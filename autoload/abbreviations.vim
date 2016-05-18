@@ -2,6 +2,8 @@
 cabbrev WA wa
 cabbrev Wa wa
 cabbrev Qa qa
+cabbrev QA qa
+cabbrev qA qa
 cabbrev Wqa wqa
 cabbrev Wqa wqa
 cabbrev WQa wqa
@@ -14,21 +16,30 @@ cabbrev q Q
 cabbrev qb QB
 cabbrev Qb QB
 cabbrev qB QB
-cabbrev QB QB
 
 cabbrev wq WQ
 cabbrev Wq WQ
 cabbrev wQ WQ
-cabbrev wQ WQ
 
 cabbrev wqb WQB
 cabbrev Wqb WQB
-cabbrev WQb WQB
 cabbrev wQb WQB
+cabbrev WQb WQB
 cabbrev wqB WQB
 cabbrev WqB WQB
-cabbrev WQB WQB
 cabbrev wQB WQB
+
+cabbrev ex EX
+cabbrev Ex EX
+cabbrev eX EX
+
+cabbrev exb EXB
+cabbrev Exb EXB
+cabbrev eXb EXB
+cabbrev EXb EXB
+cabbrev exB EXB
+cabbrev ExB EXB
+cabbrev eXB EXB
 
 " shortcuts:
 cabbrev te tabedit

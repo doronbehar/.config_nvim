@@ -11,6 +11,7 @@ let g:NERDTreeAutoDeleteBuffer = 1
 let g:NERDTreeHijackNetrw = 1
 let g:NERDTreeCaseSensitiveSort = 1
 let g:NERDTreeShowLineNumbers = 1
+let g:NERDTreeBookmarcsFile = "~/.local/share/nvim/NERDTreeBookmarks"
 
 " airline:
 if !exists('g:airline_symbols')
