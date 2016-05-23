@@ -5,12 +5,12 @@ cabbrev Qa qa
 cabbrev QA qa
 cabbrev qA qa
 cabbrev Wqa wqa
-cabbrev Wqa wqa
 cabbrev WQa wqa
-cabbrev WQa wqa
+cabbrev WQA wqa
 
 " Abbreviations for deleting the buffer that was last opened according
 " to ~/.vim/commands:
+
 cabbrev q Q
 
 cabbrev qb QB
@@ -33,13 +33,7 @@ cabbrev ex EX
 cabbrev Ex EX
 cabbrev eX EX
 
-cabbrev exb EXB
-cabbrev Exb EXB
-cabbrev eXb EXB
-cabbrev EXb EXB
-cabbrev exB EXB
-cabbrev ExB EXB
-cabbrev eXB EXB
+cabbrev Cd CD
 
 " shortcuts:
 cabbrev te tabedit

@@ -21,6 +21,7 @@ let g:airline_symbols.maxlinenr = 'Ξ'
 let g:airline_theme = 'powerlineish'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+let g:airline_section_c = 0
 " disable file encoding if width is smaller than 60:
 call airline#parts#define_minwidth('ffenc', 45)
 

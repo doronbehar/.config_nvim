@@ -15,12 +15,13 @@ command! -nargs=* Nopaste set nopaste list
 
 " create a command that sets up all normal word wrap "Wrap"
 command! -nargs=* Wrap set wrap linebreak nolist | nmap j gj| nmap k gk| nmap 0 g0| nmap $ g$
-command! -nargs=* Nowrap set nowrap nolinebreak list | nunmap j| uunmap k| nunmap 0| nunmap $
+command! -nargs=* Nowrap set nowrap nolinebreak list | nunmap j| unmap k| nunmap 0| nunmap $
+
+" create command to cd into the directory of the current file:
+command! -nargs=* CD cd %:p:h
 
 " Fully Hijack netrw with NERDTree:
-command! -nargs=* EXB e %:p:h
-" The shorter command is to delete the last buffer as well:
-command! -nargs=* -bang EX e %:p:h | bdel<bang> #
+command! -nargs=* EX e %:p:h
 " Open NERDTree faster:
 command! -nargs=? -complete=dir -bang D NERDTree<bang> <args>
 " Write file with no case mistakes:
@@ -29,7 +30,7 @@ command! -nargs=? -complete=file -bang W w<bang> <args>
 " delete buffers when exiting
 " (the if statement makes sure you don't get inside a loop when trying
 " to quit the last opened file)
-command! -nargs=* -bang Q if len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1| q<bang> | else | bdelete<bang> | endif | set foldmethod=indent
+command! -nargs=* -bang Q if len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1| q<bang> | else | bdel<bang> | endif | set foldmethod=indent
 command! -nargs=* -bang WQ w<bang> | Q
 " command to just quit the buffer but not delete it:
 command! -nargs=* -bang QB q<bang>
