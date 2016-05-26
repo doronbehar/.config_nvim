@@ -17,7 +17,7 @@ hi SpecialKey		term=bold			cterm=bold				ctermfg=237													guifg=#cc0000
 hi NonText			term=bold			cterm=bold				ctermfg=darkred							gui=bold			guifg=#cc0000
 hi Directory		term=bold			cterm=bold				ctermfg=brown												guifg=#cc8000
 hi ErrorMsg			term=standout		cterm=bold				ctermfg=grey		ctermbg=red								guifg=White		guibg=Red
-hi Search			term=reverse		ctermfg=white			ctermbg=red													guifg=white		guibg=Red
+hi Search			term=none														ctermbg=82								guifg=white		guibg=Red
 hi MoreMsg			term=bold			cterm=bold				ctermfg=darkgreen						gui=bold			guifg=SeaGreen
 hi ModeMsg			term=bold			cterm=bold														gui=bold			guifg=White		guibg=Blue
 hi LineNr			term=underline		cterm=bold				ctermfg=darkcyan											guifg=Yellow
@@ -40,7 +40,7 @@ hi Todo				term=standout								ctermfg=black		ctermbg=darkcyan						guifg=Blue	
 hi CursorLine		term=underline		cterm=underline																						guibg=#555555
 hi CursorColumn		term=underline		cterm=underline																						guibg=#555555
 hi MatchParen		term=reverse								ctermfg=blue																guibg=blue
-hi TabLine			term=bold,reverse	cterm=bold				ctermfg=lightblue	ctermbg=white		gui=bold			guifg=blue		guibg=white
+hi TabLine			term=bold,reverse	cterm=bold				ctermfg=lightblue	ctermbg=123		gui=bold			guifg=blue		guibg=white
 hi TabLineFill		term=bold,reverse	cterm=bold				ctermfg=lightblue	ctermbg=white		gui=bold			guifg=blue		guibg=white
 hi TabLineSel		term=reverse								ctermfg=white		ctermbg=lightblue						guifg=white		guibg=blue
 hi Underlined		term=underline		cterm=bold,underline	ctermfg=lightblue						gui=bold,underline	guifg=lightblue

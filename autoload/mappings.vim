@@ -30,10 +30,10 @@ nnoremap g8 8gt
 nnoremap g9 9gt
 
 " windows resizing
-nnoremap <F5> <C-W>+
-nnoremap <F4> <C-W>-
-nnoremap <F6> <C-W>>
-nnoremap <F3> <C-W><
+nnoremap <C-Up> <C-W>+
+nnoremap <C-Down> <C-W>-
+nnoremap <C-Right> <C-W>>
+nnoremap <C-Left> <C-W><
 
 " Tmux vim navigator - Window movement:
 nnoremap <C-j> :TmuxNavigateDown<CR>
