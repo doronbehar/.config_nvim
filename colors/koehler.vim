@@ -40,7 +40,7 @@ hi Todo				term=standout								ctermfg=black		ctermbg=darkcyan						guifg=Blue	
 hi CursorLine		term=underline		cterm=underline																						guibg=#555555
 hi CursorColumn		term=underline		cterm=underline																						guibg=#555555
 hi MatchParen		term=reverse								ctermfg=blue																guibg=blue
-hi TabLine			term=bold,reverse	cterm=bold				ctermfg=lightblue	ctermbg=123		gui=bold			guifg=blue		guibg=white
+hi TabLine			term=bold,reverse	cterm=bold				ctermfg=lightblue	ctermbg=123			gui=bold			guifg=blue		guibg=white
 hi TabLineFill		term=bold,reverse	cterm=bold				ctermfg=lightblue	ctermbg=white		gui=bold			guifg=blue		guibg=white
 hi TabLineSel		term=reverse								ctermfg=white		ctermbg=lightblue						guifg=white		guibg=blue
 hi Underlined		term=underline		cterm=bold,underline	ctermfg=lightblue						gui=bold,underline	guifg=lightblue
@@ -68,15 +68,16 @@ hi Label			term=bold			cterm=bold				ctermfg=226								gui=bold			guifg=#ffff60
 hi Operator			term=bold			cterm=none				ctermfg=214								gui=bold			guifg=#ffff60
 hi Keyword			term=bold			cterm=bold				ctermfg=202								gui=bold			guifg=#ffff60
 hi Exception		term=bold			cterm=bold				ctermfg=208								gui=bold			guifg=#ffff60
-hi Include			term=reverse								ctermfg=200											guifg=#ff80ff
-hi Define			term=reverse								ctermfg=197											guifg=#ff80ff
-hi Macro			term=reverse								ctermfg=196											guifg=#ff80ff
-hi PreCondit		term=reverse								ctermfg=199											guifg=#ff80ff
-hi StorageClass		term=underline		cterm=bold				ctermfg=184						gui=bold			guifg=#60ff60
-hi Structure		term=underline		cterm=bold				ctermfg=186						gui=bold			guifg=#60ff60
-hi Typedef			term=underline		cterm=bold				ctermfg=188						gui=bold			guifg=#60ff60
+hi Include			term=reverse								ctermfg=200													guifg=#ff80ff
+hi Define			term=reverse								ctermfg=197													guifg=#ff80ff
+hi Macro			term=reverse								ctermfg=196													guifg=#ff80ff
+hi PreCondit		term=reverse								ctermfg=199													guifg=#ff80ff
+hi StorageClass		term=underline		cterm=bold				ctermfg=184								gui=bold			guifg=#60ff60
+hi Structure		term=underline		cterm=bold				ctermfg=186								gui=bold			guifg=#60ff60
+hi Typedef			term=underline		cterm=bold				ctermfg=188								gui=bold			guifg=#60ff60
 hi Tag				term=bold			cterm=bold				ctermfg=202													guifg=Orange
 hi SpecialChar		term=bold			cterm=bold				ctermfg=88													guifg=Orange
 hi Delimiter		term=bold			cterm=bold				ctermfg=89													guifg=Orange
 hi SpecialComment	term=bold			cterm=bold				ctermfg=52													guifg=Orange
 hi Debug			term=bold			cterm=bold				ctermfg=53													guifg=Orange
+"vim: ts=4

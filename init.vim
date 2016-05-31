@@ -5,9 +5,6 @@ set whichwrap+=<,>,h,l
 set encoding=utf8
 set tenc=utf8
 
-" Enable modifying folders
-set modifiable
-
 " highlight search during typing:
 set nohlsearch
 " incremental search

@@ -42,7 +42,7 @@ nnoremap <C-\> :TmuxNavigatePrevious<CR>
 nnoremap <C-l> :TmuxNavigateRight<CR>
 nnoremap <C-k> :TmuxNavigateUp<CR>
 
-" scrolling horizontally easier and more intutive:
+" sCRolling horizontally easier and more intutive:
 nnoremap <C-i> zl
 nnoremap <C-u> zh
 nnoremap <C-n> jzz
@@ -66,17 +66,23 @@ nnoremap bh :bp<CR>
 nnoremap Bh :Bp<CR>
 nnoremap Bl :Bn<CR>
 
-" Start the find and replace command across the entire file with a visually selected text.
-vnoremap <leader>r <Esc>:%s/<c-r>=functions#GetVisual()<cr>//gc<left><left><left>
-vnoremap <leader>R <Esc>:%s/\<<c-r>=functions#GetVisual()<cr>\>//gc<left><left><left>
+" Start the find and replace command aCRoss the entire file with a visually selected text.
+vnoremap <leader>r <Esc>:%s/<c-r>=functions#GetVisual()<CR>//gc<left><left><left>
+vnoremap <leader>R <Esc>:%s/\<<c-r>=functions#GetVisual()<CR>\>//gc<left><left><left>
+
 " make a double click on escape button execute `noh` which unhighlights all
-" previously search's results
-nnoremap <esc><esc> :noh <CR>
+" previous search's results
+nnoremap <leader>h :noh<CR>
+" toggle set hlsearc setting:
+nnoremap <leader>H :set hlsearch! hlsearch?<CR>
+
+" Create a mapping to sync syntax:
+nnoremap <leader><esc> :syntax sync fromstart<CR>
 
 " Make <leader>s find the visually selected text
-vnoremap <leader>s <Esc>/<c-r>=functions#GetVisual()<cr><cr>
+vnoremap <leader>s <Esc>/<c-r>=functions#GetVisual()<CR><CR>
 " Make <leader>S find the visually selected text - whole words only.
-vnoremap <leader>S <Esc>/\<<c-r>=functions#GetVisual()<cr>\><cr>
+vnoremap <leader>S <Esc>/\<<c-r>=functions#GetVisual()<CR>\><CR>
 
 " Add option specifically for markdown editing to make a visually selected text:
 " - **Bold**
