@@ -67,14 +67,25 @@ nnoremap Bh :Bp<CR>
 nnoremap Bl :Bn<CR>
 
 " Start the find and replace command across the entire file with a visually selected text.
-vmap <leader>r <Esc>:%s/<c-r>=functions#GetVisual()<cr>//gc<left><left><left>
-vmap <leader>R <Esc>:%s/\<<c-r>=functions#GetVisual()<cr>\>//gc<left><left><left>
+vnoremap <leader>r <Esc>:%s/<c-r>=functions#GetVisual()<cr>//gc<left><left><left>
+vnoremap <leader>R <Esc>:%s/\<<c-r>=functions#GetVisual()<cr>\>//gc<left><left><left>
 " make a double click on escape button execute `noh` which unhighlights all
 " previously search's results
 nnoremap <esc><esc> :noh <CR>
 
-" make a double-click on '/' while in visual/select mode execute a search
-" through document for the selected text:
-vnoremap // y/<C-R>"<CR>
+" Make <leader>s find the visually selected text
+vnoremap <leader>s <Esc>/<c-r>=functions#GetVisual()<cr><cr>
+" Make <leader>S find the visually selected text - whole words only.
+vnoremap <leader>S <Esc>/\<<c-r>=functions#GetVisual()<cr>\><cr>
+
+" Add option specifically for markdown editing to make a visually selected text:
+" - **Bold**
+vnoremap <leader>b "bs****<Esc>h"bP
+" - *Italic*
+vnoremap <leader>i "is**<Esc>"iP
+" - `Code`
+vnoremap <leader>c "cs``<Esc>"cP
+" - [link]()
+vnoremap <leader>l "cs[]()<Esc>hh"cPlla
 
 " vim: ft=vim

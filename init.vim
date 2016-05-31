@@ -77,10 +77,3 @@ runtime bundle/pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 " make reading help documents for Plugins easier:
 Helptags
-
-"" Custom Functions:
-runtime autoload/functions.vim
-runtime autoload/commands.vim
-runtime autoload/mappings.vim
-runtime autoload/variables.vim
-runtime autoload/abbreviations.vim

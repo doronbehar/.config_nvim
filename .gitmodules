@@ -37,3 +37,6 @@
 [submodule "bundle/tpope-markdown"]
 	path = bundle/tpope-markdown
 	url = https://github.com/tpope/vim-markdown
+[submodule "bundle/vhdl"]
+	path = bundle/vhdl
+	url = https://github.com/salinasv/vim-vhdl
