@@ -35,14 +35,7 @@ nnoremap <C-Down> <C-W>-
 nnoremap <C-Right> <C-W>>
 nnoremap <C-Left> <C-W><
 
-" Tmux vim navigator - Window movement:
-nnoremap <C-j> :TmuxNavigateDown<CR>
-nnoremap <C-h> :TmuxNavigateLeft<CR>
-nnoremap <C-\> :TmuxNavigatePrevious<CR>
-nnoremap <C-l> :TmuxNavigateRight<CR>
-nnoremap <C-k> :TmuxNavigateUp<CR>
-
-" sCRolling horizontally easier and more intutive:
+" scrolling horizontally easier and more intutive:
 nnoremap <C-i> zl
 nnoremap <C-u> zh
 nnoremap <C-n> jzz
@@ -56,15 +49,9 @@ noremap gW gE
 noremap ge w
 noremap gE W
 
-" Buffers navigation:
-nnoremap b<right> :bn<CR>
-nnoremap b<left> :bp<CR>
-nnoremap B<left> :Bp<CR>
-nnoremap B<right> :Bn<CR>
-nnoremap bl :bn<CR>
-nnoremap bh :bp<CR>
-nnoremap Bh :Bp<CR>
-nnoremap Bl :Bn<CR>
+" replace the annoyance of Q with <leader>c:
+nnoremap <leader>c Q
+map Q <nop>
 
 " Start the find and replace command aCRoss the entire file with a visually selected text.
 vnoremap <leader>r <Esc>:%s/<c-r>=functions#GetVisual()<CR>//gc<left><left><left>
@@ -93,5 +80,3 @@ vnoremap <leader>i "is**<Esc>"iP
 vnoremap <leader>c "cs``<Esc>"cP
 " - [link]()
 vnoremap <leader>l "cs[]()<Esc>hh"cPlla
-
-" vim: ft=vim
