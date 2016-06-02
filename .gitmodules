@@ -48,7 +48,7 @@
 	url = https://github.com/danro/rename.vim
 [submodule "bundle/tabmerge"]
 	path = bundle/tabmerge
-	url = https://github.com/Doron-Behar/tabmerge.vim
+	url = https://github.com/vim-scripts/Tabmerge
 [submodule "bundle/restore-view"]
 	path = bundle/restore-view
-	url = https://github.com/Doron-Behar/restore-view.vim
+	url = https://github.com/vim-scripts/restore_view.vim

@@ -71,6 +71,7 @@ set splitright
 
 " Make plugin installations easy and use github-plugins from bundle:
 runtime bundle/pathogen/autoload/pathogen.vim
+let g:pathogen_disabled = ['']
 execute pathogen#infect()
 " make reading help documents for Plugins easier:
 Helptags
