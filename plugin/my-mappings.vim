@@ -53,9 +53,9 @@ noremap gE W
 nnoremap <leader>c Q
 map Q <nop>
 
-" Start the find and replace command aCRoss the entire file with a visually selected text.
-vnoremap <leader>r <Esc>:%s/<c-r>=functions#GetVisual()<CR>//gc<left><left><left>
-vnoremap <leader>R <Esc>:%s/\<<c-r>=functions#GetVisual()<CR>\>//gc<left><left><left>
+" Start the find and replace command across the entire file with a visually selected text.
+vnoremap <leader>r <Esc>:%s/<c-r>=stackoverflow#a6171215#GetVisual()<CR>//gc<left><left><left>
+vnoremap <leader>R <Esc>:%s/\<<c-r>=stackoverflow#a6171215#GetVisual()<CR>\>//gc<left><left><left>
 
 " make a double click on escape button execute `noh` which unhighlights all
 " previous search's results
@@ -67,16 +67,20 @@ nnoremap <leader>H :set hlsearch! hlsearch?<CR>
 nnoremap <leader><esc> :syntax sync fromstart<CR>
 
 " Make <leader>s find the visually selected text
-vnoremap <leader>s <Esc>/<c-r>=functions#GetVisual()<CR><CR>
+vnoremap <leader>s <Esc>/<c-r>=stackoverflow#a6171215#GetVisual()<CR><CR>
 " Make <leader>S find the visually selected text - whole words only.
-vnoremap <leader>S <Esc>/\<<c-r>=functions#GetVisual()<CR>\><CR>
+vnoremap <leader>S <Esc>/\<<c-r>=stackoverflow#a6171215#GetVisual()<CR>\><CR>
+
+" make <leader>l and <leader>e pop up the location and Quick fix lists
+nmap <silent> <leader>l :call wikia#tip1008#ToggleList("Location List", 'l')<CR>
+nmap <silent> <leader>f :call wikia#tip1008#ToggleList("Quickfix List", 'c')<CR>
 
 " Add option specifically for markdown editing to make a visually selected text:
 " - **Bold**
-vnoremap <leader>b "bs****<Esc>h"bP
+vnoremap <leader>b "mc****<Esc>h"mP
 " - *Italic*
-vnoremap <leader>i "is**<Esc>"iP
+vnoremap <leader>i "mc**<Esc>"iP
 " - `Code`
-vnoremap <leader>c "cs``<Esc>"cP
+vnoremap <leader>c "mc``<Esc>"mP
 " - [link]()
-vnoremap <leader>l "cs[]()<Esc>hh"cPlla
+vnoremap <leader>l "mc[]()<Esc>hh"mPlla
