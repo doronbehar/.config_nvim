@@ -2,6 +2,20 @@
 
 So I decided to create a separate repository for my dotfiles just for vim. This way I'm able to fetch and pull changes right away when coming to a new computer.
 
-#### Notes:
- - I use runtime and not source for it to be easy to reload from an existing vim session modifed files without specifing the whole path.
- - I use .config/nvim/filetype.vim for automatic filetype settings - I don't even have to use `runtime filetype.vim` in my init.vim
+### Notes:
+- I use Neovim and not Vim just because of a small set of features available in Neovim and not in Vim. I don't hate Vim.
+- I use `plugin/` for separating certain configuration files from `init.vim` - It's great because I don't have to source them in `init.vim` or `runtime` them.
+- I use `autoload/<source-site>/<hint-to-page>.vim` for functions taken from various websites.
+- I use `filetype.vim` for automatic filetype settings - I don't even have to use `runtime filetype.vim` in `init.vim`.
+- I don't download plugins from [vim.org](http://www.vim.org/) directly to `plugin/` - I use [pathogen](https://github.com/tpope/vim-pathogen) and [github.com/vim-scripts](https://github.com/vim-scripts). You can find all the plugins available in [vim.org](http://www.vim.org/) from [github.com/vim-scripts](https://github.com/vim-scripts). It's great if you are a maniac like me - I use [github.com/vim-scripts](https://github.com/vim-scripts) to make sure I'm stayed updated and to clean `plugin/` from files/plugins that are not mine.
+
+### Files:
+- `plugin/settings.vim` is for settings related to plugins - NERDTree and airline for example.
+- `plugin/my-commands.vim` is for commands I created.
+- `plugin/my-mappings.vim` is for my key mappings.
+- `plugin/buf-manage.vim` is an interesting collection of commands and abbreviations you might want to take look at. In this file I have arranged a better way and to manage buffers.
+  - `Q` and `:WQ` is for exiting and deleting the last buffer afterwards.
+  - `q` and `:wq` are abbreviated to `:Q` and `:WQ` respectivley.
+  - If you want to use the original `:q` and `:wq` commands, use `:qb` and `:wqb`.
+
+  I created this file in order to enable myself quit buffers and delete them right afterwards automatically. It can save up a lot of RAM when you use Vim to make a lot of small changes to a lot of files within one Vim session.
