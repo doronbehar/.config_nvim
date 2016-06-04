@@ -52,3 +52,6 @@
 [submodule "bundle/restore-view"]
 	path = bundle/restore-view
 	url = https://github.com/vim-scripts/restore_view.vim
+[submodule "bundle/devicons"]
+	path = bundle/devicons
+	url = https://github.com/ryanoasis/vim-devicons
