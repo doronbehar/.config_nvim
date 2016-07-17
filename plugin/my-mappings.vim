@@ -77,10 +77,26 @@ nmap <silent> <leader>f :call wikia#tip1008#ToggleList("Quickfix List", 'c')<CR>
 
 " Add option specifically for markdown editing to make a visually selected text:
 " - **Bold**
-vnoremap <leader>b "mc****<Esc>h"mP
+vnoremap <silent> <leader>b "mc****<Esc>h"mP
 " - *Italic*
-vnoremap <leader>i "mc**<Esc>"iP
+vnoremap <silent> <leader>i "mc**<Esc>"mP
 " - `Code`
-vnoremap <leader>c "mc``<Esc>"mP
+vnoremap <silent> <leader>c "mc``<Esc>"mP
 " - [link]()
-vnoremap <leader>l "mc[]()<Esc>hh"mPlla
+vnoremap <silent> <leader>l "mc[]()<Esc>hh"mPlla
+" and for single [wW]ords in normal mode:
+" - **Bold**
+nnoremap <silent> <leader>b "mciw****<Esc>h"mP
+nnoremap <silent> <leader>B "mciW****<Esc>h"mP
+" - *Italic*
+nnoremap <silent> <leader>i "mciw**<Esc>"mP
+nnoremap <silent> <leader>I "mciW**<Esc>"mP
+" - `Code`
+nnoremap <silent> <leader>c "mciw``<Esc>"mP
+nnoremap <silent> <leader>C "mciW``<Esc>"mP
+" - [link]()
+nnoremap <silent> <leader>l "mciw[]()<Esc>hh"mPlla
+nnoremap <silent> <leader>L "mciW[]()<Esc>hh"mPlla
+
+" General mappings to add quotes to []() selected text:
+vnoremap <leader>" "gc""<Esc>"gP
