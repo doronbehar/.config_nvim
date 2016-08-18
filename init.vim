@@ -21,6 +21,7 @@ set background=dark
 " Always display the tabline, even if there is only one tab:
 set showtabline=2
 set list listchars=tab:›\ ,trail:-,extends:»,precedes:«,eol:¬
+set showbreak=ˆ
 " Always display the statusline in all windows:
 set laststatus=2
 " Hide the default mode text (e.g. -- INSERT -- below the statusline):

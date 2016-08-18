@@ -75,6 +75,17 @@ vnoremap <leader>S <Esc>/\<<c-r>=stackoverflow#a6171215#GetVisual()<CR>\><CR>
 nmap <silent> <leader>l :call wikia#tip1008#ToggleList("Location List", 'l')<CR>
 nmap <silent> <leader>f :call wikia#tip1008#ToggleList("Quickfix List", 'c')<CR>
 
+" Make <leader>t translate visually selected text and open a terminal:
+" * Requiers `trans` program from: https://github.com/soimort/translate-shell
+" * I use this command to translate to hebrew.
+if has('nvim')
+	" NeoVim has a built in terminal better than the normal `!` command line
+	" interface not available alone in NeoVim.
+	vnoremap <leader>t <Esc>:term trans -t he <c-r>=stackoverflow#a6171215#GetVisual()<CR><CR>
+else
+	vnoremap <leader>t <Esc>:!trans -t he <c-r>=stackoverflow#a6171215#GetVisual()<CR><CR>
+end
+
 " Add option specifically for markdown editing to make a visually selected text:
 " - **Bold**
 vnoremap <silent> <leader>b "mc****<Esc>h"mP
