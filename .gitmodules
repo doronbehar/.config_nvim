@@ -55,3 +55,6 @@
 [submodule "bundle/devicons"]
 	path = bundle/devicons
 	url = https://github.com/ryanoasis/vim-devicons
+[submodule "bundle/move"]
+	path = bundle/move
+	url = https://github.com/matze/vim-move

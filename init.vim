@@ -27,6 +27,10 @@ set laststatus=2
 " Hide the default mode text (e.g. -- INSERT -- below the statusline):
 set noshowmode
 
+" Scrolloff - keep a 10 lines distance between end of page and the cursor's
+" line:
+set scrolloff=10
+
 " enable mouse actions
 set mouse=a
 " make vim's * register compatible with system's clipboard:
