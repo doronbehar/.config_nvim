@@ -63,3 +63,26 @@ cabbrev rn Rename
 " Tabmerge:
 cabbrev tabmerge Tabmerge
 cabbrev tm Tabmerge
+
+" index-search:
+let g:indexed_search_max_hits=200
+let g:indexed_search_shortmess=1
+let g:indexed_search_numbered_only=1
+
+" easymotion:
+" match the easymotion idea of word movement ot mine just like in
+" plugin/my-mappings.vim
+map <leader><leader>w <Plug>(easymotion-b)
+map <leader><leader>W <Plug>(easymotion-B)
+map <leader><leader>ge <Plug>(easymotion-w)
+map <leader><leader>gE <Plug>(easymotion-W)
+map <leader><leader>gw <Plug>(easymotion-ge)
+map <leader><leader>gW <Plug>(easymotion-gE)
+let g:EasyMotion_keys = 'asdfghjklqweruio'
+
+" vim-move:
+let g:move_map_keys = 0
+vmap <A-n> <Plug>MoveBlockDown
+vmap <A-m> <Plug>MoveBlockUp
+nmap <A-n> <Plug>MoveLineDown
+nmap <A-m> <Plug>MoveLineUp

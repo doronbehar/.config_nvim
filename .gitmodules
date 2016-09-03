@@ -58,3 +58,9 @@
 [submodule "bundle/move"]
 	path = bundle/move
 	url = https://github.com/matze/vim-move
+[submodule "bundle/over"]
+	path = bundle/over
+	url = https://github.com/osyo-manga/vim-over
+[submodule "bundle/indexed-search"]
+	path = bundle/indexed-search
+	url = https://github.com/henrik/vim-indexed-search

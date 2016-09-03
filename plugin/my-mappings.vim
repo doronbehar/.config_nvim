@@ -36,12 +36,21 @@ nnoremap <C-Right> <C-W>>
 nnoremap <C-Left> <C-W><
 
 " scrolling horizontally easier and more intutive:
-nnoremap <C-i> zl
-nnoremap <C-u> zh
-nnoremap <C-n> jzz
-nnoremap <C-m> kzz
+noremap <A-l> zl
+noremap <A-h> zh
+noremap <A-j> jzz
+noremap <A-k> kzz
+
+" remapping to a better more comfortable mappings.
+noremap <C-m> -
+noremap <C-n> <C-m>
+
+" Remove useless motion mappings
+noremap <C-p> <nop>
 
 " Word navigation - Uses e and W with g appended before for special movement.
+noremap b <nop>
+noremap B <nop>
 noremap w b
 noremap W B
 noremap gw ge
@@ -50,12 +59,17 @@ noremap ge w
 noremap gE W
 
 " replace the annoyance of Q with <leader>c:
-nnoremap <leader>c Q
+noremap <leader>q Q
 map Q <nop>
 
 " Start the find and replace command across the entire file with a visually selected text.
-vnoremap <leader>r <Esc>:%s/<c-r>=stackoverflow#a6171215#GetVisual()<CR>//gc<left><left><left>
-vnoremap <leader>R <Esc>:%s/\<<c-r>=stackoverflow#a6171215#GetVisual()<CR>\>//gc<left><left><left>
+vnoremap <leader>r <Esc>:OverCommandLine<CR>%s/<c-r>=stackoverflow#a6171215#GetVisual()<CR>//gc<left><left><left>
+vnoremap <leader>R <Esc>:OverCommandLine<CR>%s/\<<c-r>=stackoverflow#a6171215#GetVisual()<CR>\>//gc<left><left><left>
+
+" Add key-combination for going back to previously mistakanly-replaced/mistakanly-not-replaced
+" item in find and replace prompt:
+nnoremap <leader>m '.:<Up><Home><Del>.,$<CR>
+nnoremap <leader>M u'.:<Up><Home><Del>.,$<CR>
 
 " make a double click on escape button execute `noh` which unhighlights all
 " previous search's results
@@ -71,9 +85,9 @@ vnoremap <leader>s <Esc>/<c-r>=stackoverflow#a6171215#GetVisual()<CR><CR>
 " Make <leader>S find the visually selected text - whole words only.
 vnoremap <leader>S <Esc>/\<<c-r>=stackoverflow#a6171215#GetVisual()<CR>\><CR>
 
-" make <leader>l and <leader>e pop up the location and Quick fix lists
-nmap <silent> <leader>l :call wikia#tip1008#ToggleList("Location List", 'l')<CR>
-nmap <silent> <leader>f :call wikia#tip1008#ToggleList("Quickfix List", 'c')<CR>
+" make <leader>l and <leader>c pop up the location and Quick fix lists
+nnoremap <silent> <leader>l :call wikia#tip1008#ToggleList("Location List", 'l')<CR>
+nnoremap <silent> <leader>f :call wikia#tip1008#ToggleList("Quickfix List", 'c')<CR>
 
 " Make <leader>t translate visually selected text and open a terminal:
 " * Requiers `trans` program from: https://github.com/soimort/translate-shell
@@ -86,28 +100,6 @@ else
 	vnoremap <leader>t <Esc>:!trans -t he <c-r>=stackoverflow#a6171215#GetVisual()<CR><CR>
 end
 
-" Add option specifically for markdown editing to make a visually selected text:
-" - **Bold**
-vnoremap <silent> <leader>b "mc****<Esc>h"mP
-" - *Italic*
-vnoremap <silent> <leader>i "mc**<Esc>"mP
-" - `Code`
-vnoremap <silent> <leader>c "mc``<Esc>"mP
-" - [link]()
-vnoremap <silent> <leader>l "mc[]()<Esc>hh"mPlla
-" and for single [wW]ords in normal mode:
-" - **Bold**
-nnoremap <silent> <leader>b "mciw****<Esc>h"mP
-nnoremap <silent> <leader>B "mciW****<Esc>h"mP
-" - *Italic*
-nnoremap <silent> <leader>i "mciw**<Esc>"mP
-nnoremap <silent> <leader>I "mciW**<Esc>"mP
-" - `Code`
-nnoremap <silent> <leader>c "mciw``<Esc>"mP
-nnoremap <silent> <leader>C "mciW``<Esc>"mP
-" - [link]()
-nnoremap <silent> <leader>l "mciw[]()<Esc>hh"mPlla
-nnoremap <silent> <leader>L "mciW[]()<Esc>hh"mPlla
-
-" General mappings to add quotes to []() selected text:
+" General mappings to add quotes to selected text:
 vnoremap <leader>" "gc""<Esc>"gP
+vnoremap <leader>' "gc''<Esc>"gP
