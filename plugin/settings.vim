@@ -10,7 +10,7 @@ let g:NERDTreeShowHidden = 1
 let g:NERDTreeAutoDeleteBuffer = 1
 let g:NERDTreeCaseSensitiveSort = 1
 let g:NERDTreeShowLineNumbers = 1
-let g:NERDTreeBookmarcsFile = "~/.local/share/nvim/NERDTreeBookmarks"
+let g:NERDTreeBookmarksFile = expand("$HOME/.local/share/nvim/NERDTreeBookmarks")
 " disable Netrw:
 let g:NERDTreeHijackNetrw = 1
 let g:loaded_netrw = 1

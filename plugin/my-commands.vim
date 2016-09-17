@@ -1,35 +1,44 @@
 " pasting from xclipboard settings:
-command! -nargs=* Paste set paste list
-command! -nargs=* Nopaste set nopaste list
+command! -nargs=* Paste setlocal paste list
+command! -nargs=* Nopaste setlocal nopaste list
 
 " create a command that sets up all normal word wrap "Wrap"
-command! -nargs=* Wrap set wrap linebreak nolist | map j gj| map k gk| map 0 g0| map $ g$
-command! -nargs=* Nowrap set nowrap nolinebreak list | unmap j| unmap k| unmap 0| unmap $
+command! -nargs=* Wrap setlocal wrap linebreak nolist|
+			\ map <silent> <buffer> j gj|
+			\ map <silent> <buffer> k gk|
+			\ map <silent> <buffer> 0 g0|
+			\ map <silent> <buffer> $ g$
+command! -nargs=* Nowrap setlocal nowrap nolinebreak list|
+			\ unmap <silent> <buffer> j|
+			\ unmap <silent> <buffer> k|
+			\ unmap <silent> <buffer> 0|
+			\ unmap <silent> <buffer> $
 
 " create command to cd into the directory of the current file:
-command! -nargs=* CD cd %:p:h
-cabbrev Cd CD
+command! -nargs=* Cd cd %:p:h
+cabbrev CD Cd
 
-command! -nargs=* Hebrew set keymap=hebrew|
-			\ set rightleft|
-			\ unmap <silent> <buffer> ge|
-			\ unmap <silent> <buffer> gE|
-			\ noremap <buffer> w e|
-			\ noremap <buffer> W E|
-			\ noremap <buffer> e b|
-			\ noremap <buffer> E B|
-			\ noremap <buffer> gw w|
-			\ noremap <buffer> gW W
+" Command to fix keymaps for hebrew changed because of Left and right
+" reversed:
+command! -nargs=* Hebrew setlocal keymap=hebrew|
+			\ setlocal rightleft|
+			\ noremap <silent> <buffer> w e|
+			\ noremap <silent> <buffer> W E|
+			\ noremap <silent> <buffer> e b|
+			\ noremap <silent> <buffer> E B|
+			\ noremap <silent> <buffer> gw w|
+			\ noremap <silent> <buffer> gW W|
+			\ noremap <silent> <buffer> ge ge|
+			\ noremap <silent> <buffer> gE gE
 cabbrev Heb Hebrew
-
-command! -nargs=* Nohebrew set keymap= |
-			\ set norightleft|
-			\ unmap <silent> <buffer> e|
-			\ unmap <silent> <buffer> E|
-			\ noremap <buffer> w b|
-			\ noremap <buffer> W B|
-			\ noremap <buffer> gw ge|
-			\ noremap <buffer> gW gE|
-			\ noremap <buffer> ge w|
-			\ noremap <buffer> gE W
+command! -nargs=* Nohebrew setlocal keymap= |
+			\ setlocal norightleft|
+			\ noremap <silent> <buffer> w b|
+			\ noremap <silent> <buffer> W B|
+			\ noremap <silent> <buffer> gw ge|
+			\ noremap <silent> <buffer> gW gE|
+			\ noremap <silent> <buffer> ge w|
+			\ noremap <silent> <buffer> gE W|
+			\ noremap <silent> <buffer> e e|
+			\ noremap <silent> <buffer> E E
 cabbrev Noheb Nohebrew
