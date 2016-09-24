@@ -36,8 +36,8 @@ nnoremap <C-Right> <C-W>>
 nnoremap <C-Left> <C-W><
 
 " scrolling horizontally easier and more intutive:
-noremap <A-l> zl
-noremap <A-h> zh
+noremap <A-i> zl
+noremap <A-u> zh
 noremap <A-j> jzz
 noremap <A-k> kzz
 

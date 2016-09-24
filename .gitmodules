@@ -64,3 +64,6 @@
 [submodule "bundle/indexed-search"]
 	path = bundle/indexed-search
 	url = https://github.com/henrik/vim-indexed-search
+[submodule "bundle/ncurses-syntax"]
+	path = bundle/ncurses-syntax
+	url = https://github.com/Doron-Behar/vim-ncurses-syntax
