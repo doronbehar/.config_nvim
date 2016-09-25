@@ -67,3 +67,6 @@
 [submodule "bundle/ncurses-syntax"]
 	path = bundle/ncurses-syntax
 	url = https://github.com/Doron-Behar/vim-ncurses-syntax
+[submodule "bundle/todo.txt@freitass"]
+	path = bundle/todo.txt@freitass
+	url = https://github.com/freitass/todo.txt-vim
