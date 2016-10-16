@@ -11,7 +11,7 @@ let g:NERDTreeAutoDeleteBuffer = 1
 let g:NERDTreeCaseSensitiveSort = 1
 let g:NERDTreeShowLineNumbers = 1
 let g:NERDTreeBookmarksFile = expand("$HOME/.local/share/nvim/NERDTreeBookmarks")
-" disable Netrw:
+" - disable Netrw:
 let g:NERDTreeHijackNetrw = 1
 let g:loaded_netrw = 1
 let g:loaded_netrwPlugin = 1
@@ -19,11 +19,14 @@ command! -nargs=* EX e %:p:h
 cabbrev ex EX
 cabbrev Ex EX
 cabbrev eX EX
-" open NERDTree faster:
+" - open NERDTree faster:
 cabbrev D NERDTree
-" open automatically NERDTree when no file is specified:
+" - open automatically NERDTree when no file is specified:
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" - mappings:
+let g:NERDTreeMapJumpNextSibling = ''
+let g:NERDTreeMapJumpPrevSibling = ''
 
 " airline:
 if !exists('g:airline_symbols')
@@ -36,18 +39,6 @@ let g:airline_powerline_fonts = 1
 let g:airline_section_c = 0
 " disable file encoding if width is smaller than 60:
 call airline#parts#define_minwidth('ffenc', 45)
-
-" GitGutter:
-" make change gitgutter's signs refresh easier to type
-command! -nargs=* GGE GitGutterEnable
-command! -nargs=* GGD GitGutterDisable
-"GitGutterToggle
-command! -nargs=* GGSE GitGutterSignsEnable
-command! -nargs=* GGSD GitGutterSignsDisable
-"GitGutterSignsToggle
-command! -nargs=* GGHE GitGutterLineHighlightsEnable
-command! -nargs=* GGHD GitGutterLineHighlightsDisable
-"GitGutterLineHighlightsToggle
 
 " Tmux vim navigator - Window movement:
 nnoremap <C-j> :TmuxNavigateDown<CR>
