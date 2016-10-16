@@ -87,4 +87,8 @@ nmap <A-n> <Plug>MoveLineDown
 nmap <A-m> <Plug>MoveLineUp
 " }}}
 
+" {{{
+let g:android_sdk_path = expand("$ANDROID_HOME")
+" }}}
+
 " vim:foldmethod=marker:ft=vim
