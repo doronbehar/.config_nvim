@@ -1,9 +1,10 @@
-" gitgutter signs:
+" {{{ Gitgutter:
 let g:gitgutter_sign_added = '+ '
 let g:gitgutter_sign_modified = '≈ '
 let g:gitgutter_sign_removed = '- '
+" }}}
 
-" NERDTree:
+" {{{ NERDTree:
 let g:NERDTreeDirArrowExpandable = '»'
 let g:NERDTreeDirArrowCollapsible = '¬'
 let g:NERDTreeShowHidden = 1
@@ -27,8 +28,9 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " - mappings:
 let g:NERDTreeMapJumpNextSibling = ''
 let g:NERDTreeMapJumpPrevSibling = ''
+" }}}
 
-" airline:
+" {{{ Airline:
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
@@ -39,28 +41,33 @@ let g:airline_powerline_fonts = 1
 let g:airline_section_c = 0
 " disable file encoding if width is smaller than 60:
 call airline#parts#define_minwidth('ffenc', 45)
+" }}}
 
-" Tmux vim navigator - Window movement:
+" {{{ Tmux vim navigator - Window movement:
 nnoremap <C-j> :TmuxNavigateDown<CR>
 nnoremap <C-h> :TmuxNavigateLeft<CR>
 nnoremap <C-\> :TmuxNavigatePrevious<CR>
 nnoremap <C-l> :TmuxNavigateRight<CR>
 nnoremap <C-k> :TmuxNavigateUp<CR>
+" }}}
 
-" Rename:
+" {{{ Rename:
 cabbrev rename Rename
 cabbrev rn Rename
+" }}}
 
-" Tabmerge:
+" {{{ Tabmerge:
 cabbrev tabmerge Tabmerge
 cabbrev tm Tabmerge
+" }}}
 
-" index-search:
+" {{{ index-search:
 let g:indexed_search_max_hits=200
 let g:indexed_search_shortmess=1
 let g:indexed_search_numbered_only=1
+" }}}
 
-" easymotion:
+" {{{ easymotion:
 " match the easymotion idea of word movement ot mine just like in
 " plugin/my-mappings.vim
 map <leader><leader>w <Plug>(easymotion-b)
@@ -70,10 +77,14 @@ map <leader><leader>gE <Plug>(easymotion-W)
 map <leader><leader>gw <Plug>(easymotion-ge)
 map <leader><leader>gW <Plug>(easymotion-gE)
 let g:EasyMotion_keys = 'asdfghjklqweruio'
+" }}}
 
-" vim-move:
+" {{{ vim-move:
 let g:move_map_keys = 0
 vmap <A-n> <Plug>MoveBlockDown
 vmap <A-m> <Plug>MoveBlockUp
 nmap <A-n> <Plug>MoveLineDown
 nmap <A-m> <Plug>MoveLineUp
+" }}}
+
+" vim:foldmethod=marker:ft=vim

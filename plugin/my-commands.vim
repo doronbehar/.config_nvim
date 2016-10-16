@@ -1,8 +1,9 @@
-" pasting from xclipboard settings:
+" {{{ pasting from xclipboard settings
 command! -nargs=* Paste setlocal paste list
 command! -nargs=* Nopaste setlocal nopaste list
+" }}}
 
-" create a command that sets up all normal word wrap "Wrap"
+" {{{ create a command that sets up normal "Wrap"
 command! -nargs=* Wrap setlocal wrap linebreak nolist|
 			\ map <silent> <buffer> j gj|
 			\ map <silent> <buffer> k gk|
@@ -13,13 +14,14 @@ command! -nargs=* Nowrap setlocal nowrap nolinebreak list|
 			\ unmap <silent> <buffer> k|
 			\ unmap <silent> <buffer> 0|
 			\ unmap <silent> <buffer> $
+" }}}
 
-" create command to cd into the directory of the current file:
+" {{{ create command to cd into the directory of the current file
 command! -nargs=* Cd cd %:p:h
 cabbrev CD Cd
+" }}}
 
-" Command to fix keymaps for hebrew changed because of Left and right
-" reversed:
+" {{{ Command to fix keymaps for hebrew
 command! -nargs=* Hebrew setlocal keymap=hebrew|
 			\ setlocal rightleft|
 			\ noremap <silent> <buffer> w e|
@@ -42,3 +44,6 @@ command! -nargs=* Nohebrew setlocal keymap= |
 			\ noremap <silent> <buffer> e e|
 			\ noremap <silent> <buffer> E E
 cabbrev Noheb Nohebrew
+" }}}
+
+" vim:ft=vim:foldmethod=marker

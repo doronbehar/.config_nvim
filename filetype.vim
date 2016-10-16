@@ -1,4 +1,4 @@
-" markdown: spellchecking and wrap
+" {{{ markdown: spellchecking and wrap
 autocmd Filetype markdown setlocal spell
 autocmd Filetype markdown Wrap
 " Add option specifically for markdown editing to make a visually selected text:
@@ -33,10 +33,15 @@ else
 	autocmd Filetype markdown nnoremap <leader>t viw<Esc>:!trans -t he <c-r>=stackoverflow#a6171215#GetVisual()<CR><CR>
 	autocmd Filetype markdown nnoremap <leader>T viW<Esc>:!trans -t he <c-r>=stackoverflow#a6171215#GetVisual()<CR><CR>
 end
+" }}}
 
-" gitcommit: spellcheck
+" {{{ gitcommit: spellcheck
 autocmd Filetype gitcommit setlocal spell
+" }}}
 
-" Hebrew text files:
+" {{{ Hebrew text files:
 autocmd Filetype hebrew Hebrew
 autocmd Filetype hebrew Wrap
+" }}}
+
+" vim:ft=vim:foldmethod=marker

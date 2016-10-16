@@ -1,4 +1,4 @@
-" tab manipulation
+" {{{ tab manipulation
 nnoremap t<right> :tabm +1<CR>
 nnoremap t<left> :tabm -1<CR>
 nnoremap t0 :tabm 0<CR>
@@ -13,8 +13,9 @@ nnoremap t8 :tabm 8<CR>
 nnoremap t9 :tabm 9<CR>
 nnoremap th :tabm -1<CR>
 nnoremap tl :tabm +1<CR>
+" }}}
 
-" tab movement
+" {{{ tab movement
 nnoremap g<right> :tabn<CR>
 nnoremap g<left> :tabp<CR>
 nnoremap gl :tabn<CR>
@@ -28,27 +29,30 @@ nnoremap g6 6gt
 nnoremap g7 7gt
 nnoremap g8 8gt
 nnoremap g9 9gt
+" }}}
 
-" windows resizing
+" {{{ windows resizing
 nnoremap <C-Up> <C-W>+
 nnoremap <C-Down> <C-W>-
 nnoremap <C-Right> <C-W>>
 nnoremap <C-Left> <C-W><
+" }}}
 
-" scrolling horizontally easier and more intutive:
+" {{{ scrolling horizontally easier and more intutive:
 noremap <A-i> zl
 noremap <A-u> zh
 noremap <A-j> jzz
 noremap <A-k> kzz
+" }}}
 
-" remapping to a better more comfortable mappings.
+" {{{ Jumping up/down to the non-white character of the line
 noremap <C-m> -
 noremap <C-n> <C-m>
-
 " Remove useless motion mappings
 noremap <C-p> <nop>
+" }}}
 
-" Word navigation - Uses e and W with g appended before for special movement.
+" {{{ Word navigation - Uses e and W with g appended before for special movement.
 noremap b <nop>
 noremap B <nop>
 noremap w b
@@ -57,39 +61,49 @@ noremap gw ge
 noremap gW gE
 noremap ge w
 noremap gE W
+" }}}
 
-" replace the annoyance of Q with <leader>c:
+" {{{ <leader> mappings
+
+" {{{ replace the annoyance of Q with <leader>q:
 noremap <leader>q Q
 map Q <nop>
+" }}}
 
-" Start the find and replace command across the entire file with a visually selected text.
+" {{{ Start the find and replace command across the entire file with a visually selected text.
 vnoremap <leader>r <Esc>:OverCommandLine<CR>%s/<c-r>=stackoverflow#a6171215#GetVisual()<CR>//gc<left><left><left>
+" Whole words only.
 vnoremap <leader>R <Esc>:OverCommandLine<CR>%s/\<<c-r>=stackoverflow#a6171215#GetVisual()<CR>\>//gc<left><left><left>
+" }}}
 
-" Add key-combination for going back to previously mistakanly-replaced/mistakanly-not-replaced
+" {{{ Add key-combination for going back to previously mistakanly-replaced/mistakanly-not-replaced
 " item in find and replace prompt:
 nnoremap <leader>m '.:<Up><Home><Del>.,$<CR>
 nnoremap <leader>M u'.:<Up><Home><Del>.,$<CR>
+" }}}
 
+" {{{
 " make a double click on escape button execute `noh` which unhighlights all
 " previous search's results
 nnoremap <leader>h :noh<CR>
 " toggle set hlsearc setting:
 nnoremap <leader>H :set hlsearch! hlsearch?<CR>
-
 " Create a mapping to sync syntax:
 nnoremap <leader><esc> :syntax sync fromstart<CR>
+" }}}
 
-" Make <leader>s find the visually selected text
+" {{{ Make <leader>s find the visually selected text
 vnoremap <leader>s <Esc>/<c-r>=stackoverflow#a6171215#GetVisual()<CR><CR>
-" Make <leader>S find the visually selected text - whole words only.
+" whole words only.
 vnoremap <leader>S <Esc>/\<<c-r>=stackoverflow#a6171215#GetVisual()<CR>\><CR>
+" }}}
 
-" make <leader>l and <leader>c pop up the location and Quick fix lists
+" {{{ make <leader>l and <leader>c pop up the location and Quick fix lists
 nnoremap <silent> <leader>l :call wikia#tip1008#ToggleList("Location List", 'l')<CR>
 nnoremap <silent> <leader>f :call wikia#tip1008#ToggleList("Quickfix List", 'c')<CR>
+" }}}
 
-" Make <leader>t translate visually selected text and open a terminal:
+" {{{ Make <leader>t translate visually selected text in a terminal:
 " * Requiers `trans` program from: https://github.com/soimort/translate-shell
 " * I use this command to translate to hebrew.
 if has('nvim')
@@ -99,7 +113,13 @@ if has('nvim')
 else
 	vnoremap <leader>t <Esc>:!trans -t he <c-r>=stackoverflow#a6171215#GetVisual()<CR><CR>
 end
+" }}}
 
-" General mappings to add quotes to selected text:
+" {{{ General mappings to add quotes to selected text:
 vnoremap <leader>" "gc""<Esc>"gP
 vnoremap <leader>' "gc''<Esc>"gP
+" }}}
+
+" }}}
+
+" vim:ft=vim:foldmethod=marker
