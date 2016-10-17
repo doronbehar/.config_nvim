@@ -43,9 +43,6 @@
 [submodule "bundle/bufonly"]
 	path = bundle/bufonly
 	url = https://github.com/schickling/vim-bufonly
-[submodule "bundle/rename"]
-	path = bundle/rename
-	url = https://github.com/danro/rename.vim
 [submodule "bundle/tabmerge"]
 	path = bundle/tabmerge
 	url = https://github.com/vim-scripts/Tabmerge
@@ -76,3 +73,6 @@
 [submodule "bundle/android"]
 	path = bundle/android
 	url = https://github.com/hsanson/vim-android
+[submodule "bundle/eunuch"]
+	path = bundle/eunuch
+	url = https://github.com/tpope/vim-eunuch
