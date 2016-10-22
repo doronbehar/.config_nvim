@@ -67,3 +67,6 @@
 [submodule "bundle/searchindex@google"]
 	path = bundle/searchindex@google
 	url = https://github.com/google/vim-searchindex
+[submodule "bundle/window-swap@wesQ3"]
+	path = bundle/window-swap@wesQ3
+	url = https://github.com/wesQ3/vim-windowswap

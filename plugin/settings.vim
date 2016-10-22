@@ -51,12 +51,6 @@ nnoremap <C-l> :TmuxNavigateRight<CR>
 nnoremap <C-k> :TmuxNavigateUp<CR>
 " }}}
 
-" {{{ index-search:
-let g:indexed_search_max_hits=200
-let g:indexed_search_shortmess=1
-let g:indexed_search_numbered_only=1
-" }}}
-
 " {{{ easymotion:
 " match the easymotion idea of word movement ot mine just like in
 " plugin/my-mappings.vim
@@ -67,14 +61,6 @@ map <leader><leader>gE <Plug>(easymotion-W)
 map <leader><leader>gw <Plug>(easymotion-ge)
 map <leader><leader>gW <Plug>(easymotion-gE)
 let g:EasyMotion_keys = 'asdfghjklqweruio'
-" }}}
-
-" {{{ vim-move:
-let g:move_map_keys = 0
-vmap <A-n> <Plug>MoveBlockDown
-vmap <A-m> <Plug>MoveBlockUp
-nmap <A-n> <Plug>MoveLineDown
-nmap <A-m> <Plug>MoveLineUp
 " }}}
 
 " {{{ Buffergator:
@@ -95,6 +81,10 @@ nnoremap ]b :BuffergatorMruCycleNext<CR>
 
 " {{{ Android:
 let g:android_sdk_path = expand("$ANDROID_HOME")
+" }}}
+
+" {{{
+let g:todo_load_python=0
 " }}}
 
 " vim:foldmethod=marker:ft=vim
