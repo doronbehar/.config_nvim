@@ -1,23 +1,23 @@
 [submodule "bundle/fugitive"]
-	path = bundle/fugitive
+	path = bundle/fugitive@tpope
 	url = https://github.com/tpope/vim-fugitive.git
 [submodule "bundle/gitgutter"]
-	path = bundle/gitgutter
+	path = bundle/gitgutter@airblade
 	url = https://github.com/airblade/vim-gitgutter.git
 [submodule "bundle/csv"]
-	path = bundle/csv
+	path = bundle/csv@chrisbra
 	url = https://github.com/chrisbra/csv.vim.git
 [submodule "bundle/tmux"]
-	path = bundle/tmux
+	path = bundle/tmux-syntax@zaiste
 	url = https://github.com/zaiste/tmux.vim
 [submodule "bundle/neocomplete"]
-	path = bundle/neocomplete
+	path = bundle/neocomplete@Shougo
 	url = https://github.com/Shougo/neocomplete.vim
 [submodule "bundle/easymotion"]
 	path = bundle/easymotion
 	url = https://github.com/easymotion/vim-easymotion
 [submodule "bundle/incsearch"]
-	path = bundle/incsearch
+	path = bundle/incsearch@haya14busa
 	url = https://github.com/haya14busa/incsearch.vim
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
@@ -26,53 +26,44 @@
 	path = bundle/airline
 	url = https://github.com/vim-airline/vim-airline
 [submodule "bundle/airline-themes"]
-	path = bundle/airline-themes
+	path = bundle/themes@airline
 	url = https://github.com/vim-airline/vim-airline-themes
 [submodule "bundle/pathogen"]
-	path = bundle/pathogen
+	path = bundle/pathogen@tpope
 	url = https://github.com/tpope/vim-pathogen
 [submodule "bundle/tmux-navigator"]
-	path = bundle/tmux-navigator
+	path = bundle/tmux-navigator@christoomey
 	url = https://github.com/christoomey/vim-tmux-navigator
 [submodule "bundle/tpope-markdown"]
-	path = bundle/tpope-markdown
+	path = bundle/markdown@tpope
 	url = https://github.com/tpope/vim-markdown
 [submodule "bundle/vhdl"]
-	path = bundle/vhdl
+	path = bundle/vhdl@salinasv
 	url = https://github.com/salinasv/vim-vhdl
-[submodule "bundle/bufonly"]
-	path = bundle/bufonly
-	url = https://github.com/schickling/vim-bufonly
-[submodule "bundle/tabmerge"]
-	path = bundle/tabmerge
-	url = https://github.com/vim-scripts/Tabmerge
 [submodule "bundle/restore-view"]
-	path = bundle/restore-view
+	path = bundle/restore_view@vim.org
 	url = https://github.com/vim-scripts/restore_view.vim
 [submodule "bundle/devicons"]
-	path = bundle/devicons
+	path = bundle/devicons@ryanoasis
 	url = https://github.com/ryanoasis/vim-devicons
-[submodule "bundle/move"]
-	path = bundle/move
-	url = https://github.com/matze/vim-move
 [submodule "bundle/over"]
-	path = bundle/over
+	path = bundle/over@osyo-manga
 	url = https://github.com/osyo-manga/vim-over
-[submodule "bundle/indexed-search"]
-	path = bundle/indexed-search
-	url = https://github.com/henrik/vim-indexed-search
 [submodule "bundle/ncurses-syntax"]
-	path = bundle/ncurses-syntax
+	path = bundle/ncurses-syntax@melvilletheatre.com
 	url = https://github.com/Doron-Behar/vim-ncurses-syntax
 [submodule "bundle/todo.txt@freitass"]
 	path = bundle/todo.txt@freitass
 	url = https://github.com/freitass/todo.txt-vim
 [submodule "bundle/buffergator"]
-	path = bundle/buffergator
+	path = bundle/buffergator@jeetsukumaran
 	url = https://github.com/jeetsukumaran/vim-buffergator
 [submodule "bundle/android"]
-	path = bundle/android
+	path = bundle/android@hsanson
 	url = https://github.com/hsanson/vim-android
 [submodule "bundle/eunuch"]
-	path = bundle/eunuch
+	path = bundle/eunuch@tpope
 	url = https://github.com/tpope/vim-eunuch
+[submodule "bundle/searchindex@google"]
+	path = bundle/searchindex@google
+	url = https://github.com/google/vim-searchindex

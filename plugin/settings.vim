@@ -51,16 +51,6 @@ nnoremap <C-l> :TmuxNavigateRight<CR>
 nnoremap <C-k> :TmuxNavigateUp<CR>
 " }}}
 
-" {{{ Rename:
-cabbrev rename Rename
-cabbrev rn Rename
-" }}}
-
-" {{{ Tabmerge:
-cabbrev tabmerge Tabmerge
-cabbrev tm Tabmerge
-" }}}
-
 " {{{ index-search:
 let g:indexed_search_max_hits=200
 let g:indexed_search_shortmess=1
