@@ -10,9 +10,6 @@
 [submodule "bundle/tmux"]
 	path = bundle/tmux-syntax@zaiste
 	url = https://github.com/zaiste/tmux.vim
-[submodule "bundle/neocomplete"]
-	path = bundle/neocomplete@Shougo
-	url = https://github.com/Shougo/neocomplete.vim
 [submodule "bundle/easymotion"]
 	path = bundle/easymotion
 	url = https://github.com/easymotion/vim-easymotion
