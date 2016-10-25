@@ -46,9 +46,6 @@
 [submodule "bundle/devicons"]
 	path = bundle/devicons@ryanoasis
 	url = https://github.com/ryanoasis/vim-devicons
-[submodule "bundle/over"]
-	path = bundle/over@osyo-manga
-	url = https://github.com/osyo-manga/vim-over
 [submodule "bundle/ncurses-syntax"]
 	path = bundle/ncurses-syntax@melvilletheatre.com
 	url = https://github.com/Doron-Behar/vim-ncurses-syntax
