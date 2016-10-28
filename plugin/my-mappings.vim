@@ -71,9 +71,9 @@ map Q <nop>
 " }}}
 
 " {{{ Start the find and replace command across the entire file with a visually selected text.
-vnoremap <leader>r <Esc>:OverCommandLine<CR>%s/<c-r>=stackoverflow#a6171215#GetVisual()<CR>//gc<left><left><left>
+vnoremap <leader>r <Esc>:%s/<c-r>=stackoverflow#a6171215#GetVisual()<CR>//gc<left><left><left>
 " Whole words only.
-vnoremap <leader>R <Esc>:OverCommandLine<CR>%s/\<<c-r>=stackoverflow#a6171215#GetVisual()<CR>\>//gc<left><left><left>
+vnoremap <leader>R <Esc>:%s/\<<c-r>=stackoverflow#a6171215#GetVisual()<CR>\>//gc<left><left><left>
 " }}}
 
 " {{{ Add key-combination for going back to previously mistakanly-replaced/mistakanly-not-replaced
