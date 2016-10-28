@@ -64,3 +64,6 @@
 [submodule "bundle/window-swap@wesQ3"]
 	path = bundle/window-swap@wesQ3
 	url = https://github.com/wesQ3/vim-windowswap
+[submodule "bundle/github-hub@jez"]
+	path = bundle/github-hub@jez
+	url = https://github.com/jez/vim-github-hub
