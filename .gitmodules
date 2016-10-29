@@ -67,3 +67,6 @@
 [submodule "bundle/github-hub@jez"]
 	path = bundle/github-hub@jez
 	url = https://github.com/jez/vim-github-hub
+[submodule "bundle/peekaboo@junegunn"]
+	path = bundle/peekaboo@junegunn
+	url = https://github.com/junegunn/vim-peekaboo

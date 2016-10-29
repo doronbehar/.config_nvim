@@ -83,8 +83,14 @@ nnoremap ]b :BuffergatorMruCycleNext<CR>
 let g:android_sdk_path = expand("$ANDROID_HOME")
 " }}}
 
-" {{{
+" {{{ todo.txt
 let g:todo_load_python=0
+" }}}
+
+" {{{ peekaboo
+" Compact display; do not display the names of the register groups
+let g:peekaboo_compact = 1
+let g:peekaboo_window = "botright 17new"
 " }}}
 
 " vim:foldmethod=marker:ft=vim
