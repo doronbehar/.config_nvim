@@ -83,7 +83,7 @@ nnoremap <leader>M u'.:<Up><Home><Del>.,$<CR>
 " }}}
 
 " {{{
-" make a double click on escape button execute `noh` which unhighlights all
+" make a <leader>h execute `noh` which unhighlights all
 " previous search's results
 nnoremap <leader>h :noh<CR>
 " toggle set hlsearc setting:
@@ -120,6 +120,12 @@ vnoremap <leader>" "gc""<Esc>"gP
 vnoremap <leader>' "gc''<Esc>"gP
 " }}}
 
+" }}}
+"
+" {{{ Foldings
+nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+vnoremap <Space> zf
+nnoremap <F1> :call myfunctions#cycle_foldmethods()<CR>
 " }}}
 
 " vim:ft=vim:foldmethod=marker
