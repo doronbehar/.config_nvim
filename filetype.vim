@@ -44,4 +44,8 @@ autocmd Filetype hebrew Hebrew
 autocmd Filetype hebrew Wrap
 " }}}
 
+" {{{ todo.txt
+autocmd Filetype todo Wrap
+" }}}
+
 " vim:ft=vim:foldmethod=marker

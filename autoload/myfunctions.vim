@@ -1,3 +1,4 @@
+" {{{1 Cycle through the foldmethods.
 function! myfunctions#cycle_foldmethods()
 	let s:opts = ['manual', 'indent', 'expr', 'marker', 'syntax', 'diff']
 	let s:index = 0
@@ -18,3 +19,6 @@ function! myfunctions#cycle_foldmethods()
 	endwhile
 	echo "Foldmethod is"&fdm "Now"
 endfunction
+
+" {{{1 modeline
+" vim:foldmethod=marker:ft=vim

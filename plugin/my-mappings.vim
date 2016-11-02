@@ -103,7 +103,7 @@ nnoremap <silent> <leader>l :call wikia#tip1008#ToggleList("Location List", 'l')
 nnoremap <silent> <leader>f :call wikia#tip1008#ToggleList("Quickfix List", 'c')<CR>
 " }}}
 
-" {{{ Make <leader>t translate visually selected text in a terminal:
+" {{{ Make <leader>t translate visually selected text in a terminal
 " * Requiers `trans` program from: https://github.com/soimort/translate-shell
 " * I use this command to translate to hebrew.
 if has('nvim')
@@ -115,13 +115,18 @@ else
 end
 " }}}
 
+" {{{ Make <leader>o run xdg-open on the visually selected text
+" Useful for URLs
+vnoremap <leader>o "gy<Esc>:!xdg-open '<c-r>g'<CR>
+" }}}
+
 " {{{ General mappings to add quotes to selected text:
 vnoremap <leader>" "gc""<Esc>"gP
 vnoremap <leader>' "gc''<Esc>"gP
 " }}}
 
 " }}}
-"
+
 " {{{ Foldings
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Space> zf

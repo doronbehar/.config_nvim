@@ -29,7 +29,7 @@ set noshowmode
 
 " Scrolloff - keep a 10 lines distance between end of page and the cursor's
 " line:
-set scrolloff=10
+"set scrolloff=10
 
 " enable mouse actions
 set mouse=a
