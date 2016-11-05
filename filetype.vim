@@ -44,6 +44,11 @@ autocmd Filetype hebrew Hebrew
 autocmd Filetype hebrew Wrap
 " }}}
 
+" {{{ Hebrew todo.txt files:
+autocmd Filetype לעשות Hebrew
+autocmd Filetype לעשות Wrap
+" }}}
+
 " {{{ todo.txt
 autocmd Filetype todo Wrap
 " }}}
