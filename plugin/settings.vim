@@ -91,6 +91,8 @@ let g:todo_load_python=0
 " Compact display; do not display the names of the register groups
 let g:peekaboo_compact = 1
 let g:peekaboo_window = "botright 17new"
+let g:peekaboo_prefix = '<leader>'
+let g:peekaboo_ins_prefix = '<c-q>'
 " }}}
 
 " vim:foldmethod=marker:ft=vim
