@@ -80,6 +80,11 @@ set ttimeoutlen=0
 set splitbelow
 set splitright
 
+" Add vifm runtime files to rtp:
+set rtp+=/usr/share/vifm/vim
+
+set rtp+=/usr/share/vim/vimfiles
+
 " Make plugin installations easy and use github-plugins from bundle:
 runtime bundle/pathogen@tpope/autoload/pathogen.vim
 let g:pathogen_disabled = ['']
