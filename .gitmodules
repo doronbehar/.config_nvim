@@ -73,3 +73,6 @@
 [submodule "bundle/stay@kopischke"]
 	path = bundle/stay@kopischke
 	url = https://github.com/kopischke/vim-stay
+[submodule "bundle/tex@lervag"]
+	path = bundle/tex@lervag
+	url = https://github.com/lervag/vimtex
