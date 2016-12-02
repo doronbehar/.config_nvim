@@ -76,3 +76,6 @@
 [submodule "bundle/tex@lervag"]
 	path = bundle/tex@lervag
 	url = https://github.com/lervag/vimtex
+[submodule "bundle/delview@org"]
+	path = bundle/delview@org
+	url = https://github.com/vim-scripts/delview
