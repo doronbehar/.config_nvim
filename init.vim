@@ -15,6 +15,9 @@ set incsearch
 " Smart case: case-sensitive when uppercase, otherwise - not.
 set smartcase
 
+" translate on the fly using translate-shell by soimort
+set keywordprg=trans\ -no-ansi\ :he
+
 filetype plugin on
 filetype indent on
 set autoread
