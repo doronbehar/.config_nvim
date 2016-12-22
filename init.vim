@@ -85,7 +85,6 @@ set splitright
 
 " Add vifm runtime files to rtp:
 set rtp+=/usr/share/vifm/vim
-
 set rtp+=/usr/share/vim/vimfiles
 
 " Make plugin installations easy and use github-plugins from bundle:
