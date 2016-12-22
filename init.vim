@@ -8,10 +8,12 @@ set t_Co=256
 " Change the Cursor shape for insert and other modes
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
-" highlight search during typing:
+" highlight search during typing
 set nohlsearch
 " incremental search
 set incsearch
+" incremental substitution
+set inccommand=split
 " Smart case: case-sensitive when uppercase, otherwise - not.
 set smartcase
 
