@@ -82,3 +82,6 @@
 [submodule "bundle/lilypond"]
 	path = bundle/lilypond
 	url = https://github.com/matze/vim-lilypond
+[submodule "bundle/github-dashboard@junegunn"]
+	path = bundle/github-dashboard@junegunn
+	url = https://github.com/junegunn/vim-github-dashboard
