@@ -85,3 +85,6 @@
 [submodule "bundle/github-dashboard@junegunn"]
 	path = bundle/github-dashboard@junegunn
 	url = https://github.com/junegunn/vim-github-dashboard
+[submodule "bundle/fzf"]
+	path = bundle/fzf
+	url = https://github.com/junegunn/fzf.vim
