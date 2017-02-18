@@ -49,6 +49,7 @@ nnoremap <C-h> :TmuxNavigateLeft<CR>
 nnoremap <C-\> :TmuxNavigatePrevious<CR>
 nnoremap <C-l> :TmuxNavigateRight<CR>
 nnoremap <C-k> :TmuxNavigateUp<CR>
+let g:tmux_navigator_disable_when_zoomed = 1
 " }}}
 
 " {{{ easymotion:
