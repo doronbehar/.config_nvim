@@ -39,7 +39,7 @@ nnoremap <leader>h :set hlsearch! hlsearch?<CR>
 nnoremap <leader><esc> :syntax sync fromstart<CR>
 " }}}
 
-" {{{ <leader>[\'\"] : add quotes to selected text
+" {{{ <leader>['"] : add quotes to selected text
 vnoremap <leader>" "gc""<Esc>"gP
 vnoremap <leader>' "gc''<Esc>"gP
 " }}}
