@@ -88,3 +88,6 @@
 [submodule "bundle/fzf"]
 	path = bundle/fzf@junegunn
 	url = https://github.com/junegunn/fzf.vim
+[submodule "bundle/push"]
+	path = bundle/push@glts
+	url = https://github.com/glts/vim-push
