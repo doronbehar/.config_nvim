@@ -15,16 +15,6 @@ autocmd Filetype markdown vnoremap <buffer> <leader>l "mc[]()<Esc>hh"mPlla
 autocmd Filetype gitcommit setlocal spell
 " }}}
 
-" {{{ Hebrew text files:
-autocmd Filetype hebrew Hebrew
-autocmd Filetype hebrew Wrap
-" }}}
-
-" {{{ Hebrew todo.txt files:
-autocmd Filetype לעשות Hebrew
-autocmd Filetype לעשות Wrap
-" }}}
-
 " {{{ todo.txt
 autocmd Filetype todo Wrap
 " }}}
