@@ -13,6 +13,7 @@ function! g:Toggle_rtl()
 		noremap <silent> <buffer> gE W
 		noremap <silent> <buffer> e e
 		noremap <silent> <buffer> E E
+		set keymap=
 	else
 		setlocal rightleft
 		noremap <silent> <buffer> w e
@@ -23,9 +24,11 @@ function! g:Toggle_rtl()
 		noremap <silent> <buffer> gW W
 		noremap <silent> <buffer> ge ge
 		noremap <silent> <buffer> gE gE
+		set keymap=hebrew
 	endif
 endfunction
 noremap <F12> :call Toggle_rtl()<CR>
+inoremap <F12> <C-\><C-o>:call Toggle_rtl()<CR>
 " }}}
 
 " {{{ autocmd's : TeX, HTML, markdown
