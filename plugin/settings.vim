@@ -96,4 +96,10 @@ let g:peekaboo_prefix = '<leader>'
 let g:peekaboo_ins_prefix = '<c-q>'
 " }}}
 
+" {{{ vimtex
+if has('clientserver')
+	let g:vimtex_latexmk_progname = 'nvr'
+endif
+" }}}
+
 " vim:foldmethod=marker:ft=vim
