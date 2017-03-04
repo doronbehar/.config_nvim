@@ -24,7 +24,7 @@ filetype plugin on
 filetype indent on
 set autoread
 syntax enable
-colorscheme koehler
+colorscheme my
 set background=dark
 " Always display the tabline, even if there is only one tab:
 set showtabline=2
