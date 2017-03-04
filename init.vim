@@ -30,20 +30,14 @@ set background=dark
 set showtabline=2
 set list listchars=tab:›\ ,trail:-,extends:»,precedes:«,eol:¬
 set showbreak=ˆ
+call matchadd('ColorColumn', '\%81v', 100)
 " Always display the statusline in all windows:
 set laststatus=2
 " Hide the default mode text (e.g. -- INSERT -- below the statusline):
 set noshowmode
 
-" Scrolloff - keep a 10 lines distance between end of page and the cursor's
-" line:
-"set scrolloff=10
-
 " enable mouse actions
 set mouse=a
-
-" make vim's '+' register compatible with system's clipboard:
-"set clipboard+=unnamedplus
 
 " tab's and indentation preferences:
 set shiftwidth=4
