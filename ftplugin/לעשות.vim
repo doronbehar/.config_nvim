@@ -1,1 +1,0 @@
-../bundle/todo.txt@freitass/ftplugin/todo.vim
