@@ -18,7 +18,7 @@ set inccommand=split
 set smartcase
 
 " translate on the fly using translate-shell by soimort
-set keywordprg=trans\ -no-ansi\ :he
+set keywordprg=trans\ -no-ansi
 
 filetype plugin on
 filetype indent on
@@ -30,7 +30,6 @@ set background=dark
 set showtabline=2
 set list listchars=tab:›\ ,trail:-,extends:»,precedes:«,eol:¬
 set showbreak=ˆ
-call matchadd('ColorColumn', '\%81v', 100)
 " Always display the statusline in all windows:
 set laststatus=2
 " Hide the default mode text (e.g. -- INSERT -- below the statusline):
@@ -41,7 +40,6 @@ set mouse=a
 
 " tab's and indentation preferences:
 set shiftwidth=4
-" tabsize:
 set tabstop=4
 set autoindent
 set smartindent

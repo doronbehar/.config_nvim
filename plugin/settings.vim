@@ -65,7 +65,7 @@ let g:EasyMotion_keys = 'asdfghjklqweruio'
 " }}}
 
 " {{{ Buffergator:
-let g:buffergator_viewport_split_policy="B"
+let g:buffergator_viewport_split_policy="n/N"
 let g:buffergator_split_size=10
 let g:buffergator_sort_regime="mru"
 let g:buffergator_display_regime="filepath"
@@ -91,7 +91,7 @@ let g:todo_load_python=0
 " {{{ peekaboo
 " Compact display; do not display the names of the register groups
 let g:peekaboo_compact = 1
-let g:peekaboo_window = "botright 17new"
+let g:peekaboo_window = "enew"
 let g:peekaboo_prefix = '<leader>'
 let g:peekaboo_ins_prefix = '<c-q>'
 " }}}
