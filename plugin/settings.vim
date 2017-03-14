@@ -22,9 +22,6 @@ cabbrev Ex EX
 cabbrev eX EX
 " - open NERDTree faster:
 cabbrev D NERDTree
-" - open automatically NERDTree when no file is specified:
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " - mappings:
 let g:NERDTreeMapJumpNextSibling = ''
 let g:NERDTreeMapJumpPrevSibling = ''
