@@ -1,13 +1,28 @@
+" {{{1 Uncategorized
 set nocompatible
-set modeline
-set backspace=eol,start,indent
-set whichwrap+=<,>,h,l
+" no word wrap:
+set nowrap
+" Make any buffer able to be hidden even if not saved
+set hidden
+if &diff
+	set diffopt+=iwhite
+endif
+" Easier to launch new splits:
+set splitbelow
+set splitright
+
+" {{{ Terminal
 set encoding=utf8
 set tenc=utf8
 set t_Co=256
-" Change the Cursor shape for insert and other modes
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+" make the return to normal mode with escape not take too long and confuse me:
+set timeoutlen=1000
+set ttimeoutlen=0
+" Define keys actions
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
 
+" {{{1 search
 " highlight search during typing
 set nohlsearch
 " incremental search
@@ -17,9 +32,8 @@ set inccommand=split
 " Smart case: case-sensitive when uppercase, otherwise - not.
 set smartcase
 
-" translate on the fly using translate-shell by soimort
-set keywordprg=trans\ -no-ansi
-
+" {{{1 UI
+" Colors
 filetype plugin on
 filetype indent on
 set autoread
@@ -34,56 +48,48 @@ set showbreak=ˆ
 set laststatus=2
 " Hide the default mode text (e.g. -- INSERT -- below the statusline):
 set noshowmode
-
+" Change the Cursor shape for insert and other modes
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 " enable mouse actions
 set mouse=a
+" folds
+set foldenable
+set foldmethod=indent
+set foldcolumn=2
 
-" tab's and indentation preferences:
+" {{{1 tab's and indentation preferences:
 set shiftwidth=4
 set tabstop=4
 set autoindent
 set smartindent
 set preserveindent
 set noexpandtab
-" no word wrap:
-set nowrap
-if &diff
-	set diffopt+=iwhite
-endif
-set foldenable
-set foldmethod=indent
-set foldcolumn=2
 
+" {{{1 backup and restore
 set backupdir=~/.local/share/nvim/tmp//
 set directory=~/.local/share/nvim/tmp//
 set viewdir=~/.local/share/nvim/view//
-" Load local nvimrc's in the directory the file is being launched from.
-set exrc
-set secure
-
-" Make any buffer able to be hidden even if not saved
-set hidden
-
 " restore-view setting:
 set viewoptions=folds,cursor
 " mks settings:
 set sessionoptions=folds,help,resize,tabpages,winpos,winsize
 
-" make the return to normal mode with escape not take too long and confuse me:
-set timeoutlen=1000
-set ttimeoutlen=0
+" {{{1 Load local configuration
+" Load nvimrc's in the directory the file is being launched from.
+set modeline
+set exrc
+set secure
 
-" Easier to launch new splits:
-set splitbelow
-set splitright
-
+" {{{1 RTP
 " Add vifm runtime files to rtp:
 set rtp+=/usr/share/vifm/vim
-set rtp+=/usr/share/vim/vimfiles
-
+" External Plugins
 " Make plugin installations easy and use github-plugins from bundle:
 runtime bundle/pathogen@tpope/autoload/pathogen.vim
 let g:pathogen_disabled = ['']
 execute pathogen#infect()
 " make reading help documents for Plugins easier:
 Helptags
+
+" {{{1 Modeline
+" vim: foldmethod=marker
