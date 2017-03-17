@@ -61,22 +61,6 @@ map <leader><leader>gW <Plug>(easymotion-gE)
 let g:EasyMotion_keys = 'asdfghjklqweruio'
 " }}}
 
-" {{{ Buffergator:
-let g:buffergator_viewport_split_policy="n/N"
-let g:buffergator_split_size=10
-let g:buffergator_sort_regime="mru"
-let g:buffergator_display_regime="filepath"
-let g:buffergator_show_full_directory_path=1
-let g:buffergator_suppress_keymaps=1
-let g:buffergator_window_statusline=0
-let g:buffergator_tab_statusline=0
-nnoremap <leader>b :BuffergatorToggle<CR>
-autocmd FileType buffergator nnoremap <esc> :BuffergatorClose<CR>
-nnoremap <leader>t :BuffergatorTabsToggle<CR>
-nnoremap [b :BuffergatorMruCyclePrev<CR>
-nnoremap ]b :BuffergatorMruCycleNext<CR>
-" }}}
-
 " {{{ Android:
 let g:android_sdk_path = expand("$ANDROID_HOME")
 " }}}

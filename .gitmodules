@@ -46,9 +46,6 @@
 [submodule "bundle/todo.txt@freitass"]
 	path = bundle/todo.txt@freitass
 	url = https://github.com/freitass/todo.txt-vim
-[submodule "bundle/buffergator"]
-	path = bundle/buffergator@jeetsukumaran
-	url = https://github.com/jeetsukumaran/vim-buffergator
 [submodule "bundle/android"]
 	path = bundle/android@hsanson
 	url = https://github.com/hsanson/vim-android
@@ -94,3 +91,6 @@
 [submodule "bundle/taskwarrior@blindFS"]
 	path = bundle/taskwarrior@blindFS
 	url = https://github.com/blindFS/vim-taskwarrior
+[submodule "bundle/bufexplorer@jlanzarotta"]
+	path = bundle/bufexplorer@jlanzarotta
+	url = https://github.com/jlanzarotta/bufexplorer
