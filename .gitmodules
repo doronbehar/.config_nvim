@@ -43,9 +43,6 @@
 [submodule "bundle/ncurses-syntax"]
 	path = bundle/ncurses-syntax@melvilletheatre.com
 	url = https://github.com/Doron-Behar/vim-ncurses-syntax
-[submodule "bundle/todo.txt@freitass"]
-	path = bundle/todo.txt@freitass
-	url = https://github.com/freitass/todo.txt-vim
 [submodule "bundle/android"]
 	path = bundle/android@hsanson
 	url = https://github.com/hsanson/vim-android
@@ -58,9 +55,6 @@
 [submodule "bundle/window-swap@wesQ3"]
 	path = bundle/window-swap@wesQ3
 	url = https://github.com/wesQ3/vim-windowswap
-[submodule "bundle/github-hub@jez"]
-	path = bundle/github-hub@jez
-	url = https://github.com/jez/vim-github-hub
 [submodule "bundle/peekaboo@junegunn"]
 	path = bundle/peekaboo@junegunn
 	url = https://github.com/junegunn/vim-peekaboo
@@ -73,18 +67,9 @@
 [submodule "bundle/tex@lervag"]
 	path = bundle/tex@lervag
 	url = https://github.com/lervag/vimtex
-[submodule "bundle/delview@org"]
-	path = bundle/delview@org
-	url = https://github.com/vim-scripts/delview
 [submodule "bundle/lilypond"]
 	path = bundle/lilypond
 	url = https://github.com/matze/vim-lilypond
-[submodule "bundle/github-dashboard@junegunn"]
-	path = bundle/github-dashboard@junegunn
-	url = https://github.com/junegunn/vim-github-dashboard
-[submodule "bundle/fzf"]
-	path = bundle/fzf@junegunn
-	url = https://github.com/junegunn/fzf.vim
 [submodule "bundle/push"]
 	path = bundle/push@glts
 	url = https://github.com/glts/vim-push
@@ -94,3 +79,6 @@
 [submodule "bundle/bufexplorer@jlanzarotta"]
 	path = bundle/bufexplorer@jlanzarotta
 	url = https://github.com/jlanzarotta/bufexplorer
+[submodule "bundle/surround@tpope"]
+	path = bundle/surround@tpope
+	url = https://github.com/tpope/vim-surround
