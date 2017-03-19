@@ -10,6 +10,8 @@ endif
 " Easier to launch new splits:
 set splitbelow
 set splitright
+" When opening new files, look recursively into subdirectories
+set path+=**
 
 " {{{ Terminal
 set encoding=utf8

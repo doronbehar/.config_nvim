@@ -78,9 +78,17 @@ let g:peekaboo_ins_prefix = '<c-q>'
 " }}}
 
 " {{{ vimtex
-if has('clientserver')
+if !has('clientserver')
 	let g:vimtex_latexmk_progname = 'nvr'
 endif
+let g:tex_flavor = 'latex'
+let g:vimtex_fold_enabled = 1
+let g:vimtex_fold_envs = 0
+let g:vimtex_indent_ignored_envs = ['document', 'hebrew', 'english']
+" }}}
+"
+" {{{ tw
+let g:task_rc_override='confirmation=off'
 " }}}
 
 " vim:foldmethod=marker:ft=vim

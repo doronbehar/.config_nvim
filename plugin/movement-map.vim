@@ -16,10 +16,4 @@ noremap <C-n> <C-m>
 noremap <C-p> <nop>
 " }}}
 
-" {{{ Add key-combination for going back to previously mistakanly-replaced/mistakanly-not-replaced
-" item in find and replace prompt:
-nnoremap <leader>m '.:<Up><Home><Del>.,$<CR>
-nnoremap <leader>M u'.:<Up><Home><Del>.,$<CR>
-" }}}
-
 " vim:ft=vim:foldmethod=marker
