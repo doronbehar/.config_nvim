@@ -82,7 +82,7 @@ set modeline
 set exrc
 set secure
 
-" {{{1 RTP
+" {{{1 runtime
 " Add vifm runtime files to rtp:
 set rtp+=/usr/share/vifm/vim
 " External Plugins

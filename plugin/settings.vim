@@ -86,7 +86,14 @@ let g:vimtex_fold_enabled = 1
 let g:vimtex_fold_envs = 0
 let g:vimtex_indent_ignored_envs = ['document', 'hebrew', 'english']
 " }}}
-"
+
+" {{{ bufexplorer
+let g:bufExplorerDisableDefaultKeyMapping=1
+let g:bufExplorerDetailedHelp=1
+let g:bufExplorerShowRelativePath=0
+nnoremap bb :ToggleBufExplorer<CR>
+" }}}
+
 " {{{ tw
 let g:task_rc_override='confirmation=off'
 " }}}
