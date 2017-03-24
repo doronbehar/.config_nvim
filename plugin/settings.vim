@@ -91,7 +91,7 @@ let g:vimtex_indent_ignored_envs = ['document', 'hebrew', 'english']
 let g:bufExplorerDisableDefaultKeyMapping=1
 let g:bufExplorerDetailedHelp=1
 let g:bufExplorerShowRelativePath=0
-nnoremap bb :ToggleBufExplorer<CR>
+nnoremap gb :ToggleBufExplorer<CR>
 " }}}
 
 " {{{ tw

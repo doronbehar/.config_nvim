@@ -86,7 +86,6 @@ set secure
 " Add vifm runtime files to rtp:
 set rtp+=/usr/share/vifm/vim
 " External Plugins
-" Make plugin installations easy and use github-plugins from bundle:
 runtime bundle/pathogen@tpope/autoload/pathogen.vim
 let g:pathogen_disabled = ['']
 execute pathogen#infect()
