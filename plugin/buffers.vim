@@ -20,10 +20,10 @@ command! -nargs=* -bang QuitIfBufferIsLast if len(filter(range(1, bufnr('$')), '
 
 " {{{ mappings
 " navigation (mappings)
-nnoremap b<right> :bn<CR>
-nnoremap b<left> :bp<CR>
-nnoremap bl :bn<CR>
-nnoremap bh :bp<CR>
+nnoremap b<right> :bnext<CR>
+nnoremap b<left> :bprevious<CR>
+nnoremap bl :bnext<CR>
+nnoremap bh :bprevious<CR>
 " write and quit
 nnoremap bd :QuitIfBufferIsLast<CR>
 nnoremap bq :QuitIfBufferIsLast!<CR>

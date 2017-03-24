@@ -31,9 +31,4 @@ noremap <F12> :call Toggle_rtl()<CR>
 inoremap <F12> <C-\><C-o>:call Toggle_rtl()<CR>
 " }}}
 
-" {{{ autocmd's : TeX, HTML, markdown
-autocmd Filetype tex vnoremap <buffer> <leader>` "mc\textenglish{}<Esc>"mP
-autocmd Filetype html vnoremap <buffer> <leader>` "mc<span dir=ltr></span><Esc>6h"mP
-" }}}
-
 " vim:ft=vim:foldmethod=marker
