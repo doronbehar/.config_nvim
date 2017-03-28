@@ -1,19 +1,17 @@
 " {{{1 Uncategorized
 set nocompatible
-" no word wrap:
-set nowrap
 " Make any buffer able to be hidden even if not saved
 set hidden
-if &diff
-	set diffopt+=iwhite
-endif
+" no word wrap:
+set nowrap
+set diffopt+=iwhite,vertical
 " Easier to launch new splits:
 set splitbelow
 set splitright
 " When opening new files, look recursively into subdirectories
 set path+=**
 
-" {{{ Terminal
+" {{{1 Terminal
 set encoding=utf8
 set tenc=utf8
 set t_Co=256

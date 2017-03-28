@@ -20,5 +20,57 @@ function! myfunctions#cycle_foldmethods()
 	echo "Foldmethod is"&fdm "Now"
 endfunction
 
+" {{{1 Toggle common rtl options vs ltr
+function! myfunctions#toggle_rtl()
+	if &rightleft
+		setlocal norightleft
+		noremap <silent> <buffer> w b
+		noremap <silent> <buffer> W B
+		noremap <silent> <buffer> gw ge
+		noremap <silent> <buffer> gW gE
+		noremap <silent> <buffer> ge w
+		noremap <silent> <buffer> gE W
+		noremap <silent> <buffer> e e
+		noremap <silent> <buffer> E E
+		setlocal keymap=
+		setlocal listchars+=eol:¬
+	else
+		setlocal rightleft
+		noremap <silent> <buffer> w e
+		noremap <silent> <buffer> W E
+		noremap <silent> <buffer> e b
+		noremap <silent> <buffer> E B
+		noremap <silent> <buffer> gw w
+		noremap <silent> <buffer> gW W
+		noremap <silent> <buffer> ge ge
+		noremap <silent> <buffer> gE gE
+		setlocal keymap=hebrew
+		setlocal listchars+=eol:⌐
+	endif
+endfunction
+
+" {{{1 Toggle advaneced wrap mode
+function! myfunctions#toggle_smartwrap()
+	if &wrap
+		setlocal nowrap
+		setlocal nolinebreak
+		setlocal nobreakindent
+		setlocal list
+		unmap <silent> <buffer> j
+		unmap <silent> <buffer> k
+		unmap <silent> <buffer> 0
+		unmap <silent> <buffer> $
+	else
+		setlocal wrap
+		setlocal linebreak
+		setlocal breakindent
+		setlocal nolist
+		map <silent> <buffer> j gj
+		map <silent> <buffer> k gk
+		map <silent> <buffer> 0 g0
+		map <silent> <buffer> $ g$
+	endif
+endfunction
+
 " {{{1 modeline
 " vim:foldmethod=marker:ft=vim

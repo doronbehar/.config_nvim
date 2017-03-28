@@ -1,5 +1,5 @@
 " taken from http://vim.wikia.com/wiki/VimTip1008.
-function! wikia#tip1008#GetBufferList()
+function! GetBufferList()
 	redir => buflist
 	silent! ls!
 	redir END
@@ -7,7 +7,7 @@ function! wikia#tip1008#GetBufferList()
 endfunction
 
 function! wikia#tip1008#ToggleList(bufname, pfx)
-	let buflist = wikia#tip1008#GetBufferList()
+	let buflist = GetBufferList()
 	for bufnum in map(filter(split(buflist, '\n'), 'v:val =~ "'.a:bufname.'"'), 'str2nr(matchstr(v:val, "\\d\\+"))')
 		if bufwinnr(bufnum) != -1
 			exec(a:pfx.'close')

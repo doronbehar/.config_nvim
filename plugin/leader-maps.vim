@@ -27,21 +27,11 @@ else
 end
 " }}}
 
-" {{{ <leader>o : run xdg-open on the visually selected text
-" Useful for URLs
-vnoremap <leader>o "gy<Esc>:!xdg-open '<c-r>g'<CR>
-" }}}
-
 " {{{ <leader>[h<esc>] : syntax highlighting options
 " toggle set hlsearc setting:
 nnoremap <leader>h :set hlsearch! hlsearch?<CR>
 " Create a mapping to sync syntax:
 nnoremap <leader><esc> :syntax sync fromstart<CR>
-" }}}
-
-" {{{ <leader>['"] : add quotes to selected text
-vnoremap <leader>" "gc""<Esc>"gP
-vnoremap <leader>' "gc''<Esc>"gP
 " }}}
 
 " {{{ <leader>q : better way to enter Ex mode
