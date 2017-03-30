@@ -82,3 +82,15 @@
 [submodule "bundle/surround@tpope"]
 	path = bundle/surround@tpope
 	url = https://github.com/tpope/vim-surround
+[submodule "bundle/speeddating@tpope"]
+	path = bundle/speeddating@tpope
+	url = https://github.com/tpope/vim-speeddating
+[submodule "bundle/tabular@godlygeek"]
+	path = bundle/tabular@godlygeek
+	url = https://github.com/godlygeek/tabular
+[submodule "bundle/textobj-uri@jceb"]
+	path = bundle/textobj-uri@jceb
+	url = https://github.com/jceb/vim-textobj-uri
+[submodule "bundle/textobj-user@kana"]
+	path = bundle/textobj-user@kana
+	url = https://github.com/kana/vim-textobj-user
