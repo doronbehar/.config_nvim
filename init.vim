@@ -12,15 +12,9 @@ set splitright
 set path+=**
 
 " {{{1 Terminal
-set encoding=utf8
-set tenc=utf8
-set t_Co=256
 " make the return to normal mode with escape not take too long and confuse me:
 set timeoutlen=1000
 set ttimeoutlen=0
-" Define keys actions
-set backspace=eol,start,indent
-set whichwrap+=<,>,h,l
 
 " {{{1 search
 " highlight search during typing

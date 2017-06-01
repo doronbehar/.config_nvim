@@ -16,10 +16,6 @@ let g:NERDTreeBookmarksFile = expand("$HOME/.local/share/nvim/NERDTreeBookmarks"
 let g:NERDTreeHijackNetrw = 1
 let g:loaded_netrw = 1
 let g:loaded_netrwPlugin = 1
-command! -nargs=* EX e %:p:h
-cabbrev ex EX
-cabbrev Ex EX
-cabbrev eX EX
 " - open NERDTree faster:
 cabbrev D NERDTree
 " - mappings:
