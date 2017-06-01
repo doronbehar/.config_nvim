@@ -32,12 +32,22 @@ filetype plugin on
 filetype indent on
 set autoread
 syntax enable
-colorscheme my
+if expand("$DISPLAY") != "$DISPLAY"
+	colorscheme my
+else
+	colorscheme default
+end
 set background=dark
 " Always display the tabline, even if there is only one tab:
 set showtabline=2
-set list listchars=tab:›\ ,trail:-,extends:»,precedes:«,eol:¬
-set showbreak=ˆ
+set list
+if expand("$DISPLAY") != "$DISPLAY"
+	set showbreak=ˆ
+	set listchars=tab:›\ ,trail:-,extends:»,precedes:«,eol:¬
+else
+	set showbreak=^
+	set listchars=tab:>\ ,trail:-,extends:»,precedes:«,eol:¬
+end
 " Always display the statusline in all windows:
 set laststatus=2
 " Hide the default mode text (e.g. -- INSERT -- below the statusline):

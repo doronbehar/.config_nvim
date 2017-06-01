@@ -1,6 +1,10 @@
 " {{{ Gitgutter:
 let g:gitgutter_sign_added = '+ '
-let g:gitgutter_sign_modified = '≈ '
+if expand("$DISPLAY") != "$DISPLAY"
+	let g:gitgutter_sign_modified = '≈ '
+else
+	let g:gitgutter_sign_modified = '_ '
+end
 let g:gitgutter_sign_removed = '- '
 " }}}
 
@@ -27,13 +31,30 @@ let g:NERDTreeMapJumpPrevSibling = ''
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
-let g:airline_symbols.maxlinenr = 'Ξ'
-let g:airline_theme = 'powerlineish'
+if expand("$DISPLAY") == "$DISPLAY"
+	let g:airline_powerline_ascii = 1
+	let g:airline_symbols.maxlinenr = ''
+	let g:airline_symbols.linenr = ' '
+	let g:airline_symbols.crypt = 'crypt'
+	let g:airline_symbols.branch = '|'
+	let g:airline_symbols.whitespace = ' '
+	let g:airline#extensions#whitespace#symbol = '!'
+  
+else
+	let g:airline_symbols.maxlinenr = 'Ξ'
+	let g:airline_theme = 'powerlineish'
+	let g:airline_powerline_fonts = 1
+end
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
 let g:airline_section_c = 0
 " disable file encoding if width is smaller than 60:
 call airline#parts#define_minwidth('ffenc', 45)
+" }}}
+
+" {{{ devicons
+if expand("$DISPLAY") == "$DISPLAY"
+	let g:webdevicons_enable = 0
+end
 " }}}
 
 " {{{ Tmux vim navigator - Window movement:
