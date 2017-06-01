@@ -94,3 +94,15 @@
 [submodule "bundle/qf_resize@blueyed"]
 	path = bundle/qf_resize@blueyed
 	url = https://github.com/blueyed/vim-qf_resize
+[submodule "bundle/repeat@tpope"]
+	path = bundle/repeat@tpope
+	url = git@github.com:tpope/vim-repeat
+[submodule "bundle/scriptease@tpope"]
+	path = bundle/scriptease@tpope
+	url = git@github.com:tpope/vim-scriptease
+[submodule "bundle/targets@wellle"]
+	path = bundle/targets@wellle
+	url = https://github.com/wellle/targets.vim
+[submodule "bundle/rooter@airblade"]
+	path = bundle/rooter@airblade
+	url = https://github.com/airblade/vim-rooter
