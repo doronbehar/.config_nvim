@@ -39,7 +39,6 @@ if expand("$DISPLAY") == "$DISPLAY"
 	let g:airline_symbols.branch = '|'
 	let g:airline_symbols.whitespace = ' '
 	let g:airline#extensions#whitespace#symbol = '!'
-  
 else
 	let g:airline_symbols.maxlinenr = 'Ξ'
 	let g:airline_theme = 'powerlineish'
@@ -63,7 +62,6 @@ nnoremap <C-h> :TmuxNavigateLeft<CR>
 nnoremap <C-\> :TmuxNavigatePrevious<CR>
 nnoremap <C-l> :TmuxNavigateRight<CR>
 nnoremap <C-k> :TmuxNavigateUp<CR>
-let g:tmux_navigator_disable_when_zoomed = 1
 " }}}
 
 " {{{ easymotion:

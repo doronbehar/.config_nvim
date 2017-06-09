@@ -29,7 +29,7 @@ end
 
 " {{{ <leader>[h<esc>] : syntax highlighting options
 " toggle set hlsearc setting:
-nnoremap <leader>h :set hlsearch! hlsearch?<CR>
+nnoremap <leader>l :set hlsearch! hlsearch?<CR>
 " Create a mapping to sync syntax:
 nnoremap <leader><esc> :syntax sync fromstart<CR>
 " }}}
