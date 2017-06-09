@@ -115,4 +115,10 @@ nnoremap gb :ToggleBufExplorer<CR>
 let g:task_rc_override='confirmation=off'
 " }}}
 
+" {{{ bbye
+cabbrev bd Bdelete
+cabbrev bdel Bdelete
+cabbrev bdelete Bdelete
+" }}}
+
 " vim:foldmethod=marker:ft=vim

@@ -106,3 +106,6 @@
 [submodule "bundle/rooter@airblade"]
 	path = bundle/rooter@airblade
 	url = https://github.com/airblade/vim-rooter
+[submodule "bundle/bbye@moll"]
+	path = bundle/bbye@moll
+	url = https://github.com/moll/vim-bbye
