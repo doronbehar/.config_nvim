@@ -109,3 +109,6 @@
 [submodule "bundle/bbye@moll"]
 	path = bundle/bbye@moll
 	url = https://github.com/moll/vim-bbye
+[submodule "bundle/transpose"]
+	path = bundle/transpose
+	url = https://github.com/salsifis/vim-transpose
