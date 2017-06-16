@@ -6,6 +6,7 @@ else
 	let g:gitgutter_sign_modified = '_ '
 end
 let g:gitgutter_sign_removed = '- '
+let g:gitgutter_enable_deprecated_mappings = 0
 " }}}
 
 " {{{ NERDTree:
@@ -113,6 +114,10 @@ nnoremap gb :ToggleBufExplorer<CR>
 
 " {{{ tw
 let g:task_rc_override='confirmation=off'
+" }}}
+
+" {{{ windowswap
+let g:windowswap_enable_deprecated_mappings = 0
 " }}}
 
 " {{{ bbye
