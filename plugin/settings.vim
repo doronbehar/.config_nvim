@@ -62,17 +62,19 @@ nnoremap <C-h> :TmuxNavigateLeft<CR>
 nnoremap <C-\> :TmuxNavigatePrevious<CR>
 nnoremap <C-l> :TmuxNavigateRight<CR>
 nnoremap <C-k> :TmuxNavigateUp<CR>
+let g:tmux_navigator_disable_when_zoomed = 1
 " }}}
 
 " {{{ easymotion:
 " match the easymotion idea of word movement ot mine just like in
 " plugin/my-mappings.vim
-map <leader><leader>w <Plug>(easymotion-b)
-map <leader><leader>W <Plug>(easymotion-B)
-map <leader><leader>ge <Plug>(easymotion-w)
-map <leader><leader>gE <Plug>(easymotion-W)
-map <leader><leader>gw <Plug>(easymotion-ge)
-map <leader><leader>gW <Plug>(easymotion-gE)
+map <Leader> <Plug>(easymotion-prefix)
+map <leader>w <Plug>(easymotion-b)
+map <leader>W <Plug>(easymotion-B)
+map <leader>ge <Plug>(easymotion-w)
+map <leader>gE <Plug>(easymotion-W)
+map <leader>gw <Plug>(easymotion-ge)
+map <leader>gW <Plug>(easymotion-gE)
 let g:EasyMotion_keys = 'asdfghjklqweruio'
 " }}}
 

@@ -10,24 +10,7 @@ vnoremap <leader>r <Esc>:%s/<c-r>=stackoverflow#a6171215#GetVisual()<CR>//gc<lef
 vnoremap <leader>R <Esc>:%s/\<<c-r>=stackoverflow#a6171215#GetVisual()<CR>\>//gc<left><left><left>
 " }}}
 
-" {{{ <leader>[lf] : pop up the Location-list and Quickfix-list
-nnoremap <silent> <leader>l :call wikia#tip1008#ToggleList("Location List", 'l')<CR>
-nnoremap <silent> <leader>f :call wikia#tip1008#ToggleList("Quickfix List", 'c')<CR>
-" }}}
-
-" {{{ <leader>t : translate visually selected text in a terminal
-" * Requiers `trans` program from: https://github.com/soimort/translate-shell
-" * I use this command to translate to hebrew.
-if has('nvim')
-	" NeoVim has a built in terminal better than the normal `!` command line
-	" interface not available alone in NeoVim.
-	vnoremap <leader>t <Esc>:term trans -t he <c-r>=stackoverflow#a6171215#GetVisual()<CR><CR>
-else
-	vnoremap <leader>t <Esc>:!trans -t he <c-r>=stackoverflow#a6171215#GetVisual()<CR><CR>
-end
-" }}}
-
-" {{{ <leader>[h<esc>] : syntax highlighting options
+" {{{ <leader>[l<esc>] : syntax highlighting options
 " toggle set hlsearc setting:
 nnoremap <leader>l :set hlsearch! hlsearch?<CR>
 " Create a mapping to sync syntax:
