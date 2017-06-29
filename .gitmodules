@@ -112,3 +112,6 @@
 [submodule "bundle/transpose"]
 	path = bundle/transpose
 	url = https://github.com/salsifis/vim-transpose
+[submodule "bundle/dirdiff"]
+	path = bundle/dirdiff@will133
+	url = https://github.com/will133/vim-dirdiff
