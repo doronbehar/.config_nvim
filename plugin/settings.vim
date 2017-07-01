@@ -6,7 +6,6 @@ else
 	let g:gitgutter_sign_modified = '_ '
 end
 let g:gitgutter_sign_removed = '- '
-let g:gitgutter_enable_deprecated_mappings = 0
 " }}}
 
 " {{{ NERDTree:
@@ -112,12 +111,13 @@ let g:bufExplorerShowRelativePath=0
 nnoremap gb :ToggleBufExplorer<CR>
 " }}}
 
-" {{{ tw
-let g:task_rc_override='confirmation=off'
+" {{{
+let g:windowswap_map_keys = 0 "prevent default bindings
+nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>
 " }}}
 
-" {{{ windowswap
-let g:windowswap_enable_deprecated_mappings = 0
+" {{{ tw
+let g:task_rc_override='confirmation=off'
 " }}}
 
 " {{{ bbye
