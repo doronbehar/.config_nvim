@@ -37,7 +37,7 @@ function! myfunctions#set_rtl()
 		set guicursor=
 	end
 endfunction
-function myfunctions#set_nortl()
+function! myfunctions#set_nortl()
 	setlocal norightleft
 	noremap <silent> <buffer> w b
 	noremap <silent> <buffer> W B
@@ -56,11 +56,11 @@ function myfunctions#set_nortl()
 			\,sm:block-blinkwait175-blinkoff150-blinkon175
 	end
 endfunction
-function! myfunctions#toggle_rtl(rtl)
+function! myfunctions#toggle_rtl()
 	if &rightleft
-		call myfunctions#set_nortl
+		call myfunctions#set_nortl()
 	else
-		call myfunctions#set_rtl
+		call myfunctions#set_rtl()
 	endif
 endfunction
 
@@ -89,7 +89,7 @@ function! myfunctions#toggle_smartwrap()
 	if &wrap
 		call myfunctions#set_smartwrap()
 	else
-		call myfunctions#set_nosmartwrap
+		call myfunctions#set_nosmartwrap()
 	endif
 endfunction
 
