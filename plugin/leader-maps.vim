@@ -10,9 +10,9 @@ vnoremap <leader>r <Esc>:%s/<c-r>=stackoverflow#a6171215#GetVisual()<CR>//gc<lef
 vnoremap <leader>R <Esc>:%s/\<<c-r>=stackoverflow#a6171215#GetVisual()<CR>\>//gc<left><left><left>
 " }}}
 
-" {{{ <leader>[l<esc>] : syntax highlighting options
+" {{{ <leader>[h<esc>] : syntax highlighting options
 " toggle set hlsearc setting:
-nnoremap <leader>l :set hlsearch! hlsearch?<CR>
+nnoremap <leader>h :set hlsearch! hlsearch?<CR>
 " Create a mapping to sync syntax:
 nnoremap <leader><esc> :syntax sync fromstart<CR>
 " }}}
@@ -22,6 +22,17 @@ noremap <leader>q Q
 map Q <nop>
 " }}}
 
+" {{{ <leader>t : Switch between various rtl and ltr settings
+noremap <leader>t :call myfunctions#toggle_rtl()<CR>
+inoremap <leader>t <C-\><C-o>:call myfunctions#toggle_rtl()<CR>
+" }}}
+
+" {{{ <leader>f : cycle through all foldmethods
+nnoremap <leader>f :call myfunctions#cycle_foldmethods()<CR>
+" }}}
+
+" {{{ <leader>w : toggle various wrap settings
+nnoremap <leader>w :call myfunctions#toggle_smartwrap()<CR>
 " }}}
 
 " vim:ft=vim:foldmethod=marker
