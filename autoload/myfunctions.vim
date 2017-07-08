@@ -21,63 +21,75 @@ function! myfunctions#cycle_foldmethods()
 endfunction
 
 " {{{1 Toggle common rtl options vs ltr
-function! myfunctions#toggle_rtl()
+function! myfunctions#set_rtl()
+	setlocal rightleft
+	noremap <silent> <buffer> w e
+	noremap <silent> <buffer> W E
+	noremap <silent> <buffer> e b
+	noremap <silent> <buffer> E B
+	noremap <silent> <buffer> gw w
+	noremap <silent> <buffer> gW W
+	noremap <silent> <buffer> ge ge
+	noremap <silent> <buffer> gE gE
+	setlocal keymap=hebrew
+	setlocal listchars+=eol:⌐
+	if has('nvim')
+		set guicursor=
+	end
+endfunction
+function myfunctions#set_nortl()
+	setlocal norightleft
+	noremap <silent> <buffer> w b
+	noremap <silent> <buffer> W B
+	noremap <silent> <buffer> gw ge
+	noremap <silent> <buffer> gW gE
+	noremap <silent> <buffer> ge w
+	noremap <silent> <buffer> gE W
+	noremap <silent> <buffer> e e
+	noremap <silent> <buffer> E E
+	setlocal keymap=
+	setlocal listchars+=eol:¬
+	if has('nvim')
+		set guicursor=n-v-c:block
+			\,i-ci-ve:ver25,r-cr:hor20,o:hor50
+			\,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
+			\,sm:block-blinkwait175-blinkoff150-blinkon175
+	end
+endfunction
+function! myfunctions#toggle_rtl(rtl)
 	if &rightleft
-		setlocal norightleft
-		noremap <silent> <buffer> w b
-		noremap <silent> <buffer> W B
-		noremap <silent> <buffer> gw ge
-		noremap <silent> <buffer> gW gE
-		noremap <silent> <buffer> ge w
-		noremap <silent> <buffer> gE W
-		noremap <silent> <buffer> e e
-		noremap <silent> <buffer> E E
-		setlocal keymap=
-		setlocal listchars+=eol:¬
-		if has('nvim')
-			set guicursor=n-v-c:block
-				\,i-ci-ve:ver25,r-cr:hor20,o:hor50
-				\,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
-				\,sm:block-blinkwait175-blinkoff150-blinkon175
-		end
+		call myfunctions#set_nortl
 	else
-		setlocal rightleft
-		noremap <silent> <buffer> w e
-		noremap <silent> <buffer> W E
-		noremap <silent> <buffer> e b
-		noremap <silent> <buffer> E B
-		noremap <silent> <buffer> gw w
-		noremap <silent> <buffer> gW W
-		noremap <silent> <buffer> ge ge
-		noremap <silent> <buffer> gE gE
-		setlocal keymap=hebrew
-		setlocal listchars+=eol:⌐
-		if has('nvim')
-			set guicursor=
-		end
+		call myfunctions#set_rtl
 	endif
 endfunction
 
 " {{{1 Toggle advaneced wrap mode
+function! myfunctions#set_smartwrap()
+	setlocal nowrap
+	setlocal nolinebreak
+	setlocal nobreakindent
+	setlocal list
+	unmap <silent> <buffer> j
+	unmap <silent> <buffer> k
+	unmap <silent> <buffer> 0
+	unmap <silent> <buffer> $
+endfunction
+function! myfunctions#set_nosmartwrap()
+	setlocal wrap
+	setlocal linebreak
+	setlocal breakindent
+	setlocal nolist
+	map <silent> <buffer> j gj
+	map <silent> <buffer> k gk
+	map <silent> <buffer> 0 g0
+	map <silent> <buffer> $ g$
+endfunction
 function! myfunctions#toggle_smartwrap()
 	if &wrap
-		setlocal nowrap
-		setlocal nolinebreak
-		setlocal nobreakindent
-		setlocal list
-		unmap <silent> <buffer> j
-		unmap <silent> <buffer> k
-		unmap <silent> <buffer> 0
-		unmap <silent> <buffer> $
+		call myfunctions#set_smartwrap()
 	else
-		setlocal wrap
-		setlocal linebreak
-		setlocal breakindent
-		setlocal nolist
-		map <silent> <buffer> j gj
-		map <silent> <buffer> k gk
-		map <silent> <buffer> 0 g0
-		map <silent> <buffer> $ g$
+		call myfunctions#set_nosmartwrap
 	endif
 endfunction
 
