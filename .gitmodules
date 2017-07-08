@@ -118,3 +118,6 @@
 [submodule "bundle/togglelist@milkypostman"]
 	path = bundle/togglelist@milkypostman
 	url = https://github.com/milkypostman/vim-togglelist
+[submodule "bundle/pencil@reedes"]
+	path = bundle/pencil@reedes
+	url = https://github.com/reedes/vim-pencil
