@@ -70,20 +70,20 @@ function! myfunctions#set_smartwrap()
 	setlocal nolinebreak
 	setlocal nobreakindent
 	setlocal list
-	unmap <silent> <buffer> j
-	unmap <silent> <buffer> k
-	unmap <silent> <buffer> 0
-	unmap <silent> <buffer> $
+	silent! unmap <silent> <buffer> j
+	silent! unmap <silent> <buffer> k
+	silent! unmap <silent> <buffer> 0
+	silent! unmap <silent> <buffer> $
 endfunction
 function! myfunctions#set_nosmartwrap()
 	setlocal wrap
 	setlocal linebreak
 	setlocal breakindent
 	setlocal nolist
-	map <silent> <buffer> j gj
-	map <silent> <buffer> k gk
-	map <silent> <buffer> 0 g0
-	map <silent> <buffer> $ g$
+	silent! map <silent> <buffer> j gj
+	silent! map <silent> <buffer> k gk
+	silent! map <silent> <buffer> 0 g0
+	silent! map <silent> <buffer> $ g$
 endfunction
 function! myfunctions#toggle_smartwrap()
 	if &wrap
