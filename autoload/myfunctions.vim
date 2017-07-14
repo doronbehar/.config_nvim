@@ -66,16 +66,6 @@ endfunction
 
 " {{{1 Toggle advaneced wrap mode
 function! myfunctions#set_smartwrap()
-	setlocal nowrap
-	setlocal nolinebreak
-	setlocal nobreakindent
-	setlocal list
-	silent! unmap <silent> <buffer> j
-	silent! unmap <silent> <buffer> k
-	silent! unmap <silent> <buffer> 0
-	silent! unmap <silent> <buffer> $
-endfunction
-function! myfunctions#set_nosmartwrap()
 	setlocal wrap
 	setlocal linebreak
 	setlocal breakindent
@@ -84,6 +74,16 @@ function! myfunctions#set_nosmartwrap()
 	silent! map <silent> <buffer> k gk
 	silent! map <silent> <buffer> 0 g0
 	silent! map <silent> <buffer> $ g$
+endfunction
+function! myfunctions#set_nosmartwrap()
+	setlocal nowrap
+	setlocal nolinebreak
+	setlocal nobreakindent
+	setlocal list
+	silent! unmap <silent> <buffer> j
+	silent! unmap <silent> <buffer> k
+	silent! unmap <silent> <buffer> 0
+	silent! unmap <silent> <buffer> $
 endfunction
 function! myfunctions#toggle_smartwrap()
 	if &wrap

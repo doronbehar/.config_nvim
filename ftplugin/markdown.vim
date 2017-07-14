@@ -1,2 +1,2 @@
 setlocal spell
-call myfunctions#toggle_smartwrap()
+call myfunctions#set_smartwrap()
