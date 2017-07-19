@@ -121,3 +121,6 @@
 [submodule "bundle/pencil@reedes"]
 	path = bundle/pencil@reedes
 	url = https://github.com/reedes/vim-pencil
+[submodule "bundle/mediawiki"]
+	path = bundle/mediawiki
+	url = https://github.com/chikamichi/mediawiki.vim
