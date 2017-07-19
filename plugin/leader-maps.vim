@@ -24,15 +24,14 @@ map Q <nop>
 
 " {{{ <leader>t : Switch between various rtl and ltr settings
 noremap <leader>t :call myfunctions#toggle_rtl()<CR>
-inoremap <leader>t <C-\><C-o>:call myfunctions#toggle_rtl()<CR>
 " }}}
 
 " {{{ <leader>f : cycle through all foldmethods
-nnoremap <leader>f :call myfunctions#cycle_foldmethods()<CR>
+nnoremap <leader>m :call myfunctions#cycle_foldmethods()<CR>
 " }}}
 
 " {{{ <leader>w : toggle various wrap settings
-nnoremap <leader>w :call myfunctions#toggle_smartwrap()<CR>
+nnoremap <leader>p :call myfunctions#toggle_smartwrap()<CR>
 " }}}
 
 " vim:ft=vim:foldmethod=marker
