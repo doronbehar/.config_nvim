@@ -121,3 +121,6 @@
 [submodule "bundle/mediawiki"]
 	path = bundle/mediawiki
 	url = https://github.com/chikamichi/mediawiki.vim
+[submodule "bundle/spell-he"]
+	path = bundle/spell-he
+	url = git@github.com:doronbehar/vim-spell-he
