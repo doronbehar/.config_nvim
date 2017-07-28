@@ -70,9 +70,6 @@
 [submodule "bundle/push"]
 	path = bundle/push@glts
 	url = https://github.com/glts/vim-push
-[submodule "bundle/taskwarrior@blindFS"]
-	path = bundle/taskwarrior@blindFS
-	url = https://github.com/blindFS/vim-taskwarrior
 [submodule "bundle/bufexplorer@jlanzarotta"]
 	path = bundle/bufexplorer@jlanzarotta
 	url = https://github.com/jlanzarotta/bufexplorer
