@@ -12,7 +12,7 @@ vnoremap <leader>R <Esc>:%s/\<<c-r>=stackoverflow#a6171215#GetVisual()<CR>\>//gc
 
 " {{{ <leader>[h<esc>] : syntax highlighting options
 " toggle set hlsearc setting:
-nnoremap <leader>h :set hlsearch! hlsearch?<CR>
+nnoremap <leader>v :set hlsearch! hlsearch?<CR>
 " Create a mapping to sync syntax:
 nnoremap <leader><esc> :syntax sync fromstart<CR>
 " }}}
@@ -22,8 +22,9 @@ noremap <leader>q Q
 map Q <nop>
 " }}}
 
-" {{{ <leader>t : Switch between various rtl and ltr settings
+" {{{ {<leader>t,<F1>} : Switch between various rtl and ltr settings
 noremap <leader>t :call myfunctions#toggle_rtl()<CR>
+inoremap <F12> <C-\><C-o>:call myfunctions#toggle_rtl()<CR>
 " }}}
 
 " {{{ <leader>f : cycle through all foldmethods

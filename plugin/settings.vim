@@ -6,6 +6,16 @@ else
 	let g:gitgutter_sign_modified = '_ '
 end
 let g:gitgutter_sign_removed = '- '
+let g:gitgutter_map_keys = 0
+nmap [c <Plug>GitGutterPrevHunk
+nmap ]c <Plug>GitGutterNextHunk
+nmap <Leader>hs <Plug>GitGutterStageHunk
+nmap <Leader>hu <Plug>GitGutterUndoHunk
+nmap <Leader>hp <Plug>GitGutterPreviewHunk
+omap ic <Plug>GitGutterTextObjectInnerPending
+omap ac <Plug>GitGutterTextObjectOuterPending
+xmap ic <Plug>GitGutterTextObjectInnerVisual
+xmap ac <Plug>GitGutterTextObjectOuterVisual
 " }}}
 
 " {{{ NERDTree:
