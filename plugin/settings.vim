@@ -182,4 +182,8 @@ cabbrev bdel Bdelete
 cabbrev bdelete Bdelete
 " }}}
 
+" {{{ Rooter
+let g:rooter_silent_chdir = 1
+" }}}
+
 " vim:foldmethod=marker:ft=vim
