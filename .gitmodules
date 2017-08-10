@@ -121,3 +121,6 @@
 [submodule "bundle/mediawiki"]
 	path = bundle/mediawiki
 	url = https://github.com/chikamichi/mediawiki.vim
+[submodule "bundle/emmet@mattn"]
+	path = bundle/emmet@mattn
+	url = git@github.com:mattn/emmet-vim
