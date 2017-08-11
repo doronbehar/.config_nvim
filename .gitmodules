@@ -1,9 +1,6 @@
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive@tpope
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule "bundle/gitgutter"]
-	path = bundle/gitgutter@airblade
-	url = https://github.com/airblade/vim-gitgutter.git
 [submodule "bundle/csv"]
 	path = bundle/csv@chrisbra
 	url = https://github.com/chrisbra/csv.vim.git
@@ -130,3 +127,6 @@
 [submodule "bundle/pandoc-syntax"]
 	path = bundle/pandoc-syntax
 	url = https://github.com/vim-pandoc/vim-pandoc-syntax
+[submodule "bundle/signify@mhinz"]
+	path = bundle/signify@mhinz
+	url = https://github.com/mhinz/vim-signify

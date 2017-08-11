@@ -1,23 +1,3 @@
-" {{{ Gitgutter:
-let g:gitgutter_sign_added = '+ '
-if expand("$DISPLAY") != "$DISPLAY"
-	let g:gitgutter_sign_modified = '≈ '
-else
-	let g:gitgutter_sign_modified = '_ '
-end
-let g:gitgutter_sign_removed = '- '
-let g:gitgutter_map_keys = 0
-nmap [c <Plug>GitGutterPrevHunk
-nmap ]c <Plug>GitGutterNextHunk
-nmap <Leader>hs <Plug>GitGutterStageHunk
-nmap <Leader>hu <Plug>GitGutterUndoHunk
-nmap <Leader>hp <Plug>GitGutterPreviewHunk
-omap ic <Plug>GitGutterTextObjectInnerPending
-omap ac <Plug>GitGutterTextObjectOuterPending
-xmap ic <Plug>GitGutterTextObjectInnerVisual
-xmap ac <Plug>GitGutterTextObjectOuterVisual
-" }}}
-
 " {{{ NERDTree:
 let g:NERDTreeDirArrowExpandable = '»'
 let g:NERDTreeDirArrowCollapsible = '¬'
@@ -56,8 +36,6 @@ else
 end
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_section_c = 0
-" disable file encoding if width is smaller than 60:
-call airline#parts#define_minwidth('ffenc', 45)
 " }}}
 
 " {{{ devicons
