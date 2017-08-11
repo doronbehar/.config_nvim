@@ -31,7 +31,6 @@ if expand("$DISPLAY") == "$DISPLAY"
 	let g:airline#extensions#whitespace#symbol = '!'
 else
 	let g:airline_symbols.maxlinenr = 'Ξ'
-	let g:airline_theme = 'powerlineish'
 	let g:airline_powerline_fonts = 1
 end
 let g:airline#extensions#tabline#enabled = 1

@@ -16,9 +16,6 @@
 [submodule "bundle/airline"]
 	path = bundle/airline
 	url = https://github.com/vim-airline/vim-airline
-[submodule "bundle/airline-themes"]
-	path = bundle/themes@airline
-	url = https://github.com/vim-airline/vim-airline-themes
 [submodule "bundle/pathogen"]
 	path = bundle/pathogen@tpope
 	url = https://github.com/tpope/vim-pathogen
