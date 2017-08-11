@@ -91,13 +91,19 @@ set secure
 
 " {{{1 runtime
 " Add vifm runtime files to rtp:
-set rtp+=/usr/share/vifm/vim
-" External Plugins
-runtime bundle/pathogen@tpope/autoload/pathogen.vim
-let g:pathogen_disabled = ['']
-execute pathogen#infect()
-" make reading help documents for Plugins easier:
-Helptags
+if isdirectory('/usr/share/vifm/vim')
+	set rtp+=/usr/share/vifm/vim
+end
+" External Plugins - use pathogen only for old versions of vim
+if !exists(':packadd')
+	runtime bundle/pathogen@tpope/autoload/pathogen.vim
+	let g:pathogen_disabled = ['']
+	execute pathogen#infect()
+	" make reading help documents for Plugins easier:
+	Helptags
+else
+	execute('silent! helptags ALL')
+end
 
 " {{{1 Modeline
 " vim: foldmethod=marker
