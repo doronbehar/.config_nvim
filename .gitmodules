@@ -124,3 +124,9 @@
 [submodule "bundle/emmet@mattn"]
 	path = bundle/emmet@mattn
 	url = git@github.com:mattn/emmet-vim
+[submodule "bundle/pandoc"]
+	path = bundle/pandoc
+	url = https://github.com/vim-pandoc/vim-pandoc
+[submodule "bundle/pandoc-syntax"]
+	path = bundle/pandoc-syntax
+	url = https://github.com/vim-pandoc/vim-pandoc-syntax
