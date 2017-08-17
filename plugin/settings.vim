@@ -18,6 +18,14 @@ let g:NERDTreeMapJumpPrevSibling = ''
 " }}}
 
 " {{{ Airline:
+let g:airline#extensions#disable_rtp_load = 1
+let g:airline_section_c = 0
+let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#branch#vcs_priority = ["git", "mercurial"]
+let g:airline#extensions#branch#format = 0
+let g:airline_extensions = ['tabline', 'branch']
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
@@ -33,8 +41,6 @@ else
 	let g:airline_symbols.maxlinenr = 'Ξ'
 	let g:airline_powerline_fonts = 1
 end
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_section_c = 0
 " }}}
 
 " {{{ devicons
@@ -58,10 +64,6 @@ let g:EasyMotion_keys = 'asdfghjklqweruio'
 
 " {{{ Android:
 let g:android_sdk_path = expand("$ANDROID_HOME")
-" }}}
-
-" {{{ todo.txt
-let g:todo_load_python=0
 " }}}
 
 " {{{ peekaboo
@@ -147,10 +149,6 @@ nnoremap gb :ToggleBufExplorer<CR>
 " {{{ WindowSwap
 let g:windowswap_map_keys = 0 "prevent default bindings
 nnoremap <silent> <leader>b :call WindowSwap#EasyWindowSwap()<CR>
-" }}}
-
-" {{{ tw
-let g:task_rc_override='confirmation=off'
 " }}}
 
 " {{{ bbye
