@@ -48,10 +48,6 @@ hi DiffAdd								cterm=none									ctermbg=21
 hi DiffDelete							cterm=none									ctermbg=124
 hi DiffChange							cterm=none									ctermbg=23
 hi DiffText								cterm=none									ctermbg=235
-hi SignColumn							cterm=none				ctermfg=NONE		ctermbg=NONE
-hi DiffAdd								cterm=bold				ctermfg=119			ctermbg=NONE
-hi DiffDelete							cterm=bold				ctermfg=167			ctermbg=NONE
-hi DiffChange							cterm=bold				ctermfg=227			ctermbg=NONE
 
 hi IncSearch							cterm=underline,reverse
 hi String			term=underline		cterm=bold				ctermfg=129
