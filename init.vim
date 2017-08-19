@@ -22,7 +22,9 @@ set nohlsearch
 " incremental search
 set incsearch
 " incremental substitution
-set inccommand=split
+if exists('&inccommand')
+	set inccommand=split
+end
 " Smart case: case-sensitive when uppercase, otherwise - not.
 set smartcase
 
