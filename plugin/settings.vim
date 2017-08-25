@@ -33,10 +33,31 @@ if expand("$DISPLAY") == "$DISPLAY"
 	let g:airline_symbols.branch = '|'
 	let g:airline_symbols.whitespace = ' '
 	let g:airline#extensions#whitespace#symbol = '!'
+	let g:airline_symbols.keymap = 'KEYS:'
 else
 	let g:airline_symbols.maxlinenr = 'Ξ'
 	let g:airline_powerline_fonts = 1
+	let g:airline_symbols.keymap = '⌨'
 end
+" Add the keymap variable to airline
+if has('autocmd')
+	augroup airline_init
+		autocmd!
+		autocmd User AirlineAfterInit call s:airline_init()
+	augroup END
+endif
+function! GetKeymap()
+	if &keymap != ''
+		let s:keymap2print = ' ' . &keymap
+	else
+		let s:keymap2print = ''
+	endif
+	return printf('%s%s', g:airline_symbols.keymap, s:keymap2print)
+endfunction
+function! s:airline_init()
+	call airline#parts#define_function('keymap', 'GetKeymap')
+	let g:airline_section_a = airline#section#create_left(['mode', 'crypt', 'paste', 'spell', 'iminsert', 'keymap'])
+endfunction
 " }}}
 
 " {{{ devicons
