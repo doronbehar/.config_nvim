@@ -19,13 +19,9 @@ let g:NERDTreeMapJumpPrevSibling = ''
 
 " {{{ Airline:
 let g:airline#extensions#disable_rtp_load = 1
-let g:airline_section_c = 0
 let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#branch#enabled = 1
-let g:airline#extensions#branch#vcs_priority = ["git", "mercurial"]
 let g:airline#extensions#branch#format = 0
-let g:airline_extensions = ['tabline', 'branch']
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
