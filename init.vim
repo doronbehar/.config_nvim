@@ -105,8 +105,6 @@ if !exists(':packadd')
 	execute pathogen#infect()
 	" make reading help documents for Plugins easier:
 	Helptags
-else
-	execute('silent! helptags ALL')
 end
 
 " {{{1 Modeline
