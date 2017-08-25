@@ -1,5 +1,7 @@
 " {{{1 Uncategorized
-set nocompatible
+if !has('nvim')
+	set nocompatible
+end
 " Make any buffer able to be hidden even if not saved
 set hidden
 " no word wrap:
