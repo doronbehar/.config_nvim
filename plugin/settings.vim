@@ -31,6 +31,7 @@ let g:NERDTreeMapJumpPrevSibling = ''
 let g:airline#extensions#disable_rtp_load = 1
 let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#xkblayout#enabled = 1
 let g:airline#extensions#branch#format = 0
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
