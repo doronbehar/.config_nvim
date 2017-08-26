@@ -121,3 +121,6 @@
 [submodule "bundle/signify@mhinz"]
 	path = bundle/signify@mhinz
 	url = https://github.com/mhinz/vim-signify
+[submodule "bundle/xkbswitch@lyokha"]
+	path = bundle/xkbswitch@lyokha
+	url = https://github.com/lyokha/vim-xkbswitch

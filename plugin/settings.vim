@@ -1,3 +1,13 @@
+" {{{ xkbswitch
+let g:XkbSwitchEnabled = 1
+if has('unix')
+	let g:XkbSwitchLib = '/usr/local/lib/libxkbswitch.so'
+elseif has('mac')
+	let g:XkbSwitchLib = '/usr/local/lib/libInputSourceSwitcher.dylib'
+endif
+let g:XkbSwitchSkipFt = [ 'nerdtree' ]
+" }}}
+
 " {{{ NERDTree:
 let g:NERDTreeDirArrowExpandable = '»'
 let g:NERDTreeDirArrowCollapsible = '¬'
