@@ -22,9 +22,6 @@
 [submodule "bundle/tmux-navigator"]
 	path = bundle/tmux-navigator@christoomey
 	url = https://github.com/christoomey/vim-tmux-navigator
-[submodule "bundle/tpope-markdown"]
-	path = bundle/markdown@tpope
-	url = https://github.com/tpope/vim-markdown
 [submodule "bundle/devicons"]
 	path = bundle/devicons@ryanoasis
 	url = https://github.com/ryanoasis/vim-devicons
