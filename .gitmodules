@@ -97,9 +97,6 @@
 [submodule "bundle/dirdiff"]
 	path = bundle/dirdiff
 	url = https://github.com/will133/vim-dirdiff
-[submodule "bundle/togglelist"]
-	path = bundle/togglelist
-	url = https://github.com/milkypostman/vim-togglelist
 [submodule "bundle/pencil"]
 	path = bundle/pencil
 	url = https://github.com/reedes/vim-pencil
