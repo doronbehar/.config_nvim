@@ -18,7 +18,7 @@ nnoremap <leader><esc> :syntax sync fromstart<CR>
 " }}}
 
 " {{{ <leader>q : better way to enter Ex mode
-noremap <leader>q Q
+noremap <leader>Q Q
 map Q <nop>
 " }}}
 
@@ -31,7 +31,7 @@ inoremap <F12> <C-\><C-o>:call myfunctions#toggle_rtl()<CR>
 nnoremap <leader>m :call myfunctions#cycle_foldmethods()<CR>
 " }}}
 
-" {{{ <leader>w : toggle various wrap settings
+" {{{ <leader>p : toggle various wrap settings
 nnoremap <leader>p :call myfunctions#toggle_smartwrap()<CR>
 " }}}
 

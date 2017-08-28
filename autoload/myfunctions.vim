@@ -87,9 +87,9 @@ function! myfunctions#set_nosmartwrap()
 endfunction
 function! myfunctions#toggle_smartwrap()
 	if &wrap
-		call myfunctions#set_smartwrap()
-	else
 		call myfunctions#set_nosmartwrap()
+	else
+		call myfunctions#set_smartwrap()
 	endif
 endfunction
 
