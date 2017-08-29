@@ -1,10 +1,10 @@
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
-	url = https://github.com/tpope/vim-fugitive.git
+	url = https://github.com/tpope/vim-fugitive
 [submodule "bundle/csv"]
 	path = bundle/csv
-	url = https://github.com/chrisbra/csv.vim.git
-[submodule "bundle/tmux"]
+	url = https://github.com/chrisbra/csv.vim
+[submodule "bundle/tmux-syntax"]
 	path = bundle/tmux-syntax
 	url = https://github.com/zaiste/tmux.vim
 [submodule "bundle/easymotion"]
@@ -27,7 +27,7 @@
 	url = https://github.com/ryanoasis/vim-devicons
 [submodule "bundle/ncurses-syntax"]
 	path = bundle/ncurses-syntax
-	url = https://github.com/Doron-Behar/vim-ncurses-syntax
+	url = https://github.com/doronbehar/vim-ncurses-syntax
 [submodule "bundle/android"]
 	path = bundle/android
 	url = https://github.com/hsanson/vim-android
@@ -78,10 +78,10 @@
 	url = https://github.com/blueyed/vim-qf_resize
 [submodule "bundle/repeat"]
 	path = bundle/repeat
-	url = git@github.com:tpope/vim-repeat
+	url = https://github.com/tpope/vim-repeat
 [submodule "bundle/scriptease"]
 	path = bundle/scriptease
-	url = git@github.com:tpope/vim-scriptease
+	url = https://github.com/tpope/vim-scriptease
 [submodule "bundle/targets"]
 	path = bundle/targets
 	url = https://github.com/wellle/targets.vim
@@ -105,7 +105,7 @@
 	url = https://github.com/chikamichi/mediawiki.vim
 [submodule "bundle/emmet"]
 	path = bundle/emmet
-	url = git@github.com:mattn/emmet-vim
+	url = https://github.com/mattn/emmet-vim
 [submodule "bundle/pandoc"]
 	path = bundle/pandoc
 	url = https://github.com/vim-pandoc/vim-pandoc
@@ -120,4 +120,4 @@
 	url = https://github.com/lyokha/vim-xkbswitch
 [submodule "bundle/tex"]
 	path = bundle/tex
-	url = https://github.com/lervag/tex
+	url = https://github.com/lervag/vimtex
