@@ -6,7 +6,6 @@ elseif has('mac')
 	let g:XkbSwitchLib = '/usr/local/lib/libInputSourceSwitcher.dylib'
 endif
 let g:XkbSwitchSkipGhKeys = ['gh']
-let g:XkbSwitchSkipFt = [ 'nerdtree' ]
 " }}}
 
 " {{{ NERDTree:
