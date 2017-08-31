@@ -12,6 +12,8 @@ set splitbelow
 set splitright
 " When opening new files, look recursively into subdirectories
 set path+=**
+" The langugages I speak
+set spelllang=en,he
 
 " {{{1 Terminal
 " make the return to normal mode with escape not take too long and confuse me:

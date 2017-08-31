@@ -43,7 +43,7 @@ app
 SMS
 WiFi
 PulseAudio
-NeoVim
+#eoVim
 nvim
 lua
 Debian
@@ -69,3 +69,5 @@ RTL
 LTR
 CPU
 GPU
+NeoVim/!
+Neovim
