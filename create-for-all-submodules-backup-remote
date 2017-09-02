@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# This script creates a backup remote for all submodules, this backup remote name is given after the 1st and only argument to the script.
+# Tip: export `VERBOSE=1` when running it so you can view more messages of what's going on inside it.
+# Notes:
+# - The default path for the backup remote is currently `/mnt/2white/"$owner_of_repo_on_github"/"$name_of_the_repo_on_github"`.
+# - The script assumes all submodules are placed in `bundle/`.
+IFS=$'\n'
+
+BACKUP_REMOTE="$1"
+
+for i in bundle/*; do
+	remotes="$(git -C "$i" remote -v)"
+	[[ VERBOSE == 1 ]] && echo checking if one of the remotes on the currently checked submodule is named as requested: $BACKUP_REMOTE
+	if ! echo $remotes | grep -q $BACKUP_REMOTE; then
+		[[ VERBOSE == 1 ]] && echo submodule "$i" doesn\'t have a backup remote, we will add it with:
+		remotepath=$(echo $remotes | awk '$1 == "origin" {gsub(/(ssh|https):\/\/(git@)*github\.com\//, "",$2); print $2}')
+		[[ VERBOSE == 1 ]] && echo git -C "$i" remote add $BACKUP_REMOTE /mnt/2white/"$remotepath"
+		git -C "$i" remote add $BACKUP_REMOTE /mnt/2white/"$remotepath"
+	fi
+done
