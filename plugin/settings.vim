@@ -1,11 +1,13 @@
 " {{{ xkbswitch
-let g:XkbSwitchEnabled = 1
-if has('unix')
-	let g:XkbSwitchLib = '/usr/local/lib/libxkbswitch.so'
-elseif has('mac')
-	let g:XkbSwitchLib = '/usr/local/lib/libInputSourceSwitcher.dylib'
-endif
-let g:XkbSwitchSkipGhKeys = ['gh']
+if expand("$DISPLAY") != "$DISPLAY"
+	let g:XkbSwitchEnabled = 1
+	if has('unix')
+		let g:XkbSwitchLib = '/usr/local/lib/libxkbswitch.so'
+	elseif has('mac')
+		let g:XkbSwitchLib = '/usr/local/lib/libInputSourceSwitcher.dylib'
+	endif
+	let g:XkbSwitchSkipGhKeys = ['gh']
+end
 " }}}
 
 " {{{ NERDTree:
@@ -45,9 +47,7 @@ if expand("$DISPLAY") == "$DISPLAY"
 	let g:airline_symbols.whitespace = ' '
 	let g:airline#extensions#whitespace#symbol = '!'
 	let g:airline_symbols.keymap = 'KEYS:'
-	let g:airline#extensions#xkblayout#enabled = 1
 else
-	let g:airline#extensions#xkblayout#enabled = 0
 	let g:airline_symbols.maxlinenr = 'Ξ'
 	let g:airline_powerline_fonts = 1
 	let g:airline_symbols.keymap = '⌨'
