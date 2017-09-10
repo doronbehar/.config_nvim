@@ -58,8 +58,9 @@ end
 set laststatus=2
 " Hide the default mode text (e.g. -- INSERT -- below the statusline):
 set noshowmode
-" Change the Cursor shape for insert and other modes
-if has('nvim')
+" Change the Cursor shape for insert and other modes only when using nvim and
+" a gui terminal.
+if has('nvim') && expand("$DISPLAY") != "$DISPLAY"
 	set guicursor=n-v-c:block
 		\,i-ci-ve:ver25,r-cr:hor20,o:hor50
 		\,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
