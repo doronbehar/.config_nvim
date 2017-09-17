@@ -89,6 +89,10 @@ let g:peekaboo_ins_prefix = '<c-q>'
 if has('nvim')
 	let g:vimtex_compiler_progname = 'nvr'
 endif
+imap ysc <plug>(vimtex-cmd-create)
+omap ysc <plug>(vimtex-cmd-create)
+xmap ysc <plug>(vimtex-cmd-create)
+nmap ysc <plug>(vimtex-cmd-create)
 let g:tex_flavor = 'latex'
 let g:vimtex_fold_enabled = 1
 let g:vimtex_fold_types_defaults = {
