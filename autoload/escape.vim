@@ -3,7 +3,7 @@
 " Escape special characters in a string for exact matching.
 " This is useful to copying strings from the file to the search tool
 " Based on this - http://peterodding.com/code/vim/profile/autoload/xolox/escape.vim
-function! EscapeString (string)
+function! escape#string (string)
 	let string=a:string
 	" Escape regex characters
 	let string = escape(string, '^$.*\/~[]')
@@ -15,7 +15,7 @@ endfunction
 " Get the current visual block for search and replaces
 " This function passed the visual block through a string escape function
 " Based on this - http://stackoverflow.com/questions/676600/vim-replace-selected-text/677918#677918
-function! stackoverflow#a6171215#GetVisual() range
+function! escape#getvisual() range
 	" Save the current register and clipboard
 	let reg_save = getreg('"')
 	let regtype_save = getregtype('"')
@@ -28,6 +28,6 @@ function! stackoverflow#a6171215#GetVisual() range
 	call setreg('"', reg_save, regtype_save)
 	let &clipboard = cb_save
 	"Escape any special characters in the selection
-	let escaped_selection = EscapeString(selection)
+	let escaped_selection = escape#string(selection)
 	return escaped_selection
 endfunction
