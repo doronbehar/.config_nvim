@@ -1,0 +1,2 @@
+packadd emmet
+EmmetInstall
