@@ -1,2 +1,1 @@
-setlocal spell
-call myfunctions#toggle_smartwrap()
+call Prose()
