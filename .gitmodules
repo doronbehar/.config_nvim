@@ -124,3 +124,6 @@
 [submodule "bundle/texobj-quotes"]
 	path = bundle/texobj-quotes
 	url = https://github.com/beloglazov/vim-textobj-quotes
+[submodule "bundle/togglelist"]
+	path = bundle/togglelist
+	url = https://github.com/milkypostman/vim-togglelist

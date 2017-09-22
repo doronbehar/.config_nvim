@@ -15,9 +15,9 @@ set path+=**
 " The langugages I speak
 set spelllang=en,he
 
-" {{{1 Terminal
-" make the return to normal mode with escape not take too long and confuse me:
+" {{{1 keys timeout
 set timeoutlen=1000
+" make the return to normal mode with escape not take too long and confuse me:
 set ttimeoutlen=0
 
 " {{{1 search
@@ -30,12 +30,12 @@ if exists('&inccommand')
 	set inccommand=split
 end
 " Smart case: case-sensitive when uppercase, otherwise - not.
+set ignorecase
 set smartcase
 
 " {{{1 UI
 " Colors
 filetype plugin on
-filetype indent on
 set autoread
 syntax enable
 if expand("$DISPLAY") != "$DISPLAY"
@@ -80,6 +80,7 @@ set autoindent
 set smartindent
 set preserveindent
 set noexpandtab
+filetype indent on
 
 " {{{1 backup and restore
 set backupdir=~/.local/share/nvim/tmp//
