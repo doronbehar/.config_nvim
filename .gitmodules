@@ -127,3 +127,6 @@
 [submodule "bundle/togglelist"]
 	path = bundle/togglelist
 	url = https://github.com/milkypostman/vim-togglelist
+[submodule "bundle/css-color"]
+	path = bundle/css-color
+	url = https://github.com/ap/vim-css-color
