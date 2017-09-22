@@ -97,6 +97,12 @@ let g:windowswap_map_keys = 0 "prevent default bindings
 nnoremap <silent> <leader>b :call WindowSwap#EasyWindowSwap()<CR>
 " }}}
 
+" {{{ togglelist
+let g:toggle_list_no_mappings = 1
+autocmd FileType * if &ft != 'tex' | nmap <silent> <leader>l :call ToggleLocationList()<CR> | endif
+autocmd FileType * if &ft != 'tex' | nmap <silent> <leader>q :call ToggleQuickfixList()<CR> | endif
+" }}}
+
 " {{{ bbye
 cabbrev bd Bdelete
 cabbrev bdel Bdelete
