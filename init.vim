@@ -107,8 +107,6 @@ if !exists(':packadd')
 	runtime bundle/pathogen@tpope/autoload/pathogen.vim
 	let g:pathogen_disabled = ['']
 	execute pathogen#infect()
-	" make reading help documents for Plugins easier:
-	Helptags
 end
 
 " {{{1 Modeline
