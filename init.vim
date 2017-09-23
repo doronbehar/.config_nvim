@@ -39,6 +39,7 @@ filetype plugin on
 set autoread
 syntax enable
 if expand("$DISPLAY") != "$DISPLAY"
+	set termguicolors
 	colorscheme my
 else
 	colorscheme default
