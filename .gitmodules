@@ -130,3 +130,6 @@
 [submodule "bundle/css-color"]
 	path = bundle/css-color
 	url = https://github.com/ap/vim-css-color
+[submodule "bundle/open-url"]
+	path = bundle/open-url
+	url = https://github.com/dhruvasagar/vim-open-url
