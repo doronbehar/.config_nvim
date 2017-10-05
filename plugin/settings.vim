@@ -125,4 +125,9 @@ function! Prose()
 endfunction
 " }}}
 
+" {{{ open-url
+nmap gx <Plug>(open-url-browser)
+vmap gx <Plug>(open-url-browser)
+" }}}
+
 " vim:foldmethod=marker:ft=vim
