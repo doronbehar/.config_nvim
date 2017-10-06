@@ -39,12 +39,6 @@ filetype plugin on
 set autoread
 syntax enable
 if expand("$DISPLAY") != "$DISPLAY"
-	if expand('$TERM') == 'tmux-256color' && expand('$COLORTERM') == 'rxvt'
-		set termguicolors
-		if has('nvim')
-			let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-		end
-	end
 	colorscheme my
 else
 	colorscheme default
