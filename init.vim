@@ -79,7 +79,6 @@ set tabstop=4
 set autoindent
 set smartindent
 set preserveindent
-set noexpandtab
 filetype indent on
 
 " {{{1 backup and restore
