@@ -125,6 +125,10 @@ function! Prose()
 endfunction
 " }}}
 
+" {{{ tmux-navigator
+let g:tmux_navigator_disable_when_zoomed = 1
+" }}}
+
 " {{{ open-url
 nmap gx <Plug>(open-url-browser)
 vmap gx <Plug>(open-url-browser)
