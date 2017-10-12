@@ -133,3 +133,6 @@
 [submodule "bundle/open-url"]
 	path = bundle/open-url
 	url = https://github.com/dhruvasagar/vim-open-url
+[submodule "bundle/tmux-focus-events"]
+	path = bundle/tmux-focus-events
+	url = https://github.com/tmux-plugins/vim-tmux-focus-events
