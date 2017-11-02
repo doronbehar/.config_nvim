@@ -136,3 +136,6 @@
 [submodule "bundle/tmux-focus-events"]
 	path = bundle/tmux-focus-events
 	url = https://github.com/tmux-plugins/vim-tmux-focus-events
+[submodule "bundle/ale"]
+	path = bundle/ale
+	url = https://github.com/w0rp/ale
