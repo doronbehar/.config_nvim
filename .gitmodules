@@ -139,3 +139,6 @@
 [submodule "bundle/ale"]
 	path = bundle/ale
 	url = https://github.com/w0rp/ale
+[submodule "bundle/neovim-gui-shim"]
+	path = bundle/neovim-gui-shim
+	url = https://github.com/equalsraf/neovim-gui-shim
