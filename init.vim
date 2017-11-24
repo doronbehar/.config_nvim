@@ -104,6 +104,9 @@ set secure
 if isdirectory('/usr/share/vifm/vim')
 	set rtp+=/usr/share/vifm/vim
 end
+if isdirectory('/usr/share/vim/vimfiles')
+	set rtp+=/usr/share/vim/vimfiles
+end
 " External Plugins - use pathogen only for old versions of vim
 if !exists(':packadd')
 	runtime bundle/pathogen@tpope/autoload/pathogen.vim

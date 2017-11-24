@@ -49,9 +49,6 @@
 [submodule "bundle/tex"]
 	path = bundle/tex
 	url = https://github.com/lervag/vimtex
-[submodule "bundle/lilypond"]
-	path = bundle/lilypond
-	url = https://github.com/matze/vim-lilypond
 [submodule "bundle/push"]
 	path = bundle/push
 	url = https://github.com/glts/vim-push
