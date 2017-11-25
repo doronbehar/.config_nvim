@@ -122,9 +122,6 @@ let g:rooter_silent_chdir = 1
 
 " {{{ pencil
 let g:pencil#wrapModeDefault = 'soft'
-" vim-pandoc takes care of this well enough
-let g:pencil#conceallevel = 0
-let g:pencil#concealcursor = 'c'
 function! Prose()
 	packadd pencil
 	setlocal spell
