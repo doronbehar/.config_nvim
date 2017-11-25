@@ -1,8 +1,15 @@
 " {{{ xkbswitch
 if expand("$DISPLAY") != "$DISPLAY"
 	let g:XkbSwitchEnabled = 1
+	if !(has('win64') || has('win32') || has('win16'))
+		let g:os = system('uname -a')
+	endif
 	if has('unix')
-		let g:XkbSwitchLib = '/usr/local/lib/libxkbswitch.so'
+		if g:os =~ "ARCH"
+			let g:XkbSwitchLib = '/usr/lib/libxkbswitch.so'
+		else
+			let g:XkbSwitchLib = '/usr/local/lib/libxkbswitch.so'
+		endif
 	elseif has('mac')
 		let g:XkbSwitchLib = '/usr/local/lib/libInputSourceSwitcher.dylib'
 	endif
