@@ -10,10 +10,12 @@ function! rtl#set()
 	noremap <silent> <buffer> ge ge
 	noremap <silent> <buffer> gE gE
 	setlocal keymap=hebrew
-	setlocal listchars+=eol:⌐
-	if has('nvim')
-		set guicursor=
-	end
+	if expand("$DISPLAY") != "$DISPLAY"
+		setlocal listchars=tab:›\ ,trail:-,extends:»,precedes:«,eol:⌐
+		if has('nvim')
+			set guicursor=
+		endif
+	endif
 endfunction
 function! rtl#unset()
 	setlocal norightleft
@@ -26,13 +28,15 @@ function! rtl#unset()
 	noremap <silent> <buffer> e e
 	noremap <silent> <buffer> E E
 	setlocal keymap=
-	setlocal listchars+=eol:¬
-	if has('nvim') && expand("$DISPLAY") != "$DISPLAY"
-		set guicursor=n-v-c:block
-			\,i-ci-ve:ver25,r-cr:hor20,o:hor50
-			\,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
-			\,sm:block-blinkwait175-blinkoff150-blinkon175
-	end
+	if expand("$DISPLAY") != "$DISPLAY"
+		setlocal listchars=tab:›\ ,trail:-,extends:»,precedes:«,eol:¬
+		if has('nvim')
+			set guicursor=n-v-c:block
+				\,i-ci-ve:ver25,r-cr:hor20,o:hor50
+				\,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
+				\,sm:block-blinkwait175-blinkoff150-blinkon175
+		endif
+	endif
 endfunction
 function! rtl#toggle()
 	if &rightleft
