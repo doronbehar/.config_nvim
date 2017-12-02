@@ -6,4 +6,10 @@ au BufNewFile,BufRead ~/.mozilla/firefox/*/itsalltext/github.com_*_*_issues_* se
 au BufNewFile,BufRead ~/.mozilla/firefox/*/itsalltext/*.wikipedia.org_w_index.php.* setf mediawiki
 au BufNewFile,BufRead ~/.mozilla/firefox/*/itsalltext/* setf itsalltext
 
+au BufNewFile,BufRead /tmp/ghost-*stackexchange.com* setf markdown
+au BufNewFile,BufRead /tmp/ghost-stackoverflow.com* setf markdown
+au BufNewFile,BufRead /tmp/ghost-github.com* setf markdown
+au BufNewFile,BufRead /tmp/ghost-*wikipedia.org* setf mediawiki
+au BufNewFile,BufRead /tmp/ghost-* setf itsalltext
+
 au BufNewFile,BufRead /tmp/rtv_* setf markdown
