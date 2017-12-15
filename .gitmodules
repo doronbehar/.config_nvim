@@ -139,3 +139,6 @@
 [submodule "bundle/neovim-gui-shim"]
 	path = bundle/neovim-gui-shim
 	url = https://github.com/equalsraf/neovim-gui-shim
+[submodule "bundle/ghost"]
+	path = bundle/ghost
+	url = https://github.com/raghur/vim-ghost
