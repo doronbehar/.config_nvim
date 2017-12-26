@@ -126,6 +126,7 @@ function! Prose()
 	packadd pencil
 	setlocal spell
 	let g:airline_section_x = '%{PencilMode()}'
+	Pencil
 endfunction
 " }}}
 
