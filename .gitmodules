@@ -142,3 +142,6 @@
 [submodule "bundle/ghost"]
 	path = bundle/ghost
 	url = https://github.com/raghur/vim-ghost
+[submodule "bundle/highlitedyank"]
+	path = bundle/highlitedyank
+	url = https://github.com/machakann/vim-highlightedyank

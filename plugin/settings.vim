@@ -139,4 +139,11 @@ nmap gx <Plug>(open-url-browser)
 vmap gx <Plug>(open-url-browser)
 " }}}
 
+" {{{ highlitedyank
+let g:highlightedyank_highlight_duration = 250
+if !exists('##TextYankPost')
+	map y <Plug>(highlitedyank)
+endif
+" }}}
+
 " vim:foldmethod=marker:ft=vim
