@@ -120,16 +120,6 @@ cabbrev bdelete Bdelete
 let g:rooter_silent_chdir = 1
 " }}}
 
-" {{{ pencil
-let g:pencil#wrapModeDefault = 'soft'
-function! Prose()
-	packadd pencil
-	setlocal spell
-	let g:airline_section_x = '%{PencilMode()}'
-	Pencil
-endfunction
-" }}}
-
 " {{{ tmux-navigator
 let g:tmux_navigator_disable_when_zoomed = 1
 " }}}

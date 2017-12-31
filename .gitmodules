@@ -94,9 +94,6 @@
 [submodule "bundle/dirdiff"]
 	path = bundle/dirdiff
 	url = https://github.com/will133/vim-dirdiff
-[submodule "bundle/pencil"]
-	path = bundle/pencil
-	url = https://github.com/reedes/vim-pencil
 [submodule "bundle/mediawiki"]
 	path = bundle/mediawiki
 	url = https://github.com/chikamichi/mediawiki.vim
