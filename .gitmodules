@@ -142,3 +142,6 @@
 [submodule "bundle/highlitedyank"]
 	path = bundle/highlitedyank
 	url = https://github.com/machakann/vim-highlightedyank
+[submodule "bundle/orgmode"]
+	path = bundle/orgmode
+	url = https://github.com/jceb/vim-orgmode
