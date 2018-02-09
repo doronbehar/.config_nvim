@@ -141,4 +141,8 @@ if !exists('##TextYankPost')
 endif
 " }}}
 
+" {{{ editorconfig
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+" }}}
+
 " vim:foldmethod=marker:ft=vim

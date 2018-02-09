@@ -145,3 +145,6 @@
 [submodule "bundle/orgmode"]
 	path = bundle/orgmode
 	url = https://github.com/jceb/vim-orgmode
+[submodule "bundle/editorconfig"]
+	path = bundle/editorconfig
+	url = https://github.com/editorconfig/editorconfig-vim
