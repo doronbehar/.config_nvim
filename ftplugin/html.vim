@@ -1,2 +1,1 @@
-packadd emmet
 EmmetInstall

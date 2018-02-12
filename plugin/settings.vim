@@ -145,4 +145,8 @@ endif
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 " }}}
 
+" {{{ emmet
+let g:user_emmet_install_global = 0
+" }}}
+
 " vim:foldmethod=marker:ft=vim
