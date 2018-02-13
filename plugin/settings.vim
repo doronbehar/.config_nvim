@@ -155,4 +155,8 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_insert_leave = 1
 " }}}
 
+" {{{ pandoc
+let g:pandoc#command#templates_file = split(&runtimepath, ',')[0] . '/pandoc-templates'
+" }}}
+
 " vim:foldmethod=marker:ft=vim
