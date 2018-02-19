@@ -164,4 +164,8 @@ let g:NERDSpaceDelims = 1
 let g:NERDComDefaultDelims = 1
 " }}}
 
+" {{{ fugitive
+command! Gcommend Gcommit --amend --no-edit
+" }}}
+
 " vim:foldmethod=marker:ft=vim
