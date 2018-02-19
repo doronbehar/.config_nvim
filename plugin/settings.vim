@@ -159,4 +159,9 @@ let g:ale_lint_on_insert_leave = 1
 let g:pandoc#command#templates_file = split(&runtimepath, ',')[0] . '/pandoc-templates'
 " }}}
 
+" {{{ nerdcommenter
+let g:NERDSpaceDelims = 1
+let g:NERDComDefaultDelims = 1
+" }}}
+
 " vim:foldmethod=marker:ft=vim
