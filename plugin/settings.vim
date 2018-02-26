@@ -168,4 +168,8 @@ let g:NERDComDefaultDelims = 1
 command! Gcommend Gcommit --amend --no-edit
 " }}}
 
+" {{{ gundo
+nnoremap <F5> :GundoToggle<CR>
+" }}}
+
 " vim:foldmethod=marker:ft=vim
