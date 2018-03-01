@@ -153,6 +153,7 @@ let g:user_emmet_install_global = 0
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_insert_leave = 1
+let g:ale_html_tidy_options = '--config ~/.config/nvim/tidyrc'
 " }}}
 
 " {{{ pandoc
