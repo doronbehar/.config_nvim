@@ -1,1 +1,2 @@
 EmmetInstall
+setlocal foldmethod=syntax
