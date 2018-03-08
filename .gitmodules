@@ -112,9 +112,6 @@
 [submodule "bundle/xkbswitch"]
 	path = bundle/xkbswitch
 	url = https://github.com/lyokha/vim-xkbswitch
-[submodule "bundle/tex"]
-	path = bundle/tex
-	url = https://github.com/lervag/vimtex
 [submodule "bundle/texobj-quotes"]
 	path = bundle/texobj-quotes
 	url = https://github.com/beloglazov/vim-textobj-quotes
