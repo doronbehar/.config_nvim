@@ -1,5 +1,6 @@
 " {{{ xkbswitch
-if expand("$DISPLAY") != "$DISPLAY"
+if expand("$DISPLAY") != "$DISPLAY" && expand('$SSH_CLIENT') == '$SSH_CLIENT'
+	packadd xkbswitch
 	let g:XkbSwitchEnabled = 1
 	if !(has('win64') || has('win32') || has('win16'))
 		let g:os = system('uname -a')
