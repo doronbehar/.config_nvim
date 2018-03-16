@@ -35,7 +35,6 @@ set smartcase
 
 " {{{1 UI
 " Colors
-filetype plugin on
 set autoread
 syntax enable
 if expand("$DISPLAY") != "$DISPLAY"
@@ -82,7 +81,6 @@ set tabstop=4
 set autoindent
 set smartindent
 set preserveindent
-filetype indent on
 
 " {{{1 backup and restore
 set backupdir=~/.local/share/nvim/tmp//

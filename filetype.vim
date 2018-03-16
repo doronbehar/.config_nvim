@@ -1,6 +1,8 @@
 au BufNewFile,BufRead *.rockspec let g:ale_lua_luacheck_options = '--std rockspec'
 au BufNewFile,BufRead .luacheckrc setf lua | let g:ale_lua_luacheck_options = '--no-globals'
 
+au BufNewFile,BufRead */.config/systemd/user/* au BufWritePost <buffer> !systemctl --user daemon-reload
+
 au BufNewFile,BufRead *.vifm setf vifm
 
 au BufNewFile,BufRead ~/.mozilla/firefox/*/itsalltext/*stackexchange.com_* setf markdown
