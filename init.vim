@@ -14,6 +14,7 @@ set splitright
 set path+=**
 " The langugages I speak
 set spelllang=en,he
+filetype plugin on
 
 " {{{1 keys timeout
 set timeoutlen=1000
@@ -81,6 +82,7 @@ set tabstop=4
 set autoindent
 set smartindent
 set preserveindent
+filetype indent on
 
 " {{{1 backup and restore
 set backupdir=~/.local/share/nvim/tmp//
