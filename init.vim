@@ -15,6 +15,8 @@ set path+=**
 " The langugages I speak
 set spelllang=en,he
 filetype plugin on
+" Default tex flavor
+let g:tex_flavor = 'latex'
 
 " {{{1 keys timeout
 set timeoutlen=1000
