@@ -113,7 +113,7 @@
 	path = bundle/xkbswitch
 	url = https://github.com/lyokha/vim-xkbswitch
 [submodule "bundle/texobj-quotes"]
-	path = bundle/texobj-quotes
+	path = bundle/textobj-quotes
 	url = https://github.com/beloglazov/vim-textobj-quotes
 [submodule "bundle/togglelist"]
 	path = bundle/togglelist
