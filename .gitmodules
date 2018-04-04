@@ -121,9 +121,6 @@
 [submodule "bundle/css-color"]
 	path = bundle/css-color
 	url = https://github.com/ap/vim-css-color
-[submodule "bundle/open-url"]
-	path = bundle/open-url
-	url = https://github.com/dhruvasagar/vim-open-url
 [submodule "bundle/tmux-focus-events"]
 	path = bundle/tmux-focus-events
 	url = https://github.com/tmux-plugins/vim-tmux-focus-events
@@ -160,3 +157,12 @@
 [submodule "bundle/abolish"]
 	path = bundle/abolish
 	url = https://github.com/tpope/vim-abolish
+[submodule "bundle/visualrepeat"]
+	path = bundle/visualrepeat
+	url = https://github.com/vim-scripts/visualrepeat
+[submodule "bundle/open-browser"]
+	path = bundle/open-browser
+	url = https://github.com/tyru/open-browser.vim
+[submodule "bundle/open-browser-github"]
+	path = bundle/open-browser-github
+	url = https://github.com/tyru/open-browser-github.vim
