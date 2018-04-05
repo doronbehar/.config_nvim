@@ -163,9 +163,6 @@
 [submodule "bundle/open-browser"]
 	path = bundle/open-browser
 	url = https://github.com/tyru/open-browser.vim
-[submodule "bundle/open-browser-github"]
-	path = bundle/open-browser-github
-	url = https://github.com/tyru/open-browser-github.vim
 [submodule "bundle/textobj-latex"]
 	path = bundle/textobj-latex
 	url = https://github.com/rbonvall/vim-textobj-latex
@@ -184,3 +181,6 @@
 [submodule "bundle/rhubarb"]
 	path = bundle/rhubarb
 	url = https://github.com/tpope/vim-rhubarb
+[submodule "bundle/fugitive-gitlab"]
+	path = bundle/fugitive-gitlab
+	url = https://github.com/shumphrey/fugitive-gitlab.vim
