@@ -1,1 +1,2 @@
+github|html5 --from=markdown_github --standalone --template=github
 mail_html|html --webtex --standalone --from=markdown
