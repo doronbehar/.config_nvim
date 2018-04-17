@@ -184,3 +184,6 @@
 [submodule "bundle/fugitive-gitlab"]
 	path = bundle/fugitive-gitlab
 	url = https://github.com/shumphrey/fugitive-gitlab.vim
+[submodule "bundle/neomutt"]
+	path = bundle/neomutt
+	url = https://github.com/neomutt/neomutt.vim
