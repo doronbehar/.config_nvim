@@ -187,3 +187,6 @@
 [submodule "bundle/neomutt"]
 	path = bundle/neomutt
 	url = https://github.com/neomutt/neomutt.vim
+[submodule "bundle/AnsiEsc"]
+	path = bundle/AnsiEsc
+	url = https://github.com/vim-scripts/AnsiEsc.vim
