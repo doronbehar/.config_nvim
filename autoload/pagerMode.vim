@@ -8,7 +8,7 @@ function! pagerMode#unset()
 	unmap k
 endfunction
 function! pagerMode#toggle()
-	if mapcheck("j") != ""
+	if mapcheck('j') !=# ''
 		call pagerMode#unset()
 	else
 		call pagerMode#set()

@@ -8,12 +8,12 @@ setlocal path+=node_modules
 setlocal suffixesadd+=.js,.jsx
 
 function! s:load_main_node_module(fname)
-	let node_modules = "./node_modules/"
-	let package_json_path = node_modules . a:fname . '/package.json'
-	if filereadable(package_json_path)
-		return node_modules . a:fname . "/" . json_decode(join(readfile(package_json_path))).main
+	let l:node_modules = './node_modules/'
+	let l:package_json_path = l:node_modules . a:fname . '/package.json'
+	if filereadable(l:package_json_path)
+		return l:node_modules . a:fname . '/' . json_decode(join(readfile(l:package_json_path))).main
 	else
-		return node_modules . a:fname
+		return l:node_modules . a:fname
 	endif
 endfunction
 

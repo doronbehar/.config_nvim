@@ -17,5 +17,5 @@ function! foldmethods#cycle()
 			let s:index = s:index + 1
 		endif
 	endwhile
-	echo "Foldmethod is"&fdm "Now"
+	echo 'Foldmethod is'&foldmethod 'Now'
 endfunction

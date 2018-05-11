@@ -17,17 +17,17 @@ endfunction
 " Based on this - http://stackoverflow.com/questions/676600/vim-replace-selected-text/677918#677918
 function! escape#getvisual() range
 	" Save the current register and clipboard
-	let reg_save = getreg('"')
-	let regtype_save = getregtype('"')
-	let cb_save = &clipboard
+	let l:reg_save = getreg('"')
+	let l:regtype_save = getregtype('"')
+	let l:cb_save = &clipboard
 	set clipboard&
 	" Put the current visual selection in the " register
 	normal! ""gvy
-	let selection = getreg('"')
+	let l:selection = getreg('"')
 	" Put the saved registers and clipboards back
-	call setreg('"', reg_save, regtype_save)
-	let &clipboard = cb_save
-	"Escape any special characters in the selection
-	let escaped_selection = escape#string(selection)
-	return escaped_selection
+	call setreg('"', l:reg_save, l:regtype_save)
+	let &clipboard = l:cb_save
+	"Escape any special characters in the l:selection
+	let l:escaped_selection = escape#string(l:selection)
+	return l:escaped_selection
 endfunction

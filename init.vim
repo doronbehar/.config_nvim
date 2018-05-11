@@ -1,7 +1,4 @@
 " {{{1 Uncategorized
-if !has('nvim')
-	set nocompatible
-end
 " Make any buffer able to be hidden even if not saved
 set hidden
 " no word wrap:
@@ -40,7 +37,7 @@ set smartcase
 " Colors
 set autoread
 syntax enable
-if expand("$DISPLAY") != "$DISPLAY"
+if expand('$DISPLAY') !=# '$DISPLAY'
 	colorscheme my
 else
 	colorscheme default
@@ -49,7 +46,7 @@ set background=dark
 " Always display the tabline, even if there is only one tab:
 set showtabline=2
 set list
-if expand("$DISPLAY") != "$DISPLAY"
+if expand('$DISPLAY') !=# '$DISPLAY'
 	set showbreak=ˆ
 	set listchars=tab:›\ ,trail:-,extends:»,precedes:«,eol:¬
 else
@@ -62,7 +59,7 @@ set laststatus=2
 set noshowmode
 " Change the Cursor shape for insert and other modes only when using nvim and
 " a gui terminal.
-if has('nvim') && expand("$DISPLAY") != "$DISPLAY"
+if has('nvim') && expand('$DISPLAY') !=# '$DISPLAY'
 	set guicursor=n-v-c:block
 		\,i-ci-ve:ver25,r-cr:hor20,o:hor50
 		\,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
@@ -104,10 +101,10 @@ set secure
 " {{{1 runtime
 " Add vifm runtime files to rtp:
 if isdirectory('/usr/share/vifm/vim')
-	set rtp+=/usr/share/vifm/vim
+	set runtimepath+=/usr/share/vifm/vim
 end
 if isdirectory('/usr/share/vim/vimfiles')
-	set rtp+=/usr/share/vim/vimfiles
+	set runtimepath+=/usr/share/vim/vimfiles
 end
 " External Plugins - use pathogen only for old versions of vim
 if !exists(':packadd')

@@ -1,9 +1,9 @@
 hi clear
 set background=dark
-if exists("syntax_on")
+if exists('syntax_on')
   syntax reset
 endif
-let g:colors_name = "my"
+let g:colors_name = 'my'
 
 hi Boolean			term=none				cterm=none				ctermfg=165
 hi Character		term=bold				cterm=bold				ctermfg=125

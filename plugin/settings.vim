@@ -1,12 +1,12 @@
 " {{{ xkbswitch
-if expand("$DISPLAY") != "$DISPLAY" && expand('$SSH_CLIENT') == '$SSH_CLIENT'
+if expand('$DISPLAY') !=# '$DISPLAY' && expand('$SSH_CLIENT') ==# '$SSH_CLIENT'
 	packadd xkbswitch
 	let g:XkbSwitchEnabled = 1
 	if !(has('win64') || has('win32') || has('win16'))
 		let g:os = system('uname -a')
 	endif
 	if has('unix')
-		if g:os =~ "ARCH"
+		if g:os =~# 'ARCH'
 			let g:XkbSwitchLib = '/usr/lib/libxkbswitch.so'
 		else
 			let g:XkbSwitchLib = '/usr/local/lib/libxkbswitch.so'
@@ -25,7 +25,7 @@ let g:NERDTreeShowHidden = 1
 let g:NERDTreeAutoDeleteBuffer = 1
 let g:NERDTreeCaseSensitiveSort = 1
 let g:NERDTreeShowLineNumbers = 1
-let g:NERDTreeBookmarksFile = expand("$HOME/.local/share/nvim/NERDTreeBookmarks")
+let g:NERDTreeBookmarksFile = expand('$HOME/.local/share/nvim/NERDTreeBookmarks')
 " - disable Netrw:
 let g:NERDTreeHijackNetrw = 1
 let g:loaded_netrwPlugin = 1
@@ -45,7 +45,7 @@ let g:airline#extensions#branch#format = 0
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
-if expand("$DISPLAY") == "$DISPLAY"
+if expand('$DISPLAY') ==# '$DISPLAY'
 	let g:airline_powerline_ascii = 1
 	let g:airline_symbols.maxlinenr = ''
 	let g:airline_symbols.linenr = ' '
@@ -62,7 +62,7 @@ end
 " }}}
 
 " {{{ devicons
-if expand("$DISPLAY") == "$DISPLAY"
+if expand('$DISPLAY') ==# '$DISPLAY'
 	let g:webdevicons_enable = 0
 end
 " }}}
@@ -81,13 +81,13 @@ let g:EasyMotion_keys = 'asdfghjklqweruio'
 " }}}
 
 " {{{ Android:
-let g:android_sdk_path = expand("$ANDROID_HOME")
+let g:android_sdk_path = expand('$ANDROID_HOME')
 " }}}
 
 " {{{ peekaboo
 " Compact display; do not display the names of the register groups
 let g:peekaboo_compact = 1
-let g:peekaboo_window = "enew"
+let g:peekaboo_window = 'enew'
 let g:peekaboo_prefix = '<leader>'
 let g:peekaboo_ins_prefix = '<c-q>'
 " }}}
@@ -106,8 +106,10 @@ nnoremap <silent> <leader>b :call WindowSwap#EasyWindowSwap()<CR>
 
 " {{{ togglelist
 let g:toggle_list_no_mappings = 1
-autocmd FileType * if &ft != 'tex' | nmap <silent> <leader>l :call ToggleLocationList()<CR> | endif
-autocmd FileType * if &ft != 'tex' | nmap <silent> <leader>q :call ToggleQuickfixList()<CR> | endif
+augroup toggleList
+	autocmd FileType * if &ft != 'tex' | nmap <silent> <leader>l :call ToggleLocationList()<CR> | endif
+	autocmd FileType * if &ft != 'tex' | nmap <silent> <leader>q :call ToggleQuickfixList()<CR> | endif
+augroup END
 " }}}
 
 " {{{ bbye
