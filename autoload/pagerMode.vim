@@ -1,11 +1,11 @@
 " {{{1 Toggle pager mode
 function! pagerMode#set()
-	nnoremap j <C-e>
-	nnoremap k <C-y>
+	nnoremap <silent> <buffer> j <C-e>
+	nnoremap <silent> <buffer> k <C-y>
 endfunction
 function! pagerMode#unset()
-	unmap j
-	unmap k
+	silent! unmap <silent> <buffer> j
+	silent! unmap <silent> <buffer> k
 endfunction
 function! pagerMode#toggle()
 	if mapcheck('j') !=# ''
