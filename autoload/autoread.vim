@@ -1,5 +1,5 @@
-function! autoreadFile#set()
-	augroup autoreadFile
+function! autoread#set()
+	augroup autoread
 		" Triger `autoread` when files changes on disk
 		" https://unix.stackexchange.com/questions/149209/refresh-changed-content-of-file-opened-in-vim/383044#383044
 		" https://vi.stackexchange.com/questions/13692/prevent-focusgained-autocmd-running-in-command-line-editing-mode
@@ -10,14 +10,14 @@ function! autoreadFile#set()
 	augroup END
 endfunction
 
-function! autoreadFile#unset()
-	augroup! autoreadFile
+function! autoread#unset()
+	augroup! autoread
 endfunction
 
-function! autoreadFile#toggle()
-	if exists('#autoreadFile')
-		call autoreadFile#unset()
+function! autoread#toggle()
+	if exists('#autoread')
+		call autoread#unset()
 	else
-		call autoreadFile#set()
+		call autoread#set()
 	endif
 endfunction

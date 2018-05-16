@@ -1,17 +1,17 @@
 " {{{1 Toggle pager mode
-function! pagerMode#set()
+function! pager#set()
 	nnoremap <silent> <buffer> j <C-e>
 	nnoremap <silent> <buffer> k <C-y>
 endfunction
-function! pagerMode#unset()
+function! pager#unset()
 	silent! unmap <silent> <buffer> j
 	silent! unmap <silent> <buffer> k
 endfunction
-function! pagerMode#toggle()
+function! pager#toggle()
 	if mapcheck('j') !=# ''
-		call pagerMode#unset()
+		call pager#unset()
 	else
-		call pagerMode#set()
+		call pager#set()
 	endif
 endfunction
 
