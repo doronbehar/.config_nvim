@@ -2,7 +2,9 @@ au BufNewFile,BufRead *.rockspec let g:ale_lua_luacheck_options = '--std rockspe
 au BufNewFile,BufRead .luacheckrc setf lua | let g:ale_lua_luacheck_options = '--no-globals'
 
 augroup systemdDaemonReload
-	au! BufNewFile,BufRead */.config/systemd/user/* au BufWritePost <buffer> !systemctl --user daemon-reload
+	au! BufNewFile,BufRead */.config/systemd/user/*.service au BufWritePost <buffer> !systemctl --user daemon-reload
+	au! BufNewFile,BufRead */.config/systemd/user/*.timer au BufWritePost <buffer> !systemctl --user daemon-reload
+	au! BufNewFile,BufRead */.config/systemd/user/*.target au BufWritePost <buffer> !systemctl --user daemon-reload
 augroup END
 
 augroup desktopDbReload
