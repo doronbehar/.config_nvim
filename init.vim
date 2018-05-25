@@ -74,6 +74,10 @@ set mouse=a
 set foldenable
 set foldmethod=indent
 set foldcolumn=2
+" set lazyredraw only on ssh
+if expand('$SSH_CLIENT') !=# '$SSH_CLIENT'
+	set lazyredraw
+endif
 
 " {{{1 tab's and indentation preferences:
 set shiftwidth=4
