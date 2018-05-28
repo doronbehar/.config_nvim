@@ -190,3 +190,6 @@
 [submodule "bundle/AnsiEsc"]
 	path = bundle/AnsiEsc
 	url = https://github.com/vim-scripts/AnsiEsc.vim
+[submodule "bundle/YouCompleteMe"]
+	path = bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe
