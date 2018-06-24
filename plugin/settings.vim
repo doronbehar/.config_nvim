@@ -178,4 +178,8 @@ command! Gcommend Gcommit --amend --no-edit
 nnoremap <F5> :GundoToggle<CR>
 " }}}
 
+" {{{ YouCompleteMe
+let g:ycm_autoclose_preview_window_after_completion = 1
+" }}}
+
 " vim:foldmethod=marker:ft=vim
