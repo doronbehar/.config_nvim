@@ -199,3 +199,6 @@
 [submodule "bundle/SimpylFold"]
 	path = bundle/SimpylFold
 	url = https://github.com/tmhedberg/SimpylFold
+[submodule "bundle/info"]
+	path = bundle/info
+	url = https://gitlab.com/HiPhish/info.vim
