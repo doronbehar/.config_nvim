@@ -163,6 +163,8 @@ let g:ale_html_tidy_options = '--config ~/.config/nvim/tidyrc'
 let g:pandoc#command#templates_file = split(&runtimepath, ',')[0] . '/pandoc-templates'
 command! -nargs=0 PAT call pandoc_vars#toggle_autoexec_on_writes()
 command! -nargs=+ PAC call pandoc_vars#set_autoexec_command(<f-args>)
+" Make sure I can diffrentiate between a '*' and a '-' in lists.
+let g:pandoc#syntax#conceal#blacklist = [ 'list' ]
 " }}}
 
 " {{{ nerdcommenter
