@@ -57,17 +57,6 @@ end
 set laststatus=2
 " Hide the default mode text (e.g. -- INSERT -- below the statusline):
 set noshowmode
-" Change the Cursor shape for insert and other modes only when using nvim and
-" a gui terminal.
-if has('nvim') && expand('$DISPLAY') !=# '$DISPLAY'
-	set guicursor=n-v-c:block
-		\,i-ci-ve:ver25,r-cr:hor20,o:hor50
-		\,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
-		\,sm:block-blinkwait175-blinkoff150-blinkon175
-	if exists(':packadd')
-		packadd neovim-gui-shim
-	end
-end
 " enable mouse actions
 set mouse=a
 " folds
@@ -115,6 +104,11 @@ if !exists(':packadd')
 	runtime bundle/pathogen@tpope/autoload/pathogen.vim
 	let g:pathogen_disabled = ['']
 	execute pathogen#infect()
+end
+if has('nvim') 
+	runtime only.nvim
+else
+	runtime only.vim
 end
 
 " {{{1 Modeline
