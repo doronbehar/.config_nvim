@@ -101,7 +101,7 @@ if isdirectory('/usr/share/vim/vimfiles')
 end
 " External Plugins - use pathogen only for old versions of vim
 if !exists(':packadd')
-	runtime bundle/pathogen@tpope/autoload/pathogen.vim
+	runtime bundle/pathogen/autoload/pathogen.vim
 	let g:pathogen_disabled = ['']
 	execute pathogen#infect()
 end
