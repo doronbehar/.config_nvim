@@ -208,3 +208,6 @@
 [submodule "bundle/suda"]
 	path = bundle/suda
 	url = https://github.com/lambdalisue/suda.vim
+[submodule "bundle/tradewinds"]
+	path = bundle/tradewinds
+	url = https://github.com/andymass/vim-tradewinds
