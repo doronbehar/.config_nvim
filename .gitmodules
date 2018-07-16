@@ -55,9 +55,6 @@
 [submodule "bundle/bufexplorer"]
 	path = bundle/bufexplorer
 	url = https://github.com/jlanzarotta/bufexplorer
-[submodule "bundle/surround"]
-	path = bundle/surround
-	url = https://github.com/tpope/vim-surround
 [submodule "bundle/speeddating"]
 	path = bundle/speeddating
 	url = https://github.com/tpope/vim-speeddating
@@ -163,9 +160,6 @@
 [submodule "bundle/open-browser"]
 	path = bundle/open-browser
 	url = https://github.com/tyru/open-browser.vim
-[submodule "bundle/textobj-latex"]
-	path = bundle/textobj-latex
-	url = https://github.com/rbonvall/vim-textobj-latex
 [submodule "bundle/textobj-underscore"]
 	path = bundle/textobj-underscore
 	url = https://github.com/lucapette/vim-textobj-underscore
@@ -211,3 +205,6 @@
 [submodule "bundle/tradewinds"]
 	path = bundle/tradewinds
 	url = https://github.com/andymass/vim-tradewinds
+[submodule "bundle/sandwich"]
+	path = bundle/sandwich
+	url = https://github.com/machakann/vim-sandwich
