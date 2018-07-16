@@ -18,3 +18,11 @@ function! s:load_main_node_module(fname)
 endfunction
 
 setlocal includeexpr=s:load_main_node_module(v:fname)
+set tags+=javascript_tags
+if has('cscope')
+	if filereadable('javascript_cscope.out')
+		silent cs add javascript_cscope.out
+		set cscopetag
+		set cscopetagorder=0
+	endif
+endif

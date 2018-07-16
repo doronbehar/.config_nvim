@@ -208,3 +208,6 @@
 [submodule "bundle/sandwich"]
 	path = bundle/sandwich
 	url = https://github.com/machakann/vim-sandwich
+[submodule "bundle/codequery"]
+	path = bundle/codequery
+	url = https://github.com/devjoe/vim-codequery
