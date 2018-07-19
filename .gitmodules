@@ -211,3 +211,6 @@
 [submodule "bundle/codequery"]
 	path = bundle/codequery
 	url = https://github.com/devjoe/vim-codequery
+[submodule "bundle/vader"]
+	path = bundle/vader
+	url = https://github.com/junegunn/vader.vim
