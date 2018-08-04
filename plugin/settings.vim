@@ -1,12 +1,10 @@
 " {{{ xkbswitch
 if expand('$DISPLAY') !=# '$DISPLAY' && expand('$SSH_CLIENT') ==# '$SSH_CLIENT'
-	packadd xkbswitch
-	let g:XkbSwitchEnabled = 1
 	if !(has('win64') || has('win32') || has('win16'))
 		let g:os = system('uname -a')
 	endif
 	if has('unix')
-		if g:os =~# 'ARCH'
+		if g:os =~# 'Linux' && !exists('g:XkbSwitchLib')
 			let g:XkbSwitchLib = '/usr/lib/libxkbswitch.so'
 		else
 			let g:XkbSwitchLib = '/usr/local/lib/libxkbswitch.so'
@@ -15,6 +13,12 @@ if expand('$DISPLAY') !=# '$DISPLAY' && expand('$SSH_CLIENT') ==# '$SSH_CLIENT'
 		let g:XkbSwitchLib = '/usr/local/lib/libInputSourceSwitcher.dylib'
 	endif
 	let g:XkbSwitchSkipGhKeys = ['gh']
+	if filereadable(g:XkbSwitchLib)
+		packadd xkbswitch
+		let g:XkbSwitchEnabled = 1
+	else
+		echoerr "couldn't load Xkbswitch since it's share library object was not found"
+	endif
 end
 " }}}
 
