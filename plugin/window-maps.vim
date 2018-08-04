@@ -19,6 +19,7 @@ if has('nvim')
 	tnoremap <C-l> <C-\><C-n><C-w>l
 	tnoremap <C-j> <C-\><C-n><C-w>j
 	tnoremap <C-k> <C-\><C-n><C-w>k
+	tnoremap <C-\> <C-\><C-n>
 	augroup terminalAutoInsert
 		au!
 		autocmd WinEnter *
