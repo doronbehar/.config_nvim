@@ -123,13 +123,7 @@ cabbrev bdelete Bdelete
 " }}}
 
 " {{{ Rooter
-let g:rooter_silent_chdir = 1
-let g:rooter_patterns = ['src/', '.git', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/']
 let g:rooter_manual_only = 1
-augroup rooter
-  autocmd!
-  autocmd VimEnter,BufEnter * :call setbufvar('%', 'rootDir', '') | :Rooter
-augroup END
 " }}}
 
 " {{{ tmux-navigator
