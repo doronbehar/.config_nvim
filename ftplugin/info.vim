@@ -1,4 +1,4 @@
-nnoremap u <Plug>(InfoUp)
-nnoremap ] <Plug>(InfoNext)
-nnoremap [ <Plug>(InfoPrev)
-nnoremap g0 <Plug>(InfoMenu)
+nnoremap u :InfoUp<CR>
+nnoremap ] :InfoNext<CR>
+nnoremap [ :InfoPrev<CR>
+nnoremap g0 :InfoMenu<CR>
