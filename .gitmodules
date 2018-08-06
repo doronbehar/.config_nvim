@@ -214,3 +214,6 @@
 [submodule "bundle/vader"]
 	path = bundle/vader
 	url = https://github.com/junegunn/vader.vim
+[submodule "bundle/sleuth"]
+	path = bundle/sleuth
+	url = https://github.com/tpope/vim-sleuth
