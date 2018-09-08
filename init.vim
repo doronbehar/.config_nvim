@@ -37,10 +37,9 @@ set smartcase
 " Colors
 set autoread
 syntax enable
+colorscheme my
 if expand('$DISPLAY') !=# '$DISPLAY'
-	colorscheme my
-else
-	colorscheme default
+	set termguicolors
 end
 set background=dark
 " Always display the tabline, even if there is only one tab:
