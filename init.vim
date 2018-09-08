@@ -39,8 +39,10 @@ set autoread
 syntax enable
 colorscheme my
 if expand('$DISPLAY') !=# '$DISPLAY'
-	set termguicolors
-end
+	if $TERM !~ '^rxvt' " workaround for https://www.reddit.com/r/vim/comments/4ywjd2/set_termguicolors_not_working_in_rxvtunicode/
+		set termguicolors
+	endif
+endif
 set background=dark
 " Always display the tabline, even if there is only one tab:
 set showtabline=2
