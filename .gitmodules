@@ -150,7 +150,7 @@
 	url = https://github.com/scrooloose/nerdcommenter
 [submodule "bundle/gundo"]
 	path = bundle/gundo
-	url = http://github.com/sjl/gundo.vim.git
+	url = https://github.com/sjl/gundo.vim
 [submodule "bundle/abolish"]
 	path = bundle/abolish
 	url = https://github.com/tpope/vim-abolish
@@ -214,6 +214,15 @@
 [submodule "bundle/vader"]
 	path = bundle/vader
 	url = https://github.com/junegunn/vader.vim
+[submodule "bundle/proc"]
+	path = bundle/vimproc
+	url = https://github.com/Shougo/vimproc.vim
+[submodule "bundle/vebugger"]
+	path = bundle/vebugger
+	url = https://github.com/idanarye/vim-vebugger
 [submodule "bundle/sleuth"]
 	path = bundle/sleuth
 	url = https://github.com/tpope/vim-sleuth
+[submodule "bundle/unicode"]
+	path = bundle/unicode
+	url = https://github.com/chrisbra/unicode.vim
