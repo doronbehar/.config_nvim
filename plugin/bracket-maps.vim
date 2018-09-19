@@ -12,22 +12,13 @@ nnoremap [B :bfirst<CR>
 nnoremap ]B :blast<CR>
 " }}}
 
-" {{{ location list
-nnoremap [l :lprevious<CR>
-nnoremap ]l :lnext<CR>
-nnoremap [L :lfirst<CR>
-nnoremap ]L :llast<CR>
-nnoremap [<C-L> :lpfile<CR>
-nnoremap ]<C-L> :lnfile<CR>
-" }}}
-
-" {{{ Quickfix
-nnoremap [f :cprevious<CR>
-nnoremap ]f :cnext<CR>
-nnoremap [F :cfirst<CR>
-nnoremap ]F :clast<CR>
-nnoremap [<C-F> :cpfile<CR>
-nnoremap ]<C-F> :cnfile<CR>
+" {{{ quickfix list
+nnoremap [f :lprevious<CR>
+nnoremap ]f :lnext<CR>
+nnoremap [F :lfirst<CR>
+nnoremap ]F :llast<CR>
+nnoremap [<C-F> :lpfile<CR>
+nnoremap ]<C-F> :lnfile<CR>
 " }}}
 
 " {{{ tags
