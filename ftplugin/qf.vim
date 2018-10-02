@@ -9,4 +9,4 @@ function! s:jump_to_current_line()
 	endif
 endfunction
 
-nnoremap <buffer> <CR> :call <SID>jump_to_current_line()<CR>
+nnoremap <silent> <buffer> <CR> :call <SID>jump_to_current_line()<CR>
