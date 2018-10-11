@@ -209,4 +209,8 @@ let g:sandwich#recipes += [
 \ ]
 " }}}
 
+" {{{ linux sty
+let g:linuxsty_patterns = ['linux/']
+" }}}
+
 " vim:foldmethod=marker:ft=vim
