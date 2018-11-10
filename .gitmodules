@@ -226,3 +226,6 @@
 [submodule "bundle/fzf"]
 	path = bundle/fzf
 	url = https://github.com/junegunn/fzf.vim
+[submodule "bundle/nftables"]
+	path = bundle/nftables
+	url = https://github.com/nfnty/vim-nftables
