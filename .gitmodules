@@ -229,3 +229,6 @@
 [submodule "bundle/nftables"]
 	path = bundle/nftables
 	url = https://github.com/nfnty/vim-nftables
+[submodule "bundle/syncthing"]
+	path = bundle/syncthing
+	url = https://github.com/brgmnn/vim-syncthing
