@@ -3,7 +3,6 @@
 set hidden
 " no word wrap:
 set nowrap
-set diffopt+=iwhite,vertical
 " Easier to launch new splits:
 set splitbelow
 set splitright
