@@ -11,6 +11,7 @@ update_all=(
 	bundle/dirdiff
 	bundle/easymotion
 	bundle/eunuch
+	bundle/emmet
 	bundle/highlitedyank
 	bundle/info
 	bundle/nerdtree
