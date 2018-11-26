@@ -1,2 +1,2 @@
 github|html5 --from=gfm --standalone --template=github
-mail_html|html --webtex --standalone --from=markdown
+mail_html|html --webtex --standalone --from=markdown+hard_line_breaks
