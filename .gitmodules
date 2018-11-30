@@ -121,9 +121,6 @@
 [submodule "bundle/tmux-focus-events"]
 	path = bundle/tmux-focus-events
 	url = https://github.com/tmux-plugins/vim-tmux-focus-events
-[submodule "bundle/ale"]
-	path = bundle/ale
-	url = https://github.com/w0rp/ale
 [submodule "bundle/neovim-gui-shim"]
 	path = bundle/neovim-gui-shim
 	url = https://github.com/equalsraf/neovim-gui-shim
@@ -181,9 +178,6 @@
 [submodule "bundle/AnsiEsc"]
 	path = bundle/AnsiEsc
 	url = https://github.com/vim-scripts/AnsiEsc.vim
-[submodule "bundle/YouCompleteMe"]
-	path = bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe
 [submodule "bundle/python-pep8-indent"]
 	path = bundle/python-pep8-indent
 	url = https://github.com/Vimjas/vim-python-pep8-indent
@@ -205,9 +199,6 @@
 [submodule "bundle/sandwich"]
 	path = bundle/sandwich
 	url = https://github.com/machakann/vim-sandwich
-[submodule "bundle/codequery"]
-	path = bundle/codequery
-	url = https://github.com/devjoe/vim-codequery
 [submodule "bundle/vader"]
 	path = bundle/vader
 	url = https://github.com/junegunn/vader.vim
@@ -232,3 +223,6 @@
 [submodule "bundle/syncthing"]
 	path = bundle/syncthing
 	url = https://github.com/brgmnn/vim-syncthing
+[submodule "bundle/coc"]
+	path = bundle/coc
+	url = https://github.com/neoclide/coc.nvim
