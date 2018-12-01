@@ -150,17 +150,8 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 let g:user_emmet_install_global = 0
 " }}}
 
-" {{{ ale
-let g:ale_lint_on_save = 1
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_insert_leave = 1
-let g:ale_html_tidy_options = '--config ~/.config/nvim/tidyrc'
-" }}}
-
 " {{{ pandoc
 let g:pandoc#command#templates_file = split(&runtimepath, ',')[0] . '/pandoc-templates'
-command! -nargs=0 PAT call pandoc_vars#toggle_autoexec_on_writes()
-command! -nargs=+ PAC call pandoc_vars#set_autoexec_command(<f-args>)
 " Make sure I can diffrentiate between a '*' and a '-' in lists.
 let g:pandoc#syntax#conceal#blacklist = [ 'list' ]
 " Make sure no bibliography is used automatically
@@ -179,10 +170,6 @@ command! Gcommend Gcommit --amend --no-edit
 " {{{ gundo
 let g:gundo_prefer_python3 = 1
 nnoremap <F5> :GundoToggle<CR>
-" }}}
-
-" {{{ YouCompleteMe
-let g:ycm_autoclose_preview_window_after_completion = 1
 " }}}
 
 " {{{ sandwich
@@ -209,14 +196,6 @@ let g:sandwich#recipes += [
 \    'match_syntax': 1, 'kind': ['delete', 'replace', 'textobj'],
 \    'action': ['delete'], 'input': ['(']},
 \ ]
-" }}}
-
-" {{{ linux sty
-let g:linuxsty_patterns = ['linux/']
-" }}}
-
-" {{{ suda
-" call suda#init('sudo://*')
 " }}}
 
 " vim:foldmethod=marker:ft=vim
