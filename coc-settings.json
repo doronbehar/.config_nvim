@@ -1,0 +1,39 @@
+{
+  "languageserver": {
+    "cquery": {
+      "command": "cquery",
+      "args": ["--log-file=/tmp/cq.log"],
+      // disable automatic reveal output channel
+      "revealOutputChannelOn": "never",
+      "filetypes": ["c", "cpp"],
+      "initializationOptions": {
+        "cacheDirectory": "/tmp/cquery"
+      }
+    },
+    "golang": {
+      "command": "go-langserver",
+      "filetypes": ["go"],
+      // disable output channel to hide server errors
+      "revealOutputChannelOn": "never",
+      "initializationOptions": {
+        "gocodeCompletionEnabled": true,
+        "diagnosticsEnabled": true,
+        "lintTool": "golint"
+      }
+    },
+    "dockerfile": {
+      "command": "docker-langserver",
+      "filetypes": ["dockerfile"],
+      "args": ["--stdio"]
+    },
+    "bash": {
+      "command": "bash-language-server",
+      "filetypes": ["sh"],
+      "args": ["start"]
+    },
+    "lua": {
+      "command": "lua-lsp",
+      "filetypes": ["lua"]
+    }
+  }
+}
