@@ -198,4 +198,26 @@ let g:sandwich#recipes += [
 \ ]
 " }}}
 
+" {{{ coc
+augroup CocKeys
+	autocmd User CocNvimInit nmap gd <Plug>(coc-definition)
+	autocmd User CocNvimInit nmap gD <Plug>(coc-implementation)
+	autocmd User CocNvimInit nmap gt <Plug>(coc-type-definition)
+	autocmd User CocNvimInit vmap <leader>p <Plug>(coc-format-selected)
+	autocmd User CocNvimInit nmap <leader>p <Plug>(coc-format-selected)
+	autocmd User CocNvimInit nmap <leader>i <Plug>(coc-diagnostic-info)
+	autocmd User CocNvimInit nmap * <Plug>(coc-references)
+	autocmd User CocNvimInit nmap <leader>r <Plug>(coc-rename)
+	autocmd User CocNvimInit nmap ]q <Plug>(coc-diagnostic-next)
+	autocmd User CocNvimInit nmap [q <Plug>(coc-diagnostic-prev)
+augroup END
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+autocmd! CompleteDone * pclose!
+" }}}
+
+" {{{ AnsiEsc
+let g:loaded_cecutil = 1
+" }}}
+
 " vim:foldmethod=marker:ft=vim
