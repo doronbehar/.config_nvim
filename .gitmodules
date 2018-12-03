@@ -229,3 +229,9 @@
 [submodule "bundle/jsonc"]
 	path = bundle/jsonc
 	url = https://github.com/neoclide/jsonc.vim
+[submodule "bundle/neco-vim"]
+	path = bundle/neco-vim
+	url = https://github.com/Shougo/neco-vim
+[submodule "bundle/coc-neco"]
+	path = bundle/coc-neco
+	url = https://github.com/neoclide/coc-neco
