@@ -35,5 +35,8 @@
       "command": "lua-lsp",
       "filetypes": ["lua"]
     }
-  }
+  },
+  "pyls.plugins.pyflakes.enabled": false,
+  "pyls.plugins.pycodestyle.enabled": false,
+  "pyls.plugins.pydocstyle.enabled": true
 }
