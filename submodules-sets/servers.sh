@@ -44,6 +44,7 @@ update_all=(
 	bundle/window-swap
 	bundle/fugitive
 	bundle/nftables
+	bundle/fzf
 )
 
 git submodule init -- $update_all
