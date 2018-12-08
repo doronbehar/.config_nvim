@@ -235,3 +235,9 @@
 [submodule "bundle/coc-neco"]
 	path = bundle/coc-neco
 	url = https://github.com/neoclide/coc-neco
+[submodule "bundle/closetag"]
+	path = bundle/closetag
+	url = https://github.com/alvan/vim-closetag
+[submodule "bundle/lexima"]
+	path = bundle/lexima
+	url = https://github.com/cohama/lexima.vim
