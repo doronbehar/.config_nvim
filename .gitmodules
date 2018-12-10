@@ -106,9 +106,6 @@
 [submodule "bundle/signify"]
 	path = bundle/signify
 	url = https://github.com/mhinz/vim-signify
-[submodule "bundle/xkbswitch"]
-	path = bundle/xkbswitch
-	url = https://github.com/lyokha/vim-xkbswitch
 [submodule "bundle/texobj-quotes"]
 	path = bundle/textobj-quotes
 	url = https://github.com/beloglazov/vim-textobj-quotes
@@ -187,9 +184,6 @@
 [submodule "bundle/info"]
 	path = bundle/info
 	url = https://gitlab.com/HiPhish/info.vim
-[submodule "bundle/tagbar"]
-	path = bundle/tagbar
-	url = https://github.com/majutsushi/tagbar
 [submodule "bundle/suda"]
 	path = bundle/suda
 	url = https://github.com/lambdalisue/suda.vim
