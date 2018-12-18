@@ -38,5 +38,6 @@
   },
   "pyls.plugins.pyflakes.enabled": false,
   "pyls.plugins.pycodestyle.enabled": false,
-  "pyls.plugins.pydocstyle.enabled": true
+  "pyls.plugins.pydocstyle.enabled": true,
+  "html.format.wrapLineLength": 80
 }
