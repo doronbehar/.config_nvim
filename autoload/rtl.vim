@@ -11,10 +11,10 @@ function! rtl#set()
 	noremap <silent> <buffer> gE gE
 	setlocal keymap=hebrew
 	if expand('$DISPLAY') !=# '$DISPLAY'
-		setlocal listchars=tab:›\ ,trail:-,extends:»,precedes:«,eol:⌐
-		if has('nvim')
-			set guicursor=
-		endif
+		setlocal listchars=tab:‹\ ,trail:-,extends:«,precedes:»,eol:⌐
+	endif
+	if has('nvim')
+		set guicursor=
 	endif
 endfunction
 function! rtl#unset()
@@ -30,12 +30,12 @@ function! rtl#unset()
 	setlocal keymap=
 	if expand('$DISPLAY') !=# '$DISPLAY'
 		setlocal listchars=tab:›\ ,trail:-,extends:»,precedes:«,eol:¬
-		if has('nvim')
-			set guicursor=n-v-c:block
-				\,i-ci-ve:ver25,r-cr:hor20,o:hor50
-				\,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
-				\,sm:block-blinkwait175-blinkoff150-blinkon175
-		endif
+	endif
+	if has('nvim')
+		set guicursor=n-v-c:block
+			\,i-ci-ve:ver25,r-cr:hor20,o:hor50
+			\,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
+			\,sm:block-blinkwait175-blinkoff150-blinkon175
 	endif
 endfunction
 function! rtl#toggle()
