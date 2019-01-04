@@ -200,4 +200,10 @@ let g:ghost_port = 4465
 let g:loaded_cecutil = 1
 " }}}
 
+" {{{
+let g:pad#dir = expand('$HOME/documents/notes')
+let g:pad#open_in_split = 0
+let g:pad#set_mappings = 0
+" }}}
+
 " vim:foldmethod=marker:ft=vim
