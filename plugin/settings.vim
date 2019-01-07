@@ -192,6 +192,10 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 autocmd! CompleteDone * pclose!
 " }}}
 
+" {{{ ALE
+let g:ale_enabled = 0
+" }}}
+
 " {{{ ghost
 let g:ghost_port = 4465
 " }}}

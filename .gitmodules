@@ -241,3 +241,6 @@
 [submodule "bundle/pad"]
 	path = bundle/pad
 	url = https://github.com/fmoralesc/vim-pad
+[submodule "bundle/ale"]
+	path = bundle/ale
+	url = https://github.com/w0rp/ale
