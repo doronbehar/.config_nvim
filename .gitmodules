@@ -250,3 +250,6 @@
 [submodule "bundle/yarp"]
 	path = bundle/yarp
 	url = https://github.com/roxma/nvim-yarp
+[submodule "bundle/vimproc"]
+	path = bundle/vimproc
+	url = https://github.com/Shougo/vimproc.vim

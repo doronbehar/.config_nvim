@@ -200,6 +200,10 @@ let g:ale_enabled = 0
 let g:ghost_port = 4465
 " }}}
 
+" {{{
+let g:vebugger_leader = "\\\'"
+" }}}
+
 " {{{ AnsiEsc
 let g:loaded_cecutil = 1
 " }}}
