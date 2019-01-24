@@ -244,3 +244,9 @@
 [submodule "bundle/ale"]
 	path = bundle/ale
 	url = https://github.com/w0rp/ale
+[submodule "bundle/hug-neovim-rpc"]
+	path = bundle/hug-neovim-rpc
+	url = https://github.com/roxma/vim-hug-neovim-rpc
+[submodule "bundle/yarp"]
+	path = bundle/yarp
+	url = https://github.com/roxma/nvim-yarp

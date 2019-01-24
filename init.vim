@@ -112,7 +112,7 @@ if !exists(':packadd')
 	let g:pathogen_disabled = ['']
 	execute pathogen#infect()
 end
-if has('nvim') 
+if has('nvim')
 	runtime only.nvim
 else
 	runtime only.vim
