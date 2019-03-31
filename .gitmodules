@@ -25,9 +25,6 @@
 [submodule "bundle/devicons"]
 	path = bundle/devicons
 	url = https://github.com/ryanoasis/vim-devicons
-[submodule "bundle/ncurses-syntax"]
-	path = bundle/ncurses-syntax
-	url = https://github.com/doronbehar/vim-ncurses-syntax
 [submodule "bundle/android"]
 	path = bundle/android
 	url = https://github.com/hsanson/vim-android
