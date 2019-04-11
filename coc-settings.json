@@ -36,8 +36,6 @@
       "filetypes": ["lua"]
     }
   },
-  "pyls.plugins.pyflakes.enabled": false,
-  "pyls.plugins.pycodestyle.enabled": false,
-  "pyls.plugins.pydocstyle.enabled": true,
+  "python.linting.pylintUseMinimalCheckers": false,
   "html.format.wrapLineLength": 80
 }
