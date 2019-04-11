@@ -256,3 +256,6 @@
 [submodule "bundle/toml"]
 	path = bundle/toml
 	url = https://github.com/cespare/vim-toml
+[submodule "bundle/delve"]
+	path = bundle/delve
+	url = https://github.com/sebdah/vim-delve
