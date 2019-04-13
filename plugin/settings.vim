@@ -200,7 +200,7 @@ let g:ale_enabled = 0
 let g:ghost_port = 4465
 " }}}
 
-" {{{
+" {{{ vebugger
 let g:vebugger_leader = "\\\'"
 let g:vebugger_view_source_cmd='edit'
 " }}}
