@@ -145,9 +145,6 @@
 [submodule "bundle/visualrepeat"]
 	path = bundle/visualrepeat
 	url = https://github.com/vim-scripts/visualrepeat
-[submodule "bundle/open-browser"]
-	path = bundle/open-browser
-	url = https://github.com/tyru/open-browser.vim
 [submodule "bundle/textobj-underscore"]
 	path = bundle/textobj-underscore
 	url = https://github.com/lucapette/vim-textobj-underscore
