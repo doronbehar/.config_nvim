@@ -31,10 +31,6 @@
       "filetypes": ["sh"],
       "args": ["start"]
     },
-    "lua": {
-      "command": "lua-lsp",
-      "filetypes": ["lua"]
-    }
   },
   "python.linting.pylintUseMinimalCheckers": false,
   "suggest.timeout": 5000,
