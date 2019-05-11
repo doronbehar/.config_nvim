@@ -10,17 +10,6 @@
         "cacheDirectory": "/tmp/cquery"
       }
     },
-    "golang": {
-      "command": "go-langserver",
-      "filetypes": ["go"],
-      // disable output channel to hide server errors
-      "revealOutputChannelOn": "never",
-      "initializationOptions": {
-        "gocodeCompletionEnabled": true,
-        "diagnosticsEnabled": true,
-        "lintTool": "golint"
-      }
-    },
     "dockerfile": {
       "command": "docker-langserver",
       "filetypes": ["dockerfile"],
