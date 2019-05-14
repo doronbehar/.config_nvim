@@ -67,9 +67,6 @@
 [submodule "bundle/scriptease"]
 	path = bundle/scriptease
 	url = https://github.com/tpope/vim-scriptease
-[submodule "bundle/targets"]
-	path = bundle/targets
-	url = https://github.com/wellle/targets.vim
 [submodule "bundle/rooter"]
 	path = bundle/rooter
 	url = https://github.com/airblade/vim-rooter
@@ -202,9 +199,6 @@
 [submodule "bundle/jsonc"]
 	path = bundle/jsonc
 	url = https://github.com/neoclide/jsonc.vim
-[submodule "bundle/neco-vim"]
-	path = bundle/neco-vim
-	url = https://github.com/Shougo/neco-vim
 [submodule "bundle/jinja"]
 	path = bundle/jinja
 	url = https://github.com/lepture/vim-jinja
