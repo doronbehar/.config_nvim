@@ -37,9 +37,6 @@
 [submodule "bundle/window-swap"]
 	path = bundle/window-swap
 	url = https://github.com/wesQ3/vim-windowswap
-[submodule "bundle/peekaboo"]
-	path = bundle/peekaboo
-	url = https://github.com/junegunn/vim-peekaboo
 [submodule "bundle/stay"]
 	path = bundle/stay
 	url = https://github.com/kopischke/vim-stay
@@ -118,9 +115,6 @@
 [submodule "bundle/ghost"]
 	path = bundle/ghost
 	url = https://github.com/raghur/vim-ghost
-[submodule "bundle/highlitedyank"]
-	path = bundle/highlitedyank
-	url = https://github.com/machakann/vim-highlightedyank
 [submodule "bundle/orgmode"]
 	path = bundle/orgmode
 	url = https://github.com/jceb/vim-orgmode

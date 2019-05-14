@@ -64,14 +64,6 @@ let g:EasyMotion_keys = 'asdfghjklqweruio'
 let g:android_sdk_path = expand('$ANDROID_HOME')
 " }}}
 
-" {{{ peekaboo
-" Compact display; do not display the names of the register groups
-let g:peekaboo_compact = 1
-let g:peekaboo_window = 'enew'
-let g:peekaboo_prefix = '<leader>'
-let g:peekaboo_ins_prefix = '<c-q>'
-" }}}
-
 " {{{ WindowSwap
 let g:windowswap_map_keys = 0 "prevent default bindings
 nnoremap <silent> <leader>b :call WindowSwap#EasyWindowSwap()<CR>
@@ -102,13 +94,6 @@ let g:tmux_navigator_disable_when_zoomed = 1
 " {{{ openbrowser
 nmap gx <Plug>(openbrowser-open)
 vmap gx <Plug>(openbrowser-open)
-" }}}
-
-" {{{ highlitedyank
-let g:highlightedyank_highlight_duration = 250
-if !exists('##TextYankPost')
-	map y <Plug>(highlitedyank)
-endif
 " }}}
 
 " {{{ editorconfig
@@ -182,6 +167,8 @@ augroup CocKeys
 augroup END
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" for coc-yank
+nnoremap <leader>y :CocList yank<cr>
 autocmd! CompleteDone * pclose!
 " }}}
 
