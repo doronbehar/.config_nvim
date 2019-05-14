@@ -49,9 +49,6 @@
 [submodule "bundle/push"]
 	path = bundle/push
 	url = https://github.com/glts/vim-push
-[submodule "bundle/bufexplorer"]
-	path = bundle/bufexplorer
-	url = https://github.com/jlanzarotta/bufexplorer
 [submodule "bundle/speeddating"]
 	path = bundle/speeddating
 	url = https://github.com/tpope/vim-speeddating
