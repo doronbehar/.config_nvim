@@ -211,9 +211,6 @@
 [submodule "bundle/neco-vim"]
 	path = bundle/neco-vim
 	url = https://github.com/Shougo/neco-vim
-[submodule "bundle/closetag"]
-	path = bundle/closetag
-	url = https://github.com/alvan/vim-closetag
 [submodule "bundle/jinja"]
 	path = bundle/jinja
 	url = https://github.com/lepture/vim-jinja
