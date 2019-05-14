@@ -30,7 +30,7 @@
 	url = https://github.com/hsanson/vim-android
 [submodule "bundle/eunuch"]
 	path = bundle/eunuch
-	url = https://github.com/tpope/vim-eunuch
+	url = https://github.com/doronbehar/vim-eunuch
 [submodule "bundle/searchindex"]
 	path = bundle/searchindex
 	url = https://github.com/google/vim-searchindex
