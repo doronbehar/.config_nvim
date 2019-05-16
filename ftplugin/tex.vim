@@ -14,4 +14,3 @@ let g:vimtex_fold_types = {
 			\		]
 			\	}
 			\}
-let b:coc_paires = [["$", "$"]]

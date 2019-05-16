@@ -21,7 +21,6 @@
       "args": ["start"]
     },
   },
-  "pairs.disableLanguages": ["text", "rst", "pandoc", "mail", "itsalltext", "gitsendmail", "gitcommit"],
   "python.linting.pylintUseMinimalCheckers": false,
   "suggest.timeout": 5000,
   "html.format.wrapLineLength": 80
