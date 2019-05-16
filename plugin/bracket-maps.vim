@@ -37,9 +37,4 @@ nnoremap [T :tfirst<CR>
 nnoremap ]T :tlast<CR>
 " }}}
 
-" {{{ ale
-nnoremap ]q :ALENext<CR>
-nnoremap [q :ALEPrevious<CR>
-" }}}
-
 " vim:ft=vim:foldmethod=marker

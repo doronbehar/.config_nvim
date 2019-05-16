@@ -1,5 +1,3 @@
-au BufNewFile,BufRead *.rockspec let g:ale_lua_luacheck_options = '--std rockspec'
-au BufNewFile,BufRead .luacheckrc setf lua | let g:ale_lua_luacheck_options = '--no-globals'
 au BufNewFile,BufRead .luacompleterc setf json
 
 augroup systemdDaemonReload

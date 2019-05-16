@@ -172,10 +172,6 @@ nnoremap <leader>y :CocList yank<cr>
 autocmd! CompleteDone * pclose!
 " }}}
 
-" {{{ ALE
-let g:ale_enabled = 0
-" }}}
-
 " {{{ ghost
 let g:ghost_port = 4465
 " }}}

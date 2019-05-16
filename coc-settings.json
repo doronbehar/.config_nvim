@@ -21,6 +21,15 @@
       "args": ["start"]
     },
   },
+  "diagnostic-languageserver.filetypes": {
+    "text": "write-good",
+    "tex": "write-good",
+    "pandoc": "write-good",
+    "markdown": "write-good",
+    "html": "write-good",
+    "mail": "write-good",
+    "gitsendmail": "write-good",
+  },
   "python.linting.pylintUseMinimalCheckers": false,
   "suggest.timeout": 5000,
   "html.format.wrapLineLength": 80
