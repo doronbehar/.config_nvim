@@ -202,6 +202,9 @@
 [submodule "bundle/lexima"]
 	path = bundle/lexima
 	url = https://github.com/cohama/lexima.vim
+[submodule "bundle/closetag"]
+	path = bundle/closetag
+	url = https://github.com/alvan/vim-closetag
 [submodule "bundle/jinja"]
 	path = bundle/jinja
 	url = https://github.com/lepture/vim-jinja
