@@ -9,8 +9,6 @@ let g:NERDTreeBookmarksFile = expand('$HOME/.local/share/nvim/NERDTreeBookmarks'
 " - disable Netrw:
 let g:NERDTreeHijackNetrw = 1
 let g:loaded_netrwPlugin = 1
-" - open NERDTree faster:
-cabbrev D NERDTree
 " - mappings:
 let g:NERDTreeMapJumpNextSibling = ''
 let g:NERDTreeMapJumpPrevSibling = ''
