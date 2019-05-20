@@ -15,11 +15,11 @@
       "filetypes": ["dockerfile"],
       "args": ["--stdio"]
     },
-    "bash": {
-      "command": "bash-language-server",
-      "filetypes": ["sh"],
-      "args": ["start"]
-    },
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"]
+    }
   },
   "diagnostic-languageserver.filetypes": {
     "text": "write-good",
