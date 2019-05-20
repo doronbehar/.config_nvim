@@ -23,10 +23,8 @@
   },
   "diagnostic-languageserver.filetypes": {
     "text": "write-good",
-    "tex": "write-good",
     "pandoc": "write-good",
     "markdown": "write-good",
-    "html": "write-good",
     "mail": "write-good",
     "gitsendmail": "write-good",
   },
