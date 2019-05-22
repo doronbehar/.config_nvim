@@ -33,6 +33,9 @@ end
 " Smart case: case-sensitive when uppercase, otherwise - not.
 set ignorecase
 set smartcase
+" From some reason, if this is used in plugin/settings.vim, as all of the rest
+" of my plugins, it doesn't get picked by suda.vim's plugin/suda.vim
+let g:suda_smart_edit = 1
 
 " {{{1 UI
 " Colors
@@ -117,6 +120,7 @@ if has('nvim')
 else
 	runtime only.vim
 end
+
 
 " {{{1 Modeline
 " vim: foldmethod=marker
