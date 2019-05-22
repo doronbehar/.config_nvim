@@ -229,6 +229,6 @@
 [submodule "bundle/delve"]
 	path = bundle/delve
 	url = https://github.com/sebdah/vim-delve
-[submodule "bundle/repl"]
-	path = bundle/repl
-	url = https://gitlab.com/HiPhish/repl.nvim
+[submodule "bundle/neoterm"]
+	path = bundle/neoterm
+	url = https://github.com/kassio/neoterm

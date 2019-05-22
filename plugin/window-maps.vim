@@ -20,12 +20,5 @@ if has('nvim')
 	tnoremap <C-j> <C-\><C-n><C-w>j
 	tnoremap <C-k> <C-\><C-n><C-w>k
 	tnoremap <C-\> <C-\><C-n>
-	augroup terminalAutoInsert
-		au!
-		autocmd WinEnter *
-				\ if &buftype ==# 'terminal' |
-				\ startinsert |
-				\ endif
-	augroup END
 endif
 " }}}
