@@ -31,3 +31,5 @@ au BufNewFile,BufRead /tmp/ghost-*wikipedia.org* setf mediawiki
 au BufNewFile,BufRead /tmp/ghost-* setf itsalltext
 
 au BufNewFile,BufRead /tmp/rtv_* setf markdown
+
+au BufNewFile,BufRead neomutt-*-\w\+,neomutt[[:alnum:]_-]\\\{6\} if getline(1) =~# '^<!DOCTYPE html' | setfiletype html | elseif getline(1) =~# '^#\+ [A-Z]' | setfiletype pandoc | endif
