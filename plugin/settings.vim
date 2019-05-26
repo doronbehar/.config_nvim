@@ -193,6 +193,8 @@ nmap <leader>? :History<CR>
 " Complete a file from the history edited buffers
 nmap <leader>G :GFiles<CR>
 nmap <leader>M :GFiles?<CR>
+" Complete a file from open buffers
+nmap <leader>B :Buffers<CR>
 " }}}
 
 " {{{ vebugger
