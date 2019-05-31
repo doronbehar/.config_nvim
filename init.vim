@@ -36,6 +36,8 @@ set smartcase
 " From some reason, if this is used in plugin/settings.vim, as all of the rest
 " of my plugins, it doesn't get picked by suda.vim's plugin/suda.vim
 let g:suda_smart_edit = 1
+" However, I don't want the behaviour this in turn defines when I edit code:
+autocmd BufNewFile,BufRead /var/code/* augroup suda_smart_edit | autocmd! | augroup END | augroup! suda_smart_edit
 
 " {{{1 UI
 " Colors
