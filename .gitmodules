@@ -232,3 +232,6 @@
 [submodule "bundle/neoterm"]
 	path = bundle/neoterm
 	url = https://github.com/kassio/neoterm
+[submodule "bundle/nix"]
+	path = bundle/nix
+	url = https://github.com/LnL7/vim-nix
