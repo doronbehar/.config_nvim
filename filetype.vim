@@ -18,6 +18,8 @@ au BufNewFile,BufRead *.vifm setf vifm
 
 au BufNewFile,BufRead *.nfo setf text
 
+au BufNewFile,BufRead /dev/shm/gopass.* setlocal noswapfile nobackup noundofile
+
 au BufNewFile,BufRead ~/.mozilla/firefox/*/itsalltext/*stackexchange.com_* setf markdown
 au BufNewFile,BufRead ~/.mozilla/firefox/*/itsalltext/stackoverflow.com_* setf markdown
 au BufNewFile,BufRead ~/.mozilla/firefox/*/itsalltext/github.com_*_*_issues_* setf markdown
