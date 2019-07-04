@@ -106,16 +106,37 @@ end
 if isdirectory('/usr/share/vim/vimfiles')
 	set runtimepath+=/usr/share/vim/vimfiles
 end
-" External Plugins - use pathogen only for old versions of vim
-if !exists(':packadd')
-	runtime bundle/pathogen/autoload/pathogen.vim
-	let g:pathogen_disabled = ['']
-	execute pathogen#infect()
-end
+" Source an automatically generated file that defines a list of plugins we
+" disable according to the pack/*/opt/* symlinks. The variable it defines is
+" g:pathogen_disabled which naturally can be used by
+runtime .pathogen_disabled.vim
+" The following files, add pacakges specific to neovim / vim, they use either
+" :packadd or they filter out from the g:pathogen_disabled list these files
+" so when pathogen#infect is executed, it will add them as well
+"
+" The following function implements the common :packadd / filter call
+command! -nargs=1 Packadd if exists(':packadd') | packadd <args> | else | call filter(g:pathogen_disabled, 'v:val != " '. <args>. '"') | endif
 if has('nvim')
 	runtime only.nvim
 else
 	runtime only.vim
+end
+if !empty($ENABLE_PLUGINS)
+	let plugins_list = split($ENABLE_PLUGINS, ',')
+	if exists(':packadd')
+		for pl in plugins_list
+			execute('packadd ' . pl)
+		endfor
+	else
+		for pl in plugins_list
+			call filter(g:pathogen_disabled, 'v:val != " '. pl. '"')
+		endfor
+	endif
+endif
+" External Plugins - use pathogen only for old versions of vim
+if !exists(':packadd')
+	runtime bundle/pathogen/autoload/pathogen.vim
+	execute pathogen#infect()
 end
 
 " Load $HOST specific configuration

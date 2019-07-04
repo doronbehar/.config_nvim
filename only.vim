@@ -1,2 +1,2 @@
-packadd yarp
-packadd hug-neovim-rpc
+Packadd yarp
+Packadd hug-neovim-rpc

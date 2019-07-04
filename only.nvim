@@ -1,9 +1,7 @@
 " Neovim Specific startup commands
 
 " Load package for sudo editing
-if exists(':packadd')
-	packadd suda
-end
+Packadd suda
 
 " Change the Cursor shape for insert and other modes only when using nvim and
 " a gui terminal.
@@ -12,9 +10,7 @@ if expand('$DISPLAY') !=# '$DISPLAY'
 		\,i-ci-ve:ver25,r-cr:hor20,o:hor50
 		\,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
 		\,sm:block-blinkwait175-blinkoff150-blinkon175
-	if exists(':packadd')
-		packadd neovim-gui-shim
-	end
+	Packadd neovim-gui-shim
 end
 
 " vim: ft=vim
