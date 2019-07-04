@@ -21,6 +21,9 @@
       "filetypes": ["go"]
     }
   },
+  // This pends until https://github.com/atom/superstring/pull/72 and https://github.com/tree-sitter/node-tree-sitter/pull/45 are merged
+  "sh.enable": false,
+  "lua.commandPath": "/home/doron/.nix-profile/bin/lua-lsp",
   "diagnostic-languageserver.filetypes": {
     "text": "write-good",
     "pandoc": "write-good",
