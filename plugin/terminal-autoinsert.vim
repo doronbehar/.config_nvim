@@ -21,7 +21,7 @@ augroup terminal_autoinsert
   autocmd BufEnter term://* call s:process_check_insert(expand('<abuf>'))
 augroup END
 
-function! s:process_check_insert(bufnr)
+function! s:process_check_insert(bufnr) abort
   let l:parent_pid = getbufinfo({'bufnr': a:bufnr})[1].variables.terminal_job_pid
   let l:child_processes = system('pstree -A -T -p ' . l:parent_pid)
   if v:shell_error || empty(l:child_processes)

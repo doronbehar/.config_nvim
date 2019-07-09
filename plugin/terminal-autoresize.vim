@@ -9,7 +9,7 @@ augroup terminal_autoresetsize
   autocmd BufEnter term://* call s:reset_size()
 augroup END
 
-function! s:reset_size()
+function! s:reset_size() abort
   execute('resize -1')
   execute('resize +1')
   execute('vertical resize -1')
