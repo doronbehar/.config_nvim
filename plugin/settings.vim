@@ -87,6 +87,12 @@ let g:rooter_manual_only = 1
 
 " {{{ tmux-navigator
 let g:tmux_navigator_disable_when_zoomed = 1
+" We don't want the <c-\> which I never use
+let g:tmux_navigator_no_mappings = 1
+nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
 " }}}
 
 " {{{ openbrowser
@@ -196,10 +202,10 @@ if exists('*fzf#wrap') || !empty($VIM_NO_FZF)
 	nmap <leader>M :GFiles?<CR>
 	" Complete a file from open buffers
 	nmap <leader>B :Buffers<CR>
-	" }}}
 else
 	echomsg "couldn't find fzf#wrap definition, fix your fzf installation, use a host-specific plugin or set $VIM_NO_FZF"
 endif
+" }}}
 
 " {{{ vebugger
 let g:vebugger_leader = "\\\'"
