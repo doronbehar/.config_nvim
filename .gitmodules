@@ -232,3 +232,6 @@
 [submodule "bundle/nix"]
 	path = bundle/nix
 	url = https://github.com/LnL7/vim-nix
+[submodule "bundle/solidity"]
+	path = bundle/solidity
+	url = https://github.com/tomlion/vim-solidity
