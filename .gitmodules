@@ -1,6 +1,6 @@
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
-	url = https://github.com/doronbehar/nvim-fugitive
+	url = https://github.com/tpope/vim-fugitive
 [submodule "bundle/csv"]
 	path = bundle/csv
 	url = https://github.com/chrisbra/csv.vim
@@ -235,3 +235,9 @@
 [submodule "bundle/solidity"]
 	path = bundle/solidity
 	url = https://github.com/tomlion/vim-solidity
+[submodule "bundle/dispatch"]
+	path = bundle/dispatch
+	url = https://github.com/tpope/vim-dispatch
+[submodule "bundle/dispatch-neovim"]
+	path = bundle/dispatch-neovim
+	url = https://github.com/radenling/vim-dispatch-neovim
