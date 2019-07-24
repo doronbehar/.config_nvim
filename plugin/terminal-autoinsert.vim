@@ -13,7 +13,8 @@
 let g:terminal_autoinsert_commands = [
     \ 'lf',
     \ 'less',
-    \ 'fzf'
+    \ 'fzf',
+    \ 'git---ssh'
 \ ]
 
 augroup terminal_autoinsert
@@ -23,12 +24,12 @@ augroup END
 
 function! s:process_check_insert(bufnr) abort
   let l:parent_pid = getbufvar(a:bufnr, 'terminal_job_pid')
-  let l:child_processes = system('pstree -A -T -p ' . l:parent_pid)
+  let l:child_processes = system('pstree -A -T ' . l:parent_pid)
   if v:shell_error || empty(l:child_processes)
     return
   endif
   for l:cmd in g:terminal_autoinsert_commands
-    if l:child_processes =~ l:cmd
+    if l:child_processes =~# l:cmd
       startinsert
       return
     endif
