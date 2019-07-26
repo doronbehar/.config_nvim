@@ -169,6 +169,11 @@ augroup CocKeys
 	autocmd User CocNvimInit nmap ]q <Plug>(coc-diagnostic-next)
 	autocmd User CocNvimInit nmap [q <Plug>(coc-diagnostic-prev)
 augroup END
+
+let g:UltiSnipsExpandTrigger="<C-j>"
+let g:UltiSnipsJumpForwardTrigger="<C-j>"
+let g:UltiSnipsJumpBackwardTrigger="<C-k>"
+
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " for coc-yank
