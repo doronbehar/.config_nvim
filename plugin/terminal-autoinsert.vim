@@ -19,11 +19,16 @@ let g:terminal_autoinsert_commands = [
 
 augroup terminal_autoinsert
   au!
-  autocmd BufEnter term://* call s:process_check_insert(expand('<abuf>'))
+  autocmd BufEnter term://* call s:process_check_insert()
 augroup END
 
-function! s:process_check_insert(bufnr) abort
-  let l:parent_pid = getbufvar(a:bufnr, 'terminal_job_pid')
+function! s:process_check_insert() abort
+  let l:bufnr = bufnr('%')
+  let l:parent_pid = getbufvar(l:bufnr, 'terminal_job_pid')
+  if empty(l:parent_pid)
+    echomsg "parent pid wasn't found!"
+    return
+  endif
   let l:child_processes = system('pstree -A -T ' . l:parent_pid)
   if v:shell_error || empty(l:child_processes)
     return
