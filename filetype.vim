@@ -1,9 +1,9 @@
 au BufNewFile,BufRead .luacompleterc setf json
 
 augroup systemdDaemonReload
-	au! BufNewFile,BufRead */.config/systemd/user/*.service au BufWritePost <buffer> !systemctl --user daemon-reload
-	au! BufNewFile,BufRead */.config/systemd/user/*.timer au BufWritePost <buffer> !systemctl --user daemon-reload
-	au! BufNewFile,BufRead */.config/systemd/user/*.target au BufWritePost <buffer> !systemctl --user daemon-reload
+	au! BufNewFile,BufRead */.config/systemd/user/* au BufWritePost <buffer> !systemctl --user daemon-reload
+	au! BufNewFile,BufRead */.config/systemd/user/* au BufWritePost <buffer> !systemctl --user daemon-reload
+	au! BufNewFile,BufRead */.config/systemd/user/* au BufWritePost <buffer> !systemctl --user daemon-reload
 augroup END
 
 augroup desktopDbReload
