@@ -186,7 +186,7 @@ let g:ghost_port = 4465
 " }}}
 
 " {{{ fzf
-if exists('*fzf#wrap') || !empty($VIM_NO_FZF)
+if exists('*fzf#wrap')
 	" mappings completion - Awesome! Who needs space vim with this beauty?
 	nmap <leader><tab> <plug>(fzf-maps-n)
 	xmap <leader><tab> <plug>(fzf-maps-x)
@@ -207,7 +207,7 @@ if exists('*fzf#wrap') || !empty($VIM_NO_FZF)
 	nmap <leader>M :GFiles?<CR>
 	" Complete a file from open buffers
 	nmap <leader>B :Buffers<CR>
-else
+elseif empty($VIM_NO_FZF)
 	echomsg "couldn't find fzf#wrap definition, fix your fzf installation, use a host-specific plugin or set $VIM_NO_FZF"
 endif
 " }}}
