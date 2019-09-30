@@ -10,11 +10,6 @@
         "cacheDirectory": "/tmp/cquery"
       }
     },
-    "golang": {
-      "command": "gopls",
-      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
-      "filetypes": ["go"]
-    }
   },
   "lua.commandPath": "/home/doron/.nix-profile/bin/lua-lsp",
   "diagnostic-languageserver.filetypes": {
@@ -24,6 +19,8 @@
     "mail": "write-good",
     "gitsendmail": "write-good",
   },
+  "coc.source.emoji.filetypes": [ "markdown", "pandoc" ],
+  "diagnostic.messageTarget": "echo",
   "python.linting.pylintUseMinimalCheckers": false,
   "suggest.timeout": 5000,
   "html.format.wrapLineLength": 80
