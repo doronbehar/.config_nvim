@@ -185,11 +185,6 @@ autocmd! CompleteDone * pclose!
 let g:ghost_port = 4465
 " }}}
 
-" {{{ vebugger
-let g:vebugger_leader = "\\\'"
-let g:vebugger_view_source_cmd='edit'
-" }}}
-
 " {{{ AnsiEsc
 let g:loaded_cecutil = 1
 " }}}
