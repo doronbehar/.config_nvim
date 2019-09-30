@@ -21,9 +21,13 @@ else
 fi
 echo @@@ Cloning...
 echo git submodule add "$1" "bundle/$plugin_name_stripped"
+git submodule add "$1" "bundle/$plugin_name_stripped"
 echo @@@ linking "bundle/$plugin_name_stripped" to pack/"$2"/start/
 echo ln -s -r "bundle/$plugin_name_stripped" -t pack/"$2"/start/
+ln -s -r "bundle/$plugin_name_stripped" -t pack/"$2"/start/
 echo @@@ updating help tags
 echo $EDITOR -es --cmd "helptags bundle/$plugin_name_stripped/doc" --cmd "quit"
+$EDITOR -es --cmd "helptags bundle/$plugin_name_stripped/doc" --cmd "quit"
 echo @@@ updating .pathogen_disabled.vim
 echo nvim --cmd 'source update-submodules.vim' --cmd 'quit'
+nvim --cmd 'source update-submodules.vim' --cmd 'quit'
