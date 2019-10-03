@@ -38,5 +38,10 @@ nnoremap <F10> :call paragraph#toggle()<CR>
 inoremap <F10> <C-\><C-o>:call paragraph#toggle()<CR>
 nnoremap <F11> :call smartwrap#toggle()<CR>
 inoremap <F11> <C-\><C-o>:call smartwrap#toggle()<CR>
+" Switch between various rtl and ltr settings
+nnoremap <F12> :call rtl#toggle()<CR>
+inoremap <F12> <C-\><C-o>:call rtl#toggle()<CR>
+" Also in select mode
+snoremap <F12> i<BS><C-\><C-o>:call rtl#toggle()<CR>
 
 " vim:ft=vim:foldmethod=marker
