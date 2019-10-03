@@ -6,10 +6,16 @@ Packadd suda
 " Change the Cursor shape for insert and other modes only when using nvim and
 " a gui terminal.
 if expand('$DISPLAY') !=# '$DISPLAY'
-	set guicursor=n-v-c:block
-		\,i-ci-ve:ver25,r-cr:hor20,o:hor50
-		\,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
-		\,sm:block-blinkwait175-blinkoff150-blinkon175
+	set guicursor=a:blinkwait700-blinkoff400-blinkon250
+		\,n:block
+		\,i:ver25
+		\,r:hor20
+		\,c:block
+		\,ci:ver25
+		\,cr:hor20
+		\,ve:ver25
+		\,o:hor50
+		\,v:hor50-blinkon0
 	Packadd neovim-gui-shim
 end
 
