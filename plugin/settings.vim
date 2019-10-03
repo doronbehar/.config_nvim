@@ -64,7 +64,7 @@ let g:android_sdk_path = expand('$ANDROID_HOME')
 
 " {{{ WindowSwap
 let g:windowswap_map_keys = 0 "prevent default bindings
-nnoremap <silent> <leader>b :call WindowSwap#EasyWindowSwap()<CR>
+nnoremap <silent> <leader><leader>b :call WindowSwap#EasyWindowSwap()<CR>
 " }}}
 
 " {{{ togglelist
