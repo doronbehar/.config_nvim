@@ -36,3 +36,4 @@ au BufNewFile,BufRead /tmp/ghost-* setf itsalltext | let b:stay_ignore = 1
 au BufNewFile,BufRead /tmp/rtv_* setf markdown | let b:stay_ignore = 1
 
 au BufNewFile,BufRead neomutt-*-\w\+,neomutt[[:alnum:]_-]\\\{6\} if getline(1) =~# '^<!DOCTYPE html' | setfiletype html | elseif getline(1) =~# '^#\+ [A-Z]' | setfiletype pandoc | endif | setlocal noswapfile nobackup noundofile | let b:stay_ignore = 1
+au BufNewFile,BufRead ~/.cache/mutt/compositions/* let g:pandoc#command#autoexec_on_writes = 1 | let b:pandoc_command_autoexec_command = 'Pandoc #mail_html'
