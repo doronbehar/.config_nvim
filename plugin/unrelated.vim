@@ -26,4 +26,17 @@ nnoremap <leader>p :call pager#toggle()<CR>
 " Create a mapping to sync syntax:
 nnoremap <leader><esc> :syntax sync fromstart<CR>
 
+" Control tabsize easily
+command! -nargs=1 Tabsize call tabsize#set(<f-args>)
+
+" Change pandoc variables easily
+command! -nargs=0 PAT call pandoc_vars#toggle_autoexec_on_writes()
+command! -nargs=+ PAC call pandoc_vars#set_autoexec_command(<f-args>)
+
+" Switch between various rtl and ltr settings
+nnoremap <F10> :call paragraph#toggle()<CR>
+inoremap <F10> <C-\><C-o>:call paragraph#toggle()<CR>
+nnoremap <F11> :call smartwrap#toggle()<CR>
+inoremap <F11> <C-\><C-o>:call smartwrap#toggle()<CR>
+
 " vim:ft=vim:foldmethod=marker
