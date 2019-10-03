@@ -123,6 +123,9 @@ else
 end
 if !empty($ENABLE_PLUGINS)
 	let plugins_list = split($ENABLE_PLUGINS, ',')
+	" The following if else is a little bit different then :Packadd because it
+	" checks for `:packadd` support and then runs the loop. Using `:Packadd`
+	" inside a loop would have been a little bit less optimized.
 	if exists(':packadd')
 		for pl in plugins_list
 			execute('packadd ' . pl)
