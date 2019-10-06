@@ -156,6 +156,10 @@ let g:sandwich#recipes += [
 \ ]
 " }}}
 
+" {{{ Dispatch
+let g:dispatch_no_maps = 1
+" }}}
+
 " {{{ coc
 augroup CocKeys
 	autocmd User CocNvimInit nmap gd <Plug>(coc-definition)
