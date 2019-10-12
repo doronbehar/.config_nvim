@@ -95,11 +95,6 @@ nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
 " }}}
 
-" {{{ openbrowser
-nmap gx <Plug>(openbrowser-open)
-vmap gx <Plug>(openbrowser-open)
-" }}}
-
 " {{{ editorconfig
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 " }}}
