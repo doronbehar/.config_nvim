@@ -1,2 +1,2 @@
-github|html5 --metadata pagetitle='doc' --standalone --template=github --from=gfm+pipe_tables
+github|html5 --metadata pagetitle='doc' --standalone --template=github --from=gfm
 mail_html|html --metadata pagetitle='doc' --webtex --standalone --from=markdown+hard_line_breaks
