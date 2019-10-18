@@ -2,6 +2,8 @@
 
 " Load package for sudo editing
 Packadd suda
+Packadd colorizer.lua
+lua require 'colorizer'.setup()
 
 " Change the Cursor shape for insert and other modes only when using nvim and
 " a gui terminal.

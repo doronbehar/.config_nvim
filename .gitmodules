@@ -244,3 +244,6 @@
 [submodule "bundle/direnv"]
 	path = bundle/direnv
 	url = https://github.com/direnv/direnv.vim
+[submodule "bundle/colorizer.lua"]
+	path = bundle/colorizer.lua
+	url = https://github.com/norcalli/nvim-colorizer.lua
