@@ -27,13 +27,13 @@ au BufNewFile,BufRead ~/.mozilla/firefox/*/itsalltext/github.com_*_*_issues_* se
 au BufNewFile,BufRead ~/.mozilla/firefox/*/itsalltext/*.wikipedia.org_w_index.php.* setf mediawiki | let b:stay_ignore = 1
 au BufNewFile,BufRead ~/.mozilla/firefox/*/itsalltext/* setf itsalltext | let b:stay_ignore = 1
 
-au BufNewFile,BufRead /tmp/ghost-*stackexchange.com* setf markdown | let b:stay_ignore = 1
-au BufNewFile,BufRead /tmp/ghost-stackoverflow.com* setf markdown | let b:stay_ignore = 1
-au BufNewFile,BufRead /tmp/ghost-github.com* setf markdown | let b:stay_ignore = 1
-au BufNewFile,BufRead /tmp/ghost-*wikipedia.org* setf mediawiki | let b:stay_ignore = 1
-au BufNewFile,BufRead /tmp/ghost-* setf itsalltext | let b:stay_ignore = 1
-
-au BufNewFile,BufRead /tmp/rtv_* setf markdown | let b:stay_ignore = 1
+" GhostText / Firenvim
+au BufNewFile,BufRead *stackexchange.com* setf markdown | let b:stay_ignore = 1
+au BufNewFile,BufRead stackoverflow.com* setf markdown | let b:stay_ignore = 1
+au BufNewFile,BufRead github.com* setf markdown | let b:stay_ignore = 1
+au BufNewFile,BufRead latex.codecogs.com* setf tex | let b:stay_ignore = 1
+au BufNewFile,BufRead *wikipedia.org* setf mediawiki | let b:stay_ignore = 1
+" au BufNewFile,BufRead * setf itsalltext | let b:stay_ignore = 1
 
 au BufNewFile,BufRead neomutt-*-\w\+,neomutt[[:alnum:]_-]\\\{6\} if getline(1) =~# '^<!DOCTYPE html' | setfiletype html | elseif getline(1) =~# '^#\+ [A-Z]' | setfiletype pandoc | endif | setlocal noswapfile nobackup noundofile | let b:stay_ignore = 1
 au BufNewFile,BufRead ~/.cache/mutt/compositions/* let g:pandoc#command#autoexec_on_writes = 1 | let b:pandoc_command_autoexec_command = 'Pandoc #mail_html'

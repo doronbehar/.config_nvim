@@ -184,6 +184,24 @@ autocmd! CompleteDone * pclose!
 let g:ghost_port = 4465
 " }}}
 
+" {{{ firenvim
+let g:firenvim_config = {
+    \ 'localSettings': {
+        \ '.*': {
+            \ 'selector': '',
+            \ 'priority': 0,
+        \ },
+    \ }
+\ }
+if exists('g:started_by_firenvim')
+	" set laststatus=0
+	au TextChanged * ++nested call firenvim_w#delaywrite()
+	au TextChangedI * ++nested call firenvim_w#delaywrite()
+	" https://github.com/glacambre/firenvim#interacting-with-the-page
+	nnoremap <Esc><Esc> :call firenvim#focus_page()<CR>
+endif
+" }}}
+
 " {{{ AnsiEsc
 let g:loaded_cecutil = 1
 " }}}

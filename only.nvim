@@ -2,6 +2,7 @@
 
 " Load package for sudo editing
 Packadd suda
+Packadd firenvim
 if &termguicolors
 	Packadd colorizer.lua
 	lua require 'colorizer'.setup()
