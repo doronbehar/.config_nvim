@@ -250,3 +250,6 @@
 [submodule "bundle/firenvim"]
 	path = bundle/firenvim
 	url = https://github.com/glacambre/firenvim
+[submodule "bundle/vimspector"]
+	path = bundle/vimspector
+	url = https://github.com/puremourning/vimspector
