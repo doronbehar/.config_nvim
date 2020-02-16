@@ -11,7 +11,7 @@
       }
     },
   },
-  "lua.commandPath": "/home/doron/.nix-profile/bin/lua-lsp",
+  "lua.commandPath": "/run/current-system/sw/bin/lua-lsp",
   "diagnostic-languageserver.filetypes": {
     "text": "write-good",
     "pandoc": "write-good",
