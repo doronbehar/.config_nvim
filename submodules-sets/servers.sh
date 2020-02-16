@@ -45,6 +45,9 @@ update_all=(
 	bundle/fugitive
 	bundle/nftables
 	bundle/fzf
+	bundle/colorizer.lua
+	bundle/direnv
+	bundle/syncthing
 )
 
 git submodule init -- $update_all
