@@ -22,7 +22,7 @@
   "coc.source.emoji.filetypes": [ "markdown", "pandoc" ],
   "diagnostic.messageTarget": "echo",
   "python.linting.pylintUseMinimalCheckers": false,
-  "python.pythonPath": "/home/doron/.nix-profile/bin/nvim-python3",
+  "python.pythonPath": "/run/current-system/sw/bin/nvim-python3",
   "suggest.timeout": 5000,
   "html.format.wrapLineLength": 80
 }
