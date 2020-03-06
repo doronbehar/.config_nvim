@@ -3,20 +3,16 @@ update_all=(
 	bundle/SimpylFold
 	bundle/abolish
 	bundle/airline
-	bundle/ale
 	bundle/bbye
-	bundle/bufexplorer
 	bundle/csv
 	bundle/devicons
 	bundle/dirdiff
 	bundle/easymotion
 	bundle/eunuch
 	bundle/emmet
-	bundle/highlitedyank
 	bundle/info
 	bundle/nerdtree
 	bundle/orgmode
-	bundle/peekaboo
 	bundle/push
 	bundle/repeat
 	bundle/sandwich
@@ -26,7 +22,6 @@ update_all=(
 	bundle/stay
 	bundle/suda
 	bundle/tabular
-	bundle/targets
 	bundle/textobj-fold
 	bundle/textobj-keyvalue
 	bundle/textobj-quotes
