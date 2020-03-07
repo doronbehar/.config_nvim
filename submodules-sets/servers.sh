@@ -1,4 +1,5 @@
 update_all=(
+	bundle/nerdcommenter
 	bundle/AnsiEsc
 	bundle/SimpylFold
 	bundle/abolish
