@@ -54,6 +54,8 @@ if expand('$DISPLAY') !=# '$DISPLAY'
 else
 	set showbreak=^
 	set listchars=tab:>\ ,trail:-,extends:»,precedes:«,eol:¬
+	" Used by ~/.zshrc and potentially other configs
+	let $TERM_NO_ICONS_FONT=1
 end
 " Always display the statusline in all windows:
 set laststatus=2
