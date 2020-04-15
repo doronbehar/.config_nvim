@@ -118,6 +118,7 @@ let g:NERDComDefaultDelims = 1
 
 " {{{ fugitive
 command! Gcommend Gcommit --amend --no-edit
+let g:fugitive_gitlab_domains = [ 'https://gitlab.gnome.org' ]
 " }}}
 
 " {{{ gundo

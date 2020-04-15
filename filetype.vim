@@ -28,6 +28,7 @@ au BufNewFile,BufRead ~/.mozilla/firefox/*/itsalltext/*.wikipedia.org_w_index.ph
 au BufNewFile,BufRead ~/.mozilla/firefox/*/itsalltext/* setf itsalltext | let b:stay_ignore = 1
 
 " GhostText / Firenvim
+au BufNewFile,BufRead ghost-*.txt set expandtab
 au BufNewFile,BufRead *stackexchange.com* setf markdown | let b:stay_ignore = 1
 au BufNewFile,BufRead stackoverflow.com* setf markdown | let b:stay_ignore = 1
 au BufNewFile,BufRead github.com* setf markdown | let b:stay_ignore = 1
