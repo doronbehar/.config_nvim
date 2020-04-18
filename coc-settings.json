@@ -10,15 +10,14 @@
         "cacheDirectory": "/tmp/cquery"
       }
     },
+    "lua": {
+      "command": "java",
+      "args": ["-cp", "/home/doron/downloads/EmmyLua-LS-all.jar", "com.tang.vscode.MainKt"],
+      "filetypes": ["lua"],
+      "rootPatterns": [".git/"]
+    }
   },
-  "lua.commandPath": "/run/current-system/sw/bin/lua-lsp",
-  "diagnostic-languageserver.filetypes": {
-    "text": "write-good",
-    "pandoc": "write-good",
-    "markdown": "write-good",
-    "mail": "write-good",
-    "gitsendmail": "write-good",
-  },
+  "rust-client.rlsPath": "/run/current-system/sw/bin/rls",
   "coc.source.emoji.filetypes": [ "markdown", "pandoc" ],
   "diagnostic.messageTarget": "echo",
   "python.linting.pylintUseMinimalCheckers": false,
