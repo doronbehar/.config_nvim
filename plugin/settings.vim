@@ -169,6 +169,10 @@ augroup CocKeys
 	autocmd User CocNvimInit nmap ]q <Plug>(coc-diagnostic-next)
 	autocmd User CocNvimInit nmap [q <Plug>(coc-diagnostic-prev)
 augroup END
+if has('nvim-0.5.0')
+    " see https://github.com/neoclide/coc.nvim/issues/1775
+    let g:coc_disable_transparent_cursor = 1
+endif
 
 let g:UltiSnipsExpandTrigger="<C-j>"
 let g:UltiSnipsJumpForwardTrigger="<C-j>"
