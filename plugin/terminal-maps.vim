@@ -15,3 +15,13 @@ tnoremap <C-j> <C-\><C-n><C-w>j
 tnoremap <C-k> <C-\><C-n><C-w>k
 tnoremap <C-\><C-\> <C-\><C-n>
 " }}}
+
+" {{{ Partially solves an unfixable, annoying collision between Nvim's keys
+" interpretation, and my zsh's `bindkey` settings. Related ZSH config:
+" https://github.com/doronbehar/dotfiles/blob/master/.zshrc#L149
+"
+" I need to report this to ZSH's mailing lists, as it doesn't occour in Bash.
+tnoremap <Home> <Nop>
+tnoremap <End> <Nop>
+tnoremap <Delete> <Nop>
+" }}}
