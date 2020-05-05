@@ -95,6 +95,14 @@ nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
 " }}}
 
+" {{{ neoterm https://github.com/nikvdp/neomux
+" Disable mappings / others I'm already used to handle by myself
+let g:neomux_no_term_autoinsert = 1
+let g:neomux_paste_buffer_map = ''
+let g:neomux_no_term_leave_after_exit = 1
+let g:neomux_dont_fix_term_ctrlw_map = 1
+" }}}
+
 " {{{ editorconfig
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 " }}}

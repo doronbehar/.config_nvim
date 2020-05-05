@@ -90,7 +90,7 @@
 	url = https://github.com/vim-pandoc/vim-pandoc
 [submodule "bundle/pandoc-syntax"]
 	path = bundle/pandoc-syntax
-	url = https://github.com/doronbehar/vim-pandoc-syntax
+	url = https://github.com/vim-pandoc/vim-pandoc-syntax
 [submodule "bundle/signify"]
 	path = bundle/signify
 	url = https://github.com/mhinz/vim-signify
@@ -253,3 +253,6 @@
 [submodule "bundle/vimspector"]
 	path = bundle/vimspector
 	url = https://github.com/puremourning/vimspector
+[submodule "bundle/neomux"]
+	path = bundle/neomux
+	url = https://github.com/nikvdp/neomux
