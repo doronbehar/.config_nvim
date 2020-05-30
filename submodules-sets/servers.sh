@@ -2,17 +2,12 @@ update_all=(
 	bundle/nerdcommenter
 	bundle/AnsiEsc
 	bundle/SimpylFold
-	bundle/abolish
 	bundle/airline
 	bundle/bbye
 	bundle/csv
-	bundle/devicons
 	bundle/dirdiff
-	bundle/easymotion
 	bundle/eunuch
-	bundle/emmet
 	bundle/info
-	bundle/nerdtree
 	bundle/orgmode
 	bundle/push
 	bundle/repeat
@@ -23,8 +18,6 @@ update_all=(
 	bundle/stay
 	bundle/suda
 	bundle/tabular
-	bundle/textobj-fold
-	bundle/textobj-keyvalue
 	bundle/textobj-quotes
 	bundle/textobj-underscore
 	bundle/textobj-uri
@@ -33,9 +26,7 @@ update_all=(
 	bundle/tmux-navigator
 	bundle/tmux-syntax
 	bundle/togglelist
-	bundle/tradewinds
 	bundle/transpose
-	bundle/unicode
 	bundle/visualrepeat
 	bundle/window-swap
 	bundle/fugitive

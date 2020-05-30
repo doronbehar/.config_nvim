@@ -1,19 +1,3 @@
-" {{{ NERDTree:
-let g:NERDTreeDirArrowExpandable = '»'
-let g:NERDTreeDirArrowCollapsible = '¬'
-let g:NERDTreeShowHidden = 1
-let g:NERDTreeAutoDeleteBuffer = 1
-let g:NERDTreeCaseSensitiveSort = 1
-let g:NERDTreeShowLineNumbers = 1
-let g:NERDTreeBookmarksFile = expand('$HOME/.local/share/nvim/NERDTreeBookmarks')
-" - disable Netrw:
-let g:NERDTreeHijackNetrw = 1
-let g:loaded_netrwPlugin = 1
-" - mappings:
-let g:NERDTreeMapJumpNextSibling = ''
-let g:NERDTreeMapJumpPrevSibling = ''
-" }}}
-
 " {{{ Airline:
 let g:airline#extensions#disable_rtp_load = 1
 let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
@@ -37,25 +21,6 @@ else
 	let g:airline_powerline_fonts = 1
 	let g:airline_symbols.keymap = '⌨'
 end
-" }}}
-
-" {{{ devicons
-if expand('$DISPLAY') ==# '$DISPLAY'
-	let g:webdevicons_enable = 0
-end
-" }}}
-
-" {{{ easymotion:
-" match the easymotion idea of word movement ot mine just like in
-" plugin/my-mappings.vim
-map <Leader> <Plug>(easymotion-prefix)
-map <leader>w <Plug>(easymotion-b)
-map <leader>W <Plug>(easymotion-B)
-map <leader>ge <Plug>(easymotion-w)
-map <leader>gE <Plug>(easymotion-W)
-map <leader>gw <Plug>(easymotion-ge)
-map <leader>gW <Plug>(easymotion-gE)
-let g:EasyMotion_keys = 'asdfghjklqweruio'
 " }}}
 
 " {{{ Android:
@@ -95,28 +60,8 @@ nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
 " }}}
 
-" {{{ neoterm https://github.com/nikvdp/neomux
-" Disable mappings / others I'm already used to handle by myself
-let g:neomux_no_term_autoinsert = 1
-let g:neomux_paste_buffer_map = ''
-let g:neomux_no_term_leave_after_exit = 1
-let g:neomux_dont_fix_term_ctrlw_map = 1
-" }}}
-
 " {{{ editorconfig
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
-" }}}
-
-" {{{ emmet
-let g:user_emmet_install_global = 0
-" }}}
-
-" {{{ pandoc
-let g:pandoc#command#templates_file = split(&runtimepath, ',')[0] . '/pandoc-templates'
-" Make sure I can diffrentiate between a '*' and a '-' in lists.
-let g:pandoc#syntax#conceal#blacklist = [ 'list' ]
-" Make sure no bibliography is used automatically
-let g:pandoc#biblio#sources = 'bg'
 " }}}
 
 " {{{ nerdcommenter
