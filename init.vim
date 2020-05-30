@@ -74,6 +74,11 @@ if expand('$SSH_CLIENT') !=# '$SSH_CLIENT'
 	set lazyredraw
 endif
 
+" {{{1 UX
+" From some reason this is not the default on Vim, see
+" https://vi.stackexchange.com/a/2163/6411
+set backspace=indent,eol,start
+
 " {{{1 tab's and indentation preferences:
 set shiftwidth=4
 set tabstop=4
