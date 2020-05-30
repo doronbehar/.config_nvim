@@ -5,6 +5,10 @@
       "args": ["-cp", "/home/doron/downloads/EmmyLua-LS-all.jar", "com.tang.vscode.MainKt"],
       "filetypes": ["lua"],
       "rootPatterns": [".git/"]
+    },
+    "nix": {
+      "command": "rnix-lsp",
+      "filetypes": ["nix"]
     }
   },
   "rust-client.rlsPath": "/run/current-system/sw/bin/rls",
