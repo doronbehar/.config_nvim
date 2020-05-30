@@ -1,15 +1,5 @@
 {
   "languageserver": {
-    "cquery": {
-      "command": "cquery",
-      "args": ["--log-file=/tmp/cq.log"],
-      // disable automatic reveal output channel
-      "revealOutputChannelOn": "never",
-      "filetypes": ["c", "cpp"],
-      "initializationOptions": {
-        "cacheDirectory": "/tmp/cquery"
-      }
-    },
     "lua": {
       "command": "java",
       "args": ["-cp", "/home/doron/downloads/EmmyLua-LS-all.jar", "com.tang.vscode.MainKt"],

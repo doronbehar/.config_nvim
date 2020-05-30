@@ -256,3 +256,6 @@
 [submodule "bundle/neomux"]
 	path = bundle/neomux
 	url = https://github.com/nikvdp/neomux
+[submodule "bundle/jsx-typescript"]
+	path = bundle/jsx-typescript
+	url = https://github.com/peitalin/vim-jsx-typescript
