@@ -165,13 +165,8 @@ endif
 " }}}
 
 " {{{ AnsiEsc
+" No reason why this script is living in this plugin
 let g:loaded_cecutil = 1
-" }}}
-
-" {{{ Pad
-let g:pad#dir = expand('$HOME/documents/notes')
-let g:pad#open_in_split = 0
-let g:pad#set_mappings = 0
 " }}}
 
 " vim:foldmethod=marker:ft=vim

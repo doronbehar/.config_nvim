@@ -1,10 +1,6 @@
 " Control tabsize easily
 command! -nargs=1 Tabsize call tabsize#set(<f-args>)
 
-" Change pandoc variables easily
-command! -nargs=0 PAT call pandoc_vars#toggle_autoexec_on_writes()
-command! -nargs=+ PAC call pandoc_vars#set_autoexec_command(<f-args>)
-
 " Preserver selection after indentation:
 " Source: https://dailyvim.tumblr.com/post/138670862883/preserve-selection-after-indentation
 vmap > >gv
