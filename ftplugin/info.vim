@@ -1,4 +1,4 @@
-nmap u <Plug>(InfoUp)
-nmap ]] <Plug>(InfoNext)
-nmap [[ <Plug>(InfoPrev)
-nmap g0 <Plug>(InfoMenu)
+nnoremap <buffer> u <Plug>(InfoUp)
+nnoremap <buffer> ]] <Plug>(InfoNext)
+nnoremap <buffer> [[ <Plug>(InfoPrev)
+nnoremap <buffer> g0 <Plug>(InfoMenu)
