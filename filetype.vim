@@ -27,6 +27,8 @@ au BufNewFile,BufRead ~/.mozilla/firefox/*/itsalltext/github.com_*_*_issues_* se
 au BufNewFile,BufRead ~/.mozilla/firefox/*/itsalltext/*.wikipedia.org_w_index.php.* setf mediawiki | let b:stay_ignore = 1
 au BufNewFile,BufRead ~/.mozilla/firefox/*/itsalltext/* setf itsalltext | let b:stay_ignore = 1
 
+au BufNewFile,BufRead /var/src/nixpkgs/**.nix setf nix.nixpkgs
+
 " GhostText / Firenvim
 au BufNewFile,BufRead ghost-*.txt set expandtab
 au BufNewFile,BufRead *stackexchange.com* setf markdown | let b:stay_ignore = 1

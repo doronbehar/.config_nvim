@@ -8,7 +8,7 @@
     },
     "nix": {
       "command": "rnix-lsp",
-      "filetypes": ["nix"]
+      "filetypes": ["nix", "nix.nixpkgs"]
     }
   },
   "rust-client.rlsPath": "/run/current-system/sw/bin/rls",
