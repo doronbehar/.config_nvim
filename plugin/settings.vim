@@ -1,3 +1,8 @@
+" {{{1 netrw
+" https://vi.stackexchange.com/questions/14622/how-can-i-close-the-netrw-buffer
+let g:netrw_fastbrowse = 0
+" }}}
+
 " {{{ Airline:
 let g:airline#extensions#disable_rtp_load = 1
 let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
