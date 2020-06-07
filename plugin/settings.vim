@@ -69,6 +69,17 @@ nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 " }}}
 
+" {{{ fzf.vim
+command! -bar -bang -nargs=? -complete=buffer Buffers call 
+	\ fzf#vim#buffers(
+	\ <q-args>,
+	\ {'options': [
+	\ '--bind=D:execute@nvr -c "bw $(echo {+1} | sed "s/\[\([0-9]\)\]/\1/g")"@+reload@nvr --remote-expr "join(map(fzf#vim#buflisted_sorted(), \"fzf#vim#format_buffer(v:val)\"), \"\n\")"@',
+	\ '--multi'
+	\ ]},
+	\ <bang>0)
+" }}}
+
 " {{{ nerdcommenter
 let g:NERDSpaceDelims = 1
 let g:NERDComDefaultDelims = 1
