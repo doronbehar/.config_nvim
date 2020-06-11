@@ -11,7 +11,6 @@
 
 " Putting the most common above so they'll match first
 let g:terminal_autoinsert_commands = [
-    \ 'lf',
     \ 'less',
     \ 'fzf',
     \ 'git---ssh'

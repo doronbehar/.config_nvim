@@ -129,6 +129,14 @@ let g:sandwich#recipes += [
 let g:dispatch_no_maps = 1
 " }}}
 
+" {{{ lf.vim
+command! -nargs=+ LF call lf#LF(<f-args>, [
+	\ '-command', 'map e push l',
+	\ '-command', 'map O $gio open $f'
+	\])
+nnoremap <leader>e :LF %:p edit<CR>
+" }}}
+
 " {{{ coc
 augroup CocKeys
 	autocmd User CocNvimInit nmap gd <Plug>(coc-definition)
