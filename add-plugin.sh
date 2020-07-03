@@ -25,6 +25,7 @@ git submodule add "$1" "bundle/$plugin_name_stripped"
 echo @@@ linking "bundle/$plugin_name_stripped" to pack/"$2"/start/
 echo ln -s -r "bundle/$plugin_name_stripped" -t pack/"$2"/start/
 ln -s -r "bundle/$plugin_name_stripped" -t pack/"$2"/start/
+git add pack/"$2"/start/$plugin_name_stripped
 echo @@@ updating help tags
 echo $EDITOR -es --cmd "helptags bundle/$plugin_name_stripped/doc" --cmd "quit"
 $EDITOR -es --cmd "helptags bundle/$plugin_name_stripped/doc" --cmd "quit"
