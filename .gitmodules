@@ -259,3 +259,6 @@
 [submodule "bundle/lf"]
 	path = bundle/lf
 	url = https://github.com/thezeroalpha/vim-lf
+[submodule "bundle/asciidoctor"]
+	path = bundle/asciidoctor
+	url = https://github.com/habamax/vim-asciidoctor
