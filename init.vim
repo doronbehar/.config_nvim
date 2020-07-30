@@ -43,6 +43,30 @@ colorscheme my
 map Q <nop>
 if expand('$DISPLAY') !=# '$DISPLAY' && $TERM !~ '^rxvt' && has('nvim') " workaround for https://www.reddit.com/r/vim/comments/4ywjd2/set_termguicolors_not_working_in_rxvtunicode/
 	set termguicolors
+	" black
+	let g:terminal_color_0 = '#282a2e'
+	let g:terminal_color_8 = '#373b41'
+	" red
+	let g:terminal_color_1 = '#a54242'
+	let g:terminal_color_9 = '#cc6666'
+	" green
+	let g:terminal_color_2 = '#8c9440'
+	let g:terminal_color_10 = '#b5bd68'
+	" yellow
+	let g:terminal_color_3 = '#de935f'
+	let g:terminal_color_11 = '#f0c674'
+	" blue
+	let g:terminal_color_4 = '#5f819d'
+	let g:terminal_color_12 = '#81a2be'
+	" magenta
+	let g:terminal_color_5 = '#85678f'
+	let g:terminal_color_13 = '#b294bb'
+	" cyan
+	let g:terminal_color_6 = '#5e8d87'
+	let g:terminal_color_14 = '#8abeb7'
+	" white
+	let g:terminal_color_7 = '#707880'
+	let g:terminal_color_15 = '#c5c8c6'
 endif
 set background=dark
 " Always display the tabline, even if there is only one tab:
