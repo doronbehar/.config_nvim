@@ -16,15 +16,15 @@ vnoremap <leader>S <Esc>/\<<c-r>=escape#getvisual()<CR>\><CR>
 " replace the visually selected text
 vnoremap <leader>r <Esc>:%s/<c-r>=escape#getvisual()<CR>//gc<left><left><left>
 vnoremap <leader>R <Esc>:%s/\<<c-r>=escape#getvisual()<CR>\>//gc<left><left><left>
-
-" ---------------
-" <space> related
-" ---------------
-
 " toggle set hlsearc setting:
-nnoremap <space>v :set hlsearch! hlsearch?<CR>
+nnoremap <leader>v :set hlsearch! hlsearch?<CR>
 " Create a mapping to sync syntax:
-nnoremap <space><esc> :syntax sync fromstart<CR>
+nnoremap <leader><esc> :syntax sync fromstart<CR>
+
+" --------------------------------------------
+" <space> related, usually for searching stuff
+" --------------------------------------------
+
 " cycle through all foldmethods
 nnoremap <space>m :call foldmethods#cycle()<CR>
 " toggle pager mode
@@ -41,17 +41,19 @@ nnoremap <space>m :GFiles?<CR>
 " Complete a file from open buffers
 nnoremap <space>b :Buffers<CR>
 
-" --------------------------------
-" <F#> that should work everywhere
-" --------------------------------
+" ----------------------------------------
+" <F#> that usually should work everywhere
+" ----------------------------------------
 
 " Switch between various rtl and ltr settings
 nnoremap <F10> :call paragraph#toggle()<CR>
 inoremap <F10> <C-\><C-o>:call paragraph#toggle()<CR>
 nnoremap <F11> :call smartwrap#toggle()<CR>
 inoremap <F11> <C-\><C-o>:call smartwrap#toggle()<CR>
-" Switch between various rtl and ltr settings
 nnoremap <F12> :call rtl#toggle()<CR>
 inoremap <F12> <C-\><C-o>:call rtl#toggle()<CR>
-" Also in select mode
-snoremap <F12> i<BS><C-\><C-o>:call rtl#toggle()<CR>
+" toggle set spell setting:
+nnoremap <F2> :set spell! spell?<CR>
+inoremap <F2> <C-\><C-o>:set spell! spell?<CR>
+" Gundo
+nnoremap <F5> :GundoToggle<CR>

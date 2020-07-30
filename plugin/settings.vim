@@ -96,7 +96,6 @@ let g:gitlab_api_keys = {
 
 " {{{ gundo
 let g:gundo_prefer_python3 = 1
-nnoremap <F5> :GundoToggle<CR>
 " }}}
 
 " {{{ sandwich
