@@ -232,9 +232,6 @@
 [submodule "bundle/dispatch-neovim"]
 	path = bundle/dispatch-neovim
 	url = https://github.com/radenling/vim-dispatch-neovim
-[submodule "bundle/ultisnips"]
-	path = bundle/ultisnips
-	url = https://github.com/SirVer/ultisnips
 [submodule "bundle/snippets"]
 	path = bundle/snippets
 	url = https://github.com/honza/vim-snippets
