@@ -6,8 +6,15 @@ nnoremap <C-Left> <C-W><
 " }}}
 
 " {{{ windows scrolling
-noremap <A-i> zl
-noremap <A-u> zh
-noremap <A-j> jzz
-noremap <A-k> kzz
+if has('nvim')
+	noremap <A-i> zl
+	noremap <A-u> zh
+	noremap <A-j> jzz
+	noremap <A-k> kzz
+else
+	noremap i zl
+	noremap u zh
+	noremap j jzz
+	noremap k kzz
+endif
 " }}}
