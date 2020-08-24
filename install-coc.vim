@@ -1,23 +1,26 @@
-CocInstall coc-clangd
-CocInstall coc-cmake
-CocInstall coc-css
-CocInstall coc-diagnostic
-CocInstall coc-docker
-CocInstall coc-emoji
-CocInstall coc-eslint
-CocInstall coc-go
-CocInstall coc-html
-CocInstall coc-json
-CocInstall coc-lsp-wl
-CocInstall coc-prettier
-CocInstall coc-python
-CocInstall coc-rls
-CocInstall coc-sh
-CocInstall coc-snippets
-CocInstall coc-svg
-CocInstall coc-texlab
-CocInstall coc-tsserver
-CocInstall coc-vimlsp
-CocInstall coc-wxml
-CocInstall coc-yaml
-CocInstall coc-yank
+CocInstall
+		\ coc-clangd
+		\ coc-cmake
+		\ coc-css
+		\ coc-diagnostic
+		\ coc-docker
+		\ coc-emoji
+		\ coc-eslint
+		\ coc-go
+		\ coc-html
+		\ coc-json
+		\ coc-lsp-wl
+		\ coc-prettier
+" Needs to be split so the too many arguments error won't appear
+CocInstall 
+		\ coc-python
+		\ coc-rls
+		\ coc-sh
+		\ coc-snippets
+		\ coc-svg
+		\ coc-texlab
+		\ coc-tsserver
+		\ coc-vimlsp
+		\ coc-wxml
+		\ coc-yaml
+		\ coc-yank
