@@ -259,3 +259,6 @@
 [submodule "bundle/asciidoctor"]
 	path = bundle/asciidoctor
 	url = https://github.com/habamax/vim-asciidoctor
+[submodule "bundle/Docekrfile"]
+	path = bundle/Docekrfile
+	url = https://github.com/ekalinin/Dockerfile.vim
