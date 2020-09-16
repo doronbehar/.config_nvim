@@ -262,3 +262,6 @@
 [submodule "bundle/Docekrfile"]
 	path = bundle/Docekrfile
 	url = https://github.com/ekalinin/Dockerfile.vim
+[submodule "bundle/jsonnet"]
+	path = bundle/jsonnet
+	url = https://github.com/google/vim-jsonnet
