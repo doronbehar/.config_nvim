@@ -265,3 +265,6 @@
 [submodule "bundle/jsonnet"]
 	path = bundle/jsonnet
 	url = https://github.com/google/vim-jsonnet
+[submodule "bundle/json5"]
+	path = bundle/json5
+	url = https://github.com/gutenye/json5.vim
