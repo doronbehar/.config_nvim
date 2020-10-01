@@ -87,7 +87,10 @@ let g:NERDComDefaultDelims = 1
 
 " {{{ fugitive
 command! Gcommend Gcommit --amend --no-edit
-let g:fugitive_gitlab_domains = [ 'https://gitlab.gnome.org' ]
+let g:fugitive_gitlab_domains = [
+	\ 'https://gitlab.gnome.org',
+	\ 'https://gitlab.freedesktop.org'
+	\]
 " See :help fugitive-gitlab-config
 let g:gitlab_api_keys = {
         \ 'gitlab.com': $GITLAB_API_PRIVATE_TOKEN,
