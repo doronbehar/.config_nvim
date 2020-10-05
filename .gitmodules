@@ -268,3 +268,6 @@
 [submodule "bundle/json5"]
 	path = bundle/json5
 	url = https://github.com/gutenye/json5.vim
+[submodule "meson"]
+	path = bundle/meson
+	url = https://github.com/mesonbuild/meson

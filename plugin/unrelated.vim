@@ -26,9 +26,9 @@ nnoremap <leader><esc> :syntax sync fromstart<CR>
 " --------------------------------------------
 
 " cycle through all foldmethods
-nnoremap <space>m :call foldmethods#cycle()<CR>
+nnoremap <leader>m :call foldmethods#cycle()<CR>
 " toggle pager mode
-nnoremap <space>p :call pager#toggle()<CR>
+nnoremap <leader>p :call pager#toggle()<CR>
 " Complete a command from the history
 nnoremap <space>; :History:<CR>
 " Complete a previous search query
