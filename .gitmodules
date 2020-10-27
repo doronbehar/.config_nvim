@@ -196,9 +196,6 @@
 [submodule "bundle/jsonc"]
 	path = bundle/jsonc
 	url = https://github.com/neoclide/jsonc.vim
-[submodule "bundle/lexima"]
-	path = bundle/lexima
-	url = https://github.com/cohama/lexima.vim
 [submodule "bundle/closetag"]
 	path = bundle/closetag
 	url = https://github.com/alvan/vim-closetag
@@ -271,3 +268,6 @@
 [submodule "meson"]
 	path = bundle/meson
 	url = https://github.com/mesonbuild/meson
+[submodule "bundle/pear-tree"]
+	path = bundle/pear-tree
+	url = https://github.com/tmsvg/pear-tree
