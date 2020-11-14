@@ -85,20 +85,6 @@ let g:NERDSpaceDelims = 1
 let g:NERDComDefaultDelims = 1
 " }}}
 
-" {{{ pear-tree
-let g:pear_tree_ft_disabled = [
-	\ 'gitcommit',
-	\ 'gitsendmail',
-	\ 'mail',
-	\ 'man',
-	\ 'markdown',
-	\ 'rst',
-	\ 'text'
-	\]
-let g:pear_tree_smart_openers = 1
-let g:pear_tree_smart_closers = 1
-" }}}
-
 " {{{ fugitive
 command! Gcommend Gcommit --amend --no-edit
 let g:fugitive_gitlab_domains = [
