@@ -14,7 +14,3 @@ let g:vimtex_fold_types = {
 			\	}
 			\}
 let g:vimtex_compiler_method = 'tectonic'
-let b:pear_tree_pairs = {
-		\ '$': {'closer': '$'},
-		\ '\\begin{*}': {'closer': '\\end{*}'}
-		\ }
