@@ -11,6 +11,7 @@
       "filetypes": ["nix", "nix.nixpkgs"]
     }
   },
+  "go.goplsPath": "/run/current-system/sw/bin/gopls",
   "rust-client.rlsPath": "/run/current-system/sw/bin/rls",
   "coc.source.emoji.filetypes": [ "markdown", "pandoc" ],
   "diagnostic.messageTarget": "echo",
