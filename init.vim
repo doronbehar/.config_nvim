@@ -41,7 +41,11 @@ syntax enable
 colorscheme my
 " who uses Ex mode?
 map Q <nop>
-if expand('$DISPLAY') !=# '$DISPLAY' && $TERM !~ '^rxvt' && has('nvim') " workaround for https://www.reddit.com/r/vim/comments/4ywjd2/set_termguicolors_not_working_in_rxvtunicode/
+" Only with tmux and rxvt this seems needed - we mind not to enable it for
+" alacritty for example.
+if expand('$DISPLAY') !=# '$DISPLAY' &&
+		\ $TERM !~ '^rxvt' && has('nvim') && 
+		\ expand('$ALACRITTY_LOG') ==# '$ALACRITTY_LOG'
 	set termguicolors
 	" black
 	let g:terminal_color_0 = '#282a2e'
