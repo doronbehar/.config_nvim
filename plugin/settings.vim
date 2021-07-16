@@ -189,8 +189,9 @@ let g:firenvim_config = {
 \ }
 if exists('g:started_by_firenvim')
 	" set laststatus=0
-	au TextChanged * ++nested call firenvim_w#delaywrite()
-	au TextChangedI * ++nested call firenvim_w#delaywrite()
+	au BufEnter www.overleaf.com_* nnoremap <C-CR> <Esc>:w<CR>:call firenvim#eval_js('document.querySelector(".btn-recompile").click();')<CR>
+	" au TextChanged * ++nested call firenvim_w#delaywrite()
+	" au TextChangedI * ++nested call firenvim_w#delaywrite()
 	" https://github.com/glacambre/firenvim#interacting-with-the-page
 	nnoremap <Esc><Esc> :call firenvim#focus_page()<CR>
 endif
