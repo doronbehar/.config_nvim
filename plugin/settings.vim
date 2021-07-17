@@ -70,7 +70,7 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 " }}}
 
 " {{{ fzf.vim
-command! -bar -bang -nargs=? -complete=buffer Buffers call 
+command! -bar -bang -nargs=? -complete=buffer Buffers call
 	\ fzf#vim#buffers(
 	\ <q-args>,
 	\ {'options': [
@@ -93,8 +93,8 @@ let g:fugitive_gitlab_domains = [
 	\]
 " See :help fugitive-gitlab-config
 let g:gitlab_api_keys = {
-        \ 'gitlab.com': $GITLAB_API_PRIVATE_TOKEN,
-        \}
+	\ 'gitlab.com': $GITLAB_API_PRIVATE_TOKEN,
+	\}
 " }}}
 
 " {{{ gundo
@@ -153,8 +153,8 @@ augroup CocKeys
 	autocmd User CocNvimInit nmap [q <Plug>(coc-diagnostic-prev)
 augroup END
 if has('nvim-0.5.0')
-    " see https://github.com/neoclide/coc.nvim/issues/1775
-    let g:coc_disable_transparent_cursor = 1
+	" see https://github.com/neoclide/coc.nvim/issues/1775
+	let g:coc_disable_transparent_cursor = 1
 endif
 
 
@@ -170,12 +170,12 @@ let g:ghost_port = 4465
 
 " {{{ firenvim
 let g:firenvim_config = {
-    \ 'localSettings': {
-        \ '.*': {
-            \ 'selector': '',
-            \ 'priority': 0,
-        \ },
-    \ }
+	\ 'localSettings': {
+		\ '.*': {
+			\ 'selector': '',
+			\ 'priority': 0,
+		\ },
+	\ }
 \ }
 if exists('g:started_by_firenvim')
 	" set laststatus=0
