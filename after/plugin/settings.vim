@@ -14,4 +14,17 @@ elseif empty($VIM_NO_FZF)
 endif
 " }}}
 
+if exists('g:did_coc_loaded')
+	inoremap <silent><expr> <TAB>
+			\ pumvisible() ? "\<C-n>" :
+			\ <SID>check_back_space() ? "\<TAB>" :
+			\ coc#refresh()
+	inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+endif
+
+function! s:check_back_space() abort
+	let col = col('.') - 1
+	return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
 " vim:foldmethod=marker:ft=vim
