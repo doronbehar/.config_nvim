@@ -271,3 +271,6 @@
 [submodule "meson"]
 	path = bundle/meson
 	url = https://github.com/mesonbuild/meson
+[submodule "bundle/vala"]
+	path = bundle/vala
+	url = https://github.com/arrufat/vala.vim
