@@ -174,6 +174,7 @@ let g:firenvim_config = {
 		\ '.*': {
 			\ 'selector': '',
 			\ 'priority': 0,
+			\ 'takeover': 'never',
 		\ },
 	\ }
 \ }
