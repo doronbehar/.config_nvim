@@ -86,6 +86,7 @@ let g:NERDComDefaultDelims = 1
 " }}}
 
 " {{{ fugitive
+let g:fugitive_legacy_commands = 1
 command! Gcommend Gcommit --amend --no-edit
 let g:fugitive_gitlab_domains = [
 	\ 'https://gitlab.gnome.org',
