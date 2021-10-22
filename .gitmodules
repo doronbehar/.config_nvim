@@ -46,9 +46,6 @@
 [submodule "bundle/push"]
 	path = bundle/push
 	url = https://github.com/glts/vim-push
-[submodule "bundle/speeddating"]
-	path = bundle/speeddating
-	url = https://github.com/tpope/vim-speeddating
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = https://github.com/godlygeek/tabular
@@ -106,9 +103,6 @@
 [submodule "bundle/tmux-focus-events"]
 	path = bundle/tmux-focus-events
 	url = https://github.com/tmux-plugins/vim-tmux-focus-events
-[submodule "bundle/neovim-gui-shim"]
-	path = bundle/neovim-gui-shim
-	url = https://github.com/equalsraf/neovim-gui-shim
 [submodule "bundle/ghost"]
 	path = bundle/ghost
 	url = https://github.com/raghur/vim-ghost
@@ -205,12 +199,6 @@
 [submodule "bundle/jinja"]
 	path = bundle/jinja
 	url = https://github.com/lepture/vim-jinja
-[submodule "bundle/hug-neovim-rpc"]
-	path = bundle/hug-neovim-rpc
-	url = https://github.com/roxma/vim-hug-neovim-rpc
-[submodule "bundle/yarp"]
-	path = bundle/yarp
-	url = https://github.com/roxma/nvim-yarp
 [submodule "bundle/vimproc"]
 	path = bundle/vimproc
 	url = https://github.com/Shougo/vimproc.vim

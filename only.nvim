@@ -21,7 +21,6 @@ if expand('$DISPLAY') !=# '$DISPLAY'
 		\,ve:ver25
 		\,o:hor50
 		\,v:hor50-blinkon0
-	Packadd neovim-gui-shim
 end
 
 " vim: ft=vim
