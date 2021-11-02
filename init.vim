@@ -93,7 +93,6 @@ set noshowmode
 set mouse=a
 " folds
 set foldenable
-set foldmethod=indent
 " indentation rules, read more at :help indent.txt
 let g:vim_indent_cont = &shiftwidth
 set foldcolumn=2

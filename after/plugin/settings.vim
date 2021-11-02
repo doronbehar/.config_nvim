@@ -27,4 +27,9 @@ function! s:check_back_space() abort
 	return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
+" Set this option if no other plugin has set it
+if &foldmethod == 'manual'
+	set foldmethod=indent
+endif
+
 " vim:foldmethod=marker:ft=vim
