@@ -12,11 +12,10 @@
     }
   },
   "go.goplsPath": "/run/current-system/sw/bin/gopls",
-  "rust-client.rlsPath": "/run/current-system/sw/bin/rls",
+  "rust-client.rlsPath": "rls",
   "coc.source.emoji.filetypes": [ "markdown", "pandoc" ],
   "diagnostic.messageTarget": "echo",
-  "python.linting.pylintUseMinimalCheckers": false,
-  "python.pythonPath": "python3",
+  "jedi.executable.command": "jedi-language-server",
   "suggest.timeout": 5000,
   "html.format.wrapLineLength": 80
 }
