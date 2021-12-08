@@ -1,21 +1,20 @@
 {
   "languageserver": {
-    "lua": {
-      "command": "java",
-      "args": ["-cp", "/home/doron/downloads/EmmyLua-LS-all.jar", "com.tang.vscode.MainKt"],
-      "filetypes": ["lua"],
-      "rootPatterns": [".git/"]
-    },
     "nix": {
       "command": "rnix-lsp",
       "filetypes": ["nix", "nix.nixpkgs"]
     }
   },
-  "go.goplsPath": "/run/current-system/sw/bin/gopls",
-  "rust-client.rlsPath": "rls",
-  "coc.source.emoji.filetypes": [ "markdown", "pandoc" ],
+  // Use these from $PATH
+  "go.goplsPath": "gopls",
+  "rust-analyzer.server.path": "rust-analyzer",
+  "rust-analyzer.inlayHints.enable": true,
+  // "rust-analyzer.procMacro.enable": false,
+  "rust-analyzer.diagnostics.disabled": [ "macro-error" ],
   "diagnostic.messageTarget": "echo",
   "jedi.executable.command": "jedi-language-server",
+  // "lisp.enabled": true,
+  // "lisp.serverPath": "cl-lsp",
   "suggest.timeout": 5000,
   "html.format.wrapLineLength": 80
 }
