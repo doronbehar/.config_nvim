@@ -9,8 +9,6 @@
   "go.goplsPath": "gopls",
   "rust-analyzer.server.path": "rust-analyzer",
   "rust-analyzer.inlayHints.enable": true,
-  // "rust-analyzer.procMacro.enable": false,
-  "rust-analyzer.diagnostics.disabled": [ "macro-error" ],
   "diagnostic.messageTarget": "echo",
   "jedi.executable.command": "jedi-language-server",
   // "lisp.enabled": true,
