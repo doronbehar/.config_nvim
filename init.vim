@@ -123,11 +123,8 @@ set viewoptions=folds,cursor
 " mks settings:
 set sessionoptions=folds,help,resize,tabpages,winpos,winsize
 
-" {{{1 Load local configuration
-" Load nvimrc's in the directory the file is being launched from.
+" {{{1 Load local configuration, not using exrc since I use `prj-vim`
 set modeline
-set exrc
-set secure
 
 " {{{1 runtime
 " Add vifm runtime files to rtp:

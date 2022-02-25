@@ -259,3 +259,9 @@
 [submodule "bundle/vala"]
 	path = bundle/vala
 	url = https://github.com/arrufat/vala.vim
+[submodule "bundle/prj"]
+	path = bundle/prj
+	url = https://github.com/emersonmx/vim-prj
+[submodule "bundle/jupyter"]
+	path = bundle/jupyter
+	url = https://github.com/jupyter-vim/jupyter-vim

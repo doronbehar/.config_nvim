@@ -65,6 +65,10 @@ nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
 " }}}
 
+" {{{ For prj - https://github.com/emersonmx/vim-prj/blob/master/plugin/prj.vim
+let g:prj_config_path = ".vim/vimrc"
+" }}}
+
 " {{{ editorconfig
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 " }}}
