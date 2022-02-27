@@ -265,3 +265,15 @@
 [submodule "bundle/jupyter"]
 	path = bundle/jupyter
 	url = https://github.com/jupyter-vim/jupyter-vim
+[submodule "bundle/dap"]
+	path = bundle/dap
+	url = https://github.com/mfussenegger/nvim-dap
+[submodule "bundle/dap-python"]
+	path = bundle/dap-python
+	url = https://github.com/mfussenegger/nvim-dap-python
+[submodule "bundle/dap-ui"]
+	path = bundle/dap-ui
+	url = https://github.com/rcarriga/nvim-dap-ui
+[submodule "bundle/dap-go"]
+	path = bundle/dap-go
+	url = https://github.com/leoluz/nvim-dap-go

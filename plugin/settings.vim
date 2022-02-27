@@ -45,6 +45,66 @@ augroup toggleList
 augroup END
 " }}}
 
+" {{{ debug adaptor
+nnoremap <silent> <leader>c :lua require'dap'.continue()<CR>
+nnoremap <silent> <leader>o :lua require'dap'.step_over()<CR>
+nnoremap <silent> <leader>s :lua require'dap'.step_into()<CR>
+nnoremap <silent> <leader>u :lua require'dap'.step_out()<CR>
+nnoremap <silent> <leader>b :lua require'dap'.toggle_breakpoint()<CR>
+nnoremap <silent> <leader>B :lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>
+nnoremap <silent> <leader>lp :lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>
+nnoremap <silent> <leader>dr :lua require'dap'.repl.toggle()<CR>
+nnoremap <silent> <leader>dl :lua require'dap'.run_last()<CR>
+" https://github.com/mfussenegger/nvim-dap-python#mappings
+nnoremap <silent> <leader>dn :lua require('dap-python').test_method()<CR>
+nnoremap <silent> <leader>df :lua require('dap-python').test_class()<CR>
+vnoremap <silent> <leader>ds <ESC>:lua require('dap-python').debug_selection()<CR>
+" See :help dao-completion
+au FileType dap-repl lua require('dap.ext.autocompl').attach()
+" To immitate what happens in plugin/terminal-maps.vim
+au FileType dap-repl inoremap <C-\><C-\> <C-c>
+lua << EOF
+local dap = require('dap')
+-- https://github.com/rcarriga/nvim-dap-ui#usage
+local dapui = require("dapui")
+dapui.setup()
+-- Open the dap-ui whenever dap is launching: https://github.com/rcarriga/nvim-dap-ui#usage
+dap.listeners.after.event_initialized["dapui_config"] = function()
+  dapui.open()
+end
+dap.listeners.before.event_terminated["dapui_config"] = function()
+  dapui.close()
+end
+dap.listeners.before.event_exited["dapui_config"] = function()
+  dapui.close()
+end
+-- https://github.com/mfussenegger/nvim-dap-python#usage
+require('dap-python').setup('python')
+-- https://github.com/leoluz/nvim-dap-go#register-the-plugin
+require('dap-go').setup()
+-- See :help dap-configuration
+dap.configurations = {
+  python = {
+    {
+      type = 'python';
+      request = 'launch';
+      name = "Launch file";
+      program = "${file}";
+      pythonPath = 'python';
+    }
+  },
+  go = {
+    {
+      type = "go",
+      name = "Debug Package",
+      request = "launch",
+      program = "${fileDirname}",
+    }
+  }
+}
+EOF
+" }}}
+
 " {{{ bbye
 cabbrev bd Bdelete
 cabbrev bdel Bdelete
