@@ -27,8 +27,8 @@ echo ln -s -r "bundle/$plugin_name_stripped" -t pack/"$2"/start/
 ln -s -r "bundle/$plugin_name_stripped" -t pack/"$2"/start/
 git add pack/"$2"/start/$plugin_name_stripped
 echo @@@ updating help tags
-echo $EDITOR -es --cmd "helptags bundle/$plugin_name_stripped/doc" --cmd "quit"
-$EDITOR -es --cmd "helptags bundle/$plugin_name_stripped/doc" --cmd "quit"
+echo nvim -es --cmd "helptags bundle/$plugin_name_stripped/doc" --cmd "quit"
+nvim -es --cmd "helptags bundle/$plugin_name_stripped/doc" --cmd "quit"
 echo @@@ updating .pathogen_disabled.vim
 echo nvim --cmd 'source update-submodules.vim' --cmd 'quit'
 nvim --cmd 'source update-submodules.vim' --cmd 'quit'
