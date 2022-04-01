@@ -277,3 +277,6 @@
 [submodule "bundle/dap-go"]
 	path = bundle/dap-go
 	url = https://github.com/leoluz/nvim-dap-go
+[submodule "bundle/sved"]
+	path = bundle/sved
+	url = https://github.com/doronbehar/sved
