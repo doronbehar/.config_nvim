@@ -190,9 +190,6 @@
 [submodule "bundle/jsonc"]
 	path = bundle/jsonc
 	url = https://github.com/neoclide/jsonc.vim
-[submodule "bundle/lexima"]
-	path = bundle/lexima
-	url = https://github.com/doronbehar/lexima.vim
 [submodule "bundle/closetag"]
 	path = bundle/closetag
 	url = https://github.com/alvan/vim-closetag
@@ -280,3 +277,6 @@
 [submodule "bundle/sved"]
 	path = bundle/sved
 	url = https://github.com/doronbehar/sved
+[submodule "bundle/lexima"]
+	path = bundle/lexima
+	url = https://github.com/doronbehar/lexima.vim
