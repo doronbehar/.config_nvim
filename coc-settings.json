@@ -3,6 +3,10 @@
     "nix": {
       "command": "rnix-lsp",
       "filetypes": ["nix", "nix.nixpkgs"]
+    },
+    "svls": {
+        "command": "svls",
+        "filetypes": ["systemverilog"]
     }
   },
   // Use these from $PATH
