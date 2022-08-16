@@ -223,7 +223,6 @@ if has('nvim-0.5.0')
 	let g:coc_disable_transparent_cursor = 1
 endif
 
-
 let g:coc_snippet_next = '<tab>'
 " for coc-yank
 nnoremap <leader>y :CocList yank<cr>
