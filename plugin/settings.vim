@@ -70,13 +70,13 @@ local dapui = require("dapui")
 dapui.setup()
 -- Open the dap-ui whenever dap is launching: https://github.com/rcarriga/nvim-dap-ui#usage
 dap.listeners.after.event_initialized["dapui_config"] = function()
-  dapui.open()
+	dapui.open()
 end
 dap.listeners.before.event_terminated["dapui_config"] = function()
-  dapui.close()
+	dapui.close()
 end
 dap.listeners.before.event_exited["dapui_config"] = function()
-  dapui.close()
+	dapui.close()
 end
 -- https://github.com/mfussenegger/nvim-dap-python#usage
 require('dap-python').setup('python')
@@ -84,23 +84,23 @@ require('dap-python').setup('python')
 require('dap-go').setup()
 -- See :help dap-configuration
 dap.configurations = {
-  python = {
-    {
-      type = 'python';
-      request = 'launch';
-      name = "Launch file";
-      program = "${file}";
-      pythonPath = 'python';
-    }
-  },
-  go = {
-    {
-      type = "go",
-      name = "Debug Package",
-      request = "launch",
-      program = "${fileDirname}",
-    }
-  }
+	python = {
+		{
+			type = 'python';
+			request = 'launch';
+			name = "Launch file";
+			program = "${file}";
+			pythonPath = 'python';
+		}
+	},
+	go = {
+		{
+			type = "go",
+			name = "Debug Package",
+			request = "launch",
+			program = "${fileDirname}",
+		}
+	}
 }
 EOF
 " }}}
@@ -165,6 +165,38 @@ let g:gitlab_api_keys = {
 
 " {{{ gundo
 let g:gundo_prefer_python3 = 1
+" }}}
+
+" {{{ treesitter
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+	textobjects = {
+		select = {
+			enable = true,
+			-- Automatically jump forward to textobj, similar to targets.vim
+			lookahead = true,
+			keymaps = {
+				-- You can use the capture groups defined in textobjects.scm
+				["af"] = "@function.outer",
+				["if"] = "@function.inner",
+				["ac"] = "@class.outer",
+				["ic"] = "@class.inner",
+			},
+			-- You can choose the select mode (default is charwise 'v')
+			selection_modes = {
+				['@parameter.outer'] = 'v', -- charwise
+				['@function.outer'] = 'V', -- linewise
+				['@class.outer'] = '<c-v>', -- blockwise
+			},
+			-- If you set this to `true` (default is `false`) then any textobject is
+			-- extended to include preceding xor succeeding whitespace. Succeeding
+			-- whitespace has priority in order to act similarly to eg the built-in
+			-- `ap`.
+			include_surrounding_whitespace = true,
+		},
+	},
+}
+EOF
 " }}}
 
 " {{{ sandwich
