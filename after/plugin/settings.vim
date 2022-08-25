@@ -14,26 +14,4 @@ elseif empty($VIM_NO_FZF)
 endif
 " }}}
 
-" {{{ coc
-if exists('g:did_coc_loaded')
-	" Insert <tab> when previous text is space, refresh completion if not.
-	inoremap <silent><expr> <TAB>
-			\ coc#pum#visible() ? coc#_select_confirm() :
-			\ coc#expandableOrJumpable() ?
-			\ "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-			\ <SID>check_back_space() ? "\<TAB>" :
-			\ coc#refresh()
-	inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
-endif
-function! s:check_back_space() abort
-	let col = col('.') - 1
-	return !col || getline('.')[col - 1]  =~ '\s'
-endfunction
-
-" Set this option if no other plugin has set it
-if &foldmethod == 'manual'
-	set foldmethod=indent
-endif
-" }}}
-
 " vim:foldmethod=marker:ft=vim

@@ -205,28 +205,44 @@ command! -nargs=+ LF call lf#LF(<f-args>, [
 nnoremap <leader>e :LF %:p edit<CR>
 " }}}
 
-" {{{ coc
-augroup CocKeys
-	autocmd User CocNvimInit nmap gd <Plug>(coc-definition)
-	autocmd User CocNvimInit nmap gD <Plug>(coc-implementation)
-	autocmd User CocNvimInit nmap gt <Plug>(coc-type-definition)
-	autocmd User CocNvimInit vmap <leader>p <Plug>(coc-format-selected)
-	autocmd User CocNvimInit nmap <leader>p <Plug>(coc-format-selected)
-	autocmd User CocNvimInit nmap <leader>i <Plug>(coc-diagnostic-info)
-	autocmd User CocNvimInit nmap * <Plug>(coc-references)
-	autocmd User CocNvimInit nmap <leader>r <Plug>(coc-rename)
-	autocmd User CocNvimInit nmap ]q <Plug>(coc-diagnostic-next)
-	autocmd User CocNvimInit nmap [q <Plug>(coc-diagnostic-prev)
-augroup END
-if has('nvim-0.5.0')
-	" see https://github.com/neoclide/coc.nvim/issues/1775
-	let g:coc_disable_transparent_cursor = 1
-endif
-
-let g:coc_snippet_next = '<tab>'
-" for coc-yank
-nnoremap <leader>y :CocList yank<cr>
-autocmd! CompleteDone * pclose!
+" {{{ coq
+let g:coq_settings = { 'auto_start': v:true }
+lua << EOF
+local lsp = require("lspconfig")
+local coq = require("coq")
+lsp.texlab.setup(coq.lsp_ensure_capabilities())
+lsp.clangd.setup(coq.lsp_ensure_capabilities())
+lsp.gopls.setup(coq.lsp_ensure_capabilities())
+lsp.rls.setup(coq.lsp_ensure_capabilities())
+lsp.svls.setup(coq.lsp_ensure_capabilities())
+lsp.rnix.setup(coq.lsp_ensure_capabilities())
+-- TODO: Setup wolfram alpha language server: https://github.com/kenkangxgwe/lsp-wl
+-- TODO: Install (nix)
+--lsp.cmake.setup(coq.lsp_ensure_capabilities())
+-- TODO: Install (npm) - https://github.com/hrsh7th/vscode-langservers-extracted
+--lsp.cssls.setup(coq.lsp_ensure_capabilities())
+--lsp.eslint.setup(coq.lsp_ensure_capabilities())
+-- TODO: Install (npm) - https://github.com/rcjsuen/dockerfile-language-server-nodejs
+--lsp.dockerls.setup(coq.lsp_ensure_capabilities())
+-- TODO: Install (npm) - https://github.com/mads-hartmann/bash-language-server
+--lsp.bashls.setup(coq.lsp_ensure_capabilities())
+-- TODO: Install (npm) - https://github.com/iamcco/vim-language-server
+--lsp.vimls.setup(coq.lsp_ensure_capabilities())
+-- TODO: Install (npm) - https://github.com/redhat-developer/yaml-language-server
+--lsp.yamlls.setup(coq.lsp_ensure_capabilities())
+-- TODO: Install (nix package) - https://github.com/sumneko/lua-language-server/wiki/Getting-Started
+--lsp.sumneko_lua.setup(coq.lsp_ensure_capabilities())
+EOF
+" Set recommended to false
+let g:coq_settings = {
+	\ "keymap": {
+		\ "recommended": v:false,
+		\ "jump_to_mark": "<Tab>",
+		\ "manual_complete": v:null,
+		\ "bigger_preview": v:null,
+	\}
+	\}
+" Keybindings
 " }}}
 
 " {{{ ghost
