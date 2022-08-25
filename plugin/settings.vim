@@ -238,7 +238,15 @@ nnoremap <leader>e :LF %:p edit<CR>
 " }}}
 
 " {{{ coq
-let g:coq_settings = { 'auto_start': v:true }
+let g:coq_settings = {
+	\ "auto_start": 'shut-up',
+	\ "keymap": {
+		\ "recommended": v:false,
+		\ "jump_to_mark": "<Tab>",
+		\ "manual_complete": v:null,
+		\ "bigger_preview": v:null,
+	\}
+\}
 lua << EOF
 local lsp = require("lspconfig")
 local coq = require("coq")
@@ -265,15 +273,6 @@ lsp.rnix.setup(coq.lsp_ensure_capabilities())
 -- TODO: Install (nix package) - https://github.com/sumneko/lua-language-server/wiki/Getting-Started
 --lsp.sumneko_lua.setup(coq.lsp_ensure_capabilities())
 EOF
-" Set recommended to false
-let g:coq_settings = {
-	\ "keymap": {
-		\ "recommended": v:false,
-		\ "jump_to_mark": "<Tab>",
-		\ "manual_complete": v:null,
-		\ "bigger_preview": v:null,
-	\}
-	\}
 " Keybindings
 " }}}
 
