@@ -4,3 +4,9 @@ git submodule foreach 'git pull && [[ -d doc ]] && $EDITOR -es --cmd "helptags d
 
 # next thing to do, is update the list of disabled plugins according to the symlinks in pack/*/opt vs pack/*/start
 nvim --cmd 'source update-submodules.vim' --cmd 'quit'
+
+# Update coq
+nvim -c 'COQdeps' -c 'quit'
+cd ~/.config/nvim/bundle/coq/.vars/runtime/bin/
+ln -sf /run/current-system/sw/bin/python3.10 .
+cd ~-
