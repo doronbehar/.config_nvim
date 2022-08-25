@@ -92,6 +92,10 @@ set noshowmode
 " enable mouse actions
 set mouse=a
 " folds
+if has('nvim-0.7')
+	set foldmethod=expr
+	set foldexpr=nvim_treesitter#foldexpr()
+endif
 set foldenable
 " indentation rules, read more at :help indent.txt
 let g:vim_indent_cont = &shiftwidth
@@ -119,7 +123,7 @@ set backupdir=~/.local/share/nvim/tmp//
 set directory=~/.local/share/nvim/tmp//
 set viewdir=~/.local/share/nvim/view//
 " restore-view setting:
-set viewoptions=folds,cursor
+set viewoptions=cursor
 " mks settings:
 set sessionoptions=folds,help,resize,tabpages,winpos,winsize
 

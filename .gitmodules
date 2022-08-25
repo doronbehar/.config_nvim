@@ -279,3 +279,9 @@
 [submodule "bundle/lspconfig"]
 	path = bundle/lspconfig
 	url = https://github.com/neovim/nvim-lspconfig
+[submodule "bundle/treesitter"]
+	path = bundle/treesitter
+	url = https://github.com/nvim-treesitter/nvim-treesitter
+[submodule "bundle/treesitter-textobjects"]
+	path = bundle/treesitter-textobjects
+	url = https://github.com/nvim-treesitter/nvim-treesitter-textobjects
