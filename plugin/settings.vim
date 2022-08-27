@@ -242,7 +242,7 @@ let g:coq_settings = {
 	\ "auto_start": 'shut-up',
 	\ "keymap": {
 		\ "recommended": v:false,
-		\ "jump_to_mark": "<Tab>",
+		\ "jump_to_mark": "<S-Tab>",
 		\ "manual_complete": v:null,
 		\ "bigger_preview": v:null,
 	\}
