@@ -237,7 +237,7 @@ command! -nargs=+ LF call lf#LF(<f-args>, [
 nnoremap <leader>e :LF %:p edit<CR>
 " }}}
 
-" {{{ coq
+" {{{ coq / LSP
 let g:coq_settings = {
 	\ "auto_start": 'shut-up',
 	\ "keymap": {
@@ -250,30 +250,36 @@ let g:coq_settings = {
 lua << EOF
 local lsp = require("lspconfig")
 local coq = require("coq")
-lsp.texlab.setup(coq.lsp_ensure_capabilities())
-lsp.clangd.setup(coq.lsp_ensure_capabilities())
-lsp.gopls.setup(coq.lsp_ensure_capabilities())
-lsp.rls.setup(coq.lsp_ensure_capabilities())
-lsp.svls.setup(coq.lsp_ensure_capabilities())
-lsp.rnix.setup(coq.lsp_ensure_capabilities())
+lsp_setup_args = coq.lsp_ensure_capabilities({
+})
+servers_list = {
+	"texlab",
+	"clangd",
+	"gopls",
+	"rls",
+	"svls",
+	"rnix"
+	-- TODO: Install (via nix)
+	--"cmake"
+	-- TODO: Install (via npm) - https://github.com/hrsh7th/vscode-langservers-extracted
+	--"cssls"
+	--"eslint"
+	-- TODO: Install (via npm) - https://github.com/rcjsuen/dockerfile-language-server-nodejs
+	--"dockerls"
+	-- TODO: Install (via npm) - https://github.com/mads-hartmann/bash-language-server
+	--"bashls"
+	-- TODO: Install (via npm) - https://github.com/iamcco/vim-language-server
+	--"vimls"
+	-- TODO: Install (via npm) - https://github.com/redhat-developer/yaml-language-server
+	--"yamlls"
+	-- TODO: Install (create a nix package) - https://github.com/sumneko/lua-language-server/wiki/Getting-Started
+	--"sumneko_lua"
+	}
 -- TODO: Setup wolfram alpha language server: https://github.com/kenkangxgwe/lsp-wl
--- TODO: Install (nix)
---lsp.cmake.setup(coq.lsp_ensure_capabilities())
--- TODO: Install (npm) - https://github.com/hrsh7th/vscode-langservers-extracted
---lsp.cssls.setup(coq.lsp_ensure_capabilities())
---lsp.eslint.setup(coq.lsp_ensure_capabilities())
--- TODO: Install (npm) - https://github.com/rcjsuen/dockerfile-language-server-nodejs
---lsp.dockerls.setup(coq.lsp_ensure_capabilities())
--- TODO: Install (npm) - https://github.com/mads-hartmann/bash-language-server
---lsp.bashls.setup(coq.lsp_ensure_capabilities())
--- TODO: Install (npm) - https://github.com/iamcco/vim-language-server
---lsp.vimls.setup(coq.lsp_ensure_capabilities())
--- TODO: Install (npm) - https://github.com/redhat-developer/yaml-language-server
---lsp.yamlls.setup(coq.lsp_ensure_capabilities())
--- TODO: Install (nix package) - https://github.com/sumneko/lua-language-server/wiki/Getting-Started
---lsp.sumneko_lua.setup(coq.lsp_ensure_capabilities())
+for _,v in ipairs(servers_list) do
+	lsp[v].setup(lsp_setup_args)
+end
 EOF
-" Keybindings
 " }}}
 
 " {{{ ghost
