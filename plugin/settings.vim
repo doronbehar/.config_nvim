@@ -251,6 +251,26 @@ lua << EOF
 local lsp = require("lspconfig")
 local coq = require("coq")
 lsp_setup_args = coq.lsp_ensure_capabilities({
+	on_attach = function(client, bufnr)
+		-- LSP Keybindings
+		local bufopts = {
+			noremap=true,
+			silent=true,
+			buffer=bufnr
+		}
+		vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
+		vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
+		vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
+		vim.keymap.set('n', 'gs', vim.lsp.buf.signature_help, bufopts)
+		vim.keymap.set('n', 'gt', vim.lsp.buf.type_definition, bufopts)
+		vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
+		vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename, bufopts)
+		vim.keymap.set('n', '<leader>f', vim.lsp.buf.formatting, bufopts)
+		--vim.keymap.set('n', '<space>q', vim.diagnostic.open_float, opts)
+		vim.keymap.set('n', '[q', vim.diagnostic.goto_prev, opts)
+		vim.keymap.set('n', ']q', vim.diagnostic.goto_next, opts)
+		vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
+	end
 })
 servers_list = {
 	"texlab",
