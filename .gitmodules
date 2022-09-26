@@ -268,14 +268,6 @@
 [submodule "bundle/nix"]
 	path = bundle/nix
 	url = https://github.com/doronbehar/vim-nix
-[submodule "bundle/coq"]
-	path = bundle/coq
-	url = https://github.com/ms-jpq/coq_nvim
-	branch = coq
-[submodule "bundle/coq.artifacts"]
-	path = bundle/coq.artifacts
-	url = https://github.com/ms-jpq/coq.artifacts
-	branch = artifacts
 [submodule "bundle/lspconfig"]
 	path = bundle/lspconfig
 	url = https://github.com/neovim/nvim-lspconfig
@@ -285,3 +277,30 @@
 [submodule "bundle/treesitter-textobjects"]
 	path = bundle/treesitter-textobjects
 	url = https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+[submodule "bundle/cmp"]
+	path = bundle/cmp
+	url = https://github.com/hrsh7th/nvim-cmp
+[submodule "bundle/nvim-lsp"]
+	path = bundle/nvim-lsp
+	url = https://github.com/hrsh7th/cmp-nvim-lsp
+[submodule "bundle/path"]
+	path = bundle/path
+	url = https://github.com/hrsh7th/cmp-path
+[submodule "bundle/cmdline"]
+	path = bundle/cmdline
+	url = https://github.com/hrsh7th/cmp-cmdline
+[submodule "bundle/cmp-vsnip"]
+	path = bundle/cmp-vsnip
+	url = https://github.com/hrsh7th/cmp-vsnip
+[submodule "bundle/vim-vsnip"]
+	path = bundle/vim-vsnip
+	url = https://github.com/hrsh7th/vim-vsnip
+[submodule "bundle/friendly-snippets"]
+	path = bundle/friendly-snippets
+	url = https://github.com/rafamadriz/friendly-snippets
+[submodule "bundle/cmp-treesitter"]
+	path = bundle/cmp-treesitter
+	url = https://github.com/ray-x/cmp-treesitter
+[submodule "bundle/lsp-signature-help"]
+	path = bundle/lsp-signature-help
+	url = https://github.com/hrsh7th/cmp-nvim-lsp-signature-help
