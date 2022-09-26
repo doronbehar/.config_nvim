@@ -275,6 +275,8 @@ lsp_setup_args = coq.lsp_ensure_capabilities({
 servers_list = {
 	"texlab",
 	"clangd",
+	-- Installed via flake.nix
+	"jedi_language_server",
 	"gopls",
 	"rls",
 	"svls",
