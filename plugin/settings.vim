@@ -315,23 +315,18 @@ servers_list = {
 	"gopls",
 	"rls",
 	"svls",
-	"rnix"
-	-- TODO: Install (via nix)
-	--"cmake"
-	-- TODO: Install (via npm) - https://github.com/hrsh7th/vscode-langservers-extracted
-	--"cssls"
-	--"eslint"
-	-- TODO: Install (via npm) - https://github.com/rcjsuen/dockerfile-language-server-nodejs
-	--"dockerls"
-	-- TODO: Install (via npm) - https://github.com/mads-hartmann/bash-language-server
-	--"bashls"
-	-- TODO: Install (via npm) - https://github.com/iamcco/vim-language-server
-	--"vimls"
-	-- TODO: Install (via npm) - https://github.com/redhat-developer/yaml-language-server
-	--"yamlls"
+	"rnix",
+	"cmake",
 	-- TODO: Install (create a nix package) - https://github.com/sumneko/lua-language-server/wiki/Getting-Started
 	--"sumneko_lua"
 	-- TODO: Setup wolfram alpha language server: https://github.com/kenkangxgwe/lsp-wl
+	-- All of the rest are installed via npm - on ZENIX with nixNodeJSPkgs
+	"cssls",
+	"eslint",
+	"dockerls",
+	"bashls",
+	"vimls",
+	"yamlls",
 	}
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 local lsp = require("lspconfig")
