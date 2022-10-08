@@ -306,6 +306,14 @@ cmp.setup.cmdline(':', {
 		{ name = 'cmdline' }
 	})
 })
+cmp.setup.filetype("zsh", {
+	sources = cmp.config.sources({
+		{ name = 'zsh' },
+	}, {
+		{ name = 'vsnip' },
+		{ name = 'path' }
+	})
+})
 -- Set up lspconfig.
 servers_list = {
 	"texlab",

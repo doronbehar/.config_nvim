@@ -304,3 +304,6 @@
 [submodule "bundle/lsp-signature-help"]
 	path = bundle/lsp-signature-help
 	url = https://github.com/hrsh7th/cmp-nvim-lsp-signature-help
+[submodule "bundle/zsh"]
+	path = bundle/zsh
+	url = https://github.com/tamago324/cmp-zsh
