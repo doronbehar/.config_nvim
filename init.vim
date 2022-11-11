@@ -43,9 +43,9 @@ colorscheme my
 map Q <nop>
 " Only with tmux and rxvt this seems needed - we mind not to enable it for
 " alacritty for example.
-if expand('$DISPLAY') !=# '$DISPLAY' &&
+if $DISPLAY !=# '' &&
 		\ $TERM !~ '^rxvt' && has('nvim') && 
-		\ expand('$ALACRITTY_LOG') ==# '$ALACRITTY_LOG'
+		\ $ALACRITTY_LOG ==# ''
 	set termguicolors
 	" black
 	let g:terminal_color_0 = '#282a2e'
@@ -76,7 +76,7 @@ set background=dark
 " Always display the tabline, even if there is only one tab:
 set showtabline=2
 set list
-if expand('$DISPLAY') !=# '$DISPLAY'
+if $DISPLAY !=# ''
 	set showbreak=ˆ
 	set listchars=tab:›\ ,trail:-,extends:»,precedes:«,eol:¬
 else
@@ -101,7 +101,7 @@ set foldenable
 let g:vim_indent_cont = &shiftwidth
 set foldcolumn=2
 " set lazyredraw only on ssh
-if expand('$SSH_CLIENT') !=# '$SSH_CLIENT'
+if $SSH_CLIENT !=# ''
 	set lazyredraw
 endif
 

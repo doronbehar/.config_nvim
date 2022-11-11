@@ -12,7 +12,7 @@ let g:airline#extensions#branch#format = 0
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
-if expand('$DISPLAY') ==# '$DISPLAY'
+if $DISPLAY ==# ''
 	let g:airline_powerline_ascii = 1
 	let g:airline_symbols.maxlinenr = ''
 	let g:airline_symbols.linenr = ' '
@@ -29,7 +29,7 @@ end
 " }}}
 
 " {{{ Android:
-let g:android_sdk_path = expand('$ANDROID_HOME')
+let g:android_sdk_path = $ANDROID_HOME
 " }}}
 
 " {{{ WindowSwap

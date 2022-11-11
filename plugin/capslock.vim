@@ -1,3 +1,3 @@
-if expand('$DISPLAY') !=# '$DISPLAY'
+if $DISPLAY !=# ''
   au InsertLeave * call capslock#unset()
 endif

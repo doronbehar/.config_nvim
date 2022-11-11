@@ -10,7 +10,7 @@ end
 
 " Change the Cursor shape for insert and other modes only when using nvim and
 " a gui terminal.
-if expand('$DISPLAY') !=# '$DISPLAY'
+if $DISPLAY !=# ''
 	set guicursor=a:blinkwait700-blinkoff400-blinkon250
 		\,n:block
 		\,i:ver25

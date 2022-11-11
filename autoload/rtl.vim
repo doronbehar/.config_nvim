@@ -10,7 +10,7 @@ function! rtl#set()
 	noremap <silent> <buffer> ge ge
 	noremap <silent> <buffer> gE gE
 	setlocal keymap=hebrew
-	if expand('$DISPLAY') !=# '$DISPLAY'
+	if $DISPLAY !=# ''
 		setlocal listchars=tab:‹\ ,trail:-,extends:«,precedes:»,eol:⌐
 	endif
 	if has('nvim')
@@ -28,7 +28,7 @@ function! rtl#unset()
 	noremap <silent> <buffer> e e
 	noremap <silent> <buffer> E E
 	setlocal keymap=
-	if expand('$DISPLAY') !=# '$DISPLAY'
+	if $DISPLAY !=# ''
 		setlocal listchars=tab:›\ ,trail:-,extends:»,precedes:«,eol:¬
 	endif
 	if has('nvim')
