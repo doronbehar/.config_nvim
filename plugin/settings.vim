@@ -333,7 +333,7 @@ servers_list = {
 	"gopls",
 	"rls",
 	"svls",
-	"rnix",
+	"nil_ls",
 	"cmake",
 	-- TODO: Install (create a nix package) - https://github.com/sumneko/lua-language-server/wiki/Getting-Started
 	--"sumneko_lua"
