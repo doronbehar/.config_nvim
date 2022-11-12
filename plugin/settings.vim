@@ -170,6 +170,16 @@ let g:gundo_prefer_python3 = 1
 " {{{ treesitter
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
+	highlight = {
+		enable = true,
+		disable = function(lang, bufnr)
+			-- including vim for the sake of Lua blocks inside VimL
+			if lang == "nix" then
+				return true
+			end
+			return false
+		end
+	},
 	textobjects = {
 		select = {
 			enable = true,
