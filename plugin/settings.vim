@@ -172,9 +172,14 @@ lua <<EOF
 require'nvim-treesitter.configs'.setup {
 	highlight = {
 		enable = true,
-		disable = function(lang, bufnr)
+		disable = function(lang, buf)
 			-- including vim for the sake of Lua blocks inside VimL
 			if lang == "nix" then
+				return true
+			end
+			local max_filesize = 100 * 1024 -- 100 KB
+			local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+			if ok and stats and stats.size > max_filesize then
 				return true
 			end
 			return false
@@ -249,6 +254,7 @@ nnoremap <leader>e :LF %:p edit<CR>
 
 " {{{ LSP & completion
 set completeopt=menu,menuone,noselect
+let g:vsnip_snippet_dir = $XDG_CONFIG_HOME . '/nvim/snippets'
 lua <<EOF
 -- Set up nvim-cmp.
 local has_words_before = function()
