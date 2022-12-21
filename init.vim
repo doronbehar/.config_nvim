@@ -44,7 +44,7 @@ map Q <nop>
 " Only with tmux and rxvt this seems needed - we mind not to enable it for
 " alacritty for example.
 if $DISPLAY !=# '' &&
-		\ $TERM !~ '^rxvt' && has('nvim') && 
+		\ $TERM !~ '^rxvt' && has('nvim') &&
 		\ $ALACRITTY_LOG ==# ''
 	set termguicolors
 	" black
@@ -92,10 +92,18 @@ set noshowmode
 " enable mouse actions
 set mouse=a
 " folds
+function! s:largeFiles()
+	setlocal foldmethod=indent
+	setlocal foldexpr=0
+	lua require('cmp').setup.buffer { enabled = false }
+endfunction
 if has('nvim-0.7')
 	set foldmethod=expr
 	set foldexpr=nvim_treesitter#foldexpr()
 endif
+autocmd BufReadPre * if getfsize(expand("<afile>")) > 1024 * 1024 |
+	\ call s:largeFiles() |
+\ endif
 set foldenable
 " indentation rules, read more at :help indent.txt
 let g:vim_indent_cont = &shiftwidth
