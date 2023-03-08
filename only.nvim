@@ -1,7 +1,6 @@
 " Neovim Specific startup commands
 
 " Load package for sudo editing
-Packadd suda
 Packadd firenvim
 if &termguicolors && has('nvim-0.4.0')
 	Packadd colorizer.lua
