@@ -139,13 +139,6 @@ set sessionoptions=folds,help,resize,tabpages,winpos,winsize
 set modeline
 
 " {{{1 runtime
-" Add vifm runtime files to rtp:
-if isdirectory('/usr/share/vifm/vim')
-	set runtimepath+=/usr/share/vifm/vim
-end
-if isdirectory('/usr/share/vim/vimfiles')
-	set runtimepath+=/usr/share/vim/vimfiles
-end
 " Source an automatically generated file that defines a list of plugins we
 " disable according to the pack/*/opt/* symlinks. The variable it defines is
 " g:pathogen_disabled which naturally can be used by
