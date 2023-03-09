@@ -1,7 +1,3 @@
-" Waiting for: https://github.com/NixOS/nixpkgs/pull/220136
-set rtp+=/run/current-system/sw/share/vim-plugins/fzf
-set rtp+=/run/current-system/sw/share/doc/task/scripts/vim
-
 runtime host-specific/nix-suda.vim
 
 " {{{ debug adaptor
