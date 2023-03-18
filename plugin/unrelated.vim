@@ -38,9 +38,65 @@ nnoremap <space>g :FzfLua git_files<CR>
 nnoremap <space>m :FzfLua git_status<CR>
 " Complete a file from open buffers
 nnoremap <space>b :FzfLua buffers<CR>
-" TODO: Add commands as requested here:
-" https://github.com/ibhagwan/fzf-lua/issues/688
-" TODO: Make fzf-lua be able to delete buffers
+" Search and press a keymap
+nnoremap <leader><tab> :FzfLua keymaps<CR>
+lua << EOF
+function shellinspect(var)
+  vim.fn.system("echo var is " .. vim.fn.shellescape(vim.inspect(var)) .. " >> dbg")
+end
+vim.keymap.set('i', '<c-x><c-f>', function()
+  bufnr = vim.fn.bufnr('%')
+  buflinenr = vim.fn.line('.')
+  curpos = vim.fn.getcurpos()[3]
+  --cfile = vim.api.nvim_eval('expand("<cfile>")')
+  cfile = vim.fn.expand("<cfile>")
+  shellinspect("cfile before is " .. cfile)
+  fzf.fzf_exec("find -maxdepth 1 -mindepth 1 -printf '%P\n'", {
+    actions = {
+      ['default'] = function(selected)
+        shellinspect("cfile now is " .. cfile)
+        line = vim.fn.getbufline(bufnr, buflinenr)[1]
+        if cfile == "" then
+          line_completed = line .. selected[1]
+        else
+          line_completed = vim.fn.substitute(line, vim.fn.escape(cfile, '^$.*\\/~[]'), selected[1])
+        end
+        vim.fn.setbufline(bufnr, buflinenr, line_completed)
+        vim.fn.cursor(buflinenr, curpos + string.len(selected[1]))
+      end
+    },
+    fzf_opts = {
+      ['--query'] = vim.fn.shellescape(cfile)
+    },
+    previewer = "builtin"
+  })
+end)
+EOF
+lua << EOF
+fzf = require'fzf-lua'
+vim.keymap.set('i', '<c-x><c-l>', function()
+  bufnr = vim.fn.bufnr('%')
+  buflinenr = vim.fn.line('.')
+  curpos = vim.fn.getcurpos()[3]
+  fzf.lines({
+    actions = {
+      ['default'] = function(selected)
+        line_text = vim.fn.getqflist({
+          efm = '%f:%l: %m',
+          lines = selected
+        }).items[1].text
+        vim.fn.appendbufline(bufnr, buflinenr, line_text)
+        -- Actually deletes the line we edited
+        vim.fn.deletebufline(bufnr, buflinenr)
+        vim.fn.cursor(buflinenr, curpos + string.len(line_text))
+      end
+    },
+    fzf_opts = {
+      ['--query'] = vim.fn.shellescape(vim.fn.getbufline(bufnr, buflinenr)[1])
+    }
+  })
+end)
+EOF
 
 " ----------------------------------------
 " <F#> that usually should work everywhere
