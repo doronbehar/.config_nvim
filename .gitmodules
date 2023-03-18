@@ -172,9 +172,6 @@
 [submodule "bundle/unicode"]
 	path = bundle/unicode
 	url = https://github.com/chrisbra/unicode.vim
-[submodule "bundle/fzf"]
-	path = bundle/fzf
-	url = https://github.com/doronbehar/fzf.vim
 [submodule "bundle/nftables"]
 	path = bundle/nftables
 	url = https://github.com/nfnty/vim-nftables
@@ -307,3 +304,6 @@
 [submodule "bundle/zsh"]
 	path = bundle/zsh
 	url = https://github.com/tamago324/cmp-zsh
+[submodule "bundle/fzf-lua"]
+	path = bundle/fzf-lua
+	url = https://github.com/ibhagwan/fzf-lua

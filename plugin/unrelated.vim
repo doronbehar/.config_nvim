@@ -30,16 +30,17 @@ nnoremap <leader>m :call foldmethods#cycle()<CR>
 " toggle pager mode
 nnoremap <leader>p :call pager#toggle()<CR>
 " Complete a command from the history
-nnoremap <space>; :History:<CR>
+nnoremap <space>; :FzfLua command_history:<CR>
 " Complete a previous search query
-nnoremap <space>/ :History/<CR>
-" Complete a previous search query
-nnoremap <space>? :History<CR>
+nnoremap <space>/ :FzfLua search_history<CR>
 " Complete a file from the history edited buffers
-nnoremap <space>g :GFiles<CR>
-nnoremap <space>m :GFiles?<CR>
+nnoremap <space>g :FzfLua git_files<CR>
+nnoremap <space>m :FzfLua git_status<CR>
 " Complete a file from open buffers
-nnoremap <space>b :Buffers<CR>
+nnoremap <space>b :FzfLua buffers<CR>
+" TODO: Add commands as requested here:
+" https://github.com/ibhagwan/fzf-lua/issues/688
+" TODO: Make fzf-lua be able to delete buffers
 
 " ----------------------------------------
 " <F#> that usually should work everywhere
