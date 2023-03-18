@@ -41,39 +41,45 @@ nnoremap <space>b :FzfLua buffers<CR>
 " Search and press a keymap
 nnoremap <leader><tab> :FzfLua keymaps<CR>
 lua << EOF
-function shellinspect(var)
-  vim.fn.system("echo var is " .. vim.fn.shellescape(vim.inspect(var)) .. " >> dbg")
-end
-vim.keymap.set('i', '<c-x><c-f>', function()
+fzf = require('fzf-lua')
+-- Useful if you debug these functions
+--function shellinspect(var)
+--  vim.fn.system("echo var is " .. vim.fn.shellescape(vim.inspect(var)) .. " >> dbg")
+--end
+FzfLuaCfileComplete = function(cfile)
   bufnr = vim.fn.bufnr('%')
   buflinenr = vim.fn.line('.')
   curpos = vim.fn.getcurpos()[3]
-  --cfile = vim.api.nvim_eval('expand("<cfile>")')
-  cfile = vim.fn.expand("<cfile>")
-  shellinspect("cfile before is " .. cfile)
-  fzf.fzf_exec("find -maxdepth 1 -mindepth 1 -printf '%P\n'", {
+  cfile = cfile or ""
+  cfile_expanded = vim.fn.expand(cfile)
+  find_cmd = 'find ' .. vim.fn.shellescape(vim.fs.dirname(cfile_expanded)) .. ' -mindepth 1 -maxdepth 2'
+  fzf.fzf_exec(find_cmd, {
     actions = {
       ['default'] = function(selected)
-        shellinspect("cfile now is " .. cfile)
         line = vim.fn.getbufline(bufnr, buflinenr)[1]
         if cfile == "" then
           line_completed = line .. selected[1]
         else
-          line_completed = vim.fn.substitute(line, vim.fn.escape(cfile, '^$.*\\/~[]'), selected[1])
+          -- Special treatment to $HOME/ -> ~/ expansion likely done for cfile_expanded
+          replacement = vim.fn.substitute(selected[1], os.getenv('HOME'), '~', '')
+          line_completed = vim.fn.substitute(
+            line,
+            vim.fn.escape(cfile, '^$.*\\/~[]'),
+            replacement,
+            ''
+          )
         end
         vim.fn.setbufline(bufnr, buflinenr, line_completed)
         vim.fn.cursor(buflinenr, curpos + string.len(selected[1]))
       end
     },
     fzf_opts = {
-      ['--query'] = vim.fn.shellescape(cfile)
+      ['--query'] = vim.fn.shellescape(cfile_expanded)
     },
     previewer = "builtin"
   })
-end)
-EOF
-lua << EOF
-fzf = require'fzf-lua'
+end
+vim.cmd([[inoremap <c-x><c-f> <esc>:lua FzfLuaCfileComplete('<C-R>=expand("<cfile>")<CR>')<CR>]])
 vim.keymap.set('i', '<c-x><c-l>', function()
   bufnr = vim.fn.bufnr('%')
   buflinenr = vim.fn.line('.')
@@ -85,9 +91,7 @@ vim.keymap.set('i', '<c-x><c-l>', function()
           efm = '%f:%l: %m',
           lines = selected
         }).items[1].text
-        vim.fn.appendbufline(bufnr, buflinenr, line_text)
-        -- Actually deletes the line we edited
-        vim.fn.deletebufline(bufnr, buflinenr)
+        vim.fn.setbufline(bufnr, buflinenr, line_text)
         vim.fn.cursor(buflinenr, curpos + string.len(line_text))
       end
     },
