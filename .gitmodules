@@ -1,11 +1,11 @@
 [submodule "bundle/fugitive"]
-	path = bundle/fugitive
+	path = pack/git/start/fugitive
 	url = https://github.com/tpope/vim-fugitive
 [submodule "bundle/csv"]
-	path = bundle/csv
+	path = pack/filetype/start/csv
 	url = https://github.com/chrisbra/csv.vim
 [submodule "bundle/tmux-syntax"]
-	path = bundle/tmux-syntax
+	path = pack/tmux/start/syntax
 	url = https://github.com/zaiste/tmux.vim
 [submodule "bundle/easymotion"]
 	path = bundle/easymotion
@@ -14,70 +14,70 @@
 	path = bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree
 [submodule "bundle/airline"]
-	path = bundle/airline
+	path = pack/looks/start/airline
 	url = https://github.com/vim-airline/vim-airline
 [submodule "bundle/pathogen"]
-	path = bundle/pathogen
+	path = pack/functional/opt/pathogen
 	url = https://github.com/tpope/vim-pathogen
 [submodule "bundle/tmux-navigator"]
-	path = bundle/tmux-navigator
+	path = pack/tmux/start/navigator
 	url = https://github.com/christoomey/vim-tmux-navigator
 [submodule "bundle/devicons"]
 	path = bundle/devicons
 	url = https://github.com/ryanoasis/vim-devicons
 [submodule "bundle/android"]
-	path = bundle/android
+	path = pack/filetype/opt/android
 	url = https://github.com/hsanson/vim-android
 [submodule "bundle/eunuch"]
-	path = bundle/eunuch
+	path = pack/functional/start/eunuch
 	url = https://github.com/doronbehar/vim-eunuch
 [submodule "bundle/searchindex"]
-	path = bundle/searchindex
+	path = pack/editing/start/searchindex
 	url = https://github.com/google/vim-searchindex
 [submodule "bundle/window-swap"]
-	path = bundle/window-swap
+	path = pack/functional/start/window-swap
 	url = https://github.com/wesQ3/vim-windowswap
 [submodule "bundle/stay"]
-	path = bundle/stay
+	path = pack/editing/start/stay
 	url = https://github.com/kopischke/vim-stay
 [submodule "bundle/tex"]
-	path = bundle/tex
+	path = pack/filetype/start/tex
 	url = https://github.com/lervag/vimtex
 [submodule "bundle/push"]
-	path = bundle/push
+	path = pack/editing/start/push
 	url = https://github.com/glts/vim-push
 [submodule "bundle/tabular"]
-	path = bundle/tabular
+	path = pack/functional/opt/tabular
 	url = https://github.com/godlygeek/tabular
 [submodule "bundle/textobj-uri"]
-	path = bundle/textobj-uri
+	path = pack/textobj/start/uri
 	url = https://github.com/jceb/vim-textobj-uri
 [submodule "bundle/textobj-user"]
-	path = bundle/textobj-user
+	path = pack/textobj/start/user
 	url = https://github.com/kana/vim-textobj-user
 [submodule "bundle/qf_resize"]
-	path = bundle/qf_resize
+	path = pack/looks/start/qf_resize
 	url = https://github.com/blueyed/vim-qf_resize
 [submodule "bundle/repeat"]
-	path = bundle/repeat
+	path = pack/editing/start/repeat
 	url = https://github.com/tpope/vim-repeat
 [submodule "bundle/scriptease"]
-	path = bundle/scriptease
+	path = pack/filetype/opt/scriptease
 	url = https://github.com/tpope/vim-scriptease
 [submodule "bundle/rooter"]
-	path = bundle/rooter
+	path = pack/git/start/rooter
 	url = https://github.com/airblade/vim-rooter
 [submodule "bundle/bbye"]
-	path = bundle/bbye
+	path = pack/editing/start/bbye
 	url = https://github.com/moll/vim-bbye
 [submodule "bundle/transpose"]
-	path = bundle/transpose
+	path = pack/functional/opt/transpose
 	url = https://github.com/salsifis/vim-transpose
 [submodule "bundle/dirdiff"]
-	path = bundle/dirdiff
+	path = pack/functional/opt/dirdiff
 	url = https://github.com/will133/vim-dirdiff
 [submodule "bundle/mediawiki"]
-	path = bundle/mediawiki
+	path = pack/filetype/start/mediawiki
 	url = https://github.com/chikamichi/mediawiki.vim
 [submodule "bundle/emmet"]
 	path = bundle/emmet
@@ -89,43 +89,43 @@
 	path = bundle/pandoc-syntax
 	url = https://github.com/vim-pandoc/vim-pandoc-syntax
 [submodule "bundle/signify"]
-	path = bundle/signify
+	path = pack/looks/start/signify
 	url = https://github.com/mhinz/vim-signify
 [submodule "bundle/texobj-quotes"]
-	path = bundle/textobj-quotes
+	path = pack/textobj/start/quotes
 	url = https://github.com/beloglazov/vim-textobj-quotes
 [submodule "bundle/togglelist"]
-	path = bundle/togglelist
+	path = pack/functional/start/togglelist
 	url = https://github.com/milkypostman/vim-togglelist
 [submodule "bundle/css-color"]
-	path = bundle/css-color
+	path = pack/looks/opt/css-color
 	url = https://github.com/ap/vim-css-color
 [submodule "bundle/tmux-focus-events"]
 	path = bundle/tmux-focus-events
 	url = https://github.com/tmux-plugins/vim-tmux-focus-events
 [submodule "bundle/ghost"]
-	path = bundle/ghost
+	path = pack/functional/start/ghost
 	url = https://github.com/raghur/vim-ghost
 [submodule "bundle/orgmode"]
-	path = bundle/orgmode
+	path = pack/filetype/start/orgmode
 	url = https://github.com/jceb/vim-orgmode
 [submodule "bundle/editorconfig"]
-	path = bundle/editorconfig
+	path = pack/filetype/opt/editorconfig
 	url = https://github.com/editorconfig/editorconfig-vim
 [submodule "bundle/nerdcommenter"]
-	path = bundle/nerdcommenter
+	path = pack/editing/start/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter
 [submodule "bundle/gundo"]
-	path = bundle/gundo
+	path = pack/editing/start/gundo
 	url = https://github.com/sjl/gundo.vim
 [submodule "bundle/abolish"]
 	path = bundle/abolish
 	url = https://github.com/tpope/vim-abolish
 [submodule "bundle/visualrepeat"]
-	path = bundle/visualrepeat
+	path = pack/editing/start/visualrepeat
 	url = https://github.com/vim-scripts/visualrepeat
 [submodule "bundle/textobj-underscore"]
-	path = bundle/textobj-underscore
+	path = pack/textobj/start/underscore
 	url = https://github.com/lucapette/vim-textobj-underscore
 [submodule "bundle/textobj-keyvalue"]
 	path = bundle/textobj-keyvalue
@@ -137,173 +137,173 @@
 	path = bundle/textobj-fold
 	url = https://github.com/kana/vim-textobj-fold
 [submodule "bundle/rhubarb"]
-	path = bundle/rhubarb
+	path = pack/git/start/rhubarb
 	url = https://github.com/tpope/vim-rhubarb
 [submodule "bundle/fugitive-gitlab"]
-	path = bundle/fugitive-gitlab
+	path = pack/git/start/fugitive-gitlab
 	url = https://github.com/shumphrey/fugitive-gitlab.vim
 [submodule "bundle/neomutt"]
-	path = bundle/neomutt
+	path = pack/filetype/start/neomutt
 	url = https://github.com/neomutt/neomutt.vim
 [submodule "bundle/AnsiEsc"]
-	path = bundle/AnsiEsc
+	path = pack/filetype/start/AnsiEsc
 	url = https://github.com/vim-scripts/AnsiEsc.vim
 [submodule "bundle/info"]
-	path = bundle/info
+	path = pack/functional/start/info
 	url = https://gitlab.com/HiPhish/info.vim
 [submodule "bundle/suda"]
-	path = bundle/suda
+	path = pack/functional/start/suda
 	url = https://github.com/lambdalisue/suda.vim
 [submodule "bundle/tradewinds"]
 	path = bundle/tradewinds
 	url = https://github.com/andymass/vim-tradewinds
 [submodule "bundle/sandwich"]
-	path = bundle/sandwich
+	path = pack/editing/start/sandwich
 	url = https://github.com/machakann/vim-sandwich
 [submodule "bundle/vader"]
-	path = bundle/vader
+	path = pack/functional/opt/vader
 	url = https://github.com/junegunn/vader.vim
 [submodule "bundle/proc"]
 	path = bundle/vimproc
 	url = https://github.com/Shougo/vimproc.vim
 [submodule "bundle/sleuth"]
-	path = bundle/sleuth
+	path = pack/editing/start/sleuth
 	url = https://github.com/tpope/vim-sleuth
 [submodule "bundle/unicode"]
 	path = bundle/unicode
 	url = https://github.com/chrisbra/unicode.vim
 [submodule "bundle/nftables"]
-	path = bundle/nftables
+	path = pack/filetype/start/nftables
 	url = https://github.com/nfnty/vim-nftables
 [submodule "bundle/syncthing"]
-	path = bundle/syncthing
+	path = pack/filetype/start/syncthing
 	url = https://github.com/brgmnn/vim-syncthing
 [submodule "bundle/jsonc"]
-	path = bundle/jsonc
+	path = pack/filetype/start/jsonc
 	url = https://github.com/neoclide/jsonc.vim
 [submodule "bundle/closetag"]
-	path = bundle/closetag
+	path = pack/editing/start/closetag
 	url = https://github.com/alvan/vim-closetag
 [submodule "bundle/jinja"]
-	path = bundle/jinja
+	path = pack/filetype/start/jinja
 	url = https://github.com/lepture/vim-jinja
 [submodule "bundle/vimproc"]
 	path = bundle/vimproc
 	url = https://github.com/Shougo/vimproc.vim
 [submodule "bundle/rust"]
-	path = bundle/rust
+	path = pack/filetype/start/rust
 	url = https://github.com/rust-lang/rust.vim
 [submodule "bundle/toml"]
-	path = bundle/toml
+	path = pack/filetype/start/toml
 	url = https://github.com/cespare/vim-toml
 [submodule "bundle/solidity"]
-	path = bundle/solidity
+	path = pack/filetype/start/solidity
 	url = https://github.com/tomlion/vim-solidity
 [submodule "bundle/dispatch"]
-	path = bundle/dispatch
+	path = pack/functional/start/dispatch
 	url = https://github.com/tpope/vim-dispatch
 [submodule "bundle/dispatch-neovim"]
-	path = bundle/dispatch-neovim
+	path = pack/functional/start/dispatch-neovim
 	url = https://github.com/radenling/vim-dispatch-neovim
 [submodule "bundle/direnv"]
-	path = bundle/direnv
+	path = pack/functional/start/direnv
 	url = https://github.com/direnv/direnv.vim
 [submodule "bundle/colorizer.lua"]
-	path = bundle/colorizer.lua
+	path = pack/looks/opt/colorizer.lua
 	url = https://github.com/norcalli/nvim-colorizer.lua
 [submodule "bundle/firenvim"]
-	path = bundle/firenvim
+	path = pack/functional/opt/firenvim
 	url = https://github.com/glacambre/firenvim
 [submodule "bundle/neomux"]
 	path = bundle/neomux
 	url = https://github.com/nikvdp/neomux
 [submodule "bundle/jsx-typescript"]
-	path = bundle/jsx-typescript
+	path = pack/filetype/start/jsx-typescript
 	url = https://github.com/peitalin/vim-jsx-typescript
 [submodule "bundle/lf"]
-	path = bundle/lf
+	path = pack/functional/start/lf
 	url = https://github.com/thezeroalpha/vim-lf
 [submodule "bundle/asciidoctor"]
-	path = bundle/asciidoctor
+	path = pack/filetype/start/asciidoctor
 	url = https://github.com/habamax/vim-asciidoctor
 [submodule "bundle/Docekrfile"]
-	path = bundle/Docekrfile
+	path = pack/filetype/start/Docekrfile
 	url = https://github.com/ekalinin/Dockerfile.vim
 [submodule "bundle/jsonnet"]
-	path = bundle/jsonnet
+	path = pack/filetype/start/jsonnet
 	url = https://github.com/google/vim-jsonnet
 [submodule "bundle/json5"]
-	path = bundle/json5
+	path = pack/filetype/start/json5
 	url = https://github.com/gutenye/json5.vim
 [submodule "bundle/vala"]
-	path = bundle/vala
+	path = pack/filetype/start/vala
 	url = https://github.com/arrufat/vala.vim
 [submodule "bundle/prj"]
-	path = bundle/prj
+	path = pack/functional/start/prj
 	url = https://github.com/emersonmx/vim-prj
 [submodule "bundle/jupyter"]
 	path = bundle/jupyter
 	url = https://github.com/jupyter-vim/jupyter-vim
 [submodule "bundle/dap"]
-	path = bundle/dap
+	path = pack/functional/start/dap
 	url = https://github.com/mfussenegger/nvim-dap
 [submodule "bundle/dap-python"]
-	path = bundle/dap-python
+	path = pack/functional/start/dap-python
 	url = https://github.com/mfussenegger/nvim-dap-python
 [submodule "bundle/dap-ui"]
-	path = bundle/dap-ui
+	path = pack/functional/start/dap-ui
 	url = https://github.com/rcarriga/nvim-dap-ui
 [submodule "bundle/dap-go"]
-	path = bundle/dap-go
+	path = pack/functional/start/dap-go
 	url = https://github.com/leoluz/nvim-dap-go
 [submodule "bundle/sved"]
-	path = bundle/sved
+	path = pack/functional/start/sved
 	url = https://github.com/doronbehar/sved
 [submodule "bundle/lexima"]
-	path = bundle/lexima
+	path = pack/editing/start/lexima
 	url = https://github.com/doronbehar/lexima.vim
 [submodule "bundle/nix"]
-	path = bundle/nix
+	path = pack/filetype/start/nix
 	url = https://github.com/doronbehar/vim-nix
 [submodule "bundle/lspconfig"]
-	path = bundle/lspconfig
+	path = pack/functional/start/lspconfig
 	url = https://github.com/neovim/nvim-lspconfig
 [submodule "bundle/treesitter"]
-	path = bundle/treesitter
+	path = pack/functional/opt/treesitter
 	url = https://github.com/nvim-treesitter/nvim-treesitter
 [submodule "bundle/treesitter-textobjects"]
-	path = bundle/treesitter-textobjects
+	path = pack/functional/start/treesitter-textobjects
 	url = https://github.com/nvim-treesitter/nvim-treesitter-textobjects
 [submodule "bundle/cmp"]
-	path = bundle/cmp
+	path = pack/functional/start/cmp
 	url = https://github.com/hrsh7th/nvim-cmp
 [submodule "bundle/nvim-lsp"]
-	path = bundle/nvim-lsp
+	path = pack/completion/start/nvim-lsp
 	url = https://github.com/hrsh7th/cmp-nvim-lsp
 [submodule "bundle/path"]
-	path = bundle/path
+	path = pack/completion/start/path
 	url = https://github.com/hrsh7th/cmp-path
 [submodule "bundle/cmdline"]
-	path = bundle/cmdline
+	path = pack/completion/start/cmdline
 	url = https://github.com/hrsh7th/cmp-cmdline
 [submodule "bundle/cmp-vsnip"]
-	path = bundle/cmp-vsnip
+	path = pack/completion/start/vsnip
 	url = https://github.com/hrsh7th/cmp-vsnip
 [submodule "bundle/vim-vsnip"]
-	path = bundle/vim-vsnip
+	path = pack/functional/start/vsnip
 	url = https://github.com/hrsh7th/vim-vsnip
 [submodule "bundle/friendly-snippets"]
-	path = bundle/friendly-snippets
+	path = pack/functional/start/friendly-snippets
 	url = https://github.com/rafamadriz/friendly-snippets
 [submodule "bundle/cmp-treesitter"]
-	path = bundle/cmp-treesitter
+	path = pack/completion/start/treesitter
 	url = https://github.com/ray-x/cmp-treesitter
 [submodule "bundle/lsp-signature-help"]
-	path = bundle/lsp-signature-help
+	path = pack/completion/start/lsp-signature-help
 	url = https://github.com/hrsh7th/cmp-nvim-lsp-signature-help
 [submodule "bundle/zsh"]
-	path = bundle/zsh
+	path = pack/completion/start/zsh
 	url = https://github.com/tamago324/cmp-zsh
 [submodule "bundle/fzf-lua"]
-	path = bundle/fzf-lua
+	path = pack/functional/start/fzf-lua
 	url = https://github.com/ibhagwan/fzf-lua

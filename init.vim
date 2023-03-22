@@ -138,40 +138,20 @@ set sessionoptions=folds,help,resize,tabpages,winpos,winsize
 " {{{1 Load local configuration, not using exrc since I use `prj-vim`
 set modeline
 
-" {{{1 runtime
-" Source an automatically generated file that defines a list of plugins we
-" disable according to the pack/*/opt/* symlinks. The variable it defines is
-" g:pathogen_disabled which naturally can be used by
-runtime .pathogen_disabled.vim
-" The following files, add pacakges specific to neovim / vim, they use either
-" :packadd or they filter out from the g:pathogen_disabled list these files
-" so when pathogen#infect is executed, it will add them as well
-"
-" The following function implements the common :packadd / filter call
-command! -nargs=1 Packadd if exists(':packadd') | packadd <args> | else | call filter(g:pathogen_disabled, 'v:val != " '. <args>. '"') | endif
-if has('nvim')
-	runtime only.nvim
-else
-	runtime only.vim
-end
+" {{{1 Enable to add plugins via
 if !empty($ENABLE_PLUGINS)
 	let plugins_list = split($ENABLE_PLUGINS, ',')
-	" The following if else is a little bit different then :Packadd because it
-	" checks for `:packadd` support and then runs the loop. Using `:Packadd`
-	" inside a loop would have been a little bit less optimized.
 	if exists(':packadd')
 		for pl in plugins_list
 			execute('packadd ' . pl)
 		endfor
 	else
-		for pl in plugins_list
-			call filter(g:pathogen_disabled, 'v:val != " '. pl. '"')
-		endfor
+		echoerr "You don't have :packadd available, hence $ENABLE_PLUGINS is not supported"
 	endif
 endif
 " External Plugins - use pathogen only for old versions of vim
 if !exists(':packadd')
-	runtime bundle/pathogen/autoload/pathogen.vim
+	runtime pack/functional/opt/pathogen/autoload/pathogen.vim
 	execute pathogen#infect()
 end
 
