@@ -148,6 +148,7 @@ servers_list = {
 	"rls",
 	"svls",
 	"nil_ls",
+	"vhdl_ls",
 	"cmake",
 	-- See setup at https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#arduino_language_server
 	"arduino_language_server",
