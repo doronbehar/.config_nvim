@@ -40,24 +40,6 @@ nnoremap <space>m :FzfLua git_status<CR>
 nnoremap <space>b :FzfLua buffers<CR>
 " Search and press a keymap
 nnoremap <leader><tab> :FzfLua keymaps<CR>
-lua << EOF
-fzf = require('fzf-lua')
--- Useful if you debug these functions
---function shellinspect(var)
---  vim.fn.system("echo var is " .. vim.fn.shellescape(vim.inspect(var)) .. " >> dbg")
---end
-vim.keymap.set({ "n", "v", "i" }, "<C-x><C-f>",
-  function()
-    require("fzf-lua").complete_path({ cmd = "find -maxdepth 2 -mindepth 1 -printf '%P\n'", previewer = "builtin" })
-  end,
-  { silent = true, desc = "Fuzzy complete path" }
-)
-vim.keymap.set({ "n", "v", "i" }, "<C-x><C-l>",
-  function()
-    require("fzf-lua").complete_line()
-  end,
-  { silent = true, desc = "Fuzzy complete lines" })
-EOF
 
 " ----------------------------------------
 " <F#> that usually should work everywhere
