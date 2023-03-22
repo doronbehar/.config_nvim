@@ -46,60 +46,17 @@ fzf = require('fzf-lua')
 --function shellinspect(var)
 --  vim.fn.system("echo var is " .. vim.fn.shellescape(vim.inspect(var)) .. " >> dbg")
 --end
-FzfLuaCfileComplete = function(cfile)
-  bufnr = vim.fn.bufnr('%')
-  buflinenr = vim.fn.line('.')
-  curpos = vim.fn.getcurpos()[3]
-  cfile = cfile or ""
-  cfile_expanded = vim.fn.expand(cfile)
-  find_cmd = 'find ' .. vim.fn.shellescape(vim.fs.dirname(cfile_expanded)) .. ' -mindepth 1 -maxdepth 2'
-  fzf.fzf_exec(find_cmd, {
-    actions = {
-      ['default'] = function(selected)
-        line = vim.fn.getbufline(bufnr, buflinenr)[1]
-        if cfile == "" then
-          line_completed = line .. selected[1]
-        else
-          -- Special treatment to $HOME/ -> ~/ expansion likely done for cfile_expanded
-          replacement = vim.fn.substitute(selected[1], os.getenv('HOME'), '~', '')
-          line_completed = vim.fn.substitute(
-            line,
-            vim.fn.escape(cfile, '^$.*\\/~[]'),
-            replacement,
-            ''
-          )
-        end
-        vim.fn.setbufline(bufnr, buflinenr, line_completed)
-        vim.fn.cursor(buflinenr, curpos + string.len(selected[1]))
-      end
-    },
-    fzf_opts = {
-      ['--query'] = vim.fn.shellescape(cfile_expanded)
-    },
-    previewer = "builtin"
-  })
-end
-vim.cmd([[inoremap <c-x><c-f> <esc>:lua FzfLuaCfileComplete('<C-R>=expand("<cfile>")<CR>')<CR>]])
-vim.keymap.set('i', '<c-x><c-l>', function()
-  bufnr = vim.fn.bufnr('%')
-  buflinenr = vim.fn.line('.')
-  curpos = vim.fn.getcurpos()[3]
-  fzf.lines({
-    actions = {
-      ['default'] = function(selected)
-        line_text = vim.fn.getqflist({
-          efm = '%f:%l: %m',
-          lines = selected
-        }).items[1].text
-        vim.fn.setbufline(bufnr, buflinenr, line_text)
-        vim.fn.cursor(buflinenr, curpos + string.len(line_text))
-      end
-    },
-    fzf_opts = {
-      ['--query'] = vim.fn.shellescape(vim.fn.getbufline(bufnr, buflinenr)[1])
-    }
-  })
-end)
+vim.keymap.set({ "n", "v", "i" }, "<C-x><C-f>",
+  function()
+    require("fzf-lua").complete_path({ cmd = "find -maxdepth 2 -mindepth 1 -printf '%P\n'", previewer = "builtin" })
+  end,
+  { silent = true, desc = "Fuzzy complete path" }
+)
+vim.keymap.set({ "n", "v", "i" }, "<C-x><C-l>",
+  function()
+    require("fzf-lua").complete_line()
+  end,
+  { silent = true, desc = "Fuzzy complete lines" })
 EOF
 
 " ----------------------------------------
