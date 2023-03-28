@@ -212,7 +212,7 @@
 	path = pack/looks/opt/colorizer.lua
 	url = https://github.com/norcalli/nvim-colorizer.lua
 [submodule "bundle/firenvim"]
-	path = pack/functional/opt/firenvim
+	path = pack/functional/start/firenvim
 	url = https://github.com/glacambre/firenvim
 [submodule "bundle/neomux"]
 	path = bundle/neomux
