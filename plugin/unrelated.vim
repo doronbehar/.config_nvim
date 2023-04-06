@@ -1,5 +1,8 @@
 " Control tabsize easily
 command! -nargs=1 Tabsize call tabsize#set(<f-args>)
+" View a man page with hardwrapping - useful for man pages with big tables,
+" like `systemd.unit`
+command! -nargs=1 ManHW unlet $MANWIDTH | let g:man_hardwrap = 1 | Man <args> | let g:man_hardwrap = 0 | let $MANWIDTH=999
 
 " Preserver selection after indentation:
 " Source: https://dailyvim.tumblr.com/post/138670862883/preserve-selection-after-indentation
