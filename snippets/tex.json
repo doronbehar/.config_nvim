@@ -1,7 +1,0 @@
-{
-	"parenthesis": {
-		"prefix": "lprp",
-		"body": "\\left ($0 \\right)",
-		"description": ""
-	}
-}
