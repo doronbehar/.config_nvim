@@ -1,6 +1,8 @@
 " {{{1 Toggle common rtl options vs ltr
 function! rtl#set()
-	setlocal rightleft
+	if $MLTERM ==# ''
+		setlocal rightleft
+	endif
 	noremap <silent> <buffer> w e
 	noremap <silent> <buffer> W E
 	noremap <silent> <buffer> e b
@@ -18,7 +20,9 @@ function! rtl#set()
 	endif
 endfunction
 function! rtl#unset()
-	setlocal norightleft
+	if $MLTERM ==# ''
+		setlocal norightleft
+	endif
 	noremap <silent> <buffer> w b
 	noremap <silent> <buffer> W B
 	noremap <silent> <buffer> gw ge
