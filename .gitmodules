@@ -13,9 +13,6 @@
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree
-[submodule "bundle/airline"]
-	path = pack/looks/start/airline
-	url = https://github.com/vim-airline/vim-airline
 [submodule "bundle/pathogen"]
 	path = pack/functional/opt/pathogen
 	url = https://github.com/tpope/vim-pathogen
@@ -304,3 +301,6 @@
 [submodule "bundle/fzf-lua"]
 	path = pack/functional/start/fzf-lua
 	url = https://github.com/ibhagwan/fzf-lua
+[submodule "pack/looks/start/lualine"]
+	path = pack/looks/start/lualine
+	url = https://github.com/nvim-lualine/lualine.nvim

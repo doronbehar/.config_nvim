@@ -3,31 +3,6 @@
 let g:netrw_fastbrowse = 0
 " }}}
 
-" {{{ Airline:
-let g:airline#extensions#disable_rtp_load = 1
-let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#keymap#enabled = 1
-let g:airline#extensions#branch#format = 0
-if !exists('g:airline_symbols')
-	let g:airline_symbols = {}
-endif
-if $DISPLAY ==# ''
-	let g:airline_powerline_ascii = 1
-	let g:airline_symbols.maxlinenr = ''
-	let g:airline_symbols.linenr = ' '
-	let g:airline_symbols.crypt = 'crypt'
-	let g:airline_symbols.branch = '|'
-	let g:airline_symbols.whitespace = ' '
-	let g:airline#extensions#whitespace#symbol = '!'
-	let g:airline_symbols.keymap = 'KEYS:'
-else
-	let g:airline_symbols.maxlinenr = 'Ξ'
-	let g:airline_powerline_fonts = 1
-	let g:airline_symbols.keymap = '⌨'
-end
-" }}}
-
 " {{{ Android:
 let g:android_sdk_path = $ANDROID_HOME
 " }}}

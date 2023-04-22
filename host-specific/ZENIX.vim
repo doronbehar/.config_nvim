@@ -262,4 +262,23 @@ require'nvim-treesitter.configs'.setup {
 EOF
 " }}}
 
+" {{{ lualine
+lua << END
+require('lualine').setup({
+	options = {
+		theme = "powerline_dark"
+	},
+	tabline = {
+		lualine_a = {'buffers'},
+		lualine_b = {},
+		lualine_c = {},
+		lualine_x = {},
+		lualine_y = {},
+		lualine_z = {'tabs'}
+	}
+})
+END
+" }}}
+
+
 " vim:foldmethod=marker:ft=vim
