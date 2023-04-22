@@ -117,7 +117,9 @@ cmp.setup({
 		{ name = 'nvim_lsp' },
 		{ name = 'nvim_lsp_signature_help' },
 	}, {
-		{ name = 'treesitter' },
+		-- Currently disabled, not much of use anyway, but may be interesting once:
+		-- https://github.com/hrsh7th/nvim-cmp/issues/1522 is resolved.
+		--{ name = 'treesitter' },
 		{ name = 'vsnip' },
 		{ name = 'path' }
 	})
