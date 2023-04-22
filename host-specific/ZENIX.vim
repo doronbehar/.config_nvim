@@ -168,6 +168,7 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protoc
 local lsp = require("lspconfig")
 for _,v in ipairs(servers_list) do
 	lsp[v].setup{
+		autostart = false,
 		capabilities = capabilities,
 		on_attach = function(client, bufnr)
 			-- LSP Keybindings

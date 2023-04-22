@@ -105,6 +105,13 @@ if has('nvim-0.7')
 endif
 autocmd BufReadPre * if getfsize(expand("<afile>")) > 1024 * 1024 |
 	\ call s:largeFiles() |
+	\ else |
+	\ execute('LspStart') |
+\ endif
+autocmd BufEnter * if getfsize(expand("<afile>")) > 1024 * 1024 |
+	\ execute('NoMatchParen') |
+	\ else |
+	\ execute('DoMatchParen') |
 \ endif
 set foldenable
 " indentation rules, read more at :help indent.txt
