@@ -121,9 +121,6 @@
 [submodule "bundle/abolish"]
 	path = bundle/abolish
 	url = https://github.com/tpope/vim-abolish
-[submodule "bundle/visualrepeat"]
-	path = pack/editing/start/visualrepeat
-	url = https://github.com/vim-scripts/visualrepeat
 [submodule "bundle/textobj-underscore"]
 	path = pack/textobj/start/underscore
 	url = https://github.com/lucapette/vim-textobj-underscore
