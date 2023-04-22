@@ -19,16 +19,10 @@ if [[ -z "$3" ]]; then
 else
 	plugin_name_stripped="$3"
 fi
+plugindir="pack/"$2"/start/$plugin_name_stripped"
 echo @@@ Cloning...
-echo git submodule add "$1" "bundle/$plugin_name_stripped"
-git submodule add "$1" "bundle/$plugin_name_stripped"
-echo @@@ linking "bundle/$plugin_name_stripped" to pack/"$2"/start/
-echo ln -s -r "bundle/$plugin_name_stripped" -t pack/"$2"/start/
-ln -s -r "bundle/$plugin_name_stripped" -t pack/"$2"/start/
-git add pack/"$2"/start/$plugin_name_stripped
+echo git submodule add "$1" "$plugindir"
+git submodule add "$1" "$plugindir"
 echo @@@ updating help tags
-echo nvim -es --cmd "helptags bundle/$plugin_name_stripped/doc" --cmd "quit"
-nvim -es --cmd "helptags bundle/$plugin_name_stripped/doc" --cmd "quit"
-echo @@@ updating .pathogen_disabled.vim
-echo nvim --cmd 'source update-submodules.vim' --cmd 'quit'
-nvim --cmd 'source update-submodules.vim' --cmd 'quit'
+echo nvim -es --cmd "helptags $plugindir/doc" --cmd "quit"
+nvim -es --cmd "helptags $plugindir/doc" --cmd "quit"
