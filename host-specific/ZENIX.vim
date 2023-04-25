@@ -113,16 +113,31 @@ cmp.setup({
 			end
 		end, { "i", "s" }),
 	}),
+	-- I don't add sources here, but I add them in a BufReadPre autocmd
+})
+-- If a file is too large, I don't want to add to it's cmp sources treesitter, see:
+-- https://github.com/hrsh7th/nvim-cmp/issues/1522
+vim.api.nvim_create_autocmd('BufReadPre', {
+  callback = function(t)
+	local cmp = require('cmp')
+	-- default sources for all buffers
 	sources = cmp.config.sources({
 		{ name = 'nvim_lsp' },
 		{ name = 'nvim_lsp_signature_help' },
 	}, {
-		-- Currently disabled, not much of use anyway, but may be interesting once:
-		-- https://github.com/hrsh7th/nvim-cmp/issues/1522 is resolved.
-		--{ name = 'treesitter' },
 		{ name = 'vsnip' },
 		{ name = 'path' }
 	})
+	buf = t.buf
+	local max_filesize = 100 * 1024 -- 100 KB
+	local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+	if not (ok and stats and stats.size > max_filesize) then
+		sources[#sources+1] = {name = 'treesitter', group_index = 2}
+	end
+    cmp.setup.buffer {
+		sources = sources
+    }
+  end,
 })
 -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline(':', {
