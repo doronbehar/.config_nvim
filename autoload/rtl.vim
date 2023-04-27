@@ -2,7 +2,12 @@
 function! rtl#set()
 	if $MLTERM ==# ''
 		setlocal rightleft
+	else
+		noremap h l
+		noremap l h
 	endif
+	echomsg 'keymap=hebrew'
+	setlocal keymap=hebrew
 	noremap <silent> <buffer> w e
 	noremap <silent> <buffer> W E
 	noremap <silent> <buffer> e b
@@ -11,7 +16,6 @@ function! rtl#set()
 	noremap <silent> <buffer> gW W
 	noremap <silent> <buffer> ge ge
 	noremap <silent> <buffer> gE gE
-	setlocal keymap=hebrew
 	if $DISPLAY !=# ''
 		setlocal listchars=tab:‹\ ,trail:-,extends:«,precedes:»,eol:⌐
 	endif
@@ -22,7 +26,12 @@ endfunction
 function! rtl#unset()
 	if $MLTERM ==# ''
 		setlocal norightleft
+	else
+		unmap l
+		unmap h
 	endif
+	echomsg 'keymap='
+	setlocal keymap=
 	noremap <silent> <buffer> w b
 	noremap <silent> <buffer> W B
 	noremap <silent> <buffer> gw ge
@@ -31,7 +40,6 @@ function! rtl#unset()
 	noremap <silent> <buffer> gE W
 	noremap <silent> <buffer> e e
 	noremap <silent> <buffer> E E
-	setlocal keymap=
 	if $DISPLAY !=# ''
 		setlocal listchars=tab:›\ ,trail:-,extends:»,precedes:«,eol:¬
 	endif
@@ -42,8 +50,9 @@ function! rtl#unset()
 			\,sm:block-blinkwait175-blinkoff150-blinkon175
 	endif
 endfunction
+" Lucky I don't speak more languages
 function! rtl#toggle()
-	if &rightleft
+	if &keymap ==# 'hebrew'
 		call rtl#unset()
 	else
 		call rtl#set()
