@@ -186,7 +186,7 @@ for _,v in ipairs(servers_list) do
 			vim.keymap.set('n', 'gt', vim.lsp.buf.type_definition, bufopts)
 			vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
 			vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename, bufopts)
-			vim.keymap.set('n', '<leader>f', vim.lsp.buf.formatting, bufopts)
+			vim.keymap.set('n', '<leader>f', vim.lsp.buf.format, bufopts)
 			--vim.keymap.set('n', '<space>q', vim.diagnostic.open_float, opts)
 			vim.keymap.set('n', '[q', vim.diagnostic.goto_prev, opts)
 			vim.keymap.set('n', ']q', vim.diagnostic.goto_next, opts)
