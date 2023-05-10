@@ -261,7 +261,10 @@ require('lualine').setup({
 		theme = "powerline_dark"
 	},
 	tabline = {
-		lualine_a = {'buffers'},
+		lualine_a = {{
+			'buffers',
+			show_filename_only = false,
+		}},
 		lualine_b = {},
 		lualine_c = {},
 		lualine_x = {},
