@@ -14,6 +14,16 @@ let g:vimtex_fold_types = {
 			\	}
 			\}
 let g:vimtex_compiler_method = 'tectonic'
+let g:vimtex_compiler_tectonic = {
+    \ 'build_dir' : '',
+    \ 'hooks' : [],
+    \ 'options' : [
+    \   '--keep-logs',
+    \   '--synctex',
+	\   '-Zshell-escape',
+	\   '-Zshell-escape-cwd=$PWD'
+    \ ],
+\}
 " Add a surrounding \textenglish latex command, relies upon vim-sandwich and
 " vimtex of course
 xmap SE Sctextenglish<cr>
