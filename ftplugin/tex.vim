@@ -16,4 +16,4 @@ let g:vimtex_fold_types = {
 let g:vimtex_compiler_method = 'tectonic'
 " Add a surrounding \textenglish latex command, relies upon vim-sandwich and
 " vimtex of course
-xmap E Sctextenglish<cr>
+xmap SE Sctextenglish<cr>
