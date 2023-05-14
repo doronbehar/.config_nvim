@@ -167,5 +167,9 @@ end
 " Load $HOST specific configuration
 runtime host-specific/$HOST.vim
 
+if executable('pplatex')
+	let g:vimtex_quickfix_method = 'pplatex'
+endif
+
 " {{{1 Modeline
 " vim: foldmethod=marker
