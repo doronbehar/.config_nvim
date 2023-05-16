@@ -24,7 +24,7 @@ hi Directory		term=bold				cterm=bold				ctermfg=215		ctermbg=NONE	gui=bold				g
 hi ErrorMsg			term=bold				cterm=bold				ctermfg=250		ctermbg=9		gui=bold				guifg=#bcbcbc	guibg=NONE
 hi Error			term=none				cterm=none				ctermfg=36		ctermbg=0		gui=none				guifg=#00af87	guibg=NONE
 hi Exception		term=bold				cterm=bold				ctermfg=208		ctermbg=NONE	gui=bold				guifg=#ff8700	guibg=NONE
-hi Float			term=none				cterm=none				ctermfg=53		ctermbg=NONE	gui=none				guifg=#5f005f	guibg=NONE
+hi Float			term=none				cterm=none				ctermfg=29		ctermbg=NONE	gui=none				guifg=#b273b2	guibg=NONE
 hi FoldColumn		term=none				cterm=none				ctermfg=244		ctermbg=NONE	gui=none				guifg=#808080	guibg=NONE
 hi Folded			term=none				cterm=none				ctermfg=244		ctermbg=NONE	gui=none				guifg=#808080	guibg=NONE
 hi Function			term=none				cterm=none				ctermfg=130		ctermbg=NONE	gui=none				guifg=#af5f00	guibg=NONE
