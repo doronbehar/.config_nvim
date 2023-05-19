@@ -106,9 +106,6 @@ endif
 autocmd BufReadPre * if getfsize(expand("<afile>")) > 1024 * 1024 |
 	\ call s:largeFiles() |
 \ endif
-autocmd BufReadPost * if getfsize(expand("<afile>")) <= 1024 * 1024 |
-	\ execute('LspStart') |
-\ endif
 autocmd BufEnter * if getfsize(expand("<afile>")) > 1024 * 1024 |
 	\ execute('NoMatchParen') |
 	\ else |

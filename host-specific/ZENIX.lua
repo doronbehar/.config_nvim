@@ -150,7 +150,8 @@ servers_list = {
 	"gopls",
 	"rls",
 	"svls",
-	"nil_ls",
+	--"nil_ls", -- Too slow for large files like all-packages.nix
+	"rnix",
 	"vhdl_ls",
 	"cmake",
 	-- See setup at https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#arduino_language_server
@@ -165,12 +166,12 @@ servers_list = {
 	"bashls",
 	"vimls",
 	"yamlls",
-	}
+}
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 local lsp = require("lspconfig")
 for _,v in ipairs(servers_list) do
 	lsp[v].setup{
-		autostart = false,
+		autostart = true,
 		capabilities = capabilities,
 		on_attach = function(client, bufnr)
 			-- LSP Keybindings
