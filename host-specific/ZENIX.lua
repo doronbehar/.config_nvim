@@ -150,8 +150,8 @@ servers_list = {
 	"gopls",
 	"rls",
 	"svls",
-	--"nil_ls", -- Too slow for large files like all-packages.nix
-	"rnix",
+	"nil_ls", -- Too slow for large files like all-packages.nix
+	--"rnix",
 	"vhdl_ls",
 	"cmake",
 	-- See setup at https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#arduino_language_server
@@ -174,6 +174,12 @@ for _,v in ipairs(servers_list) do
 		autostart = true,
 		capabilities = capabilities,
 		on_attach = function(client, bufnr)
+			-- See:
+			-- * https://github.com/oxalica/nil/issues/83
+			-- * https://github.com/neovim/neovim/issues/23026
+			if bufIsBig(bufnr) then
+				client.server_capabilities.semanticTokensProvider = nil
+			end
 			-- LSP Keybindings
 			local bufopts = {
 				noremap=true,
