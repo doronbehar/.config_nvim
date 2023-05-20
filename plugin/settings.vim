@@ -40,8 +40,14 @@ nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
 " }}}
 
-" {{{ For prj - https://github.com/emersonmx/vim-prj/blob/master/plugin/prj.vim
-let g:prj_config_path = ".vim/vimrc"
+" {{{ For localvimrc - https://github.com/embear/vim-localvimrc
+" Store and restore decisions only if the answer was given in upper case (Y/N/A)
+let g:localvimrc_persistent = 1
+" The whole point of this plugin is not to rely on the sandbox, but to rely
+" upon it's hash and persistent file
+let g:localvimrc_sandbox = 0
+let g:localvimrc_persistence_file = $HOME .. "/.local/share/nvim/localvimrc_persistent"
+let g:localvimrc_name = [ ".vim/vimrc" ]
 " }}}
 
 " {{{ editorconfig

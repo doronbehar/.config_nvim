@@ -232,9 +232,6 @@
 [submodule "bundle/vala"]
 	path = pack/filetype/start/vala
 	url = https://github.com/arrufat/vala.vim
-[submodule "bundle/prj"]
-	path = pack/functional/start/prj
-	url = https://github.com/emersonmx/vim-prj
 [submodule "bundle/jupyter"]
 	path = bundle/jupyter
 	url = https://github.com/jupyter-vim/jupyter-vim
@@ -304,3 +301,6 @@
 [submodule "pack/looks/start/lualine"]
 	path = pack/looks/start/lualine
 	url = https://github.com/nvim-lualine/lualine.nvim
+[submodule "pack/functional/start/localvimrc"]
+	path = pack/functional/start/localvimrc
+	url = https://github.com/embear/vim-localvimrc
