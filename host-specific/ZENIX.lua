@@ -37,6 +37,30 @@ dap.configurations = {
 		}
 	}
 }
+vim.api.nvim_create_user_command("RunScriptWithArgs", function(t)
+	-- :help nvim_create_user_command
+	args = vim.split(vim.fn.expand(t.args), '\n')
+	approval = vim.fn.input(
+		"Will try to run:\n    " ..
+		vim.bo.filetype .. " " ..
+		vim.fn.expand('%') .. " " ..
+		t.args .. "\n\n" ..
+		"Do you approve? (y/n) "
+	)
+	if approval ~= "n" then
+		dap.run({
+			type = vim.bo.filetype,
+			request = 'launch',
+			name = 'Launch file with custom arguments (adhoc)',
+			program = '${file}',
+			args = args,
+		})
+	end
+end, {
+	complete = 'file',
+	nargs = '+'
+})
+vim.keymap.set('n', '<leader>R', ":RunScriptWithArgs ")
 -- }}}
 
 -- {{{ Helper for treesitter, and cmp
