@@ -1,4 +1,7 @@
 runtime host-specific/nix-suda.vim
+set termguicolors
+let g:sonokai_colors_override = {'bg0': ['#000000', '0']}
+colorscheme sonokai
 luafile $XDG_CONFIG_HOME/nvim/host-specific/ZENIX.lua
 
 " See :help dao-completion

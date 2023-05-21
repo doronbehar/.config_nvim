@@ -309,7 +309,7 @@ require'nvim-treesitter.configs'.setup {
 -- {{{ lualine
 require('lualine').setup({
 	options = {
-		theme = "powerline_dark"
+		theme = "sonokai"
 	},
 	tabline = {
 		lualine_a = {{
@@ -322,6 +322,14 @@ require('lualine').setup({
 		lualine_y = {},
 		lualine_z = {'tabs'}
 	}
+})
+-- }}}
+
+-- {{{ colorizer
+colorizer = require('colorizer')
+colorizer.setup({
+	'css',
+	'vim'
 })
 -- }}}
 

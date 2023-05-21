@@ -253,3 +253,6 @@
 [submodule "pack/functional/start/localvimrc"]
 	path = pack/functional/start/localvimrc
 	url = https://github.com/embear/vim-localvimrc
+[submodule "pack/looks/start/sonokai"]
+	path = pack/looks/start/sonokai
+	url = https://github.com/sainnhe/sonokai
