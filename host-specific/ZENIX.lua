@@ -40,12 +40,12 @@ dap.configurations = {
 vim.api.nvim_create_user_command("RunScriptWithArgs", function(t)
 	-- :help nvim_create_user_command
 	args = vim.split(vim.fn.expand(t.args), '\n')
-	approval = vim.fn.input(
+	approval = vim.fn.confirm(
 		"Will try to run:\n    " ..
 		vim.bo.filetype .. " " ..
 		vim.fn.expand('%') .. " " ..
 		t.args .. "\n\n" ..
-		"Do you approve? (y/n) "
+		"Do you approve? "
 	)
 	if approval ~= "n" then
 		dap.run({
@@ -61,6 +61,24 @@ end, {
 	nargs = '+'
 })
 vim.keymap.set('n', '<leader>R', ":RunScriptWithArgs ")
+vim.keymap.set('n', '<leader>c', dap.continue)
+vim.keymap.set('n', '<leader>o', dap.step_over)
+vim.keymap.set('n', '<leader>s', dap.step_into)
+vim.keymap.set('n', '<leader>u', dap.step_out)
+vim.keymap.set('n', '<leader>b', dap.toggle_breakpoint)
+vim.keymap.set('n', '<leader>B', function()
+	dap.set_breakpoint(vim.fn.input('Breakpoint condition: '))
+end)
+vim.keymap.set('n', '<leader>lp', function()
+	dap.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))
+end)
+vim.keymap.set('n', '<leader>dr', dap.repl.toggle)
+vim.keymap.set('n', '<leader>dl', dap.run_last)
+-- https://github.com/mfussenegger/nvim-dap-python#mappings
+dap_python = require('dap-python')
+vim.keymap.set('n', '<leader>dn', dap_python.test_method)
+vim.keymap.set('n', '<leader>df', dap_python.test_class)
+vim.keymap.set('v', '<leader>ds', dap_python.debug_selection)
 -- }}}
 
 -- {{{ Helper for treesitter, and cmp
