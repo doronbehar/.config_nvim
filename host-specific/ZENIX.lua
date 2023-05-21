@@ -45,9 +45,10 @@ vim.api.nvim_create_user_command("RunScriptWithArgs", function(t)
 		vim.bo.filetype .. " " ..
 		vim.fn.expand('%') .. " " ..
 		t.args .. "\n\n" ..
-		"Do you approve? "
+		"Do you approve? ",
+		"&Yes\n&No", 1
 	)
-	if approval ~= "n" then
+	if approval == 1 then
 		dap.run({
 			type = vim.bo.filetype,
 			request = 'launch',
@@ -58,7 +59,7 @@ vim.api.nvim_create_user_command("RunScriptWithArgs", function(t)
 	end
 end, {
 	complete = 'file',
-	nargs = '+'
+	nargs = '*'
 })
 vim.keymap.set('n', '<leader>R', ":RunScriptWithArgs ")
 vim.keymap.set('n', '<leader>c', dap.continue)
