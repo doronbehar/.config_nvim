@@ -1,3 +1,5 @@
 #!/bin/sh
 
-git submodule foreach 'git pull && [[ -d doc ]] && $EDITOR -es --cmd "helptags doc" --cmd "quit" && git -C ../../../.. add $path || :'
+thisdir=$(readlink -f -- $(dirname "$0"))
+
+git submodule foreach "$thisdir/update-single-submodule.sh"
