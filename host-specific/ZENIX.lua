@@ -119,9 +119,9 @@ vim.api.nvim_create_autocmd('BufReadPre', {
 		if not bufIsBig(t.buf) then
 			sources[#sources+1] = {name = 'treesitter', group_index = 2}
 		end
-	cmp.setup.buffer {
-		sources = sources
-	}
+		cmp.setup.buffer {
+			sources = sources
+		}
 	end
 })
 -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
