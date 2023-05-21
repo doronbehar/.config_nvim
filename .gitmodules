@@ -203,7 +203,7 @@
 	path = pack/functional/start/direnv
 	url = https://github.com/direnv/direnv.vim
 [submodule "bundle/colorizer.lua"]
-	path = pack/looks/opt/colorizer.lua
+	path = pack/looks/start/colorizer.lua
 	url = https://github.com/norcalli/nvim-colorizer.lua
 [submodule "bundle/firenvim"]
 	path = pack/functional/start/firenvim
