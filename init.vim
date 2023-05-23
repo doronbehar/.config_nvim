@@ -106,11 +106,12 @@ endif
 autocmd BufReadPre * if getfsize(expand("<afile>")) > 1024 * 1024 |
 	\ call s:largeFiles() |
 \ endif
-autocmd BufEnter * if getfsize(expand("<afile>")) > 1024 * 1024 |
-	\ execute('NoMatchParen') |
-	\ else |
-	\ execute('DoMatchParen') |
-\ endif
+" Currently disabled due to: https://github.com/ibhagwan/fzf-lua/issues/768
+"autocmd BufEnter * if getfsize(expand("<afile>")) > 1024 * 1024 |
+"	\ execute('NoMatchParen') |
+"	\ else |
+"	\ execute('DoMatchParen') |
+"\ endif
 set foldenable
 " indentation rules, read more at :help indent.txt
 let g:vim_indent_cont = &shiftwidth
