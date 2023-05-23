@@ -254,13 +254,13 @@ fzf = require('fzf-lua')
 --end
 vim.keymap.set({ "n", "v", "i" }, "<C-x><C-f>",
   function()
-    require("fzf-lua").complete_path({ cmd = "find -maxdepth 2 -mindepth 1 -printf '%P\n'", previewer = "builtin" })
+    fzf.complete_path({ cmd = "find -maxdepth 2 -mindepth 1 -printf '%P\n'", previewer = "builtin" })
   end,
   { silent = true, desc = "Fuzzy complete path" }
 )
 vim.keymap.set({ "n", "v", "i" }, "<C-x><C-l>",
   function()
-    require("fzf-lua").complete_line()
+    fzf.complete_line()
   end,
   { silent = true, desc = "Fuzzy complete lines" })
 -- }}}
