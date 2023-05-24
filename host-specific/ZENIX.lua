@@ -248,6 +248,12 @@ end
 
 -- {{{ fzf-lua bindings
 fzf = require('fzf-lua')
+fzf.setup({
+	buffers = {
+		sort_lastused = false
+	}
+})
+
 -- Useful if you debug these functions
 --function shellinspect(var)
 --  vim.fn.system("echo var is " .. vim.fn.shellescape(vim.inspect(var)) .. " >> dbg")
