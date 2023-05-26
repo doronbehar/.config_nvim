@@ -15,7 +15,7 @@ let g:vimtex_fold_types = {
 \}
 let g:vimtex_compiler_method = 'tectonic'
 let g:vimtex_compiler_tectonic = {
-	\'build_dir' : {-> expand("%:p:h")},
+	\'build_dir' : '',
 	\'hooks' : [],
 	\'options' : [
 	\	'--keep-logs',
