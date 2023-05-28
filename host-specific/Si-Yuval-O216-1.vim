@@ -1,5 +1,17 @@
 runtime host-specific/nix-suda.vim
 luafile $XDG_CONFIG_HOME/nvim/host-specific/ZENIX.lua
+let g:clipboard = {
+	\'name': 'WslClipboard',
+	\'copy': {
+	\	'+': 'clip.exe',
+	\	'*': 'clip.exe',
+	\},
+	\'paste': {
+	\	'+': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+	\	'*': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+	\},
+	\'cache_enabled': 0,
+\}
 
 nnoremap <silent> <leader>c :lua require'dap'.continue()<CR>
 nnoremap <silent> <leader>o :lua require'dap'.step_over()<CR>
