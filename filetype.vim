@@ -36,6 +36,7 @@ au BufNewFile,BufRead stackoverflow.com* setf markdown | let b:stay_ignore = 1
 au BufNewFile,BufRead github.com* setf markdown | let b:stay_ignore = 1
 au BufNewFile,BufRead latex.codecogs.com* setf tex | let b:stay_ignore = 1
 au BufNewFile,BufRead *wikipedia.org* setf mediawiki | let b:stay_ignore = 1
+au BufNewFile,BufRead *nixos.wiki* setf mediawiki | let b:stay_ignore = 1
 " au BufNewFile,BufRead * setf itsalltext | let b:stay_ignore = 1
 
 au BufNewFile,BufRead neomutt-*-\w\+,neomutt[[:alnum:]_-]\\\{6\} if getline(1) =~# '^<!DOCTYPE html' | setfiletype html | elseif getline(1) =~# '^#\+ [A-Z]' | setfiletype pandoc | endif | setlocal noswapfile nobackup noundofile | let b:stay_ignore = 1
