@@ -56,6 +56,7 @@ end, {
 	nargs = '*'
 })
 vim.keymap.set('n', '<leader>R', ":RunScriptWithArgs ")
+vim.keymap.set('n', '<leader>C', dapui.close, {desc = "DAP: Close UI"})
 vim.keymap.set('n', '<leader>c', dap.continue, {desc = "DAP: Continue"})
 vim.keymap.set('n', '<leader>o', dap.step_over, {desc = "DAP: Step Over"})
 vim.keymap.set('n', '<leader>s', dap.step_into, {desc = "DAP: Step Into"})
