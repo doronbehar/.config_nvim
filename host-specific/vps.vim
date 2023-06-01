@@ -1,2 +1,2 @@
-" https://github.com/lambdalisue/suda.vim#smart-edit
-let g:suda_smart_edit = 1
+" Share the same neovim wrapper - thanks to Nix
+runtime host-specific/ZENIX.vim
