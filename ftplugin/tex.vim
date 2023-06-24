@@ -24,6 +24,8 @@ let g:vimtex_compiler_tectonic = {
 	\	'-Zshell-escape-cwd=$PWD'
 	\],
 \}
+" Clean minted cache files of \inputminted
+let g:vimtex_compiler_clean_paths = [ '_minted*' ]
 if executable('pplatex')
 	let g:vimtex_quickfix_method = 'pplatex'
 endif
