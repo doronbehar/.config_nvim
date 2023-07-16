@@ -218,18 +218,18 @@ for _,v in ipairs(servers_list) do
 				silent=true,
 				buffer=bufnr
 			}
-			vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
-			vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
-			vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
-			vim.keymap.set('n', 'gs', vim.lsp.buf.signature_help, bufopts)
-			vim.keymap.set('n', 'gt', vim.lsp.buf.type_definition, bufopts)
-			vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-			vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename, bufopts)
-			vim.keymap.set('n', '<leader>f', vim.lsp.buf.format, bufopts)
+			vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts, {desc = "LSP: go to decleration"})
+			vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts, {desc = "LSP: go to definition"})
+			vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts, {desc = "LSP: go to implementation"})
+			vim.keymap.set('n', 'gs', vim.lsp.buf.signature_help, bufopts, {desc = "LSP: signature help"})
+			vim.keymap.set('n', 'gt', vim.lsp.buf.type_definition, bufopts, {desc = "LSP: go to type definition"})
+			vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts, {desc = "LSP: show references"})
+			vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename, bufopts, {desc = "LSP: rename symbol"})
+			vim.keymap.set('n', '<leader>f', vim.lsp.buf.format, bufopts, {desc = "LSP: format document"})
 			--vim.keymap.set('n', '<space>q', vim.diagnostic.open_float, opts)
-			vim.keymap.set('n', '[q', vim.diagnostic.goto_prev, opts)
-			vim.keymap.set('n', ']q', vim.diagnostic.goto_next, opts)
-			vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
+			vim.keymap.set('n', '[q', vim.diagnostic.goto_prev, bufopts, {desc = "LSP: go to next diagnostic"})
+			vim.keymap.set('n', ']q', vim.diagnostic.goto_next, bufopts, {desc = "LSP: go to previous diagnostic"})
+			vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, bufopts, {desc = "LSP: set location list with diagnostics"})
 		end
 	}
 end
