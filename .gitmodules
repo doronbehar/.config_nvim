@@ -256,3 +256,6 @@
 [submodule "pack/looks/start/sonokai"]
 	path = pack/looks/start/sonokai
 	url = https://github.com/sainnhe/sonokai
+[submodule "pack/git/start/fubitive"]
+	path = pack/git/start/fubitive
+	url = https://github.com/tommcdo/vim-fubitive
