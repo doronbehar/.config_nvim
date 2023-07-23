@@ -1,6 +1,6 @@
 " {{{1 Toggle common rtl options vs ltr
 function! rtl#set()
-	if $MLTERM ==# ''
+	if $MLTERM ==# '' && $VTE_VERSION ==# ''
 		setlocal rightleft
 	else
 		noremap h l
@@ -24,7 +24,7 @@ function! rtl#set()
 	endif
 endfunction
 function! rtl#unset()
-	if $MLTERM ==# ''
+	if $MLTERM ==# '' && $VTE_VERSION ==# ''
 		setlocal norightleft
 	else
 		unmap l
