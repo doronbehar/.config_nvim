@@ -18,7 +18,7 @@ let g:vimtex_compiler_tectonic = {
 	\	'--keep-logs',
 	\	'--synctex',
 	\	'-Zshell-escape',
-	\	'-Zshell-escape-cwd=$PWD'
+	\	'-Zshell-escape-cwd=.'
 	\],
 \}
 " Clean minted cache files of \inputminted
