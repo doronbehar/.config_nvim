@@ -259,3 +259,6 @@
 [submodule "pack/git/start/fubitive"]
 	path = pack/git/start/fubitive
 	url = https://github.com/tommcdo/vim-fubitive
+[submodule "pack/completion/start/vsnip-integ"]
+	path = pack/completion/start/vsnip-integ
+	url = https://github.com/hrsh7th/vim-vsnip-integ
