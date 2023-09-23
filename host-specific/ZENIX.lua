@@ -11,7 +11,13 @@ end
 require('dap-python').setup('python')
 -- https://github.com/leoluz/nvim-dap-go#register-the-plugin
 require('dap-go').setup()
--- See :help dap-configuration
+-- https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation#perl
+dap.adapters.perl = {
+	type = 'executable',
+	-- TODO: Finish packaging this for NixOS, with upstream approved pname. See
+	-- https://github.com/Nihilus118/vscode-perl-debug/issues/6
+	command = "perl-debugger",
+}
 dap.configurations = {
 	python = {
 		{
@@ -28,6 +34,14 @@ dap.configurations = {
 			name = "Debug Package",
 			request = "launch",
 			program = "${fileDirname}",
+		},
+	},
+	perl = {
+		{
+			type = 'perl',
+			request = 'launch',
+			name = 'Launch Perl',
+			program = '${workspaceFolder}/${relativeFile}',
 		}
 	}
 }
@@ -207,32 +221,39 @@ servers_list = {
 }
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 local lsp = require("lspconfig")
+default_setup_settings = {
+	autostart = true,
+	capabilities = capabilities,
+	on_attach = function(client, bufnr)
+		-- LSP Keybindings
+		local bufopts = {
+			noremap=true,
+			silent=true,
+			buffer=bufnr
+		}
+		vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts, {desc = "LSP: go to decleration"})
+		vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts, {desc = "LSP: go to definition"})
+		vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts, {desc = "LSP: go to implementation"})
+		vim.keymap.set('n', 'gs', vim.lsp.buf.signature_help, bufopts, {desc = "LSP: signature help"})
+		vim.keymap.set('n', 'gt', vim.lsp.buf.type_definition, bufopts, {desc = "LSP: go to type definition"})
+		vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts, {desc = "LSP: show references"})
+		vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename, bufopts, {desc = "LSP: rename symbol"})
+		vim.keymap.set('n', '<leader>f', vim.lsp.buf.format, bufopts, {desc = "LSP: format document"})
+		--vim.keymap.set('n', '<space>q', vim.diagnostic.open_float, opts)
+		vim.keymap.set('n', '[q', vim.diagnostic.goto_prev, bufopts, {desc = "LSP: go to next diagnostic"})
+		vim.keymap.set('n', ']q', vim.diagnostic.goto_next, bufopts, {desc = "LSP: go to previous diagnostic"})
+		vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, bufopts, {desc = "LSP: set location list with diagnostics"})
+	end
+}
 for _,v in ipairs(servers_list) do
-	lsp[v].setup{
-		autostart = true,
-		capabilities = capabilities,
-		on_attach = function(client, bufnr)
-			-- LSP Keybindings
-			local bufopts = {
-				noremap=true,
-				silent=true,
-				buffer=bufnr
-			}
-			vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts, {desc = "LSP: go to decleration"})
-			vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts, {desc = "LSP: go to definition"})
-			vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts, {desc = "LSP: go to implementation"})
-			vim.keymap.set('n', 'gs', vim.lsp.buf.signature_help, bufopts, {desc = "LSP: signature help"})
-			vim.keymap.set('n', 'gt', vim.lsp.buf.type_definition, bufopts, {desc = "LSP: go to type definition"})
-			vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts, {desc = "LSP: show references"})
-			vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename, bufopts, {desc = "LSP: rename symbol"})
-			vim.keymap.set('n', '<leader>f', vim.lsp.buf.format, bufopts, {desc = "LSP: format document"})
-			--vim.keymap.set('n', '<space>q', vim.diagnostic.open_float, opts)
-			vim.keymap.set('n', '[q', vim.diagnostic.goto_prev, bufopts, {desc = "LSP: go to next diagnostic"})
-			vim.keymap.set('n', ']q', vim.diagnostic.goto_next, bufopts, {desc = "LSP: go to previous diagnostic"})
-			vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, bufopts, {desc = "LSP: set location list with diagnostics"})
-		end
-	}
+	lsp[v].setup(default_setup_settings)
 end
+perl_setup_settings = default_setup_settings
+perl_setup_settings.cmd = {
+	-- Such an executable exists only on Nix, in our perlnavigator package.
+	"perlnavigator", "--stdio"
+}
+lsp.perlnavigator.setup(perl_setup_settings)
 -- }}}
 
 -- {{{ fzf-lua bindings
