@@ -261,6 +261,11 @@ fzf = require('fzf-lua')
 fzf.setup({
 	buffers = {
 		sort_lastused = false
+	},
+	actions = {
+		files = {
+			["default"] = fzf.actions.file_edit,
+		} 
 	}
 })
 
