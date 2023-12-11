@@ -199,6 +199,7 @@ servers_list = {
 	"clangd",
 	-- Installed via flake.nix
 	"jedi_language_server",
+	"matlab_ls",
 	"gopls",
 	"rls",
 	"svls",
