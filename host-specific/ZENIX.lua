@@ -272,19 +272,26 @@ fzf.setup({
 
 -- Useful if you debug these functions
 --function shellinspect(var)
---  vim.fn.system("echo var is " .. vim.fn.shellescape(vim.inspect(var)) .. " >> dbg")
+--	vim.fn.system("echo var is " .. vim.fn.shellescape(vim.inspect(var)) .. " >> dbg")
 --end
 vim.keymap.set({ "n", "v", "i" }, "<C-x><C-f>",
-  function()
-    fzf.complete_path({ cmd = "find -maxdepth 2 -mindepth 1 -printf '%P\n'", previewer = "builtin" })
-  end,
-  { silent = true, desc = "Fuzzy complete path" }
+	function()
+		fzf.complete_path({ cmd = "find -maxdepth 2 -mindepth 1 -printf '%P\n'", previewer = "builtin" })
+	end,
+	{ silent = true, desc = "Fuzzy complete path" }
 )
 vim.keymap.set({ "n", "v", "i" }, "<C-x><C-l>",
-  function()
-    fzf.complete_line()
-  end,
-  { silent = true, desc = "Fuzzy complete lines" })
+	function()
+		fzf.complete_line({
+		fzf_opts = {
+			['--query'] = vim.fn.shellescape(vim.fn.getbufline(
+				vim.fn.bufnr('%'),
+				vim.fn.line('.')
+			)[1])
+		}
+	})
+	end,
+	{ silent = true, desc = "Fuzzy complete lines" })
 -- }}}
 
 -- {{{ treesitter
