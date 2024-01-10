@@ -1,5 +1,8 @@
 runtime host-specific/nix-suda.vim
 set termguicolors
+" From some reason terminal colors like similar to those outside :term with
+" this
+let g:sonokai_disable_terminal_colors = 1
 let g:sonokai_colors_override = {'bg0': ['#000000', '0']}
 colorscheme sonokai
 luafile $XDG_CONFIG_HOME/nvim/host-specific/ZENIX.lua

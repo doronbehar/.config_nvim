@@ -38,10 +38,6 @@ set smartcase
 " Colors
 set autoread
 syntax enable
-" From some reason terminal colors like similar to those outside :term with
-" this
-let g:sonokai_disable_terminal_colors = 1
-colorscheme sonokai
 hi normal guibg=#000000 ctermbg=0
 " who uses Ex mode?
 map Q <nop>
