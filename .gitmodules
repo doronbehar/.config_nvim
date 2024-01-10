@@ -80,7 +80,7 @@
 	path = pack/looks/opt/css-color
 	url = https://github.com/ap/vim-css-color
 [submodule "pack/functional/start/ghost"]
-	path = pack/functional/start/ghost
+	path = pack/functional/opt/ghost
 	url = https://github.com/raghur/vim-ghost
 [submodule "pack/filetype/start/orgmode"]
 	path = pack/filetype/start/orgmode
@@ -161,7 +161,7 @@
 	path = pack/looks/start/colorizer.lua
 	url = https://github.com/norcalli/nvim-colorizer.lua
 [submodule "pack/functional/start/firenvim"]
-	path = pack/functional/start/firenvim
+	path = pack/functional/opt/firenvim
 	url = https://github.com/glacambre/firenvim
 [submodule "pack/filetype/start/jsx-typescript"]
 	path = pack/filetype/start/jsx-typescript
@@ -212,7 +212,7 @@
 	path = pack/functional/opt/treesitter
 	url = https://github.com/nvim-treesitter/nvim-treesitter
 [submodule "pack/functional/start/treesitter-textobjects"]
-	path = pack/functional/start/treesitter-textobjects
+	path = pack/functional/opt/treesitter-textobjects
 	url = https://github.com/nvim-treesitter/nvim-treesitter-textobjects
 [submodule "pack/functional/start/cmp"]
 	path = pack/functional/start/cmp
@@ -245,7 +245,7 @@
 	path = pack/completion/start/zsh
 	url = https://github.com/tamago324/cmp-zsh
 [submodule "pack/functional/start/fzf-lua"]
-	path = pack/functional/start/fzf-lua
+	path = pack/functional/opt/fzf-lua
 	url = https://github.com/ibhagwan/fzf-lua
 [submodule "pack/looks/start/lualine"]
 	path = pack/looks/start/lualine
@@ -254,7 +254,7 @@
 	path = pack/functional/start/localvimrc
 	url = https://github.com/embear/vim-localvimrc
 [submodule "pack/looks/start/sonokai"]
-	path = pack/looks/start/sonokai
+	path = pack/looks/opt/sonokai
 	url = https://github.com/sainnhe/sonokai
 [submodule "pack/git/start/fubitive"]
 	path = pack/git/start/fubitive

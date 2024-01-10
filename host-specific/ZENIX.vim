@@ -1,4 +1,12 @@
 runtime host-specific/nix-suda.vim
+
+" These plugins don't abort errorlessly when vim is used with them
+packadd sonokai
+packadd fzf-lua
+packadd ghost
+packadd firenvim
+packadd treesitter-textobjects
+
 set termguicolors
 " From some reason terminal colors like similar to those outside :term with
 " this
