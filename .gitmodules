@@ -262,3 +262,6 @@
 [submodule "pack/completion/start/vsnip-integ"]
 	path = pack/completion/start/vsnip-integ
 	url = https://github.com/hrsh7th/vim-vsnip-integ
+[submodule "pack/filetype/start/bitbake"]
+	path = pack/filetype/start/bitbake
+	url = https://github.com/kergoth/vim-bitbake
