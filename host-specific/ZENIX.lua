@@ -299,8 +299,8 @@ require'nvim-treesitter.configs'.setup {
 	highlight = {
 		enable = true,
 		disable = function(lang, buf)
-			-- including vim for the sake of Lua blocks inside VimL
-			if lang == "nix" then
+			-- TODO: Fix issues with these file types... vimdoc issues are new
+			if lang == "nix" or lang == "vimdoc" then
 				return true
 			end
 			return bufIsBig(buf)
