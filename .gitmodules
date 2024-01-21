@@ -265,3 +265,6 @@
 [submodule "pack/filetype/start/bitbake"]
 	path = pack/filetype/start/bitbake
 	url = https://github.com/kergoth/vim-bitbake
+[submodule "pack/filetype/start/pydoc"]
+	path = pack/filetype/start/pydoc
+	url = https://github.com/somini/pydoc.vim
