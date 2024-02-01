@@ -24,8 +24,8 @@ nnoremap <leader>v :set hlsearch! hlsearch?<CR>
 " Create a mapping to sync syntax:
 nnoremap <leader><esc> :syntax sync fromstart<CR>
 " Copy the current file path to clipboard
-nnoremap <leader>y :let @+=expand('%:p')<CR>
-nnoremap <leader>Y :let @+=expand('%')<CR>
+nnoremap <leader>y :let @+=expand('%:p') \| echo expand('%:p')<CR>
+nnoremap <leader>Y :let @+=expand('%') \| echo expand('%')<CR>
 
 " --------------------------------------------
 " <space> related, usually for searching stuff
