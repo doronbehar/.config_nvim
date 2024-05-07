@@ -298,6 +298,8 @@ vim.keymap.set({ "n", "v", "i" }, "<C-x><C-l>",
 require'nvim-treesitter.configs'.setup {
 	highlight = {
 		enable = true,
+		-- https://github.com/nvim-treesitter/nvim-treesitter/issues/1573#issuecomment-1780727057
+		additional_vim_regex_highlighting = { "python" },
 		disable = function(lang, buf)
 			-- TODO: Fix issues with these file types... vimdoc issues are new
 			if lang == "nix" or lang == "vimdoc" then
