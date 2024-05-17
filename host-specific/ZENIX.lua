@@ -155,25 +155,43 @@ cmp.setup({
 	}),
 	-- I don't add sources here, but I add them in a BufReadPre autocmd
 })
--- default sources for all buffers
-local default_cmp_sources = cmp.config.sources({
-	{ name = 'nvim_lsp' },
-	{ name = 'nvim_lsp_signature_help' },
-}, {
-	{ name = 'vsnip' },
-	{ name = 'path' }
-})
--- If a file is too large, I don't want to add to it's cmp sources treesitter, see:
+-- If a file is too large, I don't want to add to it any cmp sources. See:
 -- https://github.com/hrsh7th/nvim-cmp/issues/1522
 vim.api.nvim_create_autocmd('BufReadPre', {
 	callback = function(t)
-		local sources = default_cmp_sources
 		if not bufIsBig(t.buf) then
-			sources[#sources+1] = {name = 'treesitter', group_index = 2}
+			cmp.setup.buffer {
+				sources = cmp.config.sources({
+					{ name = 'nvim_lsp' },
+					{ name = 'nvim_lsp_signature_help' },
+				}, {
+					{ name = 'vsnip' },
+					{ name = 'path' },
+					{ name = 'treesitter' },
+				})
+			}
 		end
-		cmp.setup.buffer {
-			sources = sources
-		}
+	end
+})
+
+vim.api.nvim_create_autocmd('LspAttach', {
+	callback = function(t)
+		-- Detach clients if they are too big. See:
+		-- https://github.com/neovim/nvim-lspconfig/issues/2626#issuecomment-1556057157
+		if bufIsBig(t.buf) then
+			for _,client in pairs(vim.lsp.get_active_clients({bufnr = t.buf})) do
+				-- Using vim.defer_fn because when this event is fired, we are
+				-- not really attached. See:
+				-- https://www.reddit.com/r/neovim/comments/168u3e4/comment/jyyluyo/
+				vim.defer_fn(function()
+					vim.lsp.buf_detach_client(t.buf, client.id)
+					print(
+						"Detaching client " .. client.name .. " because buffer " ..
+						vim.fn.bufname(t.buf) .. " is too big"
+					)
+				end, 10)
+			end
+		end
 	end
 })
 -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
