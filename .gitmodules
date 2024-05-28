@@ -198,7 +198,7 @@
 	url = https://github.com/leoluz/nvim-dap-go
 [submodule "pack/functional/start/sved"]
 	path = pack/functional/start/sved
-	url = https://github.com/doronbehar/sved
+	url = https://github.com/peterbjorgensen/sved
 [submodule "pack/editing/start/lexima"]
 	path = pack/editing/start/lexima
 	url = https://github.com/doronbehar/lexima.vim
