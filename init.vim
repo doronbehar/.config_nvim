@@ -131,8 +131,11 @@ if !exists(':packadd')
 	execute pathogen#infect()
 end
 
-" Load $HOST specific configuration
-runtime host-specific/$HOST.vim
+if !has('win32')
+	runtime host-specific/$HOST.vim
+else
+	runtime host-specific/$COMPUTERNAME.vim
+endif
 
 if executable('pplatex')
 	let g:vimtex_quickfix_method = 'pplatex'
