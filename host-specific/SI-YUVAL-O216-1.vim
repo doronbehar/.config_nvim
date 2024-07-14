@@ -1,3 +1,4 @@
+" Installed imperatively
 packadd treesitter
 runtime host-specific\ZENIX.vim
 " Using win32yank (install via scoop)

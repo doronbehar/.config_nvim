@@ -231,7 +231,6 @@ servers_list = {
 	-- TODO: Install (create a nix package) - https://github.com/sumneko/lua-language-server/wiki/Getting-Started
 	--"sumneko_lua"
 	-- TODO: Setup wolfram alpha language server: https://github.com/kenkangxgwe/lsp-wl
-	-- All of the rest are installed via npm - on ZENIX with nixNodeJSPkgs
 	"cssls",
 	"eslint",
 	"dockerls",
