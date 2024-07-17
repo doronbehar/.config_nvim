@@ -97,6 +97,8 @@ set preserveindent
 filetype indent on
 
 " {{{1 backup and restore
+" https://www.reddit.com/r/neovim/comments/1e5d7zw/windows_backupdir_related_settings_best_practices/
+set shellslash
 set backupdir=~/.local/share/nvim/tmp//
 set directory=~/.local/share/nvim/tmp//
 set viewdir=~/.local/share/nvim/view//

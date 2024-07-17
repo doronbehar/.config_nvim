@@ -8,5 +8,4 @@ if stridx(&shell, 'bash.exe') >= 0
   set shellcmdflag=-c
   set shellquote=
   set shellxquote=
-  let $TMP="/tmp"
 endif
