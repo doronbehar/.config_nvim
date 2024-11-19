@@ -47,7 +47,7 @@ dap.configurations = {
 }
 vim.api.nvim_create_user_command("RunScriptWithArgs", function(t)
 	-- :help nvim_create_user_command
-	args = vim.split(vim.fn.expand(t.args), '\n')
+	args = vim.split(vim.fn.expand(t.args), ' ', { trimempty=true })
 	approval = vim.fn.confirm(
 		"Will try to run:\n    " ..
 		vim.bo.filetype .. " " ..
