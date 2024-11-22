@@ -2,7 +2,16 @@
 local dap = require('dap')
 -- https://github.com/rcarriga/nvim-dap-ui#usage
 local dapui = require("dapui")
-dapui.setup()
+dapui.setup({
+  -- Disable many mappings which I don't see the point with at the moment
+  mappings = {
+    edit = {},
+    open = {},
+    remove = {},
+    repl = {},
+    toggle = {},
+  },
+})
 -- Open the dap-ui whenever dap is launching: https://github.com/rcarriga/nvim-dap-ui#usage
 dap.listeners.after.event_initialized["dapui_config"] = function()
 	dapui.open()
@@ -75,6 +84,7 @@ vim.keymap.set('n', '<leader>c', dap.continue, {desc = "DAP: Continue"})
 vim.keymap.set('n', '<leader>o', dap.step_over, {desc = "DAP: Step Over"})
 vim.keymap.set('n', '<leader>s', dap.step_into, {desc = "DAP: Step Into"})
 vim.keymap.set('n', '<leader>u', dap.step_out, {desc = "DAP: Step Out"})
+vim.keymap.set('n', '<leader>T', dap.terminate, {desc = "DAP: Terminate"})
 vim.keymap.set('n', '<leader>b', dap.toggle_breakpoint, {desc = "DAP: Toggle Breakpoint"})
 vim.keymap.set('n', '<leader>B', function()
 	dap.set_breakpoint(vim.fn.input('Breakpoint condition: '))
