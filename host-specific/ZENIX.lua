@@ -56,12 +56,12 @@ dap.configurations = {
 }
 vim.api.nvim_create_user_command("RunScriptWithArgs", function(t)
 	-- :help nvim_create_user_command
-	args = vim.split(vim.fn.expand(t.args), ' ', { trimempty=true })
+	args = vim.fn.substitute(vim.fn.expand(t.args), "\n", " ", "g")
 	approval = vim.fn.confirm(
 		"Will try to run:\n    " ..
 		vim.bo.filetype .. " " ..
 		vim.fn.expand('%') .. " " ..
-		t.args .. "\n\n" ..
+		args .. "\n\n" ..
 		"Do you approve? ",
 		"&Yes\n&No", 1
 	)
@@ -71,7 +71,7 @@ vim.api.nvim_create_user_command("RunScriptWithArgs", function(t)
 			request = 'launch',
 			name = 'Launch file with custom arguments (adhoc)',
 			program = '${file}',
-			args = args,
+			args = vim.split(args, ' ', { trimempty=true }),
 		})
 	end
 end, {
