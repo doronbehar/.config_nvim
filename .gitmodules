@@ -271,3 +271,6 @@
 [submodule "pack/functional/start/nio"]
 	path = pack/functional/start/nio
 	url = https://github.com/nvim-neotest/nvim-nio
+[submodule "pack/filetype/start/ical"]
+	path = pack/filetype/start/ical
+	url = https://github.com/axvr/ical.vim
