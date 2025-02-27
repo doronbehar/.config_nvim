@@ -274,3 +274,6 @@
 [submodule "pack/filetype/start/ical"]
 	path = pack/filetype/start/ical
 	url = https://github.com/axvr/ical.vim
+[submodule "pack/functional/start/texpresso"]
+	path = pack/functional/start/texpresso
+	url = https://github.com/let-def/texpresso.vim
