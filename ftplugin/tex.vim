@@ -10,7 +10,9 @@ let g:vimtex_fold_types = {
 	\	]
 	\}
 \}
-let g:vimtex_compiler_method = 'tectonic'
+" https://github.com/lervag/vimtex/issues/3154
+let g:vimtex_compiler_method =
+	\ empty($VIMTEX_COMPILER_METHOD) ? 'tectonic' : $VIMTEX_COMPILER_METHOD
 let g:vimtex_compiler_tectonic = {
 	\'out_dir' : '',
 	\'hooks' : [],
