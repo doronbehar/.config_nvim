@@ -234,7 +234,8 @@
 	url = https://github.com/hrsh7th/vim-vsnip
 [submodule "pack/functional/start/friendly-snippets"]
 	path = pack/functional/start/friendly-snippets
-	url = https://github.com/rafamadriz/friendly-snippets
+	url = https://github.com/doronbehar/friendly-snippets
+	branch = fork
 [submodule "pack/completion/start/treesitter"]
 	path = pack/completion/start/treesitter
 	url = https://github.com/ray-x/cmp-treesitter
