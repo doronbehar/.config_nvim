@@ -54,7 +54,7 @@ dap.configurations = {
 		}
 	}
 }
-vim.api.nvim_create_user_command("RunScriptWithArgs", function(t)
+vim.api.nvim_create_user_command("DapRunScriptWithArgs", function(t)
 	-- :help nvim_create_user_command
 	args = vim.fn.substitute(vim.fn.expand(t.args), "\n", " ", "g")
 	approval = vim.fn.confirm(
@@ -78,7 +78,8 @@ end, {
 	complete = 'file',
 	nargs = '*'
 })
-vim.keymap.set('n', '<leader>R', ":RunScriptWithArgs ")
+vim.keymap.set('n', '<leader>R', ":DapRunScriptWithArgs ")
+vim.keymap.set('n', '<leader>L', ":call setqflist([], 'r') | Dispatch ./%")
 vim.keymap.set('n', '<leader>C', dapui.close, {desc = "DAP: Close UI"})
 vim.keymap.set('n', '<leader>c', dap.continue, {desc = "DAP: Continue"})
 vim.keymap.set('n', '<leader>o', dap.step_over, {desc = "DAP: Step Over"})
