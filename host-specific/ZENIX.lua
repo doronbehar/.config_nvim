@@ -364,6 +364,9 @@ require'nvim-treesitter.configs'.setup {
 		},
 	},
 }
+-- https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#folding
+vim.wo.foldmethod = 'expr'
+vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 -- }}}
 
 -- {{{ lualine

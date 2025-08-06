@@ -67,10 +67,6 @@ function! s:largeFiles()
 	let b:nix_disable_fenced_highlight = 1
 	let b:lexima_disabled = 1
 endfunction
-if has('nvim-0.7')
-	set foldmethod=expr
-	set foldexpr=nvim_treesitter#foldexpr()
-endif
 autocmd BufReadPre * if getfsize(expand("<afile>")) > 1024 * 1024 |
 	\ call s:largeFiles() |
 \ endif
