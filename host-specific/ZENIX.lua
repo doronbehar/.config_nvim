@@ -243,6 +243,7 @@ servers_list = {
 	--"sumneko_lua"
 	-- TODO: Setup wolfram alpha language server: https://github.com/kenkangxgwe/lsp-wl
 	"cssls",
+	"jsonls",
 	"eslint",
 	"dockerls",
 	"bashls",
