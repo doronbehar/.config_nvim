@@ -236,7 +236,7 @@ servers_list = {
 	--"rnix",
 	"vhdl_ls",
 	"cmake",
-	-- See setup at https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#arduino_language_server
+	-- See setup at https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#arduino_language_server
 	"arduino_language_server",
 	"autotools_ls",
 	-- TODO: Install (create a nix package) - https://github.com/sumneko/lua-language-server/wiki/Getting-Started
