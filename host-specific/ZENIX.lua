@@ -238,7 +238,8 @@ servers_list = {
 	"cmake",
 	-- See setup at https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#arduino_language_server
 	"arduino_language_server",
-	"autotools_ls",
+	-- broken on NixOS at the moment: https://github.com/NixOS/nixpkgs/issues/425798
+	--"autotools_ls",
 	-- TODO: Install (create a nix package) - https://github.com/sumneko/lua-language-server/wiki/Getting-Started
 	--"sumneko_lua"
 	-- TODO: Setup wolfram alpha language server: https://github.com/kenkangxgwe/lsp-wl
