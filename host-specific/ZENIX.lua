@@ -252,7 +252,6 @@ servers_list = {
 	"yamlls",
 }
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
-local lsp = require("lspconfig")
 default_setup_settings = {
 	autostart = true,
 	capabilities = capabilities,
@@ -278,14 +277,14 @@ default_setup_settings = {
 	end
 }
 for _,v in ipairs(servers_list) do
-	lsp[v].setup(default_setup_settings)
+	vim.lsp.config(v, default_setup_settings)
 end
 perl_setup_settings = default_setup_settings
 perl_setup_settings.cmd = {
 	-- Such an executable exists only on Nix, in our perlnavigator package.
 	"perlnavigator", "--stdio"
 }
-lsp.perlnavigator.setup(perl_setup_settings)
+vim.lsp.config("perlnavigator", perl_setup_settings)
 -- }}}
 
 -- {{{ fzf-lua bindings
