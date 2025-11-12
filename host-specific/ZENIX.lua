@@ -278,6 +278,7 @@ default_setup_settings = {
 }
 for _,v in ipairs(servers_list) do
 	vim.lsp.config(v, default_setup_settings)
+	vim.lsp.enable(v)
 end
 perl_setup_settings = default_setup_settings
 perl_setup_settings.cmd = {
