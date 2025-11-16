@@ -3,14 +3,14 @@ local dap = require('dap')
 -- https://github.com/rcarriga/nvim-dap-ui#usage
 local dapui = require("dapui")
 dapui.setup({
-  -- Disable many mappings which I don't see the point with at the moment
-  mappings = {
-    edit = {},
-    open = {},
-    remove = {},
-    repl = {},
-    toggle = {},
-  },
+-- Disable many mappings which I don't see the point with at the moment
+	mappings = {
+		edit = {},
+		open = {},
+		remove = {},
+		repl = {},
+		toggle = {},
+	},
 })
 -- Open the dap-ui whenever dap is launching: https://github.com/rcarriga/nvim-dap-ui#usage
 dap.listeners.after.event_initialized["dapui_config"] = function()
@@ -314,12 +314,12 @@ vim.keymap.set({ "n", "v", "i" }, "<C-x><C-f>",
 vim.keymap.set({ "n", "v", "i" }, "<C-x><C-l>",
 	function()
 		fzf.complete_line({
-		fzf_opts = {
-			['--query'] = vim.fn.shellescape(vim.fn.getbufline(
-				vim.fn.bufnr('%'),
-				vim.fn.line('.')
-			)[1])
-		}
+			fzf_opts = {
+				['--query'] = vim.fn.shellescape(vim.fn.getbufline(
+					vim.fn.bufnr('%'),
+					vim.fn.line('.')
+				)[1])
+			}
 	})
 	end,
 	{ silent = true, desc = "Fuzzy complete lines" })
