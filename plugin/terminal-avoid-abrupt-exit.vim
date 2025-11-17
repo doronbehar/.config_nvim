@@ -1,13 +1,18 @@
 " safe_quit.vim - Neovim plugin to prevent accidental quit with terminal buffers
 
 " Check if there are any active terminal buffers
-function! s:HasActiveTerminalBuffers()
-  for buf in getbufinfo({'bufloaded': 1})
+function! s:GetActiveTerminalBuffers()
+  let l:buffers = []
+  for buf in getbufinfo({'buflisted': 1})
     if getbufvar(buf.bufnr, '&buftype') ==# 'terminal'
-      return 1
+      call add(l:buffers, buf)
     endif
   endfor
-  return 0
+  return l:buffers
+endfunction
+
+function! s:HasActiveTerminalBuffers()
+  return ! empty(s:GetActiveTerminalBuffers())
 endfunction
 
 " Check if current buffer is a terminal
@@ -75,15 +80,13 @@ endfunction
 " Show terminal buffers info
 function! s:ShowTerminalInfo()
   let terminals = []
-  for buf in getbufinfo({'bufloaded': 1})
-    if getbufvar(buf.bufnr, '&buftype') ==# 'terminal'
-      if buf.name !=# ''
-        let name = buf.name
-      else
-        let name = 'unnamed terminal'
-      endif
-      call add(terminals, 'Buffer ' . buf.bufnr . ': ' . name)
+  for buf in s:GetActiveTerminalBuffers()
+    if buf.name !=# ''
+      let name = buf.name
+    else
+      let name = 'unnamed terminal'
     endif
+    call add(terminals, 'Buffer ' . buf.bufnr . ': ' . name)
   endfor
   
   if empty(terminals)
