@@ -99,7 +99,7 @@ endfunction
 " Create the commands
 command! -bang Q call s:SafeQuit(<bang>0)
 command! -bang Qa call s:SafeQuitAll(<bang>0)
-command! TerminalInfo call s:ShowTerminalInfo())
+command! TerminalInfo call s:ShowTerminalInfo()
 " Safe abbreviations
 cabbrev q Q
 cabbrev qa Qa
