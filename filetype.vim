@@ -18,6 +18,8 @@ au BufNewFile,BufRead *.vifm setf vifm
 
 au BufNewFile,BufRead *.nfo setf text
 
+au BufNewFile,BufRead *.qss setf css
+
 au BufNewFile,BufRead /dev/shm/gopass.* setlocal noswapfile nobackup noundofile | let b:stay_ignore = 1
 au BufNewFile,BufRead ~/.config/systemd/user/*.d/*override.conf* setlocal noswapfile nobackup noundofile | let b:stay_ignore = 1
 
