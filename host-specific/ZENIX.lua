@@ -351,6 +351,13 @@ require'nvim-treesitter-textobjects'.setup {
 		include_surrounding_whitespace = true,
 	},
 }
+-- Enable treesitter highlighting for any filetype that has a parser available
+-- https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#highlighting
+vim.api.nvim_create_autocmd('FileType', {
+	callback = function(args)
+		pcall(vim.treesitter.start)
+	end,
+})
 -- https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#folding
 vim.wo.foldmethod = 'expr'
 vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
