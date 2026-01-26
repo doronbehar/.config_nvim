@@ -17,7 +17,7 @@ reset=`tput sgr0`
 abbrev_ref="$(git rev-parse --abbrev-ref HEAD)"
 if [[ "$abbrev_ref" == "HEAD" ]]; then
 	echo ${green}
-	git checkout master || git checkout main
+	git checkout main || git checkout master
 	echo ${reset}
 	regular_update
 	exit $?
