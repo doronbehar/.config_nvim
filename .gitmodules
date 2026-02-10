@@ -214,37 +214,10 @@
 [submodule "pack/functional/start/treesitter-textobjects"]
 	path = pack/functional/opt/treesitter-textobjects
 	url = https://github.com/nvim-treesitter/nvim-treesitter-textobjects
-[submodule "pack/functional/start/cmp"]
-	path = pack/functional/start/cmp
-	url = https://github.com/hrsh7th/nvim-cmp
-[submodule "pack/completion/start/nvim-lsp"]
-	path = pack/completion/start/nvim-lsp
-	url = https://github.com/hrsh7th/cmp-nvim-lsp
-[submodule "pack/completion/start/path"]
-	path = pack/completion/start/path
-	url = https://github.com/hrsh7th/cmp-path
-[submodule "pack/completion/start/cmdline"]
-	path = pack/completion/start/cmdline
-	url = https://github.com/hrsh7th/cmp-cmdline
-[submodule "pack/completion/start/vsnip"]
-	path = pack/completion/start/vsnip
-	url = https://github.com/hrsh7th/cmp-vsnip
-[submodule "pack/functional/start/vsnip"]
-	path = pack/functional/start/vsnip
-	url = https://github.com/hrsh7th/vim-vsnip
 [submodule "pack/functional/start/friendly-snippets"]
 	path = pack/functional/start/friendly-snippets
 	url = https://github.com/doronbehar/friendly-snippets
 	branch = fork
-[submodule "pack/completion/start/treesitter"]
-	path = pack/completion/start/treesitter
-	url = https://github.com/ray-x/cmp-treesitter
-[submodule "pack/completion/start/lsp-signature-help"]
-	path = pack/completion/start/lsp-signature-help
-	url = https://github.com/hrsh7th/cmp-nvim-lsp-signature-help
-[submodule "pack/completion/start/zsh"]
-	path = pack/completion/start/zsh
-	url = https://github.com/tamago324/cmp-zsh
 [submodule "pack/functional/start/fzf-lua"]
 	path = pack/functional/opt/fzf-lua
 	url = https://github.com/ibhagwan/fzf-lua
@@ -278,3 +251,6 @@
 [submodule "pack/functional/start/texpresso"]
 	path = pack/functional/start/texpresso
 	url = https://github.com/let-def/texpresso.vim
+[submodule "pack/completion/opt/blink"]
+	path = pack/completion/opt/blink
+	url = https://github.com/saghen/blink.cmp
