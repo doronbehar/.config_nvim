@@ -63,7 +63,6 @@ set mouse=a
 function! s:largeFiles()
 	setlocal foldmethod=indent
 	setlocal foldexpr=0
-	lua require('cmp').setup.buffer { enabled = false }
 	let b:nix_disable_fenced_highlight = 1
 	let b:lexima_disabled = 1
 endfunction
