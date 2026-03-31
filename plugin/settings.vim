@@ -115,10 +115,6 @@ command! -nargs=+ LF call lf#LF(<f-args>, [
 nnoremap <leader>e :LF %:p edit<CR>
 " }}}
 
-" {{{ ghost
-let g:ghost_port = 4465
-" }}}
-
 " {{{ firenvim
 let g:firenvim_config = {
 	\ 'localSettings': {

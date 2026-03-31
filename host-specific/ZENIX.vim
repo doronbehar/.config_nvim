@@ -3,7 +3,6 @@ runtime host-specific/nix-suda.vim
 " These plugins don't abort errorlessly when vim is used with them
 packadd sonokai
 packadd fzf-lua
-packadd ghost
 packadd firenvim
 packadd treesitter-textobjects
 

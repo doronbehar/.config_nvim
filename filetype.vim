@@ -34,8 +34,7 @@ au BufNewFile,BufRead /var/src/nixpkgs/**.nix setf nix.nixpkgs
 " LAMMPS
 au BufNewFile,BufRead *.lammps setf lammps
 
-" GhostText / Firenvim
-au BufNewFile,BufRead ghost-*.txt set expandtab
+" Firenvim
 au BufNewFile,BufRead *stackexchange.com* setf markdown | let b:stay_ignore = 1
 au BufNewFile,BufRead stackoverflow.com* setf markdown | let b:stay_ignore = 1
 au BufNewFile,BufRead github.com* setf markdown | let b:stay_ignore = 1

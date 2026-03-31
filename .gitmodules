@@ -79,9 +79,6 @@
 [submodule "pack/looks/opt/css-color"]
 	path = pack/looks/opt/css-color
 	url = https://github.com/ap/vim-css-color
-[submodule "pack/functional/start/ghost"]
-	path = pack/functional/opt/ghost
-	url = https://github.com/raghur/vim-ghost
 [submodule "pack/filetype/start/orgmode"]
 	path = pack/filetype/start/orgmode
 	url = https://github.com/jceb/vim-orgmode
