@@ -156,7 +156,7 @@
 	url = https://github.com/direnv/direnv.vim
 [submodule "pack/looks/start/colorizer.lua"]
 	path = pack/looks/start/colorizer.lua
-	url = https://github.com/norcalli/nvim-colorizer.lua
+	url = https://github.com/catgoose/nvim-colorizer.lua
 [submodule "pack/functional/start/firenvim"]
 	path = pack/functional/opt/firenvim
 	url = https://github.com/glacambre/firenvim
