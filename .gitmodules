@@ -251,3 +251,6 @@
 [submodule "pack/completion/opt/blink"]
 	path = pack/completion/opt/blink
 	url = https://github.com/saghen/blink.cmp
+[submodule "pack/completion/start/blink.lib"]
+	path = pack/completion/opt/blink.lib
+	url = https://github.com/saghen/blink.lib
