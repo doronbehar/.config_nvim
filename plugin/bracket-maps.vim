@@ -6,8 +6,16 @@ nnoremap ]A :last<CR>
 " }}}
 
 " {{{ buffers
-nnoremap [b :bprevious<CR>
-nnoremap ]b :bnext<CR>
+" Skip quickfix and location-list buffers when cycling through the buffer list.
+function! s:NavBuffer(cmd) abort
+  let l:start = bufnr('%')
+  execute a:cmd
+  while &buftype ==# 'quickfix' && bufnr('%') !=# l:start
+    execute a:cmd
+  endwhile
+endfunction
+nnoremap <silent> [b <Cmd>call <SID>NavBuffer('bprevious')<CR>
+nnoremap <silent> ]b <Cmd>call <SID>NavBuffer('bnext')<CR>
 nnoremap [B :bfirst<CR>
 nnoremap ]B :blast<CR>
 " }}}
