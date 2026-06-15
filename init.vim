@@ -44,15 +44,8 @@ map Q <nop>
 " Always display the tabline, even if there is only one tab:
 set showtabline=2
 set list
-if $DISPLAY !=# ''
-	set showbreak=ˆ
-	set listchars=tab:›\ ,trail:-,extends:»,precedes:«,eol:¬
-else
-	set showbreak=^
-	set listchars=tab:>\ ,trail:-,extends:»,precedes:«,eol:¬
-	" Used by ~/.zshrc and potentially other configs
-	let $TERM_NO_ICONS_FONT=1
-end
+set showbreak=ˆ
+set listchars=tab:›\ ,trail:-,extends:»,precedes:«,eol:¬
 " Always display the statusline in all windows:
 set laststatus=2
 " Hide the default mode text (e.g. -- INSERT -- below the statusline):
