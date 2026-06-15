@@ -27,4 +27,11 @@ au FileType dap-repl inoremap <buffer> <silent> <C-d> exit<cr>
 set completeopt=menu,menuone,noselect
 let g:vsnip_snippet_dir = $XDG_CONFIG_HOME . '/nvim/snippets'
 
+if $DISPLAY ==# ''
+	set showbreak=^
+	set listchars=tab:>\ ,trail:-,extends:»,precedes:«,eol:¬
+	" Used by ~/.zshrc and potentially other configs
+	let $TERM_NO_ICONS_FONT=1
+end
+
 " vim:foldmethod=marker:ft=vim
