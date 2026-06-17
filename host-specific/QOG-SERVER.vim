@@ -10,6 +10,7 @@ set shellredir=2>&1\|\ tee
 packadd treesitter
 packadd blink.lib
 packadd blink
+let $DISPLAY='windows'
 runtime host-specific/ZENIX.vim
 " Based upon https://superuser.com/q/1902895/430539 - strip the carriage
 " returns
