@@ -11,6 +11,10 @@ packadd treesitter
 packadd blink.lib
 packadd blink
 let $DISPLAY='windows'
+" Because we use `msys/man-db` on this system, which experiences a full UNIX
+" emulation, we want to revert the cygwin paths translation done (probably) by
+" Neovim. This fixes `:Man` commands.
+let $MANPATH = systemlist('cygpath --unix --path "' . $MANPATH . '"')[0]
 runtime host-specific/ZENIX.vim
 " Based upon https://superuser.com/q/1902895/430539 - strip the carriage
 " returns
