@@ -197,8 +197,8 @@ default_setup_settings = {
 		vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename, bufopts, {desc = "LSP: rename symbol"})
 		vim.keymap.set('n', '<leader>f', vim.lsp.buf.format, bufopts, {desc = "LSP: format document"})
 		--vim.keymap.set('n', '<space>q', vim.diagnostic.open_float, opts)
-		vim.keymap.set('n', '[q', vim.diagnostic.goto_prev, bufopts, {desc = "LSP: go to next diagnostic"})
-		vim.keymap.set('n', ']q', vim.diagnostic.goto_next, bufopts, {desc = "LSP: go to previous diagnostic"})
+		vim.keymap.set('n', '[q', function() vim.diagnostic.jump({count = -1}) end, bufopts, {desc = "LSP: go to next diagnostic"})
+		vim.keymap.set('n', ']q', function() vim.diagnostic.jump({count =  1}) end, bufopts, {desc = "LSP: go to previous diagnostic"})
 		vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, bufopts, {desc = "LSP: set location list with diagnostics"})
 	end
 }
