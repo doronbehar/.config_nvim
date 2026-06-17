@@ -155,7 +155,7 @@ servers_list = {
 	"texlab",
 	"clangd",
 	-- Installed via flake.nix
-	"jedi_language_server",
+	"ty",
 	"matlab_ls",
 	"gopls",
 	"rls",
