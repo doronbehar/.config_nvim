@@ -16,6 +16,7 @@ let $DISPLAY='windows'
 " Neovim. This fixes `:Man` commands.
 let $MANPATH = systemlist('cygpath --unix --path "' . $MANPATH . '"')[0]
 runtime host-specific/ZENIX.vim
+luafile $XDG_CONFIG_HOME/nvim/host-specific/QOG-SERVER.lua
 " Based upon https://superuser.com/q/1902895/430539 - strip the carriage
 " returns
 let g:clipboard = {
