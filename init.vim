@@ -98,17 +98,6 @@ set sessionoptions=folds,help,resize,tabpages,winpos,winsize
 " {{{1 Load local configuration, not using exrc since I use `prj-vim`
 set modeline
 
-" {{{1 Enable to add plugins via
-if !empty($ENABLE_PLUGINS)
-	let plugins_list = split($ENABLE_PLUGINS, ',')
-	if exists(':packadd')
-		for pl in plugins_list
-			execute('packadd ' . pl)
-		endfor
-	else
-		echoerr "You don't have :packadd available, hence $ENABLE_PLUGINS is not supported"
-	endif
-endif
 " External Plugins - use pathogen only for old versions of vim
 if !exists(':packadd')
 	runtime pack/functional/opt/pathogen/autoload/pathogen.vim
