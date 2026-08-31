@@ -103,9 +103,6 @@
 [submodule "pack/filetype/start/neomutt"]
 	path = pack/filetype/start/neomutt
 	url = https://github.com/neomutt/neomutt.vim
-[submodule "pack/filetype/start/AnsiEsc"]
-	path = pack/filetype/start/AnsiEsc
-	url = https://github.com/vim-scripts/AnsiEsc.vim
 [submodule "pack/functional/start/info"]
 	path = pack/functional/start/info
 	url = https://gitlab.com/HiPhish/info.vim
@@ -254,3 +251,6 @@
 [submodule "pack/completion/start/blink.lib"]
 	path = pack/completion/opt/blink.lib
 	url = https://github.com/saghen/blink.lib
+[submodule "pack/functional/start/ansi"]
+	path = pack/functional/start/ansi
+	url = https://github.com/0xferrous/ansi.nvim
