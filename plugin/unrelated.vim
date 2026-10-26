@@ -61,5 +61,3 @@ inoremap <F12> <C-\><C-o>:call rtl#toggle()<CR>
 " toggle set spell setting:
 nnoremap <F2> :set spell! spell?<CR>
 inoremap <F2> <C-\><C-o>:set spell! spell?<CR>
-" Gundo
-nnoremap <F5> :GundoToggle<CR>

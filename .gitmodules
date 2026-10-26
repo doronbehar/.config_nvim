@@ -88,9 +88,6 @@
 [submodule "pack/editing/start/nerdcommenter"]
 	path = pack/editing/start/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter
-[submodule "pack/editing/start/gundo"]
-	path = pack/editing/start/gundo
-	url = https://github.com/sjl/gundo.vim
 [submodule "pack/textobj/start/underscore"]
 	path = pack/textobj/start/underscore
 	url = https://github.com/lucapette/vim-textobj-underscore
@@ -254,3 +251,6 @@
 [submodule "pack/functional/start/ansi"]
 	path = pack/functional/start/ansi
 	url = https://github.com/0xferrous/ansi.nvim
+[submodule "pack/functional/start/time-machine"]
+	path = pack/functional/start/time-machine
+	url = https://github.com/y3owk1n/time-machine.nvim

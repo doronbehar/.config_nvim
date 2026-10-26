@@ -348,5 +348,9 @@ colorizer.setup({
 	'vim'
 })
 -- }}}
+--
+-- {{{1 time-machine
+require("time-machine").setup({
+})
 
 -- vim:foldmethod=marker
