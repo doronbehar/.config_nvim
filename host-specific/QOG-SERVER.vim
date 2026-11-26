@@ -17,16 +17,26 @@ let $DISPLAY='windows'
 let $MANPATH = systemlist('cygpath --unix --path "' . $MANPATH . '"')[0]
 runtime host-specific/ZENIX.vim
 luafile $XDG_CONFIG_HOME/nvim/host-specific/QOG-SERVER.lua
-" Based upon https://superuser.com/q/1902895/430539 - strip the carriage
-" returns
+" Clipboard: exchanged with the workstation on the other end of the ssh
+" connection, over the TCP ports that `ssh-lab` reverse-forwards here - see
+" .bin/tcp-clip-get and .bin/tcp-clip-set, and windows/ssh/CLIPBOARD.md.
+" Without those ports - a plain `ssh lab` - both scripts fall back to
+" /dev/clipboard, which is the clipboard of that one ssh connection.  That
+" fallback also replaces the old clip.exe + `Get-Clipboard -Raw` pair, which
+" mangled non-ASCII text through the console code page and needed the carriage
+" returns stripped (https://superuser.com/q/1902895/430539).
+"
+" The `zsh -c` is not decoration: Neovim here is a native Windows build, and
+" provider/clipboard.vim splits a string command on spaces and execs it
+" directly, with no shell, so it cannot run a shebang script on its own.
 let g:clipboard = {
-\   'name': 'win32ansi',
+\   'name': 'ssh-clipboard-forward',
 \   'copy': {
-\      '+': 'clip.exe',
-\      '*': 'clip.exe',
+\      '+': ['zsh', '-c', 'tcp-clip-set'],
+\      '*': ['zsh', '-c', 'tcp-clip-set'],
 \    },
 \   'paste': {
-\      '+': ['powershell.exe', '-NoProfile', '-Command', '[Console]::Out.Write($(Get-Clipboard -Raw).ToString().Replace("`r", ""))'],
-\      '*': ['powershell.exe', '-NoProfile', '-Command', '[Console]::Out.Write($(Get-Clipboard -Raw).ToString().Replace("`r", ""))'],
+\      '+': ['zsh', '-c', 'tcp-clip-get'],
+\      '*': ['zsh', '-c', 'tcp-clip-get'],
 \   },
 \ }
